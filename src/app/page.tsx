@@ -1,38 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
+import { EditorialGallery } from "@/components/editorial-gallery";
 import { HeroRoleSwitcher } from "@/components/hero-role-switcher";
-
-const experience = [
-  {
-    role: "Software engineer",
-    company: "Kitt Medical",
-    location: "Casablanca",
-    date: "August 1, 2025",
-  },
-  {
-    role: "Software engineer",
-    company: "NF TECH (Agency)",
-    location: "Casablanca",
-    date: "Feb 1, 2024",
-  },
-  {
-    role: "Founder",
-    company: "Shortmagic.ai (AI SaaS)",
-    location: "Casablanca",
-    date: "April 7, 2024",
-  },
-  {
-    role: "Founder",
-    company: "FeedbackLoop (Acquired)",
-    location: "Casablanca",
-    date: "Jan 10, 2024",
-  },
-  {
-    role: "Co-founder",
-    company: "TagU (B2B SaaS)",
-    location: "Casablanca",
-    date: "April 20, 2023",
-  },
-];
+import { experiences } from "@/lib/experiences";
 
 const galleryImages = [
   { src: "/img1.png", label: "Work table" },
@@ -42,6 +12,10 @@ const galleryImages = [
   { src: "/img5.png", label: "Transit fit" },
   { src: "/img6.png", label: "Street detail" },
 ];
+
+const homepageExperiences = experiences.filter(
+  (experience) => experience.showOnHomepage !== false,
+);
 
 export default function Home() {
   return (
@@ -122,33 +96,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {galleryImages.map((image, index) => (
-              <div
-                className="glass-card reveal group relative min-h-72 overflow-hidden border border-white/15 sm:min-h-96"
-                style={{ animationDelay: `${160 + index * 70}ms` }}
-                key={image.src}
-              >
-                <Image
-                  src={image.src}
-                  alt={`${image.label} photo`}
-                  fill
-                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                  className="object-cover transition duration-700 group-hover:scale-[1.035]"
-                />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.2),transparent_38%,rgba(0,0,0,0.62)),radial-gradient(circle_at_70%_20%,rgba(255,255,255,0.12),transparent_24%)] opacity-85 transition-opacity group-hover:opacity-65" />
-                <div className="absolute inset-0 mix-blend-overlay opacity-20 [background-image:radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.42)_1px,transparent_0)] [background-size:16px_16px]" />
-                <div className="absolute inset-x-0 top-0 flex items-center justify-between border-b border-white/12 px-4 py-3 text-xs uppercase text-white/35">
-                  <span>Image stop</span>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                </div>
-                <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-4 text-sm text-white/45">
-                  <span className="max-w-36">{image.label}</span>
-                  <span className="text-white/25">Personal archive</span>
-                </div>
-              </div>
-            ))}
-          </div>
+          <EditorialGallery images={galleryImages} />
         </section>
 
         <section
@@ -201,9 +149,10 @@ export default function Home() {
           </div>
 
           <div className="border-t border-white/18">
-            {experience.map((item, index) => (
-              <article
+            {homepageExperiences.map((item, index) => (
+              <Link
                 className="glass-row reveal grid gap-2 border-b border-white/15 px-4 py-5 transition-colors sm:grid-cols-[1fr_0.75fr_0.55fr] sm:gap-6 sm:px-5 lg:px-6"
+                href={`/experience/${item.slug}`}
                 style={{ animationDelay: `${120 + index * 65}ms` }}
                 key={`${item.role}-${item.company}`}
               >
@@ -215,7 +164,7 @@ export default function Home() {
                 <p className="text-white/42 sm:pt-1 sm:text-right">
                   {item.date}
                 </p>
-              </article>
+              </Link>
             ))}
           </div>
         </section>
