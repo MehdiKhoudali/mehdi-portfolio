@@ -40,7 +40,7 @@ export default function Home() {
 
             <div className="reveal reveal-delay-1">
               <p className="mb-6 text-xs uppercase text-white/40">
-                Casablanca, Morocco / Software and startups
+                Software engineer and startup founder
               </p>
               <h1 className="max-w-full text-5xl leading-none font-semibold text-white sm:text-8xl lg:text-9xl">
                 MEHDI.K
@@ -91,8 +91,8 @@ export default function Home() {
               </h2>
             </div>
             <p className="hidden max-w-xs text-right text-sm leading-6 text-white/45 sm:block">
-              Six large image slots for portraits, product moments, or raw
-              behind-the-scenes visuals.
+              A few personal frames from work days, city moments, and things I
+              keep coming back to.
             </p>
           </div>
 
@@ -120,9 +120,9 @@ export default function Home() {
               </p>
               <p>
                 I freelance with teams on product and engineering work while
-                continuing to build my own projects. That balance keeps the work
-                grounded: client systems teach discipline, and startups keep the
-                pace sharp.
+                continuing to build my own projects. I like the mix: client work
+                keeps me close to real problems, and startup projects keep me
+                moving fast.
               </p>
             </div>
           </div>
