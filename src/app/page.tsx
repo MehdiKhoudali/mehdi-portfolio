@@ -8,9 +8,9 @@ const galleryImages = [
   { src: "/img1.png", label: "Work table" },
   { src: "/img2.png", label: "Cafe wall" },
   { src: "/img3.png", label: "Atlantic sunset" },
-  { src: "/img4.png", label: "Night hotel" },
+  { src: "/img4.jpg", label: "Night hotel" },
   { src: "/img5.png", label: "Transit fit" },
-  { src: "/img6.png", label: "Street detail" },
+  { src: "/img6.jpg", label: "Street detail" },
 ];
 
 const homepageExperiences = experiences.filter(
