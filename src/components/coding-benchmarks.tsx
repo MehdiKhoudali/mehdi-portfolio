@@ -249,7 +249,7 @@ export function CodingBenchmarks() {
               </p>
               <div className="mt-9 flex flex-wrap items-center gap-4 sm:gap-6">
                 <Link
-                  className="flex min-w-52 items-center justify-between gap-8 bg-[#efefea] px-5 py-4 text-sm text-[#101010] transition-colors hover:bg-white"
+                  className="flex items-center gap-3 bg-[#efefea] px-5 py-4 text-sm text-[#101010] transition-colors hover:bg-white"
                   href="#benchmark-gallery-title"
                 >
                   Explore the tasks <ArrowIcon />

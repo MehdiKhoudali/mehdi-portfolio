@@ -1,7 +1,9 @@
 # Design QA
 
 - Source visual truth: `C:\Users\mehdi\.codex\generated_images\019f76c3-6e0a-7071-a87f-221efa1344f1\exec-abc657e6-f731-477d-b221-879c2cb940f6.png`
+- Spacing annotation reference: `C:\Users\mehdi\AppData\Local\Temp\codex-clipboard-d783dccb-fa4a-4256-b310-717cfbe7ba6d.png`
 - Desktop implementation: `C:\Users\mehdi\AppData\Local\Temp\coding-hero-audit\03-implemented-desktop.png`
+- Latest desktop implementation: `C:\Users\mehdi\AppData\Local\Temp\coding-hero-audit\08-consistent-action-spacing.png`
 - Mobile implementation: `C:\Users\mehdi\AppData\Local\Temp\coding-hero-audit\05-implemented-mobile.png`
 - Full-view comparison: `C:\Users\mehdi\AppData\Local\Temp\coding-hero-audit\06-reference-vs-implementation.png`
 - Focused comparison: `C:\Users\mehdi\AppData\Local\Temp\coding-hero-audit\07-focused-comparison.png`
@@ -27,6 +29,10 @@
    - P2: the desktop no-wrap treatment caused horizontal overflow and clipped the headline.
    - Fix: scoped no-wrap to large screens only.
    - Post-fix evidence: `05-implemented-mobile.png`; measured document `scrollWidth` equals `clientWidth` (375 px).
+3. CTA spacing annotation: `codex-clipboard-d783dccb-fa4a-4256-b310-717cfbe7ba6d.png`
+   - P2: the primary action distributed its arrow across the full button width while the secondary action used a fixed text-to-icon gap.
+   - Fix: both actions now use the same 12 px text-to-arrow gap.
+   - Post-fix evidence: `08-consistent-action-spacing.png`; computed `column-gap` is 12 px for both links.
 
 ## Interaction and Runtime Checks
 
