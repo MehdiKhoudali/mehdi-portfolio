@@ -215,15 +215,15 @@ export function CodingBenchmarks() {
           <div className="grid gap-12 py-12 sm:py-16 lg:grid-cols-[1fr_0.46fr] lg:py-20">
             <div className="reveal reveal-delay-1">
               <p className="mb-6 text-xs uppercase tracking-[0.18em] text-white/40">
-                Tool 01 / Coding agent field tests
+                Tool 01 / Real software field tests
               </p>
-              <h1 className="max-w-5xl text-6xl leading-[0.88] font-semibold tracking-[-0.055em] text-white sm:text-8xl lg:text-[8.5rem]">
-                CODE, UNDER PRESSURE.
+              <h1 className="max-w-5xl text-[2.75rem] leading-[0.93] font-semibold tracking-[-0.045em] text-white sm:text-6xl lg:text-[5.5rem]">
+                CODING MODELS ON REAL SOFTWARE TASKS.
               </h1>
               <p className="mt-8 max-w-2xl text-lg leading-8 text-white/58 sm:text-xl sm:leading-9">
-                A transparent gallery of coding agents building the same visual,
-                interactive software tasks—complete with previews, evidence, time,
-                and cost.
+                Real interfaces, dashboards, visualizations, and games built from
+                the same brief. No abstract scores—just working software and the
+                evidence behind it.
               </p>
             </div>
 
@@ -232,7 +232,7 @@ export function CodingBenchmarks() {
                 Suite status
               </div>
               {[
-                ["01", "Benchmarks", "04"],
+                ["01", "Tasks", "04"],
                 ["02", "Published runs", "00"],
                 ["03", "Method", "Evidence first"],
               ].map(([number, label, value]) => (
@@ -249,12 +249,12 @@ export function CodingBenchmarks() {
         <section className="glass-section border-b border-white/15 p-4 sm:p-6 lg:p-8" aria-labelledby="benchmark-gallery-title">
           <div className="reveal mb-8 grid gap-7 lg:grid-cols-[1fr_auto] lg:items-end">
             <div>
-              <p className="mb-3 text-xs uppercase tracking-[0.18em] text-white/40">Initial suite / v0.1</p>
+              <p className="mb-3 text-xs uppercase tracking-[0.18em] text-white/40">Initial task set / v0.1</p>
               <h2 id="benchmark-gallery-title" className="text-5xl leading-none font-semibold sm:text-6xl">
-                Test gallery
+                Task gallery
               </h2>
             </div>
-            <div className="flex flex-wrap gap-2" aria-label="Filter benchmarks">
+            <div className="flex flex-wrap gap-2" aria-label="Filter tasks">
               {categories.map((category) => (
                 <button
                   className={`border px-4 py-2 text-sm transition-colors ${
@@ -351,7 +351,7 @@ export function CodingBenchmarks() {
         </section>
 
         <footer className="glass-section mt-auto flex flex-wrap items-center justify-between gap-4 border-t border-white/15 p-4 text-sm text-white/45 sm:p-6 lg:p-8">
-          <p>Mehdi K / Coding Benchmarks</p>
+          <p>Mehdi K / Coding model field tests</p>
           <p>Transparent tests. Complete evidence.</p>
         </footer>
       </div>
