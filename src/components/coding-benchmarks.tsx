@@ -182,6 +182,30 @@ function BenchmarkPreview({ type }: { type: Benchmark["preview"] }) {
   );
 }
 
+const heroBuilds = [
+  {
+    label: "Model 01",
+    name: "Editorial build",
+    preview: "landing" as const,
+    note: "Clear hierarchy with a conversion-first product story.",
+    tag: "Landing page",
+  },
+  {
+    label: "Model 02",
+    name: "Product build",
+    preview: "dashboard" as const,
+    note: "Dense interface work with a dashboard-led composition.",
+    tag: "Dashboard",
+  },
+  {
+    label: "Model 03",
+    name: "Visual build",
+    preview: "visualization" as const,
+    note: "Data storytelling with an interaction-first approach.",
+    tag: "Visualization",
+  },
+];
+
 export function CodingBenchmarks() {
   const [activeCategory, setActiveCategory] = useState<(typeof categories)[number]>("All");
 
@@ -212,37 +236,84 @@ export function CodingBenchmarks() {
             </div>
           </nav>
 
-          <div className="grid gap-12 py-12 sm:py-16 lg:grid-cols-[1fr_0.46fr] lg:py-20">
-            <div className="reveal reveal-delay-1">
+          <div className="grid gap-12 py-12 sm:py-16 lg:grid-cols-[0.8fr_1.5fr] lg:items-center lg:gap-10 lg:py-20">
+            <div className="reveal reveal-delay-1 lg:pr-2">
               <p className="mb-6 text-xs uppercase tracking-[0.18em] text-white/40">
                 Tool 01 / Real software field tests
               </p>
-              <h1 className="max-w-5xl text-[2.75rem] leading-[0.93] font-semibold tracking-[-0.045em] text-white sm:text-6xl lg:text-[5.5rem]">
-                CODING MODELS ON REAL SOFTWARE TASKS.
+              <h1 className="max-w-xl text-[2.7rem] leading-[0.96] font-semibold tracking-[-0.045em] text-white sm:text-5xl lg:text-[3.45rem]">
+                ONE BRIEF.<br /><span className="lg:whitespace-nowrap">DIFFERENT BUILDS.</span>
               </h1>
-              <p className="mt-8 max-w-2xl text-lg leading-8 text-white/58 sm:text-xl sm:leading-9">
-                Real interfaces, dashboards, visualizations, and games built from
-                the same brief. No abstract scores—just working software and the
-                evidence behind it.
+              <p className="mt-7 max-w-md text-base leading-7 text-white/55 sm:text-lg sm:leading-8">
+                See how coding models turn the same software task into working products.
               </p>
+              <div className="mt-9 flex flex-wrap items-center gap-4 sm:gap-6">
+                <Link
+                  className="flex min-w-52 items-center justify-between gap-8 bg-[#efefea] px-5 py-4 text-sm text-[#101010] transition-colors hover:bg-white"
+                  href="#benchmark-gallery-title"
+                >
+                  Explore the tasks <ArrowIcon />
+                </Link>
+                <Link
+                  className="flex items-center gap-3 px-2 py-3 text-sm text-white/68 transition-colors hover:text-white"
+                  href="#protocol-title"
+                >
+                  Read the method <ArrowIcon />
+                </Link>
+              </div>
             </div>
 
-            <aside className="project-meta-card reveal reveal-delay-2 self-end border border-white/15">
-              <div className="border-b border-white/12 px-4 py-4 text-xs uppercase tracking-[0.18em] text-white/38 sm:px-5">
-                Suite status
-              </div>
-              {[
-                ["01", "Tasks", "04"],
-                ["02", "Published runs", "00"],
-                ["03", "Method", "Evidence first"],
-              ].map(([number, label, value]) => (
-                <div className="project-meta-row grid grid-cols-[2rem_1fr_auto] gap-3 border-b border-white/10 px-4 py-4 last:border-b-0 sm:px-5" key={label}>
-                  <span className="text-xs text-white/25">{number}</span>
-                  <span className="text-xs uppercase tracking-[0.14em] text-white/35">{label}</span>
-                  <span className="text-sm text-white/80">{value}</span>
+            <div className="reveal reveal-delay-2 grid gap-3 lg:grid-cols-[14rem_1fr]">
+              <aside className="glass-panel border border-white/15">
+                <div className="border-b border-white/12 px-4 py-4 text-[10px] uppercase tracking-[0.2em] text-white/42">
+                  The same brief
                 </div>
-              ))}
-            </aside>
+                <div className="p-4">
+                  <span className="inline-flex border border-white/12 bg-white/[0.045] px-2 py-1 text-[10px] text-white/48">
+                    SaaS landing page
+                  </span>
+                  <h2 className="mt-5 text-lg font-medium text-white/90">Product landing page</h2>
+                  <p className="mt-3 text-xs leading-5 text-white/48">
+                    Build a responsive marketing page for a project management SaaS.
+                  </p>
+                  <div className="mt-6 border-t border-white/12 pt-5">
+                    <p className="text-[10px] uppercase tracking-[0.18em] text-white/36">Requirements</p>
+                    <ul className="mt-3 space-y-2 text-xs text-white/50">
+                      <li>Hero with headline and CTA</li>
+                      <li>Feature and pricing sections</li>
+                      <li>Responsive and accessible</li>
+                    </ul>
+                  </div>
+                  <div className="mt-6 border-t border-white/12 pt-5">
+                    <p className="text-[10px] uppercase tracking-[0.18em] text-white/36">Deliverable</p>
+                    <p className="mt-2 text-xs leading-5 text-white/50">Single-page application<br />(HTML, CSS, JS)</p>
+                  </div>
+                </div>
+              </aside>
+
+              <section className="glass-panel border border-white/15" aria-label="Example model builds">
+                <div className="border-b border-white/12 px-4 py-4 text-[10px] uppercase tracking-[0.2em] text-white/42">
+                  Different builds
+                </div>
+                <div className="grid sm:grid-cols-3">
+                  {heroBuilds.map((build) => (
+                    <article className="border-b border-white/12 p-3 last:border-b-0 sm:border-r sm:border-b-0 sm:last:border-r-0" key={build.label}>
+                      <span className="inline-flex border border-white/12 bg-white/[0.04] px-2 py-1 text-[9px] uppercase tracking-[0.14em] text-white/38">
+                        {build.label}
+                      </span>
+                      <h3 className="mt-2 text-sm text-white/78">{build.name}</h3>
+                      <div className="relative mt-4 aspect-[4/5] overflow-hidden border border-white/12 bg-[#111]">
+                        <BenchmarkPreview type={build.preview} />
+                      </div>
+                      <p className="mt-3 min-h-14 text-[11px] leading-[1.55] text-white/42">{build.note}</p>
+                      <span className="mt-3 inline-flex border border-white/12 px-2 py-1 text-[9px] text-white/36">
+                        {build.tag}
+                      </span>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            </div>
           </div>
         </header>
 
