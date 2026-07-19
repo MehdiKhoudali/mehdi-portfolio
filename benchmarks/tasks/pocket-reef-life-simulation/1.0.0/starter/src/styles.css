@@ -1,0 +1,26 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #eaf7f3;
+  background: #061713;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, input, select { font: inherit; }
+
+.starter-shell {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  text-align: center;
+  background: radial-gradient(circle at 50% 40%, #123b35, #061713 65%);
+}
+
+.starter-shell h1 { margin: 0; font-size: clamp(3rem, 9vw, 8rem); letter-spacing: -0.07em; }
+.starter-shell p { margin: 0; color: #a9c8c0; }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; }
+.starter-readout { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-top: 1rem; }
+.starter-readout span { border: 1px solid #ffffff24; padding: 0.65rem 0.9rem; }

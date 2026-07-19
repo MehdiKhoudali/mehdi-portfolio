@@ -60,15 +60,15 @@ const benchmarks: Benchmark[] = [
     preview: "dashboard",
   },
   {
-    id: "browser-game",
+    id: "pocket-reef-life-simulation",
     number: "04",
-    title: "Small browser game",
-    shortTitle: "Browser game",
+    title: "Pocket Reef life simulation",
+    shortTitle: "Life simulation",
     category: "Interaction",
     description:
-      "A compact one-button game testing state, animation, input handling, feedback, difficulty, and finish-level polish.",
-    tests: ["Game loop", "Input handling", "Visual polish"],
-    status: "Mechanics in review",
+      "A living miniature ecosystem testing deterministic simulation, emergent behavior, interactive controls, data storytelling, and animated world-building.",
+    tests: ["Emergent behavior", "Simulation state", "Visual storytelling"],
+    status: "Benchmark ready",
     preview: "game",
   },
 ];
@@ -193,18 +193,20 @@ function BenchmarkPreview({ type }: { type: Benchmark["preview"] }) {
   }
 
   return (
-    <div className="absolute inset-0 overflow-hidden bg-[#1a1320]">
+    <div className="absolute inset-0 overflow-hidden bg-[#071d23]">
       <div className="absolute inset-x-4 top-4 flex items-center justify-between text-[8px] uppercase tracking-[0.18em] text-white/55">
-        <span>Wave 07</span>
-        <span>Score 12,840</span>
+        <span>Pocket Reef / Field 01</span>
+        <span>09:42 · 4×</span>
       </div>
-      <div className="absolute left-1/2 top-1/2 size-32 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#ff8b63]/35 shadow-[0_0_60px_rgba(255,88,83,0.2)]">
-        <div className="absolute inset-5 rounded-full border border-[#ff8b63]/50" />
-        <div className="absolute left-1/2 top-1/2 size-7 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-[#ff6b5f] shadow-[0_0_24px_rgba(255,107,95,0.7)]" />
+      <div className="absolute left-1/2 top-[54%] h-36 w-56 -translate-x-1/2 -translate-y-1/2 rounded-[50%] border-4 border-[#bcebd2]/25 bg-[radial-gradient(circle_at_48%_35%,#2f8f7e,#0c4a4f_68%,#082f39)] shadow-[0_22px_42px_rgba(0,0,0,0.45),inset_0_0_38px_rgba(146,255,220,0.18)]">
+        <span className="absolute left-[24%] top-[35%] size-3 rounded-full bg-[#a4f49c] shadow-[20px_-12px_0_1px_#8cde8d,42px_20px_0_2px_#75cf82,85px_-8px_0_1px_#9ce58f]" />
+        <span className="absolute left-[36%] top-[58%] h-3 w-5 rounded-full bg-[#87e8ff] shadow-[30px_-22px_0_#87e8ff,58px_4px_0_#87e8ff,82px_-25px_0_#87e8ff]" />
+        <span className="absolute left-[48%] top-[40%] h-4 w-6 rounded-full bg-[#ff7d8e] shadow-[54px_18px_0_#ff7d8e]" />
       </div>
-      <span className="absolute bottom-9 left-1/2 h-8 w-2 -translate-x-1/2 rounded-full bg-[#a5ffdb] shadow-[0_0_20px_rgba(165,255,219,0.7)]" />
-      <div className="absolute inset-x-4 bottom-4 h-1 overflow-hidden rounded-full bg-white/10">
-        <div className="h-full w-2/3 bg-[#a5ffdb]" />
+      <div className="absolute inset-x-4 bottom-4 flex items-end gap-1">
+        {[18, 26, 22, 35, 31, 45, 38, 53, 47, 59, 51, 64].map((height, index) => (
+          <span className="flex-1 rounded-t-sm bg-[#83e7cb]/45" key={index} style={{ height }} />
+        ))}
       </div>
     </div>
   );
