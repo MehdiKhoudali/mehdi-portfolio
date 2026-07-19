@@ -104,9 +104,9 @@ export function BenchmarkResultViewer({ results }: { results: PublishedBenchmark
                 ))}
               </div>
             </div>
-            <div className="flex shrink-0 border border-white/14 p-1 text-xs">
+            <div className="grid w-full shrink-0 grid-cols-2 border border-white/14 p-1 text-xs sm:w-60">
               <button
-                className={`flex-1 px-4 py-2 transition-colors ${viewMode === "single" ? "bg-white text-black" : "text-white/50 hover:text-white"}`}
+                className={`whitespace-nowrap px-4 py-2 transition-colors ${viewMode === "single" ? "bg-white text-black" : "text-white/50 hover:text-white"}`}
                 onClick={() => setViewMode("single")}
                 type="button"
                 aria-pressed={viewMode === "single"}
@@ -114,7 +114,7 @@ export function BenchmarkResultViewer({ results }: { results: PublishedBenchmark
                 Focus
               </button>
               <button
-                className={`flex-1 px-4 py-2 transition-colors ${viewMode === "compare" ? "bg-white text-black" : "text-white/50 hover:text-white"}`}
+                className={`whitespace-nowrap px-4 py-2 transition-colors ${viewMode === "compare" ? "bg-white text-black" : "text-white/50 hover:text-white"}`}
                 onClick={() => setViewMode("compare")}
                 type="button"
                 aria-pressed={viewMode === "compare"}
