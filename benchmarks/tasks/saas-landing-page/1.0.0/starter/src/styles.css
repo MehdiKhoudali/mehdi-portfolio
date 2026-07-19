@@ -1,0 +1,26 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #191919;
+  background: #f1efe8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.starter-shell {
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.starter-shell h1 {
+  max-width: 40rem;
+  margin: 0.75rem 0 0;
+}

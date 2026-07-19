@@ -12,6 +12,10 @@ const eslintConfig = defineConfig([
     ".netlify/**",
     "out/**",
     "build/**",
+    "benchmarks/.runs/**",
+    "benchmarks/results/**",
+    "benchmarks/tasks/**/starter/dist/**",
+    "benchmarks/tasks/**/starter/node_modules/**",
     "next-env.d.ts",
   ]),
 ]);
