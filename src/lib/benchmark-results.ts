@@ -6,7 +6,7 @@ export type PublishedBenchmarkResult = {
   modelKey: BenchmarkModel;
   label: string;
   model: string;
-  status: "Passed";
+  status: "Passed" | "Failed";
   attempt: number;
   effort: BenchmarkEffort;
   durationMs: number;
@@ -14,8 +14,9 @@ export type PublishedBenchmarkResult = {
   cachedInputTokens: number;
   outputTokens: number;
   reasoningTokens: number;
-  previewUrl: string;
+  previewUrl?: string;
   summary: string;
+  failureReason?: string;
 };
 
 export const saasLandingTask = {
@@ -177,5 +178,167 @@ export const saasLandingResults: PublishedBenchmarkResult[] = [
     reasoningTokens: 3849,
     previewUrl: "/benchmarks/saas-landing-page/sol-high/index.html",
     summary: "Created a detailed high-reasoning implementation with the full responsive product journey, interactive states, and verified production output.",
+  },
+];
+
+export const creativeSiteTask = {
+  id: "award-winning-creative-site",
+  title: "Award-winning creative site",
+  product: "AFTERLIGHT",
+  version: "1.0.0",
+  description:
+    "Create an original festival website for AFTERLIGHT in Marrakech, translating one shared cultural brief into distinctive art direction, editorial typography, motion, interaction, and responsive behavior.",
+  requirements: [
+    "Original signal-and-shadow art direction without generic SaaS patterns",
+    "Programme filtering, detail reveals, schedule controls, and reservation feedback",
+    "Editorial typography, layered composition, and at least two motion patterns",
+    "Responsive, keyboard-accessible, reduced-motion-aware, self-contained build",
+  ],
+};
+
+export const creativeSiteResults: PublishedBenchmarkResult[] = [
+  {
+    id: "luna-low",
+    modelKey: "luna",
+    label: "Luna",
+    model: "gpt-5.6-luna",
+    status: "Passed",
+    attempt: 1,
+    effort: "Low",
+    durationMs: 184100,
+    inputTokens: 228477,
+    cachedInputTokens: 195584,
+    outputTokens: 7402,
+    reasoningTokens: 242,
+    previewUrl: "/benchmarks/award-winning-creative-site/luna-low/index.html",
+    summary: "Delivered and verified a complete AFTERLIGHT festival experience at low reasoning effort, with responsive editorial composition, programme interactions, and motion behavior.",
+  },
+  {
+    id: "luna-medium",
+    modelKey: "luna",
+    label: "Luna",
+    model: "gpt-5.6-luna",
+    status: "Failed",
+    attempt: 1,
+    effort: "Medium",
+    durationMs: 285300,
+    inputTokens: 472483,
+    cachedInputTokens: 430080,
+    outputTokens: 12022,
+    reasoningTokens: 943,
+    summary: "Created the requested experience, but the final source failed the production acceptance build.",
+    failureReason: "App.jsx exported App as the default export while main.jsx imported it as a named export, causing Vite to stop with a missing-export error.",
+  },
+  {
+    id: "luna-high",
+    modelKey: "luna",
+    label: "Luna",
+    model: "gpt-5.6-luna",
+    status: "Passed",
+    attempt: 1,
+    effort: "High",
+    durationMs: 462900,
+    inputTokens: 703765,
+    cachedInputTokens: 647936,
+    outputTokens: 21062,
+    reasoningTokens: 3368,
+    previewUrl: "/benchmarks/award-winning-creative-site/luna-high/index.html",
+    summary: "Produced and verified an extensive high-reasoning interpretation with a complete responsive festival narrative, interactions, and expressive visual system.",
+  },
+  {
+    id: "terra-low",
+    modelKey: "terra",
+    label: "Terra",
+    model: "gpt-5.6-terra",
+    status: "Passed",
+    attempt: 1,
+    effort: "Low",
+    durationMs: 231700,
+    inputTokens: 169618,
+    cachedInputTokens: 145152,
+    outputTokens: 9714,
+    reasoningTokens: 156,
+    previewUrl: "/benchmarks/award-winning-creative-site/terra-low/index.html",
+    summary: "Built and verified the full responsive AFTERLIGHT site at low reasoning effort, including the required programme, schedule, reservation, and motion systems.",
+  },
+  {
+    id: "terra-medium",
+    modelKey: "terra",
+    label: "Terra",
+    model: "gpt-5.6-terra",
+    status: "Passed",
+    attempt: 1,
+    effort: "Medium",
+    durationMs: 294900,
+    inputTokens: 232896,
+    cachedInputTokens: 203008,
+    outputTokens: 13696,
+    reasoningTokens: 252,
+    previewUrl: "/benchmarks/award-winning-creative-site/terra-medium/index.html",
+    summary: "Delivered a verified editorial festival experience with responsive navigation, programme filtering, schedule controls, event details, and reservation feedback.",
+  },
+  {
+    id: "terra-high",
+    modelKey: "terra",
+    label: "Terra",
+    model: "gpt-5.6-terra",
+    status: "Failed",
+    attempt: 1,
+    effort: "High",
+    durationMs: 404000,
+    inputTokens: 511990,
+    cachedInputTokens: 463104,
+    outputTokens: 15510,
+    reasoningTokens: 950,
+    summary: "Completed the requested interface, but the generated stylesheet failed the production acceptance build.",
+    failureReason: "The final CSS contained the invalid declaration color: var(--ink;), which caused Lightning CSS minification to fail.",
+  },
+  {
+    id: "sol-low",
+    modelKey: "sol",
+    label: "Sol",
+    model: "gpt-5.6-sol",
+    status: "Passed",
+    attempt: 1,
+    effort: "Low",
+    durationMs: 309800,
+    inputTokens: 251394,
+    cachedInputTokens: 185088,
+    outputTokens: 12823,
+    reasoningTokens: 152,
+    previewUrl: "/benchmarks/award-winning-creative-site/sol-low/index.html",
+    summary: "Completed and verified a detailed low-reasoning interpretation with a self-contained visual language, complete content flow, and responsive interaction states.",
+  },
+  {
+    id: "sol-medium",
+    modelKey: "sol",
+    label: "Sol",
+    model: "gpt-5.6-sol",
+    status: "Passed",
+    attempt: 1,
+    effort: "Medium",
+    durationMs: 343400,
+    inputTokens: 420102,
+    cachedInputTokens: 374528,
+    outputTokens: 14604,
+    reasoningTokens: 467,
+    previewUrl: "/benchmarks/award-winning-creative-site/sol-medium/index.html",
+    summary: "Implemented and verified a comprehensive creative festival site with layered art direction, motion, accessible controls, and complete responsive behavior.",
+  },
+  {
+    id: "sol-high",
+    modelKey: "sol",
+    label: "Sol",
+    model: "gpt-5.6-sol",
+    status: "Passed",
+    attempt: 1,
+    effort: "High",
+    durationMs: 564500,
+    inputTokens: 732434,
+    cachedInputTokens: 670464,
+    outputTokens: 24791,
+    reasoningTokens: 3140,
+    previewUrl: "/benchmarks/award-winning-creative-site/sol-high/index.html",
+    summary: "Created and verified the most extensive Sol interpretation, with a highly developed visual system, full interaction contract, and responsive festival journey.",
   },
 ];

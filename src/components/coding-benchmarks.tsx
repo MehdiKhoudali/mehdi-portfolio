@@ -16,6 +16,7 @@ type Benchmark = {
   status: string;
   preview: "landing" | "dashboard" | "visualization" | "game" | "creative";
   href?: string;
+  cta?: string;
 };
 
 const benchmarks: Benchmark[] = [
@@ -41,8 +42,10 @@ const benchmarks: Benchmark[] = [
     description:
       "An expressive cultural site testing original art direction, editorial typography, motion, transitions, and responsive creative development.",
     tests: ["Art direction", "Motion design", "Responsive craft"],
-    status: "Benchmark ready",
+    status: "9 runs published",
     preview: "creative",
+    href: "/tools/award-winning-creative-site",
+    cta: "View 9 runs",
   },
   {
     id: "screenshot-dashboard",
@@ -397,7 +400,7 @@ export function CodingBenchmarks() {
                       <span key={test}>{test}</span>
                     ))}
                     <span className="ml-auto flex items-center gap-2 text-white/65">
-                      {benchmark.href ? "View 9 builds" : "Spec soon"} <ArrowIcon />
+                      {benchmark.href ? (benchmark.cta ?? "View 9 builds") : "Spec soon"} <ArrowIcon />
                     </span>
                   </div>
                 </div>

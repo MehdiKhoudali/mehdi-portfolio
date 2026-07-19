@@ -16,40 +16,54 @@ function formatTokens(tokens: number) {
   return new Intl.NumberFormat("en", { notation: "compact", maximumFractionDigits: 1 }).format(tokens);
 }
 
-function ResultFrame({ result, compact = false }: { result: PublishedBenchmarkResult; compact?: boolean }) {
+function ResultFrame({ result, taskTitle, compact = false }: { result: PublishedBenchmarkResult; taskTitle: string; compact?: boolean }) {
+  const passed = result.status === "Passed";
+
   return (
     <article className="flex min-w-0 flex-col overflow-hidden border border-white/15 bg-[#0a0a0a]">
       <div className="flex min-h-14 flex-wrap items-center gap-x-3 gap-y-2 border-b border-white/12 px-3 py-3 sm:px-4">
-        <span className="size-2 rounded-full bg-[#9ee4b3] shadow-[0_0_14px_rgba(158,228,179,0.45)]" />
+        <span className={`size-2 rounded-full ${passed ? "bg-[#9ee4b3] shadow-[0_0_14px_rgba(158,228,179,0.45)]" : "bg-[#f39b86] shadow-[0_0_14px_rgba(243,155,134,0.35)]"}`} />
         <strong className="text-sm font-medium text-white/88">{result.label}</strong>
         <span className="text-xs text-white/35">{result.model}</span>
         <span className="border border-white/12 px-2 py-1 text-[10px] uppercase tracking-[0.14em] text-white/42">
           {result.effort} reasoning
         </span>
-        <span className="ml-auto border border-[#9ee4b3]/20 bg-[#9ee4b3]/8 px-2 py-1 text-[10px] uppercase tracking-[0.14em] text-[#b5ecc5]">
+        <span className={`ml-auto border px-2 py-1 text-[10px] uppercase tracking-[0.14em] ${passed ? "border-[#9ee4b3]/20 bg-[#9ee4b3]/8 text-[#b5ecc5]" : "border-[#f39b86]/25 bg-[#f39b86]/8 text-[#ffc0b1]"}`}>
           {result.status}
         </span>
-        <a
-          className="border border-white/14 px-3 py-1.5 text-[11px] text-white/62 transition-colors hover:border-white/35 hover:bg-white hover:text-black"
-          href={result.previewUrl}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Open build
-        </a>
+        {result.previewUrl && (
+          <a
+            className="border border-white/14 px-3 py-1.5 text-[11px] text-white/62 transition-colors hover:border-white/35 hover:bg-white hover:text-black"
+            href={result.previewUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open build
+          </a>
+        )}
       </div>
-      <iframe
-        className={`w-full border-0 bg-white ${compact ? "h-[34rem]" : "h-[68vh] min-h-[34rem] max-h-[54rem]"}`}
-        src={result.previewUrl}
-        title={`${result.label} ${result.effort.toLowerCase()} reasoning result for the SaaS landing page task`}
-        sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-      />
+      {result.previewUrl ? (
+        <iframe
+          className={`w-full border-0 bg-white ${compact ? "h-[34rem]" : "h-[68vh] min-h-[34rem] max-h-[54rem]"}`}
+          src={result.previewUrl}
+          title={`${result.label} ${result.effort.toLowerCase()} reasoning result for the ${taskTitle} task`}
+          sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+        />
+      ) : (
+        <div className={`flex w-full items-center justify-center bg-[#0d0b0b] p-8 ${compact ? "h-[34rem]" : "h-[68vh] min-h-[34rem] max-h-[54rem]"}`}>
+          <div className="max-w-xl border border-[#f39b86]/20 bg-[#f39b86]/[0.035] p-6 sm:p-8">
+            <p className="text-[10px] uppercase tracking-[0.18em] text-[#f39b86]/70">Build did not pass</p>
+            <h3 className="mt-4 text-2xl font-medium tracking-[-0.025em] text-white/88">No preview was published.</h3>
+            <p className="mt-4 text-sm leading-6 text-white/48">{result.failureReason ?? "The generated implementation failed the production acceptance checks."}</p>
+          </div>
+        </div>
+      )}
     </article>
   );
 }
 
-export function BenchmarkResultViewer({ results }: { results: PublishedBenchmarkResult[] }) {
-  const initial = results.find((result) => result.effort === "Medium") ?? results[0];
+export function BenchmarkResultViewer({ results, taskTitle = "benchmark" }: { results: PublishedBenchmarkResult[]; taskTitle?: string }) {
+  const initial = results.find((result) => result.effort === "Medium" && result.status === "Passed") ?? results[0];
   const [selectedModel, setSelectedModel] = useState<BenchmarkModel>(initial.modelKey);
   const [selectedEffort, setSelectedEffort] = useState<BenchmarkEffort>(initial.effort);
   const [viewMode, setViewMode] = useState<ViewMode>("single");
@@ -129,7 +143,7 @@ export function BenchmarkResultViewer({ results }: { results: PublishedBenchmark
       <div className="p-3 sm:p-4 lg:p-6">
         {viewMode === "single" ? (
           <>
-            <ResultFrame result={selected} />
+            <ResultFrame result={selected} taskTitle={taskTitle} />
             <section className="mt-3 grid border border-white/15 bg-white/[0.018] lg:grid-cols-[1fr_1.35fr]" aria-label={`${selected.label} ${selected.effort} run evidence`}>
               <div className="grid grid-cols-2 border-b border-white/12 sm:grid-cols-3 lg:border-r lg:border-b-0">
                 {[
@@ -158,7 +172,7 @@ export function BenchmarkResultViewer({ results }: { results: PublishedBenchmark
           </>
         ) : (
           <div className="grid gap-3 xl:grid-cols-3">
-            {effortResults.map((result) => <ResultFrame compact key={result.id} result={result} />)}
+            {effortResults.map((result) => <ResultFrame compact key={result.id} result={result} taskTitle={taskTitle} />)}
           </div>
         )}
       </div>
