@@ -24,7 +24,7 @@ export default function PocketReefBenchmark() {
               <div className="flex flex-wrap items-center gap-3 text-[10px] uppercase tracking-[0.17em] text-white/38">
                 <span>Real task / {pocketReefTask.version}</span>
                 <span className="h-px w-8 bg-white/20" />
-                <span>Attempt 01</span>
+                <span>Attempts 01–02</span>
               </div>
               <h1 className="mt-6 max-w-4xl text-5xl leading-[0.92] font-semibold tracking-[-0.045em] text-white sm:text-7xl lg:text-[5.25rem]">
                 {pocketReefTask.title}
