@@ -15,6 +15,7 @@ type Benchmark = {
   tests: string[];
   status: string;
   preview: "landing" | "dashboard" | "visualization" | "game";
+  href?: string;
 };
 
 const benchmarks: Benchmark[] = [
@@ -27,8 +28,9 @@ const benchmarks: Benchmark[] = [
     description:
       "A complete product launch page built from a detailed brand, content, interaction, and responsive-design brief.",
     tests: ["Brief fidelity", "Responsive UI", "Accessibility"],
-    status: "Brief in review",
+    status: "3 models tested",
     preview: "landing",
+    href: "/tools/saas-landing-page",
   },
   {
     id: "screenshot-dashboard",
@@ -346,13 +348,9 @@ export function CodingBenchmarks() {
           </div>
 
           <div className="grid gap-3 md:grid-cols-2">
-            {visibleBenchmarks.map((benchmark, index) => (
-              <article
-                className="glass-card reveal group border border-white/15"
-                id={benchmark.id}
-                key={benchmark.id}
-                style={{ animationDelay: `${90 + index * 65}ms` }}
-              >
+            {visibleBenchmarks.map((benchmark, index) => {
+              const cardContent = (
+                <>
                 <div className="relative aspect-[16/9] overflow-hidden border-b border-white/12 bg-[#111]">
                   <BenchmarkPreview type={benchmark.preview} />
                   <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(0,0,0,0.28))] opacity-50" />
@@ -376,12 +374,25 @@ export function CodingBenchmarks() {
                       <span key={test}>{test}</span>
                     ))}
                     <span className="ml-auto flex items-center gap-2 text-white/65">
-                      Spec soon <ArrowIcon />
+                      {benchmark.href ? "View 3 builds" : "Spec soon"} <ArrowIcon />
                     </span>
                   </div>
                 </div>
-              </article>
-            ))}
+                </>
+              );
+              const className = "glass-card reveal group block border border-white/15 transition-colors hover:border-white/30";
+              const style = { animationDelay: `${90 + index * 65}ms` };
+
+              return benchmark.href ? (
+                <Link className={className} href={benchmark.href} id={benchmark.id} key={benchmark.id} style={style}>
+                  {cardContent}
+                </Link>
+              ) : (
+                <article className={className} id={benchmark.id} key={benchmark.id} style={style}>
+                  {cardContent}
+                </article>
+              );
+            })}
           </div>
         </section>
 

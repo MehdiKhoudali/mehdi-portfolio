@@ -16,6 +16,7 @@ const eslintConfig = defineConfig([
     "benchmarks/results/**",
     "benchmarks/tasks/**/starter/dist/**",
     "benchmarks/tasks/**/starter/node_modules/**",
+    "public/benchmarks/**/assets/**",
     "next-env.d.ts",
   ]),
 ]);
