@@ -14,7 +14,7 @@ type Benchmark = {
   description: string;
   tests: string[];
   status: string;
-  preview: "landing" | "dashboard" | "visualization" | "game";
+  preview: "landing" | "dashboard" | "visualization" | "game" | "creative";
   href?: string;
 };
 
@@ -67,6 +67,18 @@ const benchmarks: Benchmark[] = [
     tests: ["Game loop", "Input handling", "Visual polish"],
     status: "Mechanics in review",
     preview: "game",
+  },
+  {
+    id: "award-winning-creative-site",
+    number: "05",
+    title: "Award-winning creative site",
+    shortTitle: "Creative site",
+    category: "Visual",
+    description:
+      "An expressive campaign site testing original art direction, editorial typography, motion, transitions, and responsive creative development.",
+    tests: ["Art direction", "Motion design", "Responsive craft"],
+    status: "Brief in development",
+    preview: "creative",
   },
 ];
 
@@ -160,6 +172,29 @@ function BenchmarkPreview({ type }: { type: Benchmark["preview"] }) {
             {[28, 46, 21, 65, 42, 76, 54, 88, 61, 72, 48, 81].map((height, index) => (
               <span className="flex-1 bg-white/12" key={index} style={{ height: `${height / 2}px` }} />
             ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (type === "creative") {
+    return (
+      <div className="absolute inset-0 overflow-hidden bg-[#f0ff4a] text-[#111]">
+        <div className="absolute inset-x-4 top-4 z-10 flex items-center justify-between text-[8px] uppercase tracking-[0.18em]">
+          <span>Studio / 2026</span>
+          <span>Index / Work / About</span>
+        </div>
+        <div className="absolute -right-8 top-8 size-40 rounded-full border-[18px] border-[#ef5f3c] mix-blend-multiply" />
+        <div className="absolute -bottom-16 -left-8 size-52 rounded-full bg-[#725cff] mix-blend-multiply" />
+        <div className="absolute left-[54%] top-[46%] h-28 w-10 -translate-x-1/2 -translate-y-1/2 rotate-[24deg] bg-[#111]" />
+        <div className="absolute inset-x-4 bottom-4 z-10">
+          <p className="text-[2.15rem] leading-[0.76] font-semibold tracking-[-0.075em] uppercase">
+            Make<br />Noise.
+          </p>
+          <div className="mt-3 flex items-end justify-between border-t border-black/30 pt-2 text-[7px] uppercase tracking-[0.16em]">
+            <span>Independent creative direction</span>
+            <span>Scroll 01-05</span>
           </div>
         </div>
       </div>
