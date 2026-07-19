@@ -68,8 +68,10 @@ const benchmarks: Benchmark[] = [
     description:
       "A living miniature ecosystem testing deterministic simulation, emergent behavior, interactive controls, data storytelling, and animated world-building.",
     tests: ["Emergent behavior", "Simulation state", "Visual storytelling"],
-    status: "Benchmark ready",
+    status: "9 runs published",
     preview: "game",
+    href: "/tools/pocket-reef-life-simulation",
+    cta: "View 9 runs",
   },
 ];
 
