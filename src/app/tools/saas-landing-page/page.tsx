@@ -53,10 +53,6 @@ export default function SaasLandingPageBenchmark() {
                 <span className="text-white/58">{requirement}</span>
               </div>
             ))}
-            <div className="mt-5 flex flex-wrap items-center justify-between gap-3 font-mono text-[10px] text-white/25">
-              <span>Task hash</span>
-              <span className="break-all text-right">{saasLandingTask.hash}</span>
-            </div>
           </div>
         </section>
 

@@ -124,7 +124,6 @@ export function BenchmarkResultViewer({ results }: { results: PublishedBenchmark
                   <span className="border border-white/12 px-2 py-1">2 files changed</span>
                 </div>
                 <p className="mt-5 max-w-3xl text-sm leading-6 text-white/55">{selected.summary}</p>
-                <p className="mt-4 font-mono text-[11px] text-white/30">{selected.changedFiles.join(" / ")}</p>
               </div>
             </section>
           </>
