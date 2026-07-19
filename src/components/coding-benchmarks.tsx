@@ -239,7 +239,7 @@ export function CodingBenchmarks() {
           <div className="grid gap-12 py-12 sm:py-16 lg:grid-cols-[0.8fr_1.5fr] lg:items-center lg:gap-10 lg:py-20">
             <div className="reveal reveal-delay-1 lg:pr-2">
               <p className="mb-6 text-xs uppercase tracking-[0.18em] text-white/40">
-                Tool 01 / Frontier model field tests
+                Frontier model field tests
               </p>
               <h1 className="max-w-xl text-[2.7rem] leading-[0.96] font-semibold tracking-[-0.045em] text-white sm:text-5xl lg:text-[3rem]">
                 <span className="lg:whitespace-nowrap">FRONTIER MODELS.</span><br />REAL TASKS.
