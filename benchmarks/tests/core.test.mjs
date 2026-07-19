@@ -35,7 +35,7 @@ test("parses a benchmark run request", () => {
   );
 });
 
-test("loads and hashes the first task package", async () => {
+test("loads, hashes, and lists the task packages", async () => {
   const task = await loadTask("saas-landing-page@1.0.0");
   assert.equal(task.id, "saas-landing-page");
   assert.equal(task.version, "1.0.0");
@@ -44,6 +44,11 @@ test("loads and hashes the first task package", async () => {
 
   const tasks = await listTasks();
   assert.deepEqual(tasks, [
+    {
+      id: "award-winning-creative-site",
+      title: "Award-winning creative site from a detailed brief",
+      version: "1.0.0",
+    },
     {
       id: "saas-landing-page",
       title: "SaaS landing page from a detailed brief",

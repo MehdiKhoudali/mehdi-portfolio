@@ -33,8 +33,20 @@ const benchmarks: Benchmark[] = [
     href: "/tools/saas-landing-page",
   },
   {
-    id: "screenshot-dashboard",
+    id: "award-winning-creative-site",
     number: "02",
+    title: "Award-winning creative site",
+    shortTitle: "Creative site",
+    category: "Visual",
+    description:
+      "An expressive cultural site testing original art direction, editorial typography, motion, transitions, and responsive creative development.",
+    tests: ["Art direction", "Motion design", "Responsive craft"],
+    status: "Benchmark ready",
+    preview: "creative",
+  },
+  {
+    id: "screenshot-dashboard",
+    number: "03",
     title: "Screenshot-to-code dashboard",
     shortTitle: "Dashboard",
     category: "Visual",
@@ -43,18 +55,6 @@ const benchmarks: Benchmark[] = [
     tests: ["Visual similarity", "Interactions", "Mobile adaptation"],
     status: "Reference in progress",
     preview: "dashboard",
-  },
-  {
-    id: "data-visualization",
-    number: "03",
-    title: "Interactive data visualization",
-    shortTitle: "Data visualization",
-    category: "Interaction",
-    description:
-      "A dense dataset turned into an explorable interface with filtering, tooltips, time controls, and clear storytelling.",
-    tests: ["Data accuracy", "Exploration", "Performance"],
-    status: "Dataset selected",
-    preview: "visualization",
   },
   {
     id: "browser-game",
@@ -67,18 +67,6 @@ const benchmarks: Benchmark[] = [
     tests: ["Game loop", "Input handling", "Visual polish"],
     status: "Mechanics in review",
     preview: "game",
-  },
-  {
-    id: "award-winning-creative-site",
-    number: "05",
-    title: "Award-winning creative site",
-    shortTitle: "Creative site",
-    category: "Visual",
-    description:
-      "An expressive campaign site testing original art direction, editorial typography, motion, transitions, and responsive creative development.",
-    tests: ["Art direction", "Motion design", "Responsive craft"],
-    status: "Brief in development",
-    preview: "creative",
   },
 ];
 
