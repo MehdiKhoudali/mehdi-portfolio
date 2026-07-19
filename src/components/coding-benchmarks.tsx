@@ -28,7 +28,7 @@ const benchmarks: Benchmark[] = [
     description:
       "A complete product launch page built from a detailed brand, content, interaction, and responsive-design brief.",
     tests: ["Brief fidelity", "Responsive UI", "Accessibility"],
-    status: "3 models tested",
+    status: "9 builds published",
     preview: "landing",
     href: "/tools/saas-landing-page",
   },
@@ -374,7 +374,7 @@ export function CodingBenchmarks() {
                       <span key={test}>{test}</span>
                     ))}
                     <span className="ml-auto flex items-center gap-2 text-white/65">
-                      {benchmark.href ? "View 3 builds" : "Spec soon"} <ArrowIcon />
+                      {benchmark.href ? "View 9 builds" : "Spec soon"} <ArrowIcon />
                     </span>
                   </div>
                 </div>

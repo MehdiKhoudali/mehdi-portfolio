@@ -31,8 +31,8 @@ export default function SaasLandingPageBenchmark() {
             </div>
             <div className="grid grid-cols-3 border border-white/15 bg-white/[0.02]">
               <div className="border-r border-white/12 p-4 sm:p-5"><span className="text-[10px] uppercase tracking-[0.14em] text-white/30">Models</span><strong className="mt-2 block text-2xl text-white/80">03</strong></div>
-              <div className="border-r border-white/12 p-4 sm:p-5"><span className="text-[10px] uppercase tracking-[0.14em] text-white/30">Passed</span><strong className="mt-2 block text-2xl text-[#b5ecc5]">03</strong></div>
-              <div className="p-4 sm:p-5"><span className="text-[10px] uppercase tracking-[0.14em] text-white/30">Effort</span><strong className="mt-2 block text-base text-white/80">Medium</strong></div>
+              <div className="border-r border-white/12 p-4 sm:p-5"><span className="text-[10px] uppercase tracking-[0.14em] text-white/30">Passed</span><strong className="mt-2 block text-2xl text-[#b5ecc5]">09</strong></div>
+              <div className="p-4 sm:p-5"><span className="text-[10px] uppercase tracking-[0.14em] text-white/30">Efforts</span><strong className="mt-2 block text-2xl text-white/80">03</strong></div>
             </div>
           </div>
         </header>
