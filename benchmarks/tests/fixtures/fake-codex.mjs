@@ -33,10 +33,12 @@ if (!workspace || !finalMessagePath || !prompt.includes("Controlled coding task"
   process.exit(3);
 }
 
-await fs.writeFile(
-  path.join(workspace, "src", "App.jsx"),
-  `export function App() {\n  return <main><h1>Relay fixture build</h1></main>;\n}\n`,
-);
+if (valueAfter("--model") !== "fixture-no-change") {
+  await fs.writeFile(
+    path.join(workspace, "src", "App.jsx"),
+    `export function App() {\n  return <main><h1>Relay fixture build</h1></main>;\n}\n`,
+  );
+}
 await fs.writeFile(finalMessagePath, "Fixture run completed successfully.\n");
 
 console.log(JSON.stringify({ type: "thread.started", thread_id: "fixture-thread" }));

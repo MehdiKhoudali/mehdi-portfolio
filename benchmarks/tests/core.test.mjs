@@ -64,6 +64,7 @@ test("builds capability-aware Codex arguments", () => {
         ignoreRules: true,
         ignoreUserConfig: true,
       },
+      platform: "win32",
     }),
     [
       "exec",
@@ -75,6 +76,10 @@ test("builds capability-aware Codex arguments", () => {
       "--ignore-user-config",
       "--ignore-rules",
       "--ephemeral",
+      "-c",
+      'approval_policy="never"',
+      "-c",
+      'windows.sandbox="unelevated"',
       "-c",
       'model_reasoning_effort="medium"',
       "-C",

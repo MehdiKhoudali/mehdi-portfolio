@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
 import { promises as fs } from "node:fs";
 import path from "node:path";
+import process from "node:process";
 import { fileURLToPath } from "node:url";
 
 export const BENCHMARK_ROOT = path.resolve(
@@ -17,6 +18,7 @@ const requiredTaskFields = [
   "setupCommands",
   "acceptanceCommands",
   "protectedPaths",
+  "minimumChangedFiles",
   "limits",
 ];
 
@@ -115,6 +117,10 @@ export async function loadTask(reference, benchmarkRoot = BENCHMARK_ROOT) {
     }
   }
 
+  if (!Number.isInteger(manifest.minimumChangedFiles) || manifest.minimumChangedFiles < 0) {
+    throw new Error("Task 'minimumChangedFiles' must be a non-negative integer");
+  }
+
   const briefPath = path.resolve(directory, manifest.brief);
   const starterPath = path.resolve(directory, manifest.starter);
   assertInside(directory, briefPath, "brief");
@@ -166,12 +172,17 @@ export function buildCodexArgs({
   workspace,
   finalMessagePath,
   capabilities = {},
+  platform = process.platform,
 }) {
   const args = ["exec", "--json", "--model", model, "--sandbox", "workspace-write"];
 
   if (capabilities.ignoreUserConfig) args.push("--ignore-user-config");
   if (capabilities.ignoreRules) args.push("--ignore-rules");
   if (capabilities.ephemeral) args.push("--ephemeral");
+  if (capabilities.ignoreUserConfig) {
+    args.push("-c", 'approval_policy="never"');
+    if (platform === "win32") args.push("-c", 'windows.sandbox="unelevated"');
+  }
   if (effort) args.push("-c", `model_reasoning_effort=${JSON.stringify(effort)}`);
 
   args.push("-C", workspace, "--output-last-message", finalMessagePath, "-");

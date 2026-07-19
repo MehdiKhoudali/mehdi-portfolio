@@ -65,3 +65,52 @@ test("runs the evidence pipeline end to end without contacting a model", { timeo
     }
   }
 });
+
+test("rejects an unchanged starter even when every acceptance command passes", { timeout: 120_000 }, async () => {
+  let resultDirectory;
+
+  try {
+    const result = spawnSync(
+      process.execPath,
+      [
+        runner,
+        "--task",
+        "saas-landing-page@1.0.0",
+        "--model",
+        "fixture-no-change",
+        "--attempt",
+        "1",
+      ],
+      {
+        cwd: path.resolve(BENCHMARK_ROOT, ".."),
+        encoding: "utf8",
+        env: { ...process.env, BENCHMARK_CODEX_RUNTIME: fakeCodex },
+        timeout: 120_000,
+        windowsHide: true,
+      },
+    );
+
+    assert.equal(result.status, 1, result.stderr || result.stdout);
+    const summary = JSON.parse(result.stdout);
+    resultDirectory = summary.resultDirectory;
+
+    assert.equal(summary.status, "failed");
+    assert.equal(summary.functionalPassed, false);
+
+    const metadata = JSON.parse(
+      await fs.readFile(path.join(resultDirectory, "metadata.json"), "utf8"),
+    );
+    assert.equal(metadata.changeSet.passed, false);
+    assert.equal(metadata.changeSet.minimumRequired, 1);
+    assert.deepEqual(metadata.changeSet.changedPaths, []);
+    assert.ok(metadata.acceptance.every((command) => command.exitCode === 0));
+    assert.equal((await fs.readFile(path.join(resultDirectory, "changes.patch"), "utf8")), "");
+  } finally {
+    if (resultDirectory) {
+      await fs.rm(resultDirectory, { recursive: true, force: true });
+      const taskResults = path.dirname(resultDirectory);
+      const remaining = await fs.readdir(taskResults).catch(() => []);
+      if (remaining.length === 0) await fs.rm(taskResults, { recursive: true, force: true });
+    }
+  }
+});

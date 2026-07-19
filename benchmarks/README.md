@@ -83,6 +83,7 @@ source/                Final source without dependencies or build output
 ```
 
 `functionalPassed` is true only when Codex exits normally, every acceptance command passes, the run does not time out, and no protected task file changes.
+The task may also require a minimum number of source changes, including newly created files. This prevents an untouched, already-buildable starter from being recorded as a successful implementation.
 
 ## Fair-comparison protocol
 

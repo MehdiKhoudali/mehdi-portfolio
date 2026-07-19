@@ -17,6 +17,7 @@
     "package.json",
     "package-lock.json"
   ],
+  "minimumChangedFiles": 1,
   "limits": {
     "timeoutMinutes": 30,
     "commandTimeoutMinutes": 10,

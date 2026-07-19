@@ -133,6 +133,7 @@ const plan = {
   setupCommands: task.setupCommands,
   acceptanceCommands: task.acceptanceCommands,
   protectedPaths: task.protectedPaths,
+  minimumChangedFiles: task.minimumChangedFiles,
   promptSha256: sha256(prompt),
 };
 
@@ -157,6 +158,7 @@ const metadata = {
   setup: [],
   acceptance: [],
   integrity: null,
+  changeSet: null,
   codexResult: null,
   usage: null,
   error: null,
@@ -222,6 +224,31 @@ try {
 
   metadata.integrity = await checkIntegrity(workspace, task.protectedPaths);
 
+  const statusResult = await runCommand({
+    command: resolveExecutable("git"),
+    args: ["status", "--porcelain=v1", "--untracked-files=all"],
+    cwd: workspace,
+    timeoutMs: 30_000,
+  });
+  const changedPaths = changedPathsFromStatus(statusResult.stdout);
+  metadata.changeSet = {
+    minimumRequired: task.minimumChangedFiles,
+    changedPaths,
+    passed:
+      statusResult.exitCode === 0 && changedPaths.length >= task.minimumChangedFiles,
+  };
+  await fs.writeFile(path.join(resultDirectory, "git-status.txt"), statusResult.stdout);
+
+  const intentToAddResult = await runCommand({
+    command: resolveExecutable("git"),
+    args: ["add", "--intent-to-add", "--all"],
+    cwd: workspace,
+    timeoutMs: 30_000,
+  });
+  if (intentToAddResult.exitCode !== 0) {
+    throw new Error("Could not prepare the complete benchmark patch");
+  }
+
   await runCommand({
     command: resolveExecutable("git"),
     args: ["diff", "--binary", "HEAD"],
@@ -230,14 +257,6 @@ try {
     timeoutMs: 30_000,
   });
 
-  const statusResult = await runCommand({
-    command: resolveExecutable("git"),
-    args: ["status", "--porcelain=v1"],
-    cwd: workspace,
-    timeoutMs: 30_000,
-  });
-  await fs.writeFile(path.join(resultDirectory, "git-status.txt"), statusResult.stdout);
-
   await copySource(workspace, path.join(resultDirectory, "source"));
 
   const acceptancePassed = metadata.acceptance.every((result) => result.exitCode === 0);
@@ -245,7 +264,8 @@ try {
     metadata.codexResult.exitCode === 0 &&
     !metadata.codexResult.timedOut &&
     acceptancePassed &&
-    metadata.integrity.passed;
+    metadata.integrity.passed &&
+    metadata.changeSet.passed;
   metadata.status = metadata.codexResult.timedOut
     ? "timed_out"
     : metadata.functionalPassed
@@ -292,8 +312,22 @@ if (!metadata.functionalPassed) process.exitCode = 1;
 
 async function initializeRepository(cwd) {
   const git = resolveExecutable("git");
+  const initResult = await runCommand({
+    command: git,
+    args: ["init", "--quiet"],
+    cwd,
+    timeoutMs: 30_000,
+  });
+  if (initResult.exitCode !== 0) {
+    throw new Error("Could not initialize benchmark repository: git init --quiet");
+  }
+
+  await fs.appendFile(
+    path.join(cwd, ".git", "info", "exclude"),
+    "\nnode_modules/\ndist/\n.next/\n",
+  );
+
   const commands = [
-    ["init", "--quiet"],
     ["config", "user.name", "Coding Model Field Tests"],
     ["config", "user.email", "benchmarks@local.invalid"],
     ["add", "--all"],
@@ -306,6 +340,19 @@ async function initializeRepository(cwd) {
       throw new Error(`Could not initialize benchmark repository: git ${args.join(" ")}`);
     }
   }
+}
+
+function changedPathsFromStatus(contents) {
+  return contents
+    .split(/\r?\n/)
+    .filter(Boolean)
+    .map((line) => line.slice(3).split(" -> ").at(-1).replaceAll("\\", "/"))
+    .filter(
+      (file) =>
+        !["node_modules/", "dist/", ".next/"].some((prefix) =>
+          file.startsWith(prefix),
+        ),
+    );
 }
 
 async function runCommandGroup({ commands, cwd, directory, timeoutMs }) {
