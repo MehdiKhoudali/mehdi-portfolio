@@ -3,7 +3,7 @@
 - Source visual truth: `C:\Users\mehdi\.codex\generated_images\019f76c3-6e0a-7071-a87f-221efa1344f1\exec-abc657e6-f731-477d-b221-879c2cb940f6.png`
 - Spacing annotation reference: `C:\Users\mehdi\AppData\Local\Temp\codex-clipboard-d783dccb-fa4a-4256-b310-717cfbe7ba6d.png`
 - Desktop implementation: `C:\Users\mehdi\AppData\Local\Temp\coding-hero-audit\03-implemented-desktop.png`
-- Latest desktop implementation: `C:\Users\mehdi\AppData\Local\Temp\coding-hero-audit\08-consistent-action-spacing.png`
+- Latest desktop implementation: `C:\Users\mehdi\AppData\Local\Temp\coding-hero-audit\10-frontier-model-copy.png`
 - Mobile implementation: `C:\Users\mehdi\AppData\Local\Temp\coding-hero-audit\05-implemented-mobile.png`
 - Full-view comparison: `C:\Users\mehdi\AppData\Local\Temp\coding-hero-audit\06-reference-vs-implementation.png`
 - Focused comparison: `C:\Users\mehdi\AppData\Local\Temp\coding-hero-audit\07-focused-comparison.png`
@@ -33,6 +33,10 @@
    - P2: the primary action distributed its arrow across the full button width while the secondary action used a fixed text-to-icon gap.
    - Fix: both actions now use the same 12 px text-to-arrow gap.
    - Post-fix evidence: `08-consistent-action-spacing.png`; computed `column-gap` is 12 px for both links.
+4. Frontier-model messaging clarification
+   - P2: the hero described different builds but did not explicitly say that the subjects are frontier coding models tested on real software tasks.
+   - Fix: updated the eyebrow, headline, supporting copy, and comparison-panel labels while preserving the selected layout.
+   - Post-fix evidence: `10-frontier-model-copy.png`; the desktop headline remains a compact two-line lockup.
 
 ## Interaction and Runtime Checks
 

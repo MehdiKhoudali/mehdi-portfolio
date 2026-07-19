@@ -239,13 +239,14 @@ export function CodingBenchmarks() {
           <div className="grid gap-12 py-12 sm:py-16 lg:grid-cols-[0.8fr_1.5fr] lg:items-center lg:gap-10 lg:py-20">
             <div className="reveal reveal-delay-1 lg:pr-2">
               <p className="mb-6 text-xs uppercase tracking-[0.18em] text-white/40">
-                Tool 01 / Real software field tests
+                Tool 01 / Frontier model field tests
               </p>
-              <h1 className="max-w-xl text-[2.7rem] leading-[0.96] font-semibold tracking-[-0.045em] text-white sm:text-5xl lg:text-[3.45rem]">
-                ONE BRIEF.<br /><span className="lg:whitespace-nowrap">DIFFERENT BUILDS.</span>
+              <h1 className="max-w-xl text-[2.7rem] leading-[0.96] font-semibold tracking-[-0.045em] text-white sm:text-5xl lg:text-[3rem]">
+                <span className="lg:whitespace-nowrap">FRONTIER MODELS.</span><br />REAL TASKS.
               </h1>
               <p className="mt-7 max-w-md text-base leading-7 text-white/55 sm:text-lg sm:leading-8">
-                See how coding models turn the same software task into working products.
+                We test frontier coding models on the same real software tasks,
+                then publish the working builds and complete evidence—not benchmark scores.
               </p>
               <div className="mt-9 flex flex-wrap items-center gap-4 sm:gap-6">
                 <Link
@@ -266,7 +267,7 @@ export function CodingBenchmarks() {
             <div className="reveal reveal-delay-2 grid gap-3 lg:grid-cols-[14rem_1fr]">
               <aside className="glass-panel border border-white/15">
                 <div className="border-b border-white/12 px-4 py-4 text-[10px] uppercase tracking-[0.2em] text-white/42">
-                  The same brief
+                  The real task
                 </div>
                 <div className="p-4">
                   <span className="inline-flex border border-white/12 bg-white/[0.045] px-2 py-1 text-[10px] text-white/48">
@@ -293,7 +294,7 @@ export function CodingBenchmarks() {
 
               <section className="glass-panel border border-white/15" aria-label="Example model builds">
                 <div className="border-b border-white/12 px-4 py-4 text-[10px] uppercase tracking-[0.2em] text-white/42">
-                  Different builds
+                  Frontier model builds
                 </div>
                 <div className="grid sm:grid-cols-3">
                   {heroBuilds.map((build) => (
