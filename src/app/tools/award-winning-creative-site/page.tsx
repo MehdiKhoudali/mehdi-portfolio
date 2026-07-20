@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BenchmarkResultViewer } from "@/components/benchmark-result-viewer";
+import { BenchmarkTaskBrief } from "@/components/benchmark-task-brief";
 import { creativeSiteResults, creativeSiteTask } from "@/lib/benchmark-results";
+import { readBenchmarkTaskBrief } from "@/lib/benchmark-task-files";
 
 export const metadata: Metadata = {
   title: "Award-winning Creative Site — Coding Model Field Test",
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
 
 export default function CreativeSiteBenchmark() {
   const passedCount = creativeSiteResults.filter((result) => result.status === "Passed").length;
+  const taskBrief = readBenchmarkTaskBrief(creativeSiteTask.id, creativeSiteTask.version);
 
   return (
     <main className="grain min-h-screen bg-[#070707] text-[#efefea]">
@@ -57,6 +60,11 @@ export default function CreativeSiteBenchmark() {
             ))}
           </div>
         </section>
+
+        <BenchmarkTaskBrief
+          downloadUrl="/benchmarks/award-winning-creative-site/task.md"
+          markdown={taskBrief}
+        />
 
         <footer className="glass-section mt-auto flex flex-wrap items-center justify-between gap-4 p-5 text-sm text-white/40 sm:p-7 lg:p-8">
           <p>Mehdi K / Coding model field tests</p>
