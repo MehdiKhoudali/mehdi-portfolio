@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "benchmark:list": "node benchmarks/bin/run.mjs --list",
+    "benchmark:dry-run": "node benchmarks/bin/run.mjs --task saas-landing-page@1.0.0 --model example-model --dry-run",
+    "benchmark:run": "node benchmarks/bin/run.mjs",
+    "benchmark:test": "node --test benchmarks/tests/*.test.mjs"
   },
   "dependencies": {
     "next": "16.2.6",

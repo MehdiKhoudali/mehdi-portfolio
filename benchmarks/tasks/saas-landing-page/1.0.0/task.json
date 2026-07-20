@@ -1,0 +1,26 @@
+{
+  "id": "saas-landing-page",
+  "version": "1.0.0",
+  "title": "SaaS landing page from a detailed brief",
+  "brief": "brief.md",
+  "starter": "starter",
+  "setupCommands": [
+    ["npm", "ci", "--ignore-scripts"]
+  ],
+  "acceptanceCommands": [
+    ["npm", "run", "build"],
+    ["npm", "run", "verify"]
+  ],
+  "protectedPaths": [
+    "AGENTS.md",
+    "BRIEF.md",
+    "package.json",
+    "package-lock.json"
+  ],
+  "minimumChangedFiles": 1,
+  "limits": {
+    "timeoutMinutes": 30,
+    "commandTimeoutMinutes": 10,
+    "reasoningEffort": "medium"
+  }
+}

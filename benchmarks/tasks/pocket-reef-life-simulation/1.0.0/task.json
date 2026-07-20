@@ -1,0 +1,16 @@
+{
+  "id": "pocket-reef-life-simulation",
+  "version": "1.0.0",
+  "title": "Pocket Reef life simulation from a detailed brief",
+  "brief": "brief.md",
+  "starter": "starter",
+  "setupCommands": [["npm", "ci", "--ignore-scripts"]],
+  "acceptanceCommands": [["npm", "run", "build"], ["npm", "run", "verify"]],
+  "protectedPaths": ["AGENTS.md", "BRIEF.md", "package.json", "package-lock.json", "scripts/verify-simulation.mjs"],
+  "minimumChangedFiles": 2,
+  "limits": {
+    "timeoutMinutes": 60,
+    "commandTimeoutMinutes": 10,
+    "reasoningEffort": "medium"
+  }
+}

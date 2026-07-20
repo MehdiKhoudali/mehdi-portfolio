@@ -33,9 +33,14 @@ export default function Home() {
               <a className="transition-colors hover:text-white/85" href="#top">
                 Home
               </a>
-              <a className="transition-colors hover:text-white/85" href="#about">
-                About
-              </a>
+              <div className="flex items-center gap-5 sm:gap-7">
+                <a className="transition-colors hover:text-white/85" href="#about">
+                  About
+                </a>
+                <Link className="transition-colors hover:text-white/85" href="/tools">
+                  Tools
+                </Link>
+              </div>
             </nav>
 
             <div className="reveal reveal-delay-1">

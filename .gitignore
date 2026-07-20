@@ -41,5 +41,12 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# local benchmark runs and generated task artifacts
+/benchmarks/.runs/
+/benchmarks/results/*
+!/benchmarks/results/.gitkeep
+/benchmarks/tasks/**/starter/node_modules/
+/benchmarks/tasks/**/starter/dist/
+
 # Local Netlify folder
 .netlify
