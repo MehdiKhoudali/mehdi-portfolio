@@ -48,20 +48,8 @@ const benchmarks: Benchmark[] = [
     cta: "View 9 runs",
   },
   {
-    id: "screenshot-dashboard",
-    number: "03",
-    title: "Screenshot-to-code dashboard",
-    shortTitle: "Dashboard",
-    category: "Visual",
-    description:
-      "A working dashboard reconstructed from a single visual reference, local assets, and a concise interaction contract.",
-    tests: ["Visual similarity", "Interactions", "Mobile adaptation"],
-    status: "Reference in progress",
-    preview: "dashboard",
-  },
-  {
     id: "pocket-reef-life-simulation",
-    number: "04",
+    number: "03",
     title: "Pocket Reef life simulation",
     shortTitle: "Life simulation",
     category: "Interaction",
