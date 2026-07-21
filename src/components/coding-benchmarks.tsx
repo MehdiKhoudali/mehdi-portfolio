@@ -284,7 +284,7 @@ export function CodingBenchmarks() {
               </div>
             </div>
 
-            <div className="reveal reveal-delay-2 grid gap-3 lg:grid-cols-[14rem_1fr]">
+            <div className="reveal reveal-delay-2 hidden gap-3 md:grid lg:grid-cols-[14rem_1fr]">
               <aside className="glass-panel border border-white/15">
                 <div className="border-b border-white/12 px-4 py-4 text-[10px] uppercase tracking-[0.2em] text-white/42">
                   The real task
@@ -422,32 +422,20 @@ export function CodingBenchmarks() {
             </div>
             <div className="border-t border-white/18">
               {[
-                ["01", "Same task", "Every agent receives the same versioned brief, assets, seed, and execution limits."],
-                ["02", "No repairs", "Failures remain part of the record. Published output is never manually corrected."],
-                ["03", "Complete evidence", "Previews sit beside build checks, interactions, screenshots, transcripts, time, and cost."],
-                ["04", "Repeatable runs", "Official results include multiple attempts, not a hand-picked best generation."],
+                ["01", "Versioned input", "Every model receives the same immutable task version: the exact Markdown brief, starter repository, supplied assets, dependency lockfile, and acceptance commands. The task hash changes whenever any of those inputs change."],
+                ["02", "Controlled environment", "Runs start from a fresh isolated copy with network access disabled, protected benchmark files locked, and identical execution limits. Models can edit the application source, but cannot change the rules used to judge it."],
+                ["03", "Reasoning levels", "Each model is tested independently at low, medium, and high reasoning effort. Model identity and reasoning effort are recorded with the run so visual quality, reliability, time, and token usage can be compared without mixing configurations."],
+                ["04", "Automated verification", "A model response is not considered a pass by itself. The generated project must compile, produce the expected artifacts, preserve protected files, contain meaningful source changes, and pass any task-specific functional checks."],
+                ["05", "Failures and reruns", "Failed output remains part of the evidence and is never manually repaired. A rerun receives a new attempt number and a clean workspace, allowing a successful retry to be published without rewriting the original failure."],
+                ["06", "Published evidence", "Every result records its task and prompt hashes, model configuration, duration, token usage, changed files, build outcome, and final source snapshot. Passing builds are published as interactive previews beside that evidence."],
               ].map(([number, title, description], index) => (
-                <div className="glass-row reveal grid gap-3 border-b border-white/15 px-4 py-5 sm:grid-cols-[2.5rem_0.45fr_1fr] sm:gap-5 sm:px-5" key={title} style={{ animationDelay: `${120 + index * 60}ms` }}>
+                <div className="glass-row reveal grid gap-3 border-b border-white/15 px-4 py-6 sm:grid-cols-[2.5rem_0.42fr_1fr] sm:gap-5 sm:px-5" key={title} style={{ animationDelay: `${120 + index * 60}ms` }}>
                   <span className="text-xs text-white/25">{number}</span>
                   <h3 className="text-lg text-white/80">{title}</h3>
-                  <p className="text-sm leading-6 text-white/48">{description}</p>
+                  <p className="max-w-3xl text-sm leading-6 text-white/48">{description}</p>
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        <section className="glass-section p-4 sm:p-6 lg:p-8">
-          <div className="reveal grid min-h-72 items-end gap-10 border border-white/15 bg-[radial-gradient(circle_at_82%_12%,rgba(255,255,255,0.1),transparent_28%),linear-gradient(135deg,rgba(255,255,255,0.035),rgba(255,255,255,0.008))] p-6 sm:p-8 lg:grid-cols-[1fr_auto]">
-            <div>
-              <p className="mb-4 text-xs uppercase tracking-[0.18em] text-white/40">Currently in the lab</p>
-              <h2 className="max-w-4xl text-4xl leading-[0.96] font-semibold tracking-[-0.04em] sm:text-6xl">
-                The first agents enter the suite soon.
-              </h2>
-            </div>
-            <Link className="flex items-center gap-3 border border-white/20 px-5 py-3 text-sm text-white/72 transition-colors hover:border-white/40 hover:bg-white hover:text-black" href="/">
-              Back to portfolio <ArrowIcon />
-            </Link>
           </div>
         </section>
 

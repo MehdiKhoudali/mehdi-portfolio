@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BenchmarkResultViewer } from "@/components/benchmark-result-viewer";
+import { BenchmarkTaskBrief } from "@/components/benchmark-task-brief";
 import { pocketReefResults, pocketReefTask } from "@/lib/benchmark-results";
+import { readBenchmarkTaskBrief } from "@/lib/benchmark-task-files";
 
 export const metadata: Metadata = {
   title: "Pocket Reef Life Simulation — Coding Model Field Test",
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
 
 export default function PocketReefBenchmark() {
   const passedCount = pocketReefResults.filter((result) => result.status === "Passed").length;
+  const taskBrief = readBenchmarkTaskBrief(pocketReefTask.id, pocketReefTask.version);
 
   return (
     <main className="grain min-h-screen bg-[#070707] text-[#efefea]">
@@ -57,6 +60,11 @@ export default function PocketReefBenchmark() {
             ))}
           </div>
         </section>
+
+        <BenchmarkTaskBrief
+          downloadUrl="/benchmarks/pocket-reef-life-simulation/task.md"
+          markdown={taskBrief}
+        />
 
         <footer className="glass-section mt-auto flex flex-wrap items-center justify-between gap-4 p-5 text-sm text-white/40 sm:p-7 lg:p-8">
           <p>Mehdi K / Coding model field tests</p>
