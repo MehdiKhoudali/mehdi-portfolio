@@ -1,59 +1,36 @@
 # Design QA
 
-- Source visual truth: `C:\Users\mehdi\.codex\generated_images\019f76c3-6e0a-7071-a87f-221efa1344f1\exec-abc657e6-f731-477d-b221-879c2cb940f6.png`
-- Spacing annotation reference: `C:\Users\mehdi\AppData\Local\Temp\codex-clipboard-d783dccb-fa4a-4256-b310-717cfbe7ba6d.png`
-- Compare-toggle reference: `C:\Users\mehdi\AppData\Local\Temp\codex-clipboard-bc603263-b30f-42b3-afa9-2ca40f8014cb.png`
-- Desktop implementation: `C:\Users\mehdi\AppData\Local\Temp\coding-hero-audit\03-implemented-desktop.png`
-- Latest desktop implementation: `C:\Users\mehdi\AppData\Local\Temp\coding-hero-audit\10-frontier-model-copy.png`
-- Compare-toggle implementation: `C:\Users\mehdi\AppData\Local\Temp\compare-toggle-full.png`
-- Mobile implementation: `C:\Users\mehdi\AppData\Local\Temp\coding-hero-audit\05-implemented-mobile.png`
-- Full-view comparison: `C:\Users\mehdi\AppData\Local\Temp\coding-hero-audit\06-reference-vs-implementation.png`
-- Focused comparison: `C:\Users\mehdi\AppData\Local\Temp\compare-toggle-qa.png`
-- Viewports: 1440 x 900 desktop; 1280 x 720 compare toggle; 390 x 844 mobile
-- State: default hero; task CTA target; Visual gallery filter selected; Compare all selected
+- Gallery composition reference: `C:\Users\mehdi\AppData\Local\Temp\codex-clipboard-d50e2a83-dce0-4032-a1d7-fedf9708ce28.png`
+- Abstract-thumbnail art direction: `C:\Users\mehdi\AppData\Local\Temp\codex-clipboard-9337a7a3-0c5e-4321-b70f-d458a7e3b60f.png`
+- Desktop implementation: `C:\Users\mehdi\AppData\Local\Temp\tools-gallery-desktop-viewport.png`
+- Mobile implementation: `C:\Users\mehdi\AppData\Local\Temp\tools-gallery-mobile-settled.png`
+- Combined comparison: `C:\Users\mehdi\AppData\Local\Temp\tools-gallery-qa-comparison.png`
+- Viewports: 1425 x 900 desktop; 390 x 844 mobile
+- State: default tools page with the `All` gallery filter selected
 
 ## Findings
 
 - No actionable P0, P1, or P2 differences remain.
-- Typography: Bricolage Grotesque, compact display sizing, tight tracking, and the two-line desktop headline match the reference hierarchy. Mobile wraps without clipping. The Compare all label now stays on one line.
-- Spacing and layout: the asymmetric copy / brief / builds composition, hero height, section boundary, panel density, and gallery reveal match the selected direction. The view toggle uses equal columns in a stable 240px desktop frame and a full-width mobile frame.
-- Colors and tokens: the existing black grain, smoked glass, off-white type, translucent borders, and restrained monochrome controls remain consistent with the portfolio system and the reference.
-- Image quality and asset fidelity: the build specimens reuse the app's crisp, responsive coded previews instead of low-resolution placeholders. Their subjects and monochrome art direction match the reference.
-- Copy and content: the selected headline, supporting statement, CTAs, shared brief, build framing, and Compare all label are present.
+- Typography: the centered serif `Task gallery` heading, restrained uppercase eyebrow, and compact filter labels preserve the approved hierarchy on desktop and mobile.
+- Spacing and layout: the gallery heading and filters remain centered as in the selected reference. The previous task/build showcase has been removed, and the hero content now occupies a clean centered column.
+- Colors and tokens: the existing black grain, off-white type, translucent borders, and monochrome controls remain unchanged. The new cobalt, coral, and emerald artwork introduces color without changing the portfolio system.
+- Image quality and asset fidelity: all three task thumbnails are dedicated 1200 x 675 WebP assets with grain, soft luminous arcs, and dark edge falloff matching the supplied art direction. They are rendered responsively with `next/image` and do not stretch.
+- Copy and content: task names remain legible over the artwork and repeat below as the card title, preserving both the visual-label treatment and descriptive hierarchy.
 
 ## Comparison History
 
-1. First desktop capture: `02-implemented-desktop.png`
-   - P2: headline wrapped to three lines instead of the reference's two-line composition.
-   - Fix: widened the editorial copy track, reduced the large-screen display size, and kept the second line together at the desktop breakpoint.
-   - Post-fix evidence: `03-implemented-desktop.png` and `07-focused-comparison.png`.
-2. First mobile capture: `04-implemented-mobile.png`
-   - P2: the desktop no-wrap treatment caused horizontal overflow and clipped the headline.
-   - Fix: scoped no-wrap to large screens only.
-   - Post-fix evidence: `05-implemented-mobile.png`; measured document `scrollWidth` equals `clientWidth` (375 px).
-3. CTA spacing annotation: `codex-clipboard-d783dccb-fa4a-4256-b310-717cfbe7ba6d.png`
-   - P2: the primary action distributed its arrow across the full button width while the secondary action used a fixed text-to-icon gap.
-   - Fix: both actions now use the same 12 px text-to-arrow gap.
-   - Post-fix evidence: `08-consistent-action-spacing.png`; computed `column-gap` is 12 px for both links.
-4. Frontier-model messaging clarification
-   - P2: the hero described different builds but did not explicitly say that the subjects are frontier coding models tested on real software tasks.
-   - Fix: updated the eyebrow, headline, supporting copy, and comparison-panel labels while preserving the selected layout.
-   - Post-fix evidence: `10-frontier-model-copy.png`; the desktop headline remains a compact two-line lockup.
-5. Compare-toggle sizing: `codex-clipboard-bc603263-b30f-42b3-afa9-2ca40f8014cb.png`
-   - P2: Compare all compressed into two lines inside a narrow flex item.
-   - Fix: replaced the flexible action row with a two-column grid, set a stable desktop width, and prevented label wrapping.
-   - Post-fix evidence: `compare-toggle-qa.png`; the focused comparison shows equal-width single-line actions. Browser measurement reports a 240px group and an approximately 115px selected button.
+1. Initial mobile capture caught the gallery during its reveal transition and appeared blurred.
+   - Resolution: waited for the transition to settle and recaptured the same 390 x 844 state.
+   - Post-fix evidence: `C:\Users\mehdi\AppData\Local\Temp\tools-gallery-mobile-settled.png`.
+2. The supplied gallery-heading reference and abstract-thumbnail reference were placed alongside the implementation in one comparison image.
+   - Result: centered heading/filter geometry is preserved, while the card artwork follows the requested luminous abstract direction.
 
 ## Interaction and Runtime Checks
 
-- `Explore the tasks` updates the hash to `#benchmark-gallery-title` and scrolls the gallery heading into view.
-- Selecting the `Visual` filter leaves the dashboard task visible, hides the landing-page task, and updates `aria-pressed`.
-- Compare all remains functional and exposes its selected state through `aria-pressed`.
+- The `All`, `Interface`, `Visual`, and `Interaction` controls remain accessible buttons with pressed-state semantics.
+- Gallery cards retain their task-detail links and published-run metadata.
+- Desktop and mobile layouts have no horizontal overflow in the tested viewports.
 - `npm run lint` passed.
 - `npm run build` passed.
-
-## Follow-up Polish
-
-- P3: add the reference's subtle brief-to-build connector when the page has real published runs and the relationship needs stronger visual emphasis.
 
 final result: passed

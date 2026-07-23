@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 
@@ -76,22 +77,13 @@ function ArrowIcon() {
 function BenchmarkPreview({ type }: { type: Benchmark["preview"] }) {
   if (type === "landing") {
     return (
-      <div className="absolute inset-0 flex flex-col bg-[#d9dfd2] p-5 text-[#171a16]">
-        <div className="mb-8 flex items-center justify-between border-b border-black/15 pb-3 text-[8px] uppercase tracking-[0.18em]">
-          <span>Northstar</span>
-          <span>Product · Pricing · Login</span>
-        </div>
-        <div className="mt-auto max-w-[80%]">
-          <div className="mb-3 h-2 w-14 rounded-full bg-[#cf5b35]" />
-          <p className="text-2xl leading-[0.92] font-semibold tracking-[-0.05em]">
-            Ship the work that matters.
-          </p>
-          <div className="mt-5 flex gap-2">
-            <span className="h-7 w-20 rounded-full bg-[#171a16]" />
-            <span className="h-7 w-16 rounded-full border border-black/25" />
-          </div>
-        </div>
-      </div>
+      <Image
+        alt=""
+        className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+        fill
+        sizes="(min-width: 768px) 50vw, 100vw"
+        src="/tools/thumbnails/saas-landing-page.webp"
+      />
     );
   }
 
@@ -161,70 +153,26 @@ function BenchmarkPreview({ type }: { type: Benchmark["preview"] }) {
 
   if (type === "creative") {
     return (
-      <div className="absolute inset-0 overflow-hidden bg-[#f0ff4a] text-[#111]">
-        <div className="absolute inset-x-4 top-4 z-10 flex items-center justify-between text-[8px] uppercase tracking-[0.18em]">
-          <span>Studio / 2026</span>
-          <span>Index / Work / About</span>
-        </div>
-        <div className="absolute -right-8 top-8 size-40 rounded-full border-[18px] border-[#ef5f3c] mix-blend-multiply" />
-        <div className="absolute -bottom-16 -left-8 size-52 rounded-full bg-[#725cff] mix-blend-multiply" />
-        <div className="absolute left-[54%] top-[46%] h-28 w-10 -translate-x-1/2 -translate-y-1/2 rotate-[24deg] bg-[#111]" />
-        <div className="absolute inset-x-4 bottom-4 z-10">
-          <p className="text-[2.15rem] leading-[0.76] font-semibold tracking-[-0.075em] uppercase">
-            Make<br />Noise.
-          </p>
-          <div className="mt-3 flex items-end justify-between border-t border-black/30 pt-2 text-[7px] uppercase tracking-[0.16em]">
-            <span>Independent creative direction</span>
-            <span>Scroll 01-05</span>
-          </div>
-        </div>
-      </div>
+      <Image
+        alt=""
+        className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+        fill
+        sizes="(min-width: 768px) 50vw, 100vw"
+        src="/tools/thumbnails/award-winning-creative-site.webp"
+      />
     );
   }
 
   return (
-    <div className="absolute inset-0 overflow-hidden bg-[#071d23]">
-      <div className="absolute inset-x-4 top-4 flex items-center justify-between text-[8px] uppercase tracking-[0.18em] text-white/55">
-        <span>Pocket Reef / Field 01</span>
-        <span>09:42 · 4×</span>
-      </div>
-      <div className="absolute left-1/2 top-[54%] h-36 w-56 -translate-x-1/2 -translate-y-1/2 rounded-[50%] border-4 border-[#bcebd2]/25 bg-[radial-gradient(circle_at_48%_35%,#2f8f7e,#0c4a4f_68%,#082f39)] shadow-[0_22px_42px_rgba(0,0,0,0.45),inset_0_0_38px_rgba(146,255,220,0.18)]">
-        <span className="absolute left-[24%] top-[35%] size-3 rounded-full bg-[#a4f49c] shadow-[20px_-12px_0_1px_#8cde8d,42px_20px_0_2px_#75cf82,85px_-8px_0_1px_#9ce58f]" />
-        <span className="absolute left-[36%] top-[58%] h-3 w-5 rounded-full bg-[#87e8ff] shadow-[30px_-22px_0_#87e8ff,58px_4px_0_#87e8ff,82px_-25px_0_#87e8ff]" />
-        <span className="absolute left-[48%] top-[40%] h-4 w-6 rounded-full bg-[#ff7d8e] shadow-[54px_18px_0_#ff7d8e]" />
-      </div>
-      <div className="absolute inset-x-4 bottom-4 flex items-end gap-1">
-        {[18, 26, 22, 35, 31, 45, 38, 53, 47, 59, 51, 64].map((height, index) => (
-          <span className="flex-1 rounded-t-sm bg-[#83e7cb]/45" key={index} style={{ height }} />
-        ))}
-      </div>
-    </div>
+    <Image
+      alt=""
+      className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+      fill
+      sizes="(min-width: 768px) 50vw, 100vw"
+      src="/tools/thumbnails/pocket-reef-life-simulation.webp"
+    />
   );
 }
-
-const heroBuilds = [
-  {
-    label: "Model 01",
-    name: "Editorial build",
-    preview: "landing" as const,
-    note: "Clear hierarchy with a conversion-first product story.",
-    tag: "Landing page",
-  },
-  {
-    label: "Model 02",
-    name: "Product build",
-    preview: "dashboard" as const,
-    note: "Dense interface work with a dashboard-led composition.",
-    tag: "Dashboard",
-  },
-  {
-    label: "Model 03",
-    name: "Visual build",
-    preview: "visualization" as const,
-    note: "Data storytelling with an interaction-first approach.",
-    tag: "Visualization",
-  },
-];
 
 export function CodingBenchmarks() {
   const [activeCategory, setActiveCategory] = useState<(typeof categories)[number]>("All");
@@ -256,19 +204,19 @@ export function CodingBenchmarks() {
             </div>
           </nav>
 
-          <div className="grid gap-12 py-12 sm:py-16 lg:grid-cols-[0.8fr_1.5fr] lg:items-center lg:gap-10 lg:py-20">
-            <div className="reveal reveal-delay-1 lg:pr-2">
+          <div className="flex justify-center py-14 text-center sm:py-20 lg:py-24">
+            <div className="reveal reveal-delay-1 flex max-w-3xl flex-col items-center">
               <p className="mb-6 text-xs uppercase tracking-[0.18em] text-white/40">
                 Frontier model field tests
               </p>
-              <h1 className="max-w-xl text-[2.7rem] leading-[0.96] font-semibold tracking-[-0.045em] text-white sm:text-5xl lg:text-[3rem]">
-                <span className="lg:whitespace-nowrap">FRONTIER MODELS.</span><br />REAL TASKS.
+              <h1 className="text-[2.7rem] leading-[0.96] font-semibold tracking-[-0.045em] text-white sm:text-6xl lg:text-7xl">
+                FRONTIER MODELS.<br />REAL TASKS.
               </h1>
-              <p className="mt-7 max-w-md text-base leading-7 text-white/55 sm:text-lg sm:leading-8">
+              <p className="mt-7 max-w-2xl text-base leading-7 text-white/55 sm:text-lg sm:leading-8">
                 We test frontier coding models on the same real software tasks,
                 then publish the working builds and complete evidence—not benchmark scores.
               </p>
-              <div className="mt-9 flex flex-wrap items-center gap-4 sm:gap-6">
+              <div className="mt-9 flex flex-wrap items-center justify-center gap-4 sm:gap-6">
                 <Link
                   className="flex items-center gap-3 bg-[#efefea] px-5 py-4 text-sm text-[#101010] transition-colors hover:bg-white"
                   href="#benchmark-gallery-title"
@@ -284,69 +232,18 @@ export function CodingBenchmarks() {
               </div>
             </div>
 
-            <div className="reveal reveal-delay-2 hidden gap-3 md:grid lg:grid-cols-[14rem_1fr]">
-              <aside className="glass-panel border border-white/15">
-                <div className="border-b border-white/12 px-4 py-4 text-[10px] uppercase tracking-[0.2em] text-white/42">
-                  The real task
-                </div>
-                <div className="p-4">
-                  <span className="inline-flex border border-white/12 bg-white/[0.045] px-2 py-1 text-[10px] text-white/48">
-                    SaaS landing page
-                  </span>
-                  <h2 className="mt-5 text-lg font-medium text-white/90">Product landing page</h2>
-                  <p className="mt-3 text-xs leading-5 text-white/48">
-                    Build a responsive marketing page for a project management SaaS.
-                  </p>
-                  <div className="mt-6 border-t border-white/12 pt-5">
-                    <p className="text-[10px] uppercase tracking-[0.18em] text-white/36">Requirements</p>
-                    <ul className="mt-3 space-y-2 text-xs text-white/50">
-                      <li>Hero with headline and CTA</li>
-                      <li>Feature and pricing sections</li>
-                      <li>Responsive and accessible</li>
-                    </ul>
-                  </div>
-                  <div className="mt-6 border-t border-white/12 pt-5">
-                    <p className="text-[10px] uppercase tracking-[0.18em] text-white/36">Deliverable</p>
-                    <p className="mt-2 text-xs leading-5 text-white/50">Single-page application<br />(HTML, CSS, JS)</p>
-                  </div>
-                </div>
-              </aside>
-
-              <section className="glass-panel border border-white/15" aria-label="Example model builds">
-                <div className="border-b border-white/12 px-4 py-4 text-[10px] uppercase tracking-[0.2em] text-white/42">
-                  Frontier model builds
-                </div>
-                <div className="grid sm:grid-cols-3">
-                  {heroBuilds.map((build) => (
-                    <article className="border-b border-white/12 p-3 last:border-b-0 sm:border-r sm:border-b-0 sm:last:border-r-0" key={build.label}>
-                      <span className="inline-flex border border-white/12 bg-white/[0.04] px-2 py-1 text-[9px] uppercase tracking-[0.14em] text-white/38">
-                        {build.label}
-                      </span>
-                      <h3 className="mt-2 text-sm text-white/78">{build.name}</h3>
-                      <div className="relative mt-4 aspect-[4/5] overflow-hidden border border-white/12 bg-[#111]">
-                        <BenchmarkPreview type={build.preview} />
-                      </div>
-                      <p className="mt-3 min-h-14 text-[11px] leading-[1.55] text-white/42">{build.note}</p>
-                      <span className="mt-3 inline-flex border border-white/12 px-2 py-1 text-[9px] text-white/36">
-                        {build.tag}
-                      </span>
-                    </article>
-                  ))}
-                </div>
-              </section>
-            </div>
           </div>
         </header>
 
         <section className="glass-section border-b border-white/15 p-4 sm:p-6 lg:p-8" aria-labelledby="benchmark-gallery-title">
-          <div className="reveal mb-8 grid gap-7 lg:grid-cols-[1fr_auto] lg:items-end">
-            <div>
+          <div className="reveal mb-10 flex flex-col items-center gap-7 text-center">
+            <div className="flex flex-col items-center">
               <p className="mb-3 text-xs uppercase tracking-[0.18em] text-white/40">Initial task set / v0.1</p>
               <h2 id="benchmark-gallery-title" className="text-5xl leading-none font-semibold sm:text-6xl">
                 Task gallery
               </h2>
             </div>
-            <div className="flex flex-wrap gap-2" aria-label="Filter tasks">
+            <div className="flex flex-wrap justify-center gap-2" aria-label="Filter tasks">
               {categories.map((category) => (
                 <button
                   className={`border px-4 py-2 text-sm transition-colors ${
@@ -371,10 +268,13 @@ export function CodingBenchmarks() {
                 <>
                 <div className="relative aspect-[16/9] overflow-hidden border-b border-white/12 bg-[#111]">
                   <BenchmarkPreview type={benchmark.preview} />
-                  <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(0,0,0,0.28))] opacity-50" />
+                  <div className="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-black/0" />
                   <span className="absolute top-4 left-4 border border-black/15 bg-black/75 px-2 py-1 text-[10px] uppercase tracking-[0.15em] text-white/65 backdrop-blur-md">
                     {benchmark.category}
                   </span>
+                  <p className="absolute inset-0 flex items-center justify-center px-8 text-center text-2xl font-medium tracking-[-0.035em] text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.65)] sm:text-3xl">
+                    {benchmark.shortTitle}
+                  </p>
                 </div>
                 <div className="relative z-10 p-5 sm:p-6">
                   <div className="mb-8 flex items-start justify-between gap-5">
