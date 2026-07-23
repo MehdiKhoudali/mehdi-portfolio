@@ -40,6 +40,12 @@ export default function Home() {
                 <Link className="transition-colors hover:text-white/85" href="/tools">
                   Tools
                 </Link>
+                <a
+                  className="transition-colors hover:text-white/85"
+                  href="https://www.thehexel.com/"
+                >
+                  Services
+                </a>
               </div>
             </nav>
 
