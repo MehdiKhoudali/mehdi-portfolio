@@ -4,6 +4,7 @@ export type GalleryImage = {
   width?: number;
   height?: number;
   browserLabel?: string;
+  mediaType?: "image" | "video";
 };
 
 export type Experience = {
@@ -153,18 +154,18 @@ export const experiences: Experience[] = [
     date: "Jan 10, 2024",
     category: "B2B Web App",
     summary:
-      "A lightweight feedback management product for collecting user feedback, prioritizing requests, and publishing a transparent roadmap.",
+      "Built when I was 15, FeedbackLoop scaled to 700 users as a product for prioritizing feedback and publishing transparent roadmaps.",
     description: [
       "FeedbackLoop was a B2B feedback product designed to help teams capture what users were asking for and turn that signal into clearer product decisions.",
       "The product centered on feedback collection, feature-request prioritization, and public roadmap visibility, so teams could keep customers informed while still managing product direction internally.",
-      "Alongside product work, I also worked on marketing, blog content, SEO, and social media distribution, helping scale the product to over 700 users before it was later acquired.",
+      "Alongside product work, I also worked on marketing, blog content, SEO, and social media distribution, helping scale the product to 700 users before it was later acquired.",
     ],
     highlights: [
       "Feedback collection for B2B teams",
       "Feature request prioritization",
       "Public-facing roadmap and feedback pages",
       "Marketing, blog, SEO, and social media work",
-      "Scaled to over 700 users",
+      "Built at 15 and scaled to 700 users",
       "Built, launched, and later acquired",
     ],
     techStack: [
@@ -203,13 +204,14 @@ export const experiences: Experience[] = [
     date: "April 20, 2023",
     category: "B2B SaaS",
     summary:
-      "A B2B SaaS product built with four friends to improve async collaboration and team workflows.",
+      "A B2B SaaS product I built at 15 with four friends to improve async collaboration and team workflows.",
     description: [
-      "TagU was a SaaS product built with four friends around async work, team collaboration, and the small workflow gaps that slow teams down.",
+      "I built TagU at 15 with four friends around async work, team collaboration, and the small workflow gaps that slow teams down.",
       "The work covered the public landing page, extension frontend, backend features, workspace flows, settings screens, and payment logic.",
       "It was an early full-product build: not just a landing page, but the product surface, collaboration model, and business mechanics around subscriptions and team workspaces.",
     ],
     highlights: [
+      "Built at 15 with four friends",
       "Built the landing page with Next.js and Tailwind CSS, hosted on Vercel",
       "Worked on the extension frontend with React and Tailwind CSS",
       "Worked on the backend with Supabase",
@@ -224,7 +226,22 @@ export const experiences: Experience[] = [
       "Stripe",
       "Tailwind CSS",
     ],
-    gallery: [],
+    galleryLayout: "grid",
+    gallery: [
+      {
+        src: "/experience/tagu/product-demo.mp4",
+        label: "TagU product demo",
+        browserLabel: "TagU / Product demo",
+        mediaType: "video",
+      },
+      {
+        src: "/experience/tagu/use-cases.png",
+        label: "TagU collaboration use cases",
+        width: 1067,
+        height: 747,
+        browserLabel: "TagU / Use cases",
+      },
+    ],
   },
 ];
 

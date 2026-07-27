@@ -48,14 +48,26 @@ export function BrowserScreenshot({
               }
         }
       >
-        <Image
-          src={image.src}
-          alt={image.label}
-          fill
-          priority={index === 0}
-          sizes="(min-width: 1024px) 94vw, 100vw"
-          className={uniformSize ? "object-contain" : "object-cover"}
-        />
+        {image.mediaType === "video" ? (
+          <video
+            aria-label={image.label}
+            className="absolute inset-0 h-full w-full object-contain"
+            controls
+            playsInline
+            preload="metadata"
+          >
+            <source src={image.src} type="video/mp4" />
+          </video>
+        ) : (
+          <Image
+            src={image.src}
+            alt={image.label}
+            fill
+            priority={index === 0}
+            sizes="(min-width: 1024px) 94vw, 100vw"
+            className={uniformSize ? "object-contain" : "object-cover"}
+          />
+        )}
       </div>
 
       <figcaption className="flex flex-wrap items-center justify-between gap-2 border-t border-white/10 px-4 py-3 text-xs text-white/35 sm:px-5 sm:py-4">
