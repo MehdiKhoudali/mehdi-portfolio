@@ -177,6 +177,7 @@ export const experiences: Experience[] = [
       "Tailwind CSS",
       "Stripe",
     ],
+    galleryLayout: "grid",
     gallery: [
       {
         src: "/experience/feedbackloop/marketing-site.png",
