@@ -197,7 +197,7 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              Twitter/X
+              X
             </a>
             <a
               className="transition-colors hover:text-white/85"
