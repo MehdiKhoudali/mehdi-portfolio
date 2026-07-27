@@ -165,7 +165,7 @@ export default async function ExperiencePage({ params }: ExperiencePageProps) {
           <div className="border-t border-white/18">
             {experience.highlights.map((highlight, index) => (
               <div
-                className="glass-row reveal grid grid-cols-[2.5rem_1fr] gap-4 border-b border-white/15 py-4 text-sm text-white/62 transition-colors sm:py-5 sm:text-base"
+                className="glass-row reveal grid grid-cols-[2.5rem_1fr] gap-4 border-b border-white/15 px-4 py-4 text-sm text-white/62 transition-colors sm:px-5 sm:py-5 sm:text-base lg:px-6"
                 style={{ animationDelay: `${120 + index * 65}ms` }}
                 key={highlight}
               >

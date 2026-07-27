@@ -23,7 +23,7 @@ export const experiences: Experience[] = [
     slug: "kitt-medical",
     role: "Full Stack Software Engineer",
     company: "Kitt Medical",
-    location: "Casablanca",
+    location: "UK",
     date: "August 1, 2025",
     category: "Healthcare SaaS / Full Stack Engineering",
     summary:
