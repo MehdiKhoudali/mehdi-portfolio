@@ -129,6 +129,7 @@ export default async function ExperiencePage({ params }: ExperiencePageProps) {
                   image={image}
                   projectName={experience.company}
                   index={index}
+                  uniformSize={experience.galleryLayout === "grid"}
                   key={image.src}
                 />
               ))}

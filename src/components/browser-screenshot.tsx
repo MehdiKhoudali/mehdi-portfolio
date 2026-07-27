@@ -5,15 +5,17 @@ type BrowserScreenshotProps = {
   image: GalleryImage;
   projectName: string;
   index?: number;
+  uniformSize?: boolean;
 };
 
 export function BrowserScreenshot({
   image,
   projectName,
   index = 0,
+  uniformSize = false,
 }: BrowserScreenshotProps) {
   return (
-    <figure className="reveal overflow-hidden rounded-xl border border-white/15 bg-[#0d0d0d] shadow-[0_28px_90px_rgba(0,0,0,0.38)]">
+    <figure className="reveal flex h-full flex-col overflow-hidden rounded-xl border border-white/15 bg-[#0d0d0d] shadow-[0_28px_90px_rgba(0,0,0,0.38)]">
       <div className="grid min-h-11 grid-cols-[1fr_auto_1fr] items-center border-b border-white/10 bg-[#151515] px-3 sm:min-h-12 sm:px-4">
         <div className="flex items-center gap-1.5" aria-hidden="true">
           <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
@@ -32,13 +34,19 @@ export function BrowserScreenshot({
       </div>
 
       <div
-        className="relative overflow-hidden bg-white"
-        style={{
-          aspectRatio:
-            image.width && image.height
-              ? `${image.width} / ${image.height}`
-              : "16 / 9",
-        }}
+        className={`relative overflow-hidden bg-white ${
+          uniformSize ? "aspect-[3/2]" : ""
+        }`}
+        style={
+          uniformSize
+            ? undefined
+            : {
+                aspectRatio:
+                  image.width && image.height
+                    ? `${image.width} / ${image.height}`
+                    : "16 / 9",
+              }
+        }
       >
         <Image
           src={image.src}
@@ -46,7 +54,7 @@ export function BrowserScreenshot({
           fill
           priority={index === 0}
           sizes="(min-width: 1024px) 94vw, 100vw"
-          className="object-cover"
+          className={uniformSize ? "object-contain" : "object-cover"}
         />
       </div>
 
