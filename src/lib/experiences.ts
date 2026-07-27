@@ -23,7 +23,7 @@ export const experiences: Experience[] = [
     slug: "kitt-medical",
     role: "Full Stack Software Engineer",
     company: "Kitt Medical",
-    location: "Casablanca",
+    location: "UK",
     date: "August 1, 2025",
     category: "Healthcare SaaS / Full Stack Engineering",
     summary:
@@ -58,7 +58,12 @@ export const experiences: Experience[] = [
       "Monday API",
       "Typeform API",
     ],
-    gallery: [],
+    gallery: [
+      {
+        src: "/experience/kitt-medical/todo-dashboard.png",
+        label: "Kitt Medical task dashboard for medication restocking",
+      },
+    ],
   },
   {
     slug: "nf-tech",
