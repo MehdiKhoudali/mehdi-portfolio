@@ -1,6 +1,9 @@
 export type GalleryImage = {
   src: string;
   label: string;
+  width?: number;
+  height?: number;
+  browserLabel?: string;
 };
 
 export type Experience = {
@@ -62,6 +65,9 @@ export const experiences: Experience[] = [
       {
         src: "/experience/kitt-medical/todo-dashboard.png",
         label: "Kitt Medical task dashboard for medication restocking",
+        width: 1915,
+        height: 874,
+        browserLabel: "Kitt Medical / Team dashboard",
       },
     ],
   },
@@ -120,7 +126,22 @@ export const experiences: Experience[] = [
       "AWS S3",
       "Stripe",
     ],
-    gallery: [],
+    gallery: [
+      {
+        src: "/experience/shortmagic-ai/marketing-site.png",
+        label: "Shortmagic marketing website",
+        width: 922,
+        height: 669,
+        browserLabel: "Shortmagic / Marketing site",
+      },
+      {
+        src: "/experience/shortmagic-ai/ai-video-workflow.png",
+        label: "Shortmagic AI video creation workflow",
+        width: 1527,
+        height: 936,
+        browserLabel: "Shortmagic / AI video studio",
+      },
+    ],
   },
   {
     slug: "feedbackloop",
@@ -154,7 +175,22 @@ export const experiences: Experience[] = [
       "Tailwind CSS",
       "Stripe",
     ],
-    gallery: [],
+    gallery: [
+      {
+        src: "/experience/feedbackloop/marketing-site.png",
+        label: "FeedbackLoop marketing website",
+        width: 1599,
+        height: 812,
+        browserLabel: "FeedbackLoop / Marketing site",
+      },
+      {
+        src: "/experience/feedbackloop/roadmap-board.png",
+        label: "FeedbackLoop public product roadmap",
+        width: 1881,
+        height: 937,
+        browserLabel: "FeedbackLoop / Public roadmap",
+      },
+    ],
   },
   {
     slug: "tagu",

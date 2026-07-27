@@ -114,14 +114,19 @@ export default async function ExperiencePage({ params }: ExperiencePageProps) {
                 </h2>
               </div>
               <p className="hidden max-w-sm text-right text-sm leading-6 text-white/42 sm:block">
-                A live product surface from the operational dashboard used by
-                Kitt Medical customers.
+                Selected product and marketing surfaces, shown in their
+                original interface.
               </p>
             </div>
 
             <div className="grid gap-5">
               {experience.gallery.map((image, index) => (
-                <BrowserScreenshot image={image} index={index} key={image.src} />
+                <BrowserScreenshot
+                  image={image}
+                  projectName={experience.company}
+                  index={index}
+                  key={image.src}
+                />
               ))}
             </div>
           </section>
@@ -133,9 +138,9 @@ export default async function ExperiencePage({ params }: ExperiencePageProps) {
               The project
             </p>
             <h2 className="mt-4 text-4xl leading-none font-semibold tracking-[-0.035em] sm:text-5xl">
-              Software for
+              The work behind
               <br />
-              real emergencies.
+              the product.
             </h2>
           </div>
 

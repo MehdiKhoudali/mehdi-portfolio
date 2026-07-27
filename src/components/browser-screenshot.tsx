@@ -3,11 +3,13 @@ import type { GalleryImage } from "@/lib/experiences";
 
 type BrowserScreenshotProps = {
   image: GalleryImage;
+  projectName: string;
   index?: number;
 };
 
 export function BrowserScreenshot({
   image,
+  projectName,
   index = 0,
 }: BrowserScreenshotProps) {
   return (
@@ -20,14 +22,24 @@ export function BrowserScreenshot({
         </div>
         <div className="flex max-w-[46vw] items-center gap-2 rounded-md border border-white/8 bg-black/25 px-3 py-1.5 text-[10px] text-white/38 sm:min-w-64 sm:text-xs">
           <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-300/65" />
-          <span className="truncate">Kitt Medical / Team dashboard</span>
+          <span className="truncate">
+            {image.browserLabel ?? projectName}
+          </span>
         </div>
         <span className="justify-self-end text-[9px] uppercase tracking-[0.16em] text-white/22 sm:text-[10px]">
           0{index + 1}
         </span>
       </div>
 
-      <div className="relative aspect-[1915/874] overflow-hidden bg-white">
+      <div
+        className="relative overflow-hidden bg-white"
+        style={{
+          aspectRatio:
+            image.width && image.height
+              ? `${image.width} / ${image.height}`
+              : "16 / 9",
+        }}
+      >
         <Image
           src={image.src}
           alt={image.label}
@@ -40,7 +52,7 @@ export function BrowserScreenshot({
 
       <figcaption className="flex flex-wrap items-center justify-between gap-2 border-t border-white/10 px-4 py-3 text-xs text-white/35 sm:px-5 sm:py-4">
         <span className="text-white/58">{image.label}</span>
-        <span>Product interface / Kitt Medical</span>
+        <span>Product interface / {projectName}</span>
       </figcaption>
     </figure>
   );
