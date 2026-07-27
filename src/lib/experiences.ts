@@ -58,7 +58,12 @@ export const experiences: Experience[] = [
       "Monday API",
       "Typeform API",
     ],
-    gallery: [],
+    gallery: [
+      {
+        src: "/experience/kitt-medical/todo-dashboard.png",
+        label: "Kitt Medical task dashboard for medication restocking",
+      },
+    ],
   },
   {
     slug: "nf-tech",
