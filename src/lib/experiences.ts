@@ -19,6 +19,7 @@ export type Experience = {
   highlights: string[];
   techStack: string[];
   gallery: GalleryImage[];
+  galleryLayout?: "stacked" | "grid";
 };
 
 export const experiences: Experience[] = [
@@ -126,6 +127,7 @@ export const experiences: Experience[] = [
       "AWS S3",
       "Stripe",
     ],
+    galleryLayout: "grid",
     gallery: [
       {
         src: "/experience/shortmagic-ai/marketing-site.png",

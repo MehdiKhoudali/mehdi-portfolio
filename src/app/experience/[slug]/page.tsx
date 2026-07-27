@@ -119,7 +119,11 @@ export default async function ExperiencePage({ params }: ExperiencePageProps) {
               </p>
             </div>
 
-            <div className="grid gap-5">
+            <div
+              className={`grid gap-5 ${
+                experience.galleryLayout === "grid" ? "lg:grid-cols-2" : ""
+              }`}
+            >
               {experience.gallery.map((image, index) => (
                 <BrowserScreenshot
                   image={image}
