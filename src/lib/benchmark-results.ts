@@ -1,11 +1,14 @@
-export type BenchmarkModel = "luna" | "terra" | "sol";
-export type BenchmarkEffort = "Low" | "Medium" | "High";
+import openCodePublication from "@/data/opencode-benchmark-results.json";
+
+export type BenchmarkModel = string;
+export type BenchmarkEffort = "Default" | "Low" | "Medium" | "High";
 
 export type PublishedBenchmarkResult = {
   id: string;
   modelKey: BenchmarkModel;
   label: string;
   model: string;
+  provider?: string;
   status: "Passed" | "Failed";
   attempt: number;
   effort: BenchmarkEffort;
@@ -14,10 +17,15 @@ export type PublishedBenchmarkResult = {
   cachedInputTokens: number;
   outputTokens: number;
   reasoningTokens: number;
+  changedFiles?: number;
   previewUrl?: string;
   summary: string;
   failureReason?: string;
 };
+
+function openCodeResults(taskId: keyof typeof openCodePublication.results) {
+  return openCodePublication.results[taskId] as PublishedBenchmarkResult[];
+}
 
 export const saasLandingTask = {
   id: "saas-landing-page",
@@ -35,6 +43,7 @@ export const saasLandingTask = {
 };
 
 export const saasLandingResults: PublishedBenchmarkResult[] = [
+  ...openCodeResults("saas-landing-page"),
   {
     id: "luna-low",
     modelKey: "luna",
@@ -197,6 +206,7 @@ export const creativeSiteTask = {
 };
 
 export const creativeSiteResults: PublishedBenchmarkResult[] = [
+  ...openCodeResults("award-winning-creative-site"),
   {
     id: "luna-low",
     modelKey: "luna",
@@ -359,6 +369,7 @@ export const pocketReefTask = {
 };
 
 export const pocketReefResults: PublishedBenchmarkResult[] = [
+  ...openCodeResults("pocket-reef-life-simulation"),
   {
     id: "luna-low",
     modelKey: "luna",
