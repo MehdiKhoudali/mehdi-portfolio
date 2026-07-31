@@ -2,12 +2,15 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import {
   buildCodexArgs,
+  buildOpenCodeArgs,
   createRunId,
   detectExecCapabilities,
+  finalMessageFromOpenCodeJsonl,
   listTasks,
   loadTask,
   parseArgs,
   usageFromJsonl,
+  usageFromOpenCodeJsonl,
 } from "../lib/core.mjs";
 
 test("parses a benchmark run request", () => {
@@ -107,6 +110,51 @@ test("detects optional flags from the installed CLI help", () => {
     ignoreRules: false,
     ignoreUserConfig: true,
   });
+});
+
+test("builds a non-interactive OpenCode invocation", () => {
+  assert.deepEqual(
+    buildOpenCodeArgs({
+      model: "opencode-go/kimi-k3",
+      variant: null,
+      workspace: "C:/work",
+      runId: "test-run",
+    }),
+    [
+      "run",
+      "--format",
+      "json",
+      "--model",
+      "opencode-go/kimi-k3",
+      "--agent",
+      "build",
+      "--dir",
+      "C:/work",
+      "--title",
+      "test-run",
+      "Read BENCHMARK_PROMPT.md and follow the complete controlled coding-task instructions exactly. Work autonomously, make the required source changes, verify the build, and then stop.",
+    ],
+  );
+});
+
+test("reads OpenCode JSON events without assuming one provider schema", () => {
+  const trace = [
+    '{"type":"session","sessionID":"session-1"}',
+    '{"type":"step_finish","part":{"tokens":{"input":100,"output":20,"reasoning":3,"cache":{"read":40}}}}',
+    '{"type":"text","part":{"type":"text","text":"Done."}}',
+  ].join("\n");
+
+  assert.deepEqual(usageFromOpenCodeJsonl(trace), {
+    events: { session: 1, step_finish: 1, text: 1 },
+    sessionId: "session-1",
+    usage: {
+      input_tokens: 100,
+      cached_input_tokens: 40,
+      output_tokens: 20,
+      reasoning_output_tokens: 3,
+    },
+  });
+  assert.equal(finalMessageFromOpenCodeJsonl(trace), "Done.");
 });
 
 test("creates stable run ids and reads JSONL usage", () => {
