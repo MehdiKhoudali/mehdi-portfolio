@@ -60,7 +60,11 @@ Run one OpenCode Go attempt (never retried automatically):
 npm run benchmark:run:opencode -- --task saas-landing-page@1.0.0 --model opencode-go/kimi-k3 --attempt 1
 ```
 
-OpenCode runs use a project-local harness configuration that disables sharing, network tools, external-directory access, subagents, questions, and doom-loop recovery. The build agent is capped at 32 steps. OpenCode model variants are not inferred; pass `--effort <variant>` only when the selected model explicitly supports that variant.
+OpenCode runs use a project-local harness configuration that disables sharing, network tools, external-directory access, subagents, questions, and doom-loop recovery. The build agent is capped at 32 steps. OpenCode model variants are not inferred; pass `--effort <variant>` only when the selected model explicitly supports that variant. The harness declares a Kimi K3 `low` variant because Kimi defaults to `max` reasoning and OpenCode 1.18.10 does not yet include the provider's newer low/high presets in its catalog:
+
+```powershell
+npm run benchmark:run:opencode -- --task saas-landing-page@1.0.0 --model opencode-go/kimi-k3 --effort low --attempt 2
+```
 
 Override reasoning effort or the recorded timeout when a comparison protocol calls for it:
 

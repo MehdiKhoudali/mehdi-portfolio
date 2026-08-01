@@ -2,6 +2,9 @@
   "schemaVersion": 1,
   "provider": "OpenCode Go",
   "runnerRevision": "88a040ae763e22270f5cf6f11ffc9648942a3db1",
+  "replacementRevisions": [
+    "e643774b022423894dda2eb67f61621283495cb5"
+  ],
   "results": {
     "saas-landing-page": [
       {
@@ -84,17 +87,17 @@
         "label": "Kimi K3",
         "model": "opencode-go/kimi-k3",
         "provider": "OpenCode Go",
-        "status": "Failed",
-        "attempt": 1,
-        "effort": "Default",
-        "durationMs": 506688,
-        "inputTokens": 75720,
-        "cachedInputTokens": 62208,
-        "outputTokens": 1455,
-        "reasoningTokens": 7886,
-        "changedFiles": 0,
-        "summary": "Kimi K3 completed the attempt without producing a qualifying implementation. The unchanged starter was rejected by the source-change guard.",
-        "failureReason": "The model made no qualifying source changes. The buildable starter is intentionally rejected and no preview is published."
+        "status": "Passed",
+        "attempt": 3,
+        "effort": "Low",
+        "durationMs": 577032,
+        "inputTokens": 280221,
+        "cachedInputTokens": 246016,
+        "outputTokens": 13868,
+        "reasoningTokens": 310,
+        "changedFiles": 2,
+        "previewUrl": "/benchmarks/award-winning-creative-site/kimi-k3/index.html",
+        "summary": "Kimi K3 completed this task on OpenCode Go attempt 3 and passed the production build, task verifier, integrity, and source-change checks."
       },
       {
         "id": "glm-5-2",
@@ -140,17 +143,17 @@
         "label": "Kimi K3",
         "model": "opencode-go/kimi-k3",
         "provider": "OpenCode Go",
-        "status": "Failed",
-        "attempt": 1,
-        "effort": "Default",
-        "durationMs": 1070247,
-        "inputTokens": 66154,
-        "cachedInputTokens": 49664,
-        "outputTokens": 1364,
-        "reasoningTokens": 32065,
-        "changedFiles": 0,
-        "summary": "Kimi K3 completed the attempt without producing a qualifying implementation. The unchanged starter was rejected by the source-change guard.",
-        "failureReason": "The model made no qualifying source changes. The buildable starter is intentionally rejected and no preview is published."
+        "status": "Passed",
+        "attempt": 3,
+        "effort": "Low",
+        "durationMs": 578315,
+        "inputTokens": 263987,
+        "cachedInputTokens": 228096,
+        "outputTokens": 13795,
+        "reasoningTokens": 663,
+        "changedFiles": 3,
+        "previewUrl": "/benchmarks/pocket-reef-life-simulation/kimi-k3/index.html",
+        "summary": "Kimi K3 completed this task on OpenCode Go attempt 3 and passed the production build, task verifier, integrity, and source-change checks."
       },
       {
         "id": "glm-5-2",

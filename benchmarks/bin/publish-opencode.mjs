@@ -7,6 +7,8 @@ import { BENCHMARK_ROOT, slug } from "../lib/core.mjs";
 
 const projectRoot = path.resolve(BENCHMARK_ROOT, "..");
 const revision = valueAfter("--revision");
+const replacementRevisions = valuesAfter("--replacement-revision");
+const acceptedRevisions = new Set([revision, ...replacementRevisions]);
 const expectedTasks = [
   "saas-landing-page",
   "award-winning-creative-site",
@@ -22,7 +24,7 @@ if (!revision) {
   throw new Error("Usage: npm run benchmark:publish:opencode -- --revision <runner-commit>");
 }
 
-const candidates = await loadCandidates();
+const candidates = selectLatestCandidates(await loadCandidates());
 const expectedRunCount = expectedTasks.length * Object.keys(modelDetails).length;
 if (candidates.length !== expectedRunCount) {
   throw new Error(
@@ -73,7 +75,7 @@ for (const candidate of candidates) {
     provider: "OpenCode Go",
     status: passed ? "Passed" : "Failed",
     attempt: metadata.attempt,
-    effort: "Default",
+    effort: titleCase(metadata.effort ?? "Default"),
     durationMs: metadata.durationMs,
     inputTokens: uncachedInputTokens + cachedInputTokens,
     cachedInputTokens,
@@ -83,7 +85,10 @@ for (const candidate of candidates) {
     ...(passed
       ? {
           previewUrl: `/benchmarks/${metadata.task.id}/${model.key}/index.html`,
-          summary: `${model.label} completed this task in one OpenCode Go attempt and passed the production build, task verifier, integrity, and source-change checks.`,
+          summary:
+            metadata.attempt === 1
+              ? `${model.label} completed this task in one OpenCode Go attempt and passed the production build, task verifier, integrity, and source-change checks.`
+              : `${model.label} completed this task on OpenCode Go attempt ${metadata.attempt} and passed the production build, task verifier, integrity, and source-change checks.`,
         }
       : {
           summary: `${model.label} completed the attempt without producing a qualifying implementation. The unchanged starter was rejected by the source-change guard.`,
@@ -109,6 +114,7 @@ await fs.writeFile(
       schemaVersion: 1,
       provider: "OpenCode Go",
       runnerRevision: revision,
+      replacementRevisions,
       results: publishedResults,
     },
     null,
@@ -141,8 +147,7 @@ async function loadCandidates() {
         const metadata = JSON.parse(await fs.readFile(metadataPath, "utf8"));
         if (
           metadata.engine === "opencode" &&
-          metadata.runner?.revision === revision &&
-          metadata.attempt === 1 &&
+          acceptedRevisions.has(metadata.runner?.revision) &&
           modelDetails[metadata.model]
         ) {
           results.push({ directory, metadata });
@@ -153,6 +158,18 @@ async function loadCandidates() {
     }
   }
   return results;
+}
+
+function selectLatestCandidates(candidates) {
+  const selected = new Map();
+  for (const candidate of candidates) {
+    const key = `${candidate.metadata.task.id}:${candidate.metadata.model}`;
+    const current = selected.get(key);
+    if (!current || candidate.metadata.attempt > current.metadata.attempt) {
+      selected.set(key, candidate);
+    }
+  }
+  return [...selected.values()];
 }
 
 async function normalizePublishedAssets(directory) {
@@ -176,6 +193,17 @@ async function normalizePublishedAssets(directory) {
 function valueAfter(flag) {
   const index = process.argv.indexOf(flag);
   return index === -1 ? null : process.argv[index + 1];
+}
+
+function valuesAfter(flag) {
+  return process.argv.flatMap((argument, index, args) =>
+    argument === flag && args[index + 1] ? [args[index + 1]] : [],
+  );
+}
+
+function titleCase(value) {
+  const text = String(value);
+  return `${text.charAt(0).toUpperCase()}${text.slice(1)}`;
 }
 
 function number(value) {

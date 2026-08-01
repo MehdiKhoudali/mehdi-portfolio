@@ -71,36 +71,37 @@ const run = {
 };
 
 const engineRuntime = engine === "opencode" ? resolveOpenCodeRuntime() : resolveCodexRuntime();
-const [versionResult, authResult, helpResult, modelsResult] = await Promise.all([
-  runCommand({
-    command: engineRuntime.command,
-    args: [...engineRuntime.argsPrefix, "--version"],
-    timeoutMs: 10_000,
-  }),
-  runCommand({
-    command: engineRuntime.command,
-    args: [
-      ...engineRuntime.argsPrefix,
-      ...(engine === "opencode" ? ["providers", "list"] : ["login", "status"]),
-    ],
-    timeoutMs: 10_000,
-  }),
-  runCommand({
-    command: engineRuntime.command,
-    args: [
-      ...engineRuntime.argsPrefix,
-      ...(engine === "opencode" ? ["run", "--help"] : ["exec", "--help"]),
-    ],
-    timeoutMs: 10_000,
-  }),
+// OpenCode uses shared local state during startup, so keep these checks sequential.
+// Parallel invocations can make a valid provider catalog check fail intermittently.
+const versionResult = await runCommand({
+  command: engineRuntime.command,
+  args: [...engineRuntime.argsPrefix, "--version"],
+  timeoutMs: 10_000,
+});
+const authResult = await runCommand({
+  command: engineRuntime.command,
+  args: [
+    ...engineRuntime.argsPrefix,
+    ...(engine === "opencode" ? ["providers", "list"] : ["login", "status"]),
+  ],
+  timeoutMs: 10_000,
+});
+const helpResult = await runCommand({
+  command: engineRuntime.command,
+  args: [
+    ...engineRuntime.argsPrefix,
+    ...(engine === "opencode" ? ["run", "--help"] : ["exec", "--help"]),
+  ],
+  timeoutMs: 10_000,
+});
+const modelsResult =
   engine === "opencode"
-    ? runCommand({
+    ? await runCommand({
         command: engineRuntime.command,
         args: [...engineRuntime.argsPrefix, "models", "opencode-go"],
         timeoutMs: 30_000,
       })
-    : Promise.resolve({ exitCode: 0, stdout: "", stderr: "" }),
-]);
+    : { exitCode: 0, stdout: "", stderr: "" };
 
 if (versionResult.exitCode !== 0) throw new Error(`${engineLabel} CLI is not available`);
 if (authResult.exitCode !== 0) throw new Error(`${engineLabel} CLI is not authenticated`);
@@ -120,7 +121,10 @@ if (engine === "opencode") {
 
 const capabilities =
   engine === "opencode"
-    ? { formatJson: helpResult.stdout.includes("--format"), variant: helpResult.stdout.includes("--variant") }
+    ? {
+        formatJson: `${helpResult.stdout}\n${helpResult.stderr}`.includes("--format"),
+        variant: `${helpResult.stdout}\n${helpResult.stderr}`.includes("--variant"),
+      }
     : detectExecCapabilities(helpResult.stdout);
 const runId = createRunId({
   taskId: task.id,
@@ -661,6 +665,22 @@ function openCodeBenchmarkConfig() {
   return {
     $schema: "https://opencode.ai/config.json",
     share: "disabled",
+    provider: {
+      "opencode-go": {
+        models: {
+          "kimi-k3": {
+            variants: {
+              // OpenCode 1.18.10 only catalogs Kimi's max preset. Kimi also
+              // supports low/high reasoning, so declare the bounded profile
+              // explicitly for quota-safe benchmark retries.
+              low: {
+                reasoningEffort: "low",
+              },
+            },
+          },
+        },
+      },
+    },
     permission: {
       "*": "deny",
       read: "allow",
