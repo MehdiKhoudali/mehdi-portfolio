@@ -162,7 +162,13 @@ async function normalizePublishedAssets(directory) {
       await normalizePublishedAssets(filePath);
     } else if (/\.(?:css|html|js)$/u.test(entry.name)) {
       const source = await fs.readFile(filePath, "utf8");
-      await fs.writeFile(filePath, source.replace(/\r\n?|\u2028|\u2029/gu, "\n"));
+      const withRelativeAssets = source.replace(/(["'(])\/assets\//gu, "$1./assets/");
+      const normalized = entry.name.endsWith(".html")
+        ? withRelativeAssets.replace(/\r\n?|\u2028|\u2029/gu, "\n")
+        : withRelativeAssets;
+      if (normalized !== source) {
+        await fs.writeFile(filePath, normalized);
+      }
     }
   }
 }
