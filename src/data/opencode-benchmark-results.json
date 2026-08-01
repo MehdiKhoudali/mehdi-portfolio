@@ -3,7 +3,8 @@
   "provider": "OpenCode Go",
   "runnerRevision": "88a040ae763e22270f5cf6f11ffc9648942a3db1",
   "replacementRevisions": [
-    "e643774b022423894dda2eb67f61621283495cb5"
+    "e643774b022423894dda2eb67f61621283495cb5",
+    "9aede360cdfade8307e470575c98f1f92093e1d7"
   ],
   "results": {
     "saas-landing-page": [
@@ -60,6 +61,42 @@
         "changedFiles": 2,
         "previewUrl": "/benchmarks/saas-landing-page/glm-5-2/index.html",
         "summary": "GLM 5.2 completed this task in one OpenCode Go attempt and passed the production build, task verifier, integrity, and source-change checks."
+      },
+      {
+        "id": "deepseek-v4-pro",
+        "modelKey": "deepseek-v4-pro",
+        "label": "DeepSeek V4 Pro",
+        "model": "opencode-go/deepseek-v4-pro",
+        "provider": "OpenCode Go",
+        "status": "Passed",
+        "attempt": 1,
+        "effort": "High",
+        "durationMs": 279396,
+        "inputTokens": 232489,
+        "cachedInputTokens": 217728,
+        "outputTokens": 17552,
+        "reasoningTokens": 1669,
+        "changedFiles": 11,
+        "previewUrl": "/benchmarks/saas-landing-page/deepseek-v4-pro/index.html",
+        "summary": "DeepSeek V4 Pro completed this task in one OpenCode Go attempt and passed the production build, task verifier, integrity, and source-change checks."
+      },
+      {
+        "id": "deepseek-v4-flash",
+        "modelKey": "deepseek-v4-flash",
+        "label": "DeepSeek V4 Flash",
+        "model": "opencode-go/deepseek-v4-flash",
+        "provider": "OpenCode Go",
+        "status": "Passed",
+        "attempt": 3,
+        "effort": "High",
+        "durationMs": 531732,
+        "inputTokens": 1037810,
+        "cachedInputTokens": 1023872,
+        "outputTokens": 22217,
+        "reasoningTokens": 30357,
+        "changedFiles": 12,
+        "previewUrl": "/benchmarks/saas-landing-page/deepseek-v4-flash/index.html",
+        "summary": "DeepSeek V4 Flash completed this task on OpenCode Go attempt 3 and passed the production build, task verifier, integrity, and source-change checks."
       }
     ],
     "award-winning-creative-site": [
@@ -116,6 +153,42 @@
         "changedFiles": 3,
         "previewUrl": "/benchmarks/award-winning-creative-site/glm-5-2/index.html",
         "summary": "GLM 5.2 completed this task in one OpenCode Go attempt and passed the production build, task verifier, integrity, and source-change checks."
+      },
+      {
+        "id": "deepseek-v4-pro",
+        "modelKey": "deepseek-v4-pro",
+        "label": "DeepSeek V4 Pro",
+        "model": "opencode-go/deepseek-v4-pro",
+        "provider": "OpenCode Go",
+        "status": "Passed",
+        "attempt": 1,
+        "effort": "High",
+        "durationMs": 308637,
+        "inputTokens": 286697,
+        "cachedInputTokens": 272640,
+        "outputTokens": 15443,
+        "reasoningTokens": 2977,
+        "changedFiles": 2,
+        "previewUrl": "/benchmarks/award-winning-creative-site/deepseek-v4-pro/index.html",
+        "summary": "DeepSeek V4 Pro completed this task in one OpenCode Go attempt and passed the production build, task verifier, integrity, and source-change checks."
+      },
+      {
+        "id": "deepseek-v4-flash",
+        "modelKey": "deepseek-v4-flash",
+        "label": "DeepSeek V4 Flash",
+        "model": "opencode-go/deepseek-v4-flash",
+        "provider": "OpenCode Go",
+        "status": "Passed",
+        "attempt": 1,
+        "effort": "High",
+        "durationMs": 442504,
+        "inputTokens": 1020151,
+        "cachedInputTokens": 1004672,
+        "outputTokens": 30133,
+        "reasoningTokens": 10752,
+        "changedFiles": 15,
+        "previewUrl": "/benchmarks/award-winning-creative-site/deepseek-v4-flash/index.html",
+        "summary": "DeepSeek V4 Flash completed this task in one OpenCode Go attempt and passed the production build, task verifier, integrity, and source-change checks."
       }
     ],
     "pocket-reef-life-simulation": [
@@ -172,6 +245,42 @@
         "changedFiles": 3,
         "previewUrl": "/benchmarks/pocket-reef-life-simulation/glm-5-2/index.html",
         "summary": "GLM 5.2 completed this task in one OpenCode Go attempt and passed the production build, task verifier, integrity, and source-change checks."
+      },
+      {
+        "id": "deepseek-v4-pro",
+        "modelKey": "deepseek-v4-pro",
+        "label": "DeepSeek V4 Pro",
+        "model": "opencode-go/deepseek-v4-pro",
+        "provider": "OpenCode Go",
+        "status": "Failed",
+        "attempt": 1,
+        "effort": "High",
+        "durationMs": 448838,
+        "inputTokens": 6281,
+        "cachedInputTokens": 0,
+        "outputTokens": 220,
+        "reasoningTokens": 28,
+        "changedFiles": 0,
+        "summary": "DeepSeek V4 Pro ended the attempt without producing a qualifying implementation. The unchanged starter was rejected by the source-change guard.",
+        "failureReason": "The model made no qualifying source changes before the OpenCode process ended. The buildable starter is intentionally rejected and no preview is published."
+      },
+      {
+        "id": "deepseek-v4-flash",
+        "modelKey": "deepseek-v4-flash",
+        "label": "DeepSeek V4 Flash",
+        "model": "opencode-go/deepseek-v4-flash",
+        "provider": "OpenCode Go",
+        "status": "Passed",
+        "attempt": 1,
+        "effort": "High",
+        "durationMs": 590202,
+        "inputTokens": 1559764,
+        "cachedInputTokens": 1531648,
+        "outputTokens": 19296,
+        "reasoningTokens": 36250,
+        "changedFiles": 2,
+        "previewUrl": "/benchmarks/pocket-reef-life-simulation/deepseek-v4-flash/index.html",
+        "summary": "DeepSeek V4 Flash completed this task in one OpenCode Go attempt and passed the production build, task verifier, integrity, and source-change checks."
       }
     ]
   }

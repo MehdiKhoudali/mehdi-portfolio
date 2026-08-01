@@ -75,7 +75,7 @@ export function BenchmarkResultViewer({ results, taskTitle = "benchmark" }: { re
     [results],
   );
   const selectedModelResult = models.find((result) => result.modelKey === selectedModel) ?? models[0];
-  const selectedUsesReasoning = selectedModelResult.effort !== "Default";
+  const selectedUsesReasoning = selectedModelResult.provider !== "OpenCode Go";
   const selected =
     results.find(
       (result) =>
@@ -83,7 +83,7 @@ export function BenchmarkResultViewer({ results, taskTitle = "benchmark" }: { re
         result.effort === (selectedUsesReasoning ? selectedEffort : "Default"),
     ) ?? selectedModelResult;
   const comparisonResults = models.map((model) => {
-    const effort = model.effort === "Default" ? "Default" : selectedEffort;
+    const effort = model.provider === "OpenCode Go" ? model.effort : selectedEffort;
     return results.find((result) => result.modelKey === model.modelKey && result.effort === effort) ?? model;
   });
 

@@ -66,6 +66,12 @@ OpenCode runs use a project-local harness configuration that disables sharing, n
 npm run benchmark:run:opencode -- --task saas-landing-page@1.0.0 --model opencode-go/kimi-k3 --effort low --attempt 2
 ```
 
+DeepSeek V4 agent requests are run with the provider's explicit `high` variant. Without the override, DeepSeek automatically promotes OpenCode requests to `max`, which can exhaust the completion budget before issuing an implementation tool call:
+
+```powershell
+npm run benchmark:run:opencode -- --task saas-landing-page@1.0.0 --model opencode-go/deepseek-v4-pro --effort high --attempt 1
+```
+
 Override reasoning effort or the recorded timeout when a comparison protocol calls for it:
 
 ```powershell

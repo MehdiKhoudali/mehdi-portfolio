@@ -10,6 +10,8 @@ const models = [
   "opencode-go/grok-4.5",
   "opencode-go/kimi-k3",
   "opencode-go/glm-5.2",
+  "opencode-go/deepseek-v4-pro",
+  "opencode-go/deepseek-v4-flash",
 ];
 
 const runs = tasks.flatMap((task) =>

@@ -18,6 +18,8 @@ const modelDetails = {
   "opencode-go/grok-4.5": { key: "grok-4-5", label: "Grok 4.5" },
   "opencode-go/kimi-k3": { key: "kimi-k3", label: "Kimi K3" },
   "opencode-go/glm-5.2": { key: "glm-5-2", label: "GLM 5.2" },
+  "opencode-go/deepseek-v4-pro": { key: "deepseek-v4-pro", label: "DeepSeek V4 Pro" },
+  "opencode-go/deepseek-v4-flash": { key: "deepseek-v4-flash", label: "DeepSeek V4 Flash" },
 };
 
 if (!revision) {
@@ -91,17 +93,17 @@ for (const candidate of candidates) {
               : `${model.label} completed this task on OpenCode Go attempt ${metadata.attempt} and passed the production build, task verifier, integrity, and source-change checks.`,
         }
       : {
-          summary: `${model.label} completed the attempt without producing a qualifying implementation. The unchanged starter was rejected by the source-change guard.`,
+          summary: `${model.label} ended the attempt without producing a qualifying implementation. The unchanged starter was rejected by the source-change guard.`,
           failureReason:
-            "The model made no qualifying source changes. The buildable starter is intentionally rejected and no preview is published.",
+            "The model made no qualifying source changes before the OpenCode process ended. The buildable starter is intentionally rejected and no preview is published.",
         }),
   });
 }
 
 for (const results of Object.values(publishedResults)) {
   results.sort((left, right) =>
-    ["grok-4-5", "kimi-k3", "glm-5-2"].indexOf(left.modelKey) -
-    ["grok-4-5", "kimi-k3", "glm-5-2"].indexOf(right.modelKey),
+    ["grok-4-5", "kimi-k3", "glm-5-2", "deepseek-v4-pro", "deepseek-v4-flash"].indexOf(left.modelKey) -
+    ["grok-4-5", "kimi-k3", "glm-5-2", "deepseek-v4-pro", "deepseek-v4-flash"].indexOf(right.modelKey),
   );
 }
 
