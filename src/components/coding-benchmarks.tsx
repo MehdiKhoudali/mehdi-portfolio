@@ -18,6 +18,7 @@ type Benchmark = {
   preview: "landing" | "dashboard" | "visualization" | "game" | "creative";
   href?: string;
   cta?: string;
+  hidden?: boolean;
 };
 
 const benchmarks: Benchmark[] = [
@@ -61,10 +62,14 @@ const benchmarks: Benchmark[] = [
     preview: "game",
     href: "/tools/pocket-reef-life-simulation",
     cta: "View 12 runs",
+    hidden: true,
   },
 ];
 
 const categories = ["All", "Interface", "Visual", "Interaction"] as const;
+const visibleCategories = categories.filter(
+  (category) => category === "All" || benchmarks.some((benchmark) => !benchmark.hidden && benchmark.category === category),
+);
 
 function ArrowIcon() {
   return (
@@ -180,8 +185,8 @@ export function CodingBenchmarks() {
   const visibleBenchmarks = useMemo(
     () =>
       activeCategory === "All"
-        ? benchmarks
-        : benchmarks.filter((benchmark) => benchmark.category === activeCategory),
+        ? benchmarks.filter((benchmark) => !benchmark.hidden)
+        : benchmarks.filter((benchmark) => !benchmark.hidden && benchmark.category === activeCategory),
     [activeCategory],
   );
 
@@ -244,7 +249,7 @@ export function CodingBenchmarks() {
               </h2>
             </div>
             <div className="flex flex-wrap justify-center gap-2" aria-label="Filter tasks">
-              {categories.map((category) => (
+              {visibleCategories.map((category) => (
                 <button
                   className={`border px-4 py-2 text-sm transition-colors ${
                     activeCategory === category
