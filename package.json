@@ -10,6 +10,9 @@
     "benchmark:list": "node benchmarks/bin/run.mjs --list",
     "benchmark:dry-run": "node benchmarks/bin/run.mjs --task saas-landing-page@1.0.0 --model example-model --dry-run",
     "benchmark:run": "node benchmarks/bin/run.mjs",
+    "benchmark:plan:opencode": "node benchmarks/bin/plan-opencode.mjs",
+    "benchmark:publish:opencode": "node benchmarks/bin/publish-opencode.mjs",
+    "benchmark:run:opencode": "node benchmarks/bin/run-opencode.mjs",
     "benchmark:test": "node --test benchmarks/tests/*.test.mjs"
   },
   "dependencies": {

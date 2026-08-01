@@ -1,6 +1,6 @@
 # Coding model field-test pipeline
 
-This directory contains the repeatable runner behind the portfolio's coding-model task gallery. It runs a versioned task through the locally authenticated Codex CLI and preserves the evidence needed to inspect the result.
+This directory contains the repeatable runner behind the portfolio's coding-model task gallery. It runs a versioned task through either the locally authenticated Codex CLI or OpenCode Go and preserves the evidence needed to inspect the result.
 
 The first task is `saas-landing-page@1.0.0`.
 
@@ -9,13 +9,13 @@ The first task is `saas-landing-page@1.0.0`.
 Every run records and standardizes:
 
 - exact task id, version, and SHA-256 package hash;
-- exact Codex model id, reasoning effort, CLI version, and authentication mode;
+- exact model id, runner revision, reasoning profile, CLI version, and authentication mode;
 - starter repository, detailed brief, installed dependencies, and protected files;
 - setup, model, and acceptance-command time limits;
 - attempt number and timestamps;
 - the full model-visible prompt.
 
-Each attempt starts in a fresh Git repository. The runner installs the locked dependencies before Codex starts, invokes `codex exec` with a workspace-write sandbox, and never repairs the result.
+Each attempt starts in a fresh Git repository. The runner installs the locked dependencies before the selected coding agent starts and never repairs the result. Codex uses its workspace-write sandbox; OpenCode uses a locked project configuration with network, external-directory, subagent, and loop-recovery permissions denied.
 
 ## Prerequisites
 
@@ -23,8 +23,10 @@ Each attempt starts in a fresh Git repository. The runner installs the locked de
 - Git.
 - Codex CLI installed and authenticated (`codex login status`).
 - A model id available to that Codex account.
+- OpenCode CLI 1.18.5 or newer for OpenCode Go runs.
+- An OpenCode Go API key connected through `/connect` in the OpenCode TUI.
 
-The runner reuses the saved Codex CLI authentication. It does not read, copy, or store authentication files.
+The runner reuses the saved CLI authentication. It does not read, copy, or store authentication files.
 
 ## Commands
 
@@ -44,6 +46,30 @@ Run one real attempt:
 
 ```powershell
 npm run benchmark:run -- --task saas-landing-page@1.0.0 --model <model-id> --attempt 1
+```
+
+Preview the fixed nine-run OpenCode Go matrix without invoking any model:
+
+```powershell
+npm run benchmark:plan:opencode
+```
+
+Run one OpenCode Go attempt (never retried automatically):
+
+```powershell
+npm run benchmark:run:opencode -- --task saas-landing-page@1.0.0 --model opencode-go/kimi-k3 --attempt 1
+```
+
+OpenCode runs use a project-local harness configuration that disables sharing, network tools, external-directory access, subagents, questions, and doom-loop recovery. The build agent is capped at 32 steps. OpenCode model variants are not inferred; pass `--effort <variant>` only when the selected model explicitly supports that variant. The harness declares a Kimi K3 `low` variant because Kimi defaults to `max` reasoning and OpenCode 1.18.10 does not yet include the provider's newer low/high presets in its catalog:
+
+```powershell
+npm run benchmark:run:opencode -- --task saas-landing-page@1.0.0 --model opencode-go/kimi-k3 --effort low --attempt 2
+```
+
+DeepSeek V4 agent requests are run with the provider's explicit `high` variant. Without the override, DeepSeek automatically promotes OpenCode requests to `max`, which can exhaust the completion budget before issuing an implementation tool call:
+
+```powershell
+npm run benchmark:run:opencode -- --task saas-landing-page@1.0.0 --model opencode-go/deepseek-v4-pro --effort high --attempt 1
 ```
 
 Override reasoning effort or the recorded timeout when a comparison protocol calls for it:
@@ -72,17 +98,19 @@ Generated runs are kept locally under `benchmarks/results/<task>/<run-id>/` and 
 metadata.json          Machine-readable run result and pass/fail state
 run-plan.json          Inputs and execution plan resolved before the run
 prompt.md              Exact model-visible task prompt
-trace.jsonl            Full Codex JSONL event stream
-codex.stderr.log       Codex progress and diagnostic output
+trace.jsonl            Full model-runner JSONL event stream
+codex.stderr.log       Codex progress and diagnostic output (Codex runs)
+opencode.stderr.log    OpenCode progress and diagnostic output (OpenCode runs)
 final-message.md       Last model message
 changes.patch          Binary-capable Git patch from the starter baseline
 git-status.txt         Final working-tree status
 setup/                 Dependency setup logs
 acceptance/            Build and verification logs
 source/                Final source without dependencies or build output
+dist/                  Verified production build when one was produced
 ```
 
-`functionalPassed` is true only when Codex exits normally, every acceptance command passes, the run does not time out, and no protected task file changes.
+`functionalPassed` is true only when the selected coding agent exits normally, every acceptance command passes, the run does not time out, and no protected task file changes.
 The task may also require a minimum number of source changes, including newly created files. This prevents an untouched, already-buildable starter from being recorded as a successful implementation.
 
 ## Fair-comparison protocol

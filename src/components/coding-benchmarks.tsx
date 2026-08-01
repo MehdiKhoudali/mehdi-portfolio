@@ -30,7 +30,7 @@ const benchmarks: Benchmark[] = [
     description:
       "A complete product launch page built from a detailed brand, content, interaction, and responsive-design brief.",
     tests: ["Brief fidelity", "Responsive UI", "Accessibility"],
-    status: "9 builds published",
+    status: "12 runs published",
     preview: "landing",
     href: "/tools/saas-landing-page",
   },
@@ -43,10 +43,10 @@ const benchmarks: Benchmark[] = [
     description:
       "An expressive cultural site testing original art direction, editorial typography, motion, transitions, and responsive creative development.",
     tests: ["Art direction", "Motion design", "Responsive craft"],
-    status: "9 runs published",
+    status: "12 runs published",
     preview: "creative",
     href: "/tools/award-winning-creative-site",
-    cta: "View 9 runs",
+    cta: "View 12 runs",
   },
   {
     id: "pocket-reef-life-simulation",
@@ -57,10 +57,10 @@ const benchmarks: Benchmark[] = [
     description:
       "A living miniature ecosystem testing deterministic simulation, emergent behavior, interactive controls, data storytelling, and animated world-building.",
     tests: ["Emergent behavior", "Simulation state", "Visual storytelling"],
-    status: "9 runs published",
+    status: "12 runs published",
     preview: "game",
     href: "/tools/pocket-reef-life-simulation",
-    cta: "View 9 runs",
+    cta: "View 12 runs",
   },
 ];
 
@@ -292,7 +292,7 @@ export function CodingBenchmarks() {
                       <span key={test}>{test}</span>
                     ))}
                     <span className="ml-auto flex items-center gap-2 text-white/65">
-                      {benchmark.href ? (benchmark.cta ?? "View 9 builds") : "Spec soon"} <ArrowIcon />
+                      {benchmark.href ? (benchmark.cta ?? "View 12 runs") : "Spec soon"} <ArrowIcon />
                     </span>
                   </div>
                 </div>

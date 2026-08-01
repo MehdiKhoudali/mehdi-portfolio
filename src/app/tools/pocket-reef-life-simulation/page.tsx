@@ -7,10 +7,11 @@ import { readBenchmarkTaskBrief } from "@/lib/benchmark-task-files";
 
 export const metadata: Metadata = {
   title: "Pocket Reef Life Simulation — Coding Model Field Test",
-  description: "Compare how GPT-5.6 Luna, Terra, and Sol built the same deterministic browser life-simulation task.",
+  description: "Compare how GPT-5.6 and OpenCode Go frontier models built the same deterministic browser life-simulation task.",
 };
 
 export default function PocketReefBenchmark() {
+  const modelCount = new Set(pocketReefResults.map((result) => result.modelKey)).size;
   const passedCount = pocketReefResults.filter((result) => result.status === "Passed").length;
   const taskBrief = readBenchmarkTaskBrief(pocketReefTask.id, pocketReefTask.version);
 
@@ -35,9 +36,9 @@ export default function PocketReefBenchmark() {
               <p className="mt-7 max-w-2xl text-base leading-7 text-white/52 sm:text-lg sm:leading-8">{pocketReefTask.description}</p>
             </div>
             <div className="grid grid-cols-3 border border-white/15 bg-white/[0.02]">
-              <div className="border-r border-white/12 p-4 sm:p-5"><span className="text-[10px] uppercase tracking-[0.14em] text-white/30">Models</span><strong className="mt-2 block text-2xl text-white/80">03</strong></div>
-              <div className="border-r border-white/12 p-4 sm:p-5"><span className="text-[10px] uppercase tracking-[0.14em] text-white/30">Passed</span><strong className="mt-2 block text-2xl text-[#b5ecc5]">0{passedCount}</strong></div>
-              <div className="p-4 sm:p-5"><span className="text-[10px] uppercase tracking-[0.14em] text-white/30">Runs</span><strong className="mt-2 block text-2xl text-white/80">09</strong></div>
+              <div className="border-r border-white/12 p-4 sm:p-5"><span className="text-[10px] uppercase tracking-[0.14em] text-white/30">Models</span><strong className="mt-2 block text-2xl text-white/80">{String(modelCount).padStart(2, "0")}</strong></div>
+              <div className="border-r border-white/12 p-4 sm:p-5"><span className="text-[10px] uppercase tracking-[0.14em] text-white/30">Passed</span><strong className="mt-2 block text-2xl text-[#b5ecc5]">{String(passedCount).padStart(2, "0")}</strong></div>
+              <div className="p-4 sm:p-5"><span className="text-[10px] uppercase tracking-[0.14em] text-white/30">Runs</span><strong className="mt-2 block text-2xl text-white/80">{String(pocketReefResults.length).padStart(2, "0")}</strong></div>
             </div>
           </div>
         </header>

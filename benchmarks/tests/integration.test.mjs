@@ -9,6 +9,8 @@ import { BENCHMARK_ROOT } from "../lib/core.mjs";
 const testDirectory = path.dirname(fileURLToPath(import.meta.url));
 const runner = path.join(BENCHMARK_ROOT, "bin", "run.mjs");
 const fakeCodex = path.join(testDirectory, "fixtures", "fake-codex.mjs");
+const openCodeRunner = path.join(BENCHMARK_ROOT, "bin", "run-opencode.mjs");
+const fakeOpenCode = path.join(testDirectory, "fixtures", "fake-opencode.mjs");
 
 test("runs the evidence pipeline end to end without contacting a model", { timeout: 120_000 }, async () => {
   let resultDirectory;
@@ -55,6 +57,57 @@ test("runs the evidence pipeline end to end without contacting a model", { timeo
     assert.match(
       await fs.readFile(path.join(resultDirectory, "source", "src", "App.jsx"), "utf8"),
       /Relay fixture build/,
+    );
+  } finally {
+    if (resultDirectory) {
+      await fs.rm(resultDirectory, { recursive: true, force: true });
+      const taskResults = path.dirname(resultDirectory);
+      const remaining = await fs.readdir(taskResults).catch(() => []);
+      if (remaining.length === 0) await fs.rm(taskResults, { recursive: true, force: true });
+    }
+  }
+});
+
+test("runs the OpenCode evidence pipeline once without contacting a model", { timeout: 120_000 }, async () => {
+  let resultDirectory;
+
+  try {
+    const result = spawnSync(
+      process.execPath,
+      [
+        openCodeRunner,
+        "--task",
+        "saas-landing-page@1.0.0",
+        "--model",
+        "opencode-go/fixture-model",
+        "--attempt",
+        "1",
+      ],
+      {
+        cwd: path.resolve(BENCHMARK_ROOT, ".."),
+        encoding: "utf8",
+        env: { ...process.env, BENCHMARK_OPENCODE_RUNTIME: fakeOpenCode },
+        timeout: 120_000,
+        windowsHide: true,
+      },
+    );
+
+    assert.equal(result.status, 0, result.stderr || result.stdout);
+    const summary = JSON.parse(result.stdout);
+    resultDirectory = summary.resultDirectory;
+    assert.equal(summary.status, "completed");
+
+    const metadata = JSON.parse(
+      await fs.readFile(path.join(resultDirectory, "metadata.json"), "utf8"),
+    );
+    assert.equal(metadata.engine, "opencode");
+    assert.equal(metadata.modelResult.exitCode, 0);
+    assert.equal(metadata.usage.sessionId, "fixture-opencode-session");
+    assert.equal(metadata.usage.usage.output_tokens, 25);
+    assert.equal(metadata.integrity.passed, true);
+    assert.match(
+      await fs.readFile(path.join(resultDirectory, "final-message.md"), "utf8"),
+      /completed successfully/,
     );
   } finally {
     if (resultDirectory) {

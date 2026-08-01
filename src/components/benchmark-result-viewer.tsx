@@ -1,11 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import type { BenchmarkEffort, BenchmarkModel, PublishedBenchmarkResult } from "@/lib/benchmark-results";
 
 type ViewMode = "single" | "compare";
 
-const efforts: BenchmarkEffort[] = ["Low", "Medium", "High"];
+const reasoningOrder: BenchmarkEffort[] = ["Low", "Medium", "High"];
 
 function formatDuration(durationMs: number) {
   const seconds = Math.round(durationMs / 1000);
@@ -26,7 +26,7 @@ function ResultFrame({ result, taskTitle, compact = false }: { result: Published
         <strong className="text-sm font-medium text-white/88">{result.label}</strong>
         <span className="text-xs text-white/35">{result.model}</span>
         <span className="border border-white/12 px-2 py-1 text-[10px] uppercase tracking-[0.14em] text-white/42">
-          {result.effort} reasoning
+          {result.effort === "Default" ? "Default profile" : `${result.effort} reasoning`}
         </span>
         <span className={`ml-auto border px-2 py-1 text-[10px] uppercase tracking-[0.14em] ${passed ? "border-[#9ee4b3]/20 bg-[#9ee4b3]/8 text-[#b5ecc5]" : "border-[#f39b86]/25 bg-[#f39b86]/8 text-[#ffc0b1]"}`}>
           {result.status}
@@ -63,12 +63,29 @@ function ResultFrame({ result, taskTitle, compact = false }: { result: Published
 }
 
 export function BenchmarkResultViewer({ results, taskTitle = "benchmark" }: { results: PublishedBenchmarkResult[]; taskTitle?: string }) {
-  const initial = results.find((result) => result.effort === "Medium" && result.status === "Passed") ?? results[0];
+  const initial =
+    results.find((result) => result.effort === "Default" && result.status === "Passed") ??
+    results.find((result) => result.effort === "Medium" && result.status === "Passed") ??
+    results[0];
   const [selectedModel, setSelectedModel] = useState<BenchmarkModel>(initial.modelKey);
-  const [selectedEffort, setSelectedEffort] = useState<BenchmarkEffort>(initial.effort);
+  const [selectedEffort, setSelectedEffort] = useState<BenchmarkEffort>("Medium");
   const [viewMode, setViewMode] = useState<ViewMode>("single");
-  const effortResults = results.filter((result) => result.effort === selectedEffort);
-  const selected = effortResults.find((result) => result.modelKey === selectedModel) ?? effortResults[0];
+  const models = useMemo(
+    () => results.filter((result, index) => results.findIndex((candidate) => candidate.modelKey === result.modelKey) === index),
+    [results],
+  );
+  const selectedModelResult = models.find((result) => result.modelKey === selectedModel) ?? models[0];
+  const selectedUsesReasoning = selectedModelResult.provider !== "OpenCode Go";
+  const selected =
+    results.find(
+      (result) =>
+        result.modelKey === selectedModel &&
+        result.effort === (selectedUsesReasoning ? selectedEffort : "Default"),
+    ) ?? selectedModelResult;
+  const comparisonResults = models.map((model) => {
+    const effort = model.provider === "OpenCode Go" ? model.effort : selectedEffort;
+    return results.find((result) => result.modelKey === model.modelKey && result.effort === effort) ?? model;
+  });
 
   return (
     <div>
@@ -79,14 +96,14 @@ export function BenchmarkResultViewer({ results, taskTitle = "benchmark" }: { re
             role="tablist"
             aria-label="Model results"
           >
-            {effortResults.map((result, index) => (
+            {models.map((result, index) => (
               <button
                 className={`min-w-40 border px-4 py-3 text-left transition-colors ${
                   selectedModel === result.modelKey && viewMode === "single"
                     ? "border-white/45 bg-white text-black"
                     : "border-white/14 bg-white/[0.025] text-white/60 hover:border-white/30 hover:text-white"
                 }`}
-                key={result.id}
+                key={result.modelKey}
                 onClick={() => {
                   setSelectedModel(result.modelKey);
                   setViewMode("single");
@@ -95,29 +112,31 @@ export function BenchmarkResultViewer({ results, taskTitle = "benchmark" }: { re
                 aria-selected={selectedModel === result.modelKey}
                 type="button"
               >
-                <span className="block text-[10px] uppercase tracking-[0.16em] opacity-55">0{index + 1} / GPT-5.6</span>
+                <span className="block text-[10px] uppercase tracking-[0.16em] opacity-55">0{index + 1} / {result.provider ?? "GPT-5.6"}</span>
                 <span className="mt-1 block text-sm font-medium">{result.label}</span>
               </button>
             ))}
           </div>
 
           <div className="flex flex-col gap-2 sm:flex-row sm:items-end">
-            <div>
-              <span className="mb-2 block text-[9px] uppercase tracking-[0.16em] text-white/30">Reasoning effort</span>
-              <div className="flex border border-white/14 p-1 text-xs" aria-label="Reasoning effort">
-                {efforts.map((effort) => (
-                  <button
-                    className={`flex-1 px-4 py-2 transition-colors ${selectedEffort === effort ? "bg-white text-black" : "text-white/50 hover:text-white"}`}
-                    key={effort}
-                    onClick={() => setSelectedEffort(effort)}
-                    type="button"
-                    aria-pressed={selectedEffort === effort}
-                  >
-                    {effort}
-                  </button>
-                ))}
+            {selectedUsesReasoning && (
+              <div>
+                <span className="mb-2 block text-[9px] uppercase tracking-[0.16em] text-white/30">Reasoning</span>
+                <div className="flex border border-white/14 p-1 text-xs" aria-label="Reasoning level">
+                  {reasoningOrder.map((effort) => (
+                    <button
+                      className={`flex-1 px-4 py-2 transition-colors ${selectedEffort === effort ? "bg-white text-black" : "text-white/50 hover:text-white"}`}
+                      key={effort}
+                      onClick={() => setSelectedEffort(effort)}
+                      type="button"
+                      aria-pressed={selectedEffort === effort}
+                    >
+                      {effort}
+                    </button>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
             <div className="grid w-full shrink-0 grid-cols-2 border border-white/14 p-1 text-xs sm:w-60">
               <button
                 className={`whitespace-nowrap px-4 py-2 transition-colors ${viewMode === "single" ? "bg-white text-black" : "text-white/50 hover:text-white"}`}
@@ -152,7 +171,7 @@ export function BenchmarkResultViewer({ results, taskTitle = "benchmark" }: { re
                   ["Reasoning", formatTokens(selected.reasoningTokens)],
                   ["Total input", formatTokens(selected.inputTokens)],
                   ["Cached input", formatTokens(selected.cachedInputTokens)],
-                  ["Uncached input", formatTokens(selected.inputTokens - selected.cachedInputTokens)],
+                  ["Uncached input", formatTokens(Math.max(0, selected.inputTokens - selected.cachedInputTokens))],
                 ].map(([label, value]) => (
                   <div className="border-r border-b border-white/10 p-4" key={label}>
                     <span className="text-[10px] uppercase tracking-[0.16em] text-white/30">{label}</span>
@@ -163,8 +182,8 @@ export function BenchmarkResultViewer({ results, taskTitle = "benchmark" }: { re
               <div className="p-5 sm:p-6">
                 <div className="flex flex-wrap gap-2 text-[10px] uppercase tracking-[0.14em] text-white/42">
                   <span className="border border-white/12 px-2 py-1">Attempt {selected.attempt}</span>
-                  <span className="border border-white/12 px-2 py-1">{selected.effort} effort</span>
-                  <span className="border border-white/12 px-2 py-1">2 files changed</span>
+                  <span className="border border-white/12 px-2 py-1">{selected.effort === "Default" ? "Default profile" : `${selected.effort} effort`}</span>
+                  <span className="border border-white/12 px-2 py-1">{selected.changedFiles ?? 2} files changed</span>
                 </div>
                 <p className="mt-5 max-w-3xl text-sm leading-6 text-white/55">{selected.summary}</p>
               </div>
@@ -172,7 +191,7 @@ export function BenchmarkResultViewer({ results, taskTitle = "benchmark" }: { re
           </>
         ) : (
           <div className="grid gap-3 xl:grid-cols-3">
-            {effortResults.map((result) => <ResultFrame compact key={result.id} result={result} taskTitle={taskTitle} />)}
+            {comparisonResults.map((result) => <ResultFrame compact key={result.id} result={result} taskTitle={taskTitle} />)}
           </div>
         )}
       </div>

@@ -10,14 +10,20 @@ import { finished } from "node:stream/promises";
 import {
   BENCHMARK_ROOT,
   buildCodexArgs,
+  buildOpenCodeArgs,
   buildPrompt,
   createRunId,
   detectExecCapabilities,
+  finalMessageFromOpenCodeJsonl,
   listTasks,
   loadTask,
   parseArgs,
   usageFromJsonl,
+  usageFromOpenCodeJsonl,
 } from "../lib/core.mjs";
+
+const engine = process.env.BENCHMARK_ENGINE === "opencode" ? "opencode" : "codex";
+const engineLabel = engine === "opencode" ? "OpenCode" : "Codex";
 
 const HELP = `Usage:
   npm run benchmark:list
@@ -26,12 +32,12 @@ const HELP = `Usage:
 
 Options:
   --task <id@version>       Versioned task package to run
-  --model <model>           Exact Codex model id
-  --effort <effort>         Optional reasoning effort override
+  --model <model>           Exact ${engineLabel} model id
+  --effort <effort>         Optional reasoning effort / model variant override
   --attempt <number>        Attempt number (default: 1)
   --timeout-minutes <n>     Override the task timeout; recorded in metadata
   --keep-workspace          Preserve the temporary workspace after the run
-  --dry-run                 Validate and print the run plan without invoking Codex
+  --dry-run                 Validate and print the run plan without invoking ${engineLabel}
   --list                    List available task packages
 `;
 
@@ -57,34 +63,69 @@ const startedAt = new Date();
 const timeoutMinutes = options.timeoutMinutes ?? task.limits.timeoutMinutes;
 const run = {
   attempt: options.attempt,
-  effort: options.effort ?? task.limits.reasoningEffort ?? null,
+  effort:
+    options.effort ??
+    (engine === "codex" ? task.limits.reasoningEffort ?? null : null),
   model: options.model,
   timeoutMinutes,
 };
 
-const codexRuntime = resolveCodexRuntime();
-const [versionResult, authResult, helpResult] = await Promise.all([
-  runCommand({
-    command: codexRuntime.command,
-    args: [...codexRuntime.argsPrefix, "--version"],
-    timeoutMs: 10_000,
-  }),
-  runCommand({
-    command: codexRuntime.command,
-    args: [...codexRuntime.argsPrefix, "login", "status"],
-    timeoutMs: 10_000,
-  }),
-  runCommand({
-    command: codexRuntime.command,
-    args: [...codexRuntime.argsPrefix, "exec", "--help"],
-    timeoutMs: 10_000,
-  }),
-]);
+const engineRuntime = engine === "opencode" ? resolveOpenCodeRuntime() : resolveCodexRuntime();
+// OpenCode uses shared local state during startup, so keep these checks sequential.
+// Parallel invocations can make a valid provider catalog check fail intermittently.
+const versionResult = await runCommand({
+  command: engineRuntime.command,
+  args: [...engineRuntime.argsPrefix, "--version"],
+  timeoutMs: 10_000,
+});
+const authResult = await runCommand({
+  command: engineRuntime.command,
+  args: [
+    ...engineRuntime.argsPrefix,
+    ...(engine === "opencode" ? ["providers", "list"] : ["login", "status"]),
+  ],
+  timeoutMs: 10_000,
+});
+const helpResult = await runCommand({
+  command: engineRuntime.command,
+  args: [
+    ...engineRuntime.argsPrefix,
+    ...(engine === "opencode" ? ["run", "--help"] : ["exec", "--help"]),
+  ],
+  timeoutMs: 10_000,
+});
+const modelsResult =
+  engine === "opencode"
+    ? await runCommand({
+        command: engineRuntime.command,
+        args: [...engineRuntime.argsPrefix, "models", "opencode-go"],
+        timeoutMs: 30_000,
+      })
+    : { exitCode: 0, stdout: "", stderr: "" };
 
-if (versionResult.exitCode !== 0) throw new Error("Codex CLI is not available");
-if (authResult.exitCode !== 0) throw new Error("Codex CLI is not authenticated");
+if (versionResult.exitCode !== 0) throw new Error(`${engineLabel} CLI is not available`);
+if (authResult.exitCode !== 0) throw new Error(`${engineLabel} CLI is not authenticated`);
+if (engine === "opencode") {
+  if (!run.model.startsWith("opencode-go/")) {
+    throw new Error("OpenCode benchmark models must use the opencode-go/<model-id> format");
+  }
+  if (modelsResult.exitCode !== 0) {
+    throw new Error(
+      "OpenCode Go is not connected. Run /connect in OpenCode, choose OpenCode Go, and add the subscription API key.",
+    );
+  }
+  if (!modelsResult.stdout.split(/\r?\n/).includes(run.model)) {
+    throw new Error(`The authenticated OpenCode Go catalog does not include '${run.model}'`);
+  }
+}
 
-const capabilities = detectExecCapabilities(helpResult.stdout);
+const capabilities =
+  engine === "opencode"
+    ? {
+        formatJson: `${helpResult.stdout}\n${helpResult.stderr}`.includes("--format"),
+        variant: `${helpResult.stdout}\n${helpResult.stderr}`.includes("--variant"),
+      }
+    : detectExecCapabilities(helpResult.stdout);
 const runId = createRunId({
   taskId: task.id,
   version: task.version,
@@ -97,16 +138,29 @@ const workspaceContainer = path.join(BENCHMARK_ROOT, ".runs", runId);
 const workspace = path.join(workspaceContainer, "workspace");
 const finalMessagePath = path.join(resultDirectory, "final-message.md");
 const prompt = buildPrompt(task, run);
-const codexArgs = buildCodexArgs({
-  model: run.model,
-  effort: run.effort,
-  workspace,
-  finalMessagePath,
-  capabilities,
-});
+const engineArgs =
+  engine === "opencode"
+    ? buildOpenCodeArgs({
+        model: run.model,
+        variant: run.effort,
+        workspace,
+        runId,
+      })
+    : buildCodexArgs({
+        model: run.model,
+        effort: run.effort,
+        workspace,
+        finalMessagePath,
+        capabilities,
+      });
+
+const protectedPaths = [
+  ...task.protectedPaths,
+  ...(engine === "opencode" ? ["BENCHMARK_PROMPT.md", "opencode.json"] : []),
+];
 
 const plan = {
-  schemaVersion: 1,
+  schemaVersion: 2,
   runId,
   dryRun: options.dryRun,
   task: {
@@ -119,12 +173,15 @@ const plan = {
   effort: run.effort,
   attempt: run.attempt,
   timeoutMinutes,
-  codex: {
-    executable: codexRuntime.display,
+  engine,
+  runner: {
+    executable: engineRuntime.display,
     version: firstLine(versionResult.stdout),
-    authentication: firstLine(authResult.stdout || authResult.stderr),
+    revision: resolveRunnerRevision(),
+    authentication:
+      engine === "opencode" ? "OpenCode Go provider connected" : firstLine(authResult.stdout || authResult.stderr),
     capabilities,
-    args: codexArgs.map((argument) =>
+    args: engineArgs.map((argument) =>
       argument === workspace || argument === finalMessagePath
         ? path.relative(BENCHMARK_ROOT, argument)
         : argument,
@@ -132,7 +189,7 @@ const plan = {
   },
   setupCommands: task.setupCommands,
   acceptanceCommands: task.acceptanceCommands,
-  protectedPaths: task.protectedPaths,
+  protectedPaths,
   minimumChangedFiles: task.minimumChangedFiles,
   promptSha256: sha256(prompt),
 };
@@ -159,10 +216,11 @@ const metadata = {
   acceptance: [],
   integrity: null,
   changeSet: null,
-  codexResult: null,
+  modelResult: null,
   usage: null,
   error: null,
   artifacts: {
+    build: "dist",
     finalMessage: "final-message.md",
     patch: "changes.patch",
     prompt: "prompt.md",
@@ -178,6 +236,13 @@ try {
       ![".git", "node_modules", "dist", ".next"].includes(path.basename(entry)),
   });
   await fs.writeFile(path.join(workspace, "BRIEF.md"), `${task.brief.trim()}\n`);
+  if (engine === "opencode") {
+    await fs.writeFile(path.join(workspace, "BENCHMARK_PROMPT.md"), `${prompt}\n`);
+    await fs.writeFile(
+      path.join(workspace, "opencode.json"),
+      `${JSON.stringify(openCodeBenchmarkConfig(), null, 2)}\n`,
+    );
+  }
   await initializeRepository(workspace);
 
   metadata.setup = await runCommandGroup({
@@ -188,32 +253,36 @@ try {
   });
 
   if (metadata.setup.some((result) => result.exitCode !== 0)) {
-    throw new Error("Task setup failed; Codex was not invoked");
+    throw new Error(`Task setup failed; ${engineLabel} was not invoked`);
   }
 
   const tracePath = path.join(resultDirectory, "trace.jsonl");
-  const codexStderrPath = path.join(resultDirectory, "codex.stderr.log");
-  const codexStartedAt = Date.now();
-  const codexResult = await runCommand({
-    command: codexRuntime.command,
-    args: [...codexRuntime.argsPrefix, ...codexArgs],
+  const engineStderrPath = path.join(resultDirectory, `${engine}.stderr.log`);
+  const modelStartedAt = Date.now();
+  const modelResult = await runCommand({
+    command: engineRuntime.command,
+    args: [...engineRuntime.argsPrefix, ...engineArgs],
     cwd: workspace,
-    stdin: prompt,
+    stdin: engine === "codex" ? prompt : undefined,
     stdoutPath: tracePath,
-    stderrPath: codexStderrPath,
+    stderrPath: engineStderrPath,
     timeoutMs: minutesToMs(timeoutMinutes),
   });
 
-  metadata.codexResult = {
-    exitCode: codexResult.exitCode,
-    signal: codexResult.signal,
-    timedOut: codexResult.timedOut,
-    durationMs: Date.now() - codexStartedAt,
-    stderrTail: tail(codexResult.stderr),
+  metadata.modelResult = {
+    exitCode: modelResult.exitCode,
+    signal: modelResult.signal,
+    timedOut: modelResult.timedOut,
+    durationMs: Date.now() - modelStartedAt,
+    stderrTail: tail(modelResult.stderr),
   };
 
   const trace = await fs.readFile(tracePath, "utf8").catch(() => "");
-  metadata.usage = usageFromJsonl(trace);
+  metadata.usage =
+    engine === "opencode" ? usageFromOpenCodeJsonl(trace) : usageFromJsonl(trace);
+  if (engine === "opencode") {
+    await fs.writeFile(finalMessagePath, `${finalMessageFromOpenCodeJsonl(trace)}\n`);
+  }
 
   metadata.acceptance = await runCommandGroup({
     commands: task.acceptanceCommands,
@@ -222,7 +291,12 @@ try {
     timeoutMs: minutesToMs(task.limits.commandTimeoutMinutes ?? 10),
   });
 
-  metadata.integrity = await checkIntegrity(workspace, task.protectedPaths);
+  const buildDirectory = path.join(workspace, "dist");
+  if (await exists(buildDirectory)) {
+    await fs.cp(buildDirectory, path.join(resultDirectory, "dist"), { recursive: true });
+  }
+
+  metadata.integrity = await checkIntegrity(workspace, protectedPaths);
 
   const statusResult = await runCommand({
     command: resolveExecutable("git"),
@@ -261,12 +335,12 @@ try {
 
   const acceptancePassed = metadata.acceptance.every((result) => result.exitCode === 0);
   metadata.functionalPassed =
-    metadata.codexResult.exitCode === 0 &&
-    !metadata.codexResult.timedOut &&
+    metadata.modelResult.exitCode === 0 &&
+    !metadata.modelResult.timedOut &&
     acceptancePassed &&
     metadata.integrity.passed &&
     metadata.changeSet.passed;
-  metadata.status = metadata.codexResult.timedOut
+  metadata.status = metadata.modelResult.timedOut
     ? "timed_out"
     : metadata.functionalPassed
       ? "completed"
@@ -542,6 +616,100 @@ function resolveCodexRuntime() {
   if (executable) return { command: executable, argsPrefix: [], display: executable };
 
   throw new Error("Could not resolve the Codex CLI runtime");
+}
+
+function resolveOpenCodeRuntime() {
+  if (process.env.BENCHMARK_OPENCODE_RUNTIME) {
+    const script = path.resolve(process.env.BENCHMARK_OPENCODE_RUNTIME);
+    if (!existsSync(script)) throw new Error(`Benchmark OpenCode runtime not found: ${script}`);
+    return {
+      command: process.execPath,
+      argsPrefix: [script],
+      display: `${process.execPath} ${script}`,
+    };
+  }
+
+  if (process.platform !== "win32") {
+    return { command: "opencode", argsPrefix: [], display: "opencode" };
+  }
+
+  const result = spawnSync("where.exe", ["opencode"], { encoding: "utf8", windowsHide: true });
+  const candidates = result.stdout?.split(/\r?\n/).filter(Boolean) ?? [];
+  const commandShim = candidates.find((candidate) => candidate.toLowerCase().endsWith(".cmd"));
+  if (commandShim) {
+    const executable = path.join(
+      path.dirname(commandShim),
+      "node_modules",
+      "opencode-ai",
+      "bin",
+      "opencode.exe",
+    );
+    if (existsSync(executable)) {
+      return { command: executable, argsPrefix: [], display: executable };
+    }
+  }
+
+  throw new Error("Could not resolve the OpenCode CLI runtime");
+}
+
+function resolveRunnerRevision() {
+  const result = spawnSync(resolveExecutable("git"), ["rev-parse", "HEAD"], {
+    cwd: path.resolve(BENCHMARK_ROOT, ".."),
+    encoding: "utf8",
+    windowsHide: true,
+  });
+  return result.status === 0 ? result.stdout.trim() : null;
+}
+
+function openCodeBenchmarkConfig() {
+  return {
+    $schema: "https://opencode.ai/config.json",
+    share: "disabled",
+    provider: {
+      "opencode-go": {
+        models: {
+          "kimi-k3": {
+            variants: {
+              // OpenCode 1.18.10 only catalogs Kimi's max preset. Kimi also
+              // supports low/high reasoning, so declare the bounded profile
+              // explicitly for quota-safe benchmark retries.
+              low: {
+                reasoningEffort: "low",
+              },
+            },
+          },
+        },
+      },
+    },
+    permission: {
+      "*": "deny",
+      read: "allow",
+      edit: "allow",
+      glob: "allow",
+      grep: "allow",
+      list: "allow",
+      lsp: "allow",
+      todowrite: "allow",
+      bash: {
+        "*": "deny",
+        "npm run build": "allow",
+        "npm run build *": "allow",
+        "npm run verify": "allow",
+        "npm run verify *": "allow",
+      },
+      task: "deny",
+      external_directory: "deny",
+      webfetch: "deny",
+      websearch: "deny",
+      question: "deny",
+      doom_loop: "deny",
+    },
+    agent: {
+      build: {
+        steps: 32,
+      },
+    },
+  };
 }
 
 function resolveTaskRuntime(command) {

@@ -189,6 +189,33 @@ export function buildCodexArgs({
   return args;
 }
 
+export function buildOpenCodeArgs({
+  model,
+  variant,
+  workspace,
+  runId,
+}) {
+  const args = [
+    "run",
+    "--format",
+    "json",
+    "--model",
+    model,
+    "--agent",
+    "build",
+    "--dir",
+    workspace,
+    "--title",
+    runId,
+  ];
+
+  if (variant) args.push("--variant", variant);
+  args.push(
+    "Read BENCHMARK_PROMPT.md and follow the complete controlled coding-task instructions exactly. Work autonomously, make the required source changes, verify the build, and then stop.",
+  );
+  return args;
+}
+
 export function detectExecCapabilities(helpText) {
   return {
     ephemeral: helpText.includes("--ephemeral"),
@@ -228,6 +255,67 @@ export function usageFromJsonl(contents) {
   }
 
   return { events, threadId, usage };
+}
+
+export function usageFromOpenCodeJsonl(contents) {
+  let sessionId = null;
+  const events = {};
+  const usage = {
+    input_tokens: 0,
+    cached_input_tokens: 0,
+    output_tokens: 0,
+    reasoning_output_tokens: 0,
+  };
+
+  for (const line of contents.split(/\r?\n/)) {
+    if (!line.trim()) continue;
+    try {
+      const event = JSON.parse(line);
+      const type = event.type ?? event.part?.type ?? "unknown";
+      events[type] = (events[type] ?? 0) + 1;
+      sessionId = event.sessionID ?? event.sessionId ?? event.session_id ?? sessionId;
+
+      const tokens = event.usage ?? event.tokens ?? event.part?.usage ?? event.part?.tokens;
+      if (!tokens || typeof tokens !== "object") continue;
+
+      usage.input_tokens += numberToken(tokens.input ?? tokens.input_tokens);
+      usage.cached_input_tokens += numberToken(
+        tokens.cache?.read ??
+          tokens.cachedInput ??
+          tokens.cached_input_tokens ??
+          tokens.input_tokens_details?.cached_tokens,
+      );
+      usage.output_tokens += numberToken(tokens.output ?? tokens.output_tokens);
+      usage.reasoning_output_tokens += numberToken(
+        tokens.reasoning ?? tokens.reasoning_tokens ?? tokens.reasoning_output_tokens,
+      );
+    } catch {
+      events.unparseable = (events.unparseable ?? 0) + 1;
+    }
+  }
+
+  return { events, sessionId, usage };
+}
+
+export function finalMessageFromOpenCodeJsonl(contents) {
+  const messages = [];
+
+  for (const line of contents.split(/\r?\n/)) {
+    if (!line.trim()) continue;
+    try {
+      const event = JSON.parse(line);
+      const text = event.part?.text ?? (event.type === "text" ? event.text : null);
+      if (typeof text === "string" && text.trim()) messages.push(text.trim());
+    } catch {
+      // The trace remains the source of truth when a line is not JSON.
+    }
+  }
+
+  return messages.at(-1) ?? "OpenCode completed without a final text message.";
+}
+
+function numberToken(value) {
+  return Number.isFinite(Number(value)) ? Number(value) : 0;
 }
 
 async function safeDirectories(directory) {
