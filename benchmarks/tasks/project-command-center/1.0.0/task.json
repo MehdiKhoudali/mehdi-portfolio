@@ -1,0 +1,16 @@
+{
+  "id": "project-command-center",
+  "version": "1.0.0",
+  "title": "Project command center from a detailed brief",
+  "brief": "brief.md",
+  "starter": "starter",
+  "setupCommands": [["npm", "ci", "--ignore-scripts"]],
+  "acceptanceCommands": [["npm", "run", "build"], ["npm", "run", "verify"]],
+  "protectedPaths": ["AGENTS.md", "BRIEF.md", "package.json", "package-lock.json"],
+  "minimumChangedFiles": 1,
+  "limits": {
+    "timeoutMinutes": 40,
+    "commandTimeoutMinutes": 10,
+    "reasoningEffort": "medium"
+  }
+}

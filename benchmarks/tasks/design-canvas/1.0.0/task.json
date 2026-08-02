@@ -1,0 +1,16 @@
+{
+  "id": "design-canvas",
+  "version": "1.0.0",
+  "title": "Mini design canvas from a detailed brief",
+  "brief": "brief.md",
+  "starter": "starter",
+  "setupCommands": [["npm", "ci", "--ignore-scripts"]],
+  "acceptanceCommands": [["npm", "run", "build"], ["npm", "run", "verify"]],
+  "protectedPaths": ["AGENTS.md", "BRIEF.md", "package.json", "package-lock.json"],
+  "minimumChangedFiles": 1,
+  "limits": {
+    "timeoutMinutes": 45,
+    "commandTimeoutMinutes": 10,
+    "reasoningEffort": "medium"
+  }
+}
