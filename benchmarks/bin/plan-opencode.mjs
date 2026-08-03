@@ -4,6 +4,7 @@ const tasks = [
   "saas-landing-page@1.0.0",
   "award-winning-creative-site@1.0.0",
   "pocket-reef-life-simulation@1.0.0",
+  "project-command-center@1.0.0",
 ];
 
 const models = [

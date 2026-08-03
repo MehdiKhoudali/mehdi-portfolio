@@ -53,8 +53,18 @@ test("loads, hashes, and lists the task packages", async () => {
       version: "1.0.0",
     },
     {
+      id: "design-canvas",
+      title: "Mini design canvas from a detailed brief",
+      version: "1.0.0",
+    },
+    {
       id: "pocket-reef-life-simulation",
       title: "Pocket Reef life simulation from a detailed brief",
+      version: "1.0.0",
+    },
+    {
+      id: "project-command-center",
+      title: "Project command center from a detailed brief",
       version: "1.0.0",
     },
     {

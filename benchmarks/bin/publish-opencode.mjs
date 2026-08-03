@@ -13,6 +13,7 @@ const expectedTasks = [
   "saas-landing-page",
   "award-winning-creative-site",
   "pocket-reef-life-simulation",
+  "project-command-center",
 ];
 const modelDetails = {
   "opencode-go/grok-4.5": { key: "grok-4-5", label: "Grok 4.5" },
@@ -32,13 +33,6 @@ if (candidates.length !== expectedRunCount) {
   throw new Error(
     `Expected exactly ${expectedRunCount} OpenCode results for runner ${revision}, found ${candidates.length}`,
   );
-}
-
-const duplicateKeys = candidates
-  .map((candidate) => `${candidate.metadata.task.id}:${candidate.metadata.model}`)
-  .filter((key, index, keys) => keys.indexOf(key) !== index);
-if (duplicateKeys.length > 0) {
-  throw new Error(`Refusing to publish duplicate task/model results: ${duplicateKeys.join(", ")}`);
 }
 
 const publishedResults = Object.fromEntries(expectedTasks.map((task) => [task, []]));
@@ -167,7 +161,12 @@ function selectLatestCandidates(candidates) {
   for (const candidate of candidates) {
     const key = `${candidate.metadata.task.id}:${candidate.metadata.model}`;
     const current = selected.get(key);
-    if (!current || candidate.metadata.attempt > current.metadata.attempt) {
+    if (
+      !current ||
+      new Date(candidate.metadata.startedAt).getTime() > new Date(current.metadata.startedAt).getTime() ||
+      (candidate.metadata.startedAt === current.metadata.startedAt &&
+        candidate.metadata.attempt > current.metadata.attempt)
+    ) {
       selected.set(key, candidate);
     }
   }

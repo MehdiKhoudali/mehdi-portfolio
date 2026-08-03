@@ -15,7 +15,7 @@ type Benchmark = {
   description: string;
   tests: string[];
   status: string;
-  preview: "landing" | "dashboard" | "visualization" | "game" | "creative";
+  preview: "landing" | "dashboard" | "visualization" | "game" | "creative" | "command";
   href?: string;
   cta?: string;
   hidden?: boolean;
@@ -63,6 +63,20 @@ const benchmarks: Benchmark[] = [
     href: "/tools/pocket-reef-life-simulation",
     cta: "View 12 runs",
     hidden: true,
+  },
+  {
+    id: "project-command-center",
+    number: "04",
+    title: "Project command center",
+    shortTitle: "Command center",
+    category: "Interface",
+    description:
+      "A dense, keyboard-friendly project workspace testing issue creation, editing, search, filtering, board movement, local persistence, and responsive product craft.",
+    tests: ["Workflow state", "Keyboard UX", "Responsive density"],
+    status: "5 runs published",
+    preview: "command",
+    href: "/tools/project-command-center",
+    cta: "View 5 runs",
   },
 ];
 
@@ -165,6 +179,29 @@ function BenchmarkPreview({ type }: { type: Benchmark["preview"] }) {
         sizes="(min-width: 768px) 50vw, 100vw"
         src="/tools/thumbnails/award-winning-creative-site.webp"
       />
+    );
+  }
+
+  if (type === "command") {
+    return (
+      <div className="absolute inset-0 overflow-hidden bg-[#d6d1c5]">
+        <div className="absolute -right-16 -top-20 size-56 rounded-full bg-[#f2ab55]/55 blur-3xl" />
+        <div className="absolute -bottom-24 left-[18%] size-64 rounded-full bg-[#587d67]/45 blur-3xl" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_14%_22%,rgba(255,255,255,0.72),transparent_25%),linear-gradient(135deg,rgba(42,49,44,0.18),transparent_55%)]" />
+        <div className="absolute inset-x-[11%] top-[17%] h-[61%] border border-[#20251f]/20 bg-[#eeebe2]/55 p-3 shadow-[0_18px_50px_rgba(27,31,25,0.18)]">
+          <div className="flex items-center justify-between border-b border-[#20251f]/15 pb-2 text-[7px] uppercase tracking-[0.16em] text-[#20251f]/60">
+            <span>Northstar</span><span>Project pulse</span>
+          </div>
+          <div className="mt-3 grid grid-cols-[0.8fr_1fr] gap-2">
+            <div className="space-y-2">
+              {[72, 51, 84, 39].map((width, index) => <span className="block h-1.5 bg-[#20251f]/16" key={index} style={{ width: `${width}%` }} />)}
+            </div>
+            <div className="grid grid-cols-3 gap-1">
+              {["#e9854f", "#6f9277", "#d2b14c"].map((color) => <span className="h-8 border border-[#20251f]/10" key={color} style={{ backgroundColor: color }} />)}
+            </div>
+          </div>
+        </div>
+      </div>
     );
   }
 

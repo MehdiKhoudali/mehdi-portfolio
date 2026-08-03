@@ -515,3 +515,22 @@ export const pocketReefResults: PublishedBenchmarkResult[] = [
     summary: "Created and verified the longest-running interpretation, with a highly developed living world, interaction model, analytical views, and extensive visual polish.",
   },
 ];
+
+export const projectCommandCenterTask = {
+  id: "project-command-center",
+  title: "Project command center",
+  product: "Northstar",
+  version: "1.0.0",
+  description:
+    "Build an original, keyboard-friendly project-management workspace for a small product team, from the same detailed workflow, interaction, state, and responsive-design brief.",
+  requirements: [
+    "Projects, issues, statuses, priorities, labels, assignees, and activity",
+    "Functional list and board views with search, filters, sorting, and issue editing",
+    "Drag-and-drop status changes with keyboard-accessible alternatives and local persistence",
+    "Dense responsive interface with semantic controls, managed focus, and reduced-motion support",
+  ],
+};
+
+export const projectCommandCenterResults: PublishedBenchmarkResult[] = [
+  ...openCodeResults("project-command-center"),
+];
