@@ -262,7 +262,7 @@
         "outputTokens": 220,
         "reasoningTokens": 28,
         "changedFiles": 0,
-        "summary": "DeepSeek V4 Pro ended the attempt without producing a qualifying implementation. The unchanged starter was rejected by the source-change guard.",
+        "summary": "The model ended the attempt without producing a qualifying implementation.",
         "failureReason": "The model made no qualifying source changes before the OpenCode process ended. The buildable starter is intentionally rejected and no preview is published."
       },
       {
@@ -327,7 +327,7 @@
         "label": "GLM 5.2",
         "model": "opencode-go/glm-5.2",
         "provider": "OpenCode Go",
-        "status": "Passed",
+        "status": "Failed",
         "attempt": 1,
         "effort": "Default",
         "durationMs": 276173,
@@ -336,8 +336,8 @@
         "outputTokens": 11139,
         "reasoningTokens": 0,
         "changedFiles": 4,
-        "previewUrl": "/benchmarks/project-command-center/glm-5-2/index.html",
-        "summary": "GLM 5.2 completed this task in one OpenCode Go attempt and passed the production build, task verifier, integrity, and source-change checks."
+        "summary": "The attempt passed the generic build checks but the published bundle still renders the benchmark starter.",
+        "failureReason": "The generated output did not replace the starter application. It is retained as a failed attempt and no preview is published."
       },
       {
         "id": "deepseek-v4-pro",
@@ -372,7 +372,7 @@
         "outputTokens": 1110,
         "reasoningTokens": 32121,
         "changedFiles": 0,
-        "summary": "DeepSeek V4 Flash ended the attempt without producing a qualifying implementation. The unchanged starter was rejected by the source-change guard.",
+        "summary": "The model ended the attempt without producing a qualifying implementation.",
         "failureReason": "The model made no qualifying source changes before the OpenCode process ended. The buildable starter is intentionally rejected and no preview is published."
       }
     ]

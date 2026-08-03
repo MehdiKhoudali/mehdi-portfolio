@@ -36,11 +36,14 @@ if (candidates.length !== expectedRunCount) {
 }
 
 const publishedResults = Object.fromEntries(expectedTasks.map((task) => [task, []]));
+let publishedCount = 0;
+let failedCount = 0;
 
 for (const candidate of candidates) {
   const { metadata, directory } = candidate;
   const model = modelDetails[metadata.model];
-  const passed = metadata.functionalPassed === true;
+  const publication = await publicationStatus(metadata, directory);
+  const passed = publication.passed;
   const destination = path.join(
     projectRoot,
     "public",
@@ -57,6 +60,9 @@ for (const candidate of candidates) {
     await fs.mkdir(path.dirname(destination), { recursive: true });
     await fs.cp(buildDirectory, destination, { recursive: true });
     await normalizePublishedAssets(destination);
+    publishedCount += 1;
+  } else {
+    failedCount += 1;
   }
 
   const usage = metadata.usage?.usage ?? {};
@@ -87,9 +93,8 @@ for (const candidate of candidates) {
               : `${model.label} completed this task on OpenCode Go attempt ${metadata.attempt} and passed the production build, task verifier, integrity, and source-change checks.`,
         }
       : {
-          summary: `${model.label} ended the attempt without producing a qualifying implementation. The unchanged starter was rejected by the source-change guard.`,
-          failureReason:
-            "The model made no qualifying source changes before the OpenCode process ended. The buildable starter is intentionally rejected and no preview is published.",
+          summary: publication.summary ?? `${model.label} ended the attempt without producing a qualifying implementation.`,
+          failureReason: publication.failureReason,
         }),
   });
 }
@@ -122,8 +127,8 @@ console.log(
   JSON.stringify(
     {
       revision,
-      published: candidates.filter((candidate) => candidate.metadata.functionalPassed).length,
-      failed: candidates.filter((candidate) => !candidate.metadata.functionalPassed).length,
+      published: publishedCount,
+      failed: failedCount,
       output: path.relative(projectRoot, outputPath),
     },
     null,
@@ -189,6 +194,47 @@ async function normalizePublishedAssets(directory) {
       }
     }
   }
+}
+
+async function publicationStatus(metadata, directory) {
+  if (metadata.functionalPassed !== true) {
+    return {
+      passed: false,
+      summary: "The model ended the attempt without producing a qualifying implementation.",
+      failureReason:
+        "The model made no qualifying source changes before the OpenCode process ended. The buildable starter is intentionally rejected and no preview is published.",
+    };
+  }
+
+  const buildDirectory = path.join(directory, "dist");
+  const stillRendersStarter = await directoryContains(
+    buildDirectory,
+    /(?:BENCHMARK STARTER|Replace this starter with)/u,
+  );
+
+  if (stillRendersStarter) {
+    return {
+      passed: false,
+      summary: "The attempt passed the generic build checks but the published bundle still renders the benchmark starter.",
+      failureReason:
+        "The generated output did not replace the starter application. It is retained as a failed attempt and no preview is published.",
+    };
+  }
+
+  return { passed: true };
+}
+
+async function directoryContains(directory, pattern) {
+  for (const entry of await fs.readdir(directory, { withFileTypes: true })) {
+    const filePath = path.join(directory, entry.name);
+    if (entry.isDirectory()) {
+      if (await directoryContains(filePath, pattern)) return true;
+    } else if (/\.(?:css|html|js)$/u.test(entry.name)) {
+      const source = await fs.readFile(filePath, "utf8");
+      if (pattern.test(source)) return true;
+    }
+  }
+  return false;
 }
 
 function valueAfter(flag) {
