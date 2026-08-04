@@ -77,6 +77,7 @@ const benchmarks: Benchmark[] = [
     preview: "command",
     href: "/tools/project-command-center",
     cta: "View 5 runs",
+    hidden: true,
   },
 ];
 
