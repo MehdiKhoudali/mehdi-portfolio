@@ -8,8 +8,7 @@ export const metadata: Metadata = {
     "A free audit call to find practical AI opportunities, reduce software costs, and identify infrastructure your business can own.",
 };
 
-const auditEmail =
-  "mailto:mehdikhoudalpro@gmail.com?subject=AI%20%26%20Self-Hosting%20Audit&body=Hi%20Mehdi%2C%0A%0AI%27d%20like%20to%20book%20a%20free%20AI%20%26%20self-hosting%20audit.%0A%0ACompany%3A%0ABiggest%20current%20cost%20or%20bottleneck%3A%0A";
+const auditUrl = "https://calendly.com/mehdikhoudali/process-audit";
 
 const deliverables = [
   {
@@ -120,7 +119,7 @@ export default function AiSelfHostingAuditPage() {
                 </p>
                 <a
                   className="inline-flex items-center gap-5 bg-[#efefea] px-5 py-3 text-xs font-medium uppercase tracking-[0.1em] text-[#080808] transition-colors hover:bg-[#b7ff5a]"
-                  href={auditEmail}
+                  href={auditUrl}
                 >
                   Book the free audit
                   <ArrowUpRight />
@@ -356,7 +355,7 @@ export default function AiSelfHostingAuditPage() {
               </p>
               <a
                 className="inline-flex items-center gap-8 bg-[#b7ff5a] px-6 py-4 text-sm font-medium text-[#080808] transition-colors hover:bg-[#efefea]"
-                href={auditEmail}
+                href={auditUrl}
               >
                 Book the free audit
                 <ArrowUpRight />
