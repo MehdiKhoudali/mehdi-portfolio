@@ -1,17 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { EditorialGallery } from "@/components/editorial-gallery";
-import { HeroRoleSwitcher } from "@/components/hero-role-switcher";
 import { experiences } from "@/lib/experiences";
-
-const galleryImages = [
-  { src: "/img1.png", label: "Work table" },
-  { src: "/img2.png", label: "Cafe wall" },
-  { src: "/img3.png", label: "Atlantic sunset" },
-  { src: "/img4.jpg", label: "Night hotel" },
-  { src: "/img5.png", label: "Transit fit" },
-  { src: "/img6.jpg", label: "Street detail" },
-];
 
 const homepageExperiences = experiences.filter(
   (experience) => experience.showOnHomepage !== false,
@@ -19,185 +8,131 @@ const homepageExperiences = experiences.filter(
 
 export default function Home() {
   return (
-    <main className="grain min-h-screen bg-[#070707] text-[#efefea]">
-      <div className="glass-shell flex min-h-screen w-full flex-col border-white/15">
-        <section
-          id="top"
-          className="grid min-h-screen grid-cols-1 border-b border-white/15 lg:grid-cols-[1.05fr_0.95fr]"
-        >
-          <div className="glass-section grid min-h-screen grid-rows-[auto_auto_1fr_auto] border-b border-white/15 p-4 sm:p-6 lg:border-r lg:border-b-0 lg:p-8">
-            <nav
-              aria-label="Primary navigation"
-              className="reveal mb-10 flex items-center justify-between border-b border-white/15 pt-2 pb-6 text-sm text-white/55 sm:pt-3 sm:pb-7"
-            >
-              <a className="transition-colors hover:text-white/85" href="#top">
-                Home
-              </a>
-              <div className="flex items-center gap-5 sm:gap-7">
-                <a className="transition-colors hover:text-white/85" href="#about">
-                  About
-                </a>
-              </div>
-            </nav>
+    <main className="portfolio-page min-h-screen bg-[#0a0a0a] text-[#f0eee8]">
+      <div className="mx-auto w-full max-w-[1180px] px-5 sm:px-8 lg:px-12">
+        <header className="portfolio-header reveal flex items-center justify-between py-6 text-xs text-white/55 sm:py-8">
+          <a className="font-medium text-white/85" href="#top">
+            Mehdi Khoudali
+          </a>
+          <nav aria-label="Primary navigation" className="flex items-center gap-5 sm:gap-8">
+            <a className="transition-colors hover:text-white" href="#work">
+              Work
+            </a>
+            <a className="transition-colors hover:text-white" href="#about">
+              About me
+            </a>
+            <a className="transition-colors hover:text-white" href="#contact">
+              Let&apos;s talk
+            </a>
+          </nav>
+        </header>
 
-            <div className="reveal reveal-delay-1">
-              <p className="mb-6 text-xs uppercase text-white/40">
-                Software engineer and startup founder
+        <section id="top" className="portfolio-hero border-t border-white/12 py-16 sm:py-24 lg:py-24">
+          <div className="grid gap-12 lg:grid-cols-[1fr_0.72fr] lg:items-center lg:gap-16">
+            <div>
+              <div className="reveal mb-10 flex h-14 w-14 items-center justify-center overflow-hidden rounded-full bg-white/10 sm:mb-12 lg:hidden">
+                <Image
+                  src="/mehdi-hero.jpeg"
+                  alt="Portrait of Mehdi Khoudali"
+                  width={96}
+                  height={96}
+                  priority
+                  className="h-full w-full object-cover object-[center_35%] grayscale"
+                />
+              </div>
+
+              <p className="reveal reveal-delay-1 mb-5 text-xs uppercase tracking-[0.14em] text-white/42">
+                Casablanca, Morocco / Available for selected work
               </p>
-              <h1 className="max-w-full text-5xl leading-none font-semibold text-white sm:text-8xl lg:text-9xl">
-                MEHDI.K
+              <h1 className="reveal reveal-delay-2 max-w-5xl text-[clamp(3.5rem,7.2vw,7.1rem)] leading-[0.86] tracking-[-0.065em] text-white">
+                <span className="block font-medium">TypeScript</span>
+                <span className="portfolio-serif portfolio-hero-serif block text-white/62">full-stack</span>
+                <span className="block font-medium">developer.</span>
               </h1>
             </div>
 
-            <div className="reveal reveal-delay-2 flex self-center pt-10 sm:pt-14 lg:pt-18">
-              <HeroRoleSwitcher />
-            </div>
-
-            <div className="reveal reveal-delay-3 grid gap-3 border-t border-white/15 pt-7 pb-3 text-sm text-white/58 sm:grid-cols-2 sm:pt-8 sm:pb-4">
-              <a
-                className="transition-colors hover:text-white/85"
-                href="mailto:mehdikhoudalpro@gmail.com"
-              >
-                mehdikhoudalpro@gmail.com
-              </a>
-              <p className="sm:text-right">+1K newsletter readers</p>
+            <div className="reveal reveal-delay-2 relative hidden min-h-[540px] overflow-hidden border border-white/12 bg-[#111] lg:block">
+              <Image
+                src="/mehdi-hero.jpeg"
+                alt="Portrait of Mehdi Khoudali"
+                fill
+                priority
+                sizes="(min-width: 1024px) 42vw, 100vw"
+                className="object-cover object-[center_34%] contrast-105 grayscale-[0.2]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-white/[0.06]" />
+              <div className="absolute inset-x-0 bottom-0 flex items-center justify-between border-t border-white/15 px-4 py-3 text-[10px] uppercase tracking-[0.12em] text-white/42">
+                <span>Mehdi Khoudali</span>
+                <span>01 / 01</span>
+              </div>
             </div>
           </div>
 
-          <aside className="reveal reveal-delay-3 relative min-h-[520px] min-w-0 overflow-hidden bg-[#10100f] lg:min-h-screen">
-            <Image
-              src="/mehdi-hero.jpeg"
-              alt="Portrait of Mehdi Khoudali"
-              fill
-              priority
-              sizes="(min-width: 1024px) 48vw, 100vw"
-              className="object-cover contrast-105 saturate-90"
-            />
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.12),rgba(0,0,0,0.46)),radial-gradient(circle_at_50%_20%,rgba(255,255,255,0.12),transparent_32%)]" />
-            <div className="absolute inset-0 mix-blend-overlay opacity-35 [background-image:radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.34)_1px,transparent_0)] [background-size:18px_18px]" />
-          </aside>
-        </section>
-
-        <section
-          aria-labelledby="gallery-title"
-          className="glass-section border-b border-white/15 p-4 sm:p-6 lg:p-8"
-        >
-          <div className="reveal mb-6 flex items-end justify-between gap-6">
-            <div>
-              <p className="mb-3 text-xs uppercase text-white/40">Visual notes</p>
-              <h2
-                id="gallery-title"
-                className="text-4xl leading-none font-semibold sm:text-5xl"
-              >
-                Image Index
-              </h2>
-            </div>
-            <p className="hidden max-w-xs text-right text-sm leading-6 text-white/45 sm:block">
-              A few personal frames from work days, city moments, and things I
-              keep coming back to.
-            </p>
-          </div>
-
-          <EditorialGallery images={galleryImages} />
-        </section>
-
-        <section
-          id="about"
-          className="glass-section border-b border-white/15 p-4 sm:p-6 lg:p-8"
-        >
-          <div className="grid gap-10 lg:grid-cols-[0.36fr_1fr]">
-            <div className="reveal">
-              <p className="mb-3 text-xs uppercase text-white/40">About</p>
-              <h2 className="text-5xl leading-none font-semibold sm:text-6xl">
-                Briefly
-              </h2>
-            </div>
-
-            <div className="reveal reveal-delay-1 grid gap-7 text-lg leading-9 text-white/68 md:grid-cols-2">
-              <p>
-                I am Mehdi Khoudali, a software engineer, freelancer, and
-                startup founder based in Casablanca, Morocco. I enjoy turning
-                rough ideas into usable products, then learning from how people
-                actually respond.
-              </p>
-              <p>
-                I freelance with teams on product and engineering work while
-                continuing to build my own projects. I like the mix: client work
-                keeps me close to real problems, and startup projects keep me
-                moving fast.
+          <div id="about" className="reveal reveal-delay-3 mt-14 grid gap-7 border-t border-white/12 pt-6 sm:mt-20 sm:grid-cols-[0.75fr_1fr] sm:gap-12">
+            <p className="text-sm uppercase tracking-[0.12em] text-white/38">About me</p>
+            <div className="max-w-xl">
+              <p className="text-base leading-7 text-white/68 sm:text-lg sm:leading-8">
+                I&apos;m <strong className="font-medium text-white">Mehdi Khoudali</strong>, a <strong className="font-medium text-white">TypeScript full-stack developer</strong>{" "}based in Casablanca. I build and ship web products across the frontend, backend, and infrastructure, staying close to both the product and the people using it. I&apos;ve founded products, scaled FeedbackLoop to 700 users, and worked on software used across thousands of venues. That experience keeps me focused on building software that is clear, useful, and reliable.
               </p>
             </div>
           </div>
         </section>
 
-        <section
-          className="glass-section p-4 sm:p-6 lg:p-8"
-          aria-labelledby="experience-title"
-        >
-          <div className="reveal mb-8 flex items-end justify-between gap-6">
+        <section id="work" aria-labelledby="work-title" className="border-t border-white/12 py-16 sm:py-24">
+          <div className="mb-10 grid gap-6 sm:grid-cols-[0.75fr_1fr] sm:gap-12">
             <div>
-              <p className="mb-3 text-xs uppercase text-white/40">Archive</p>
-              <h2
-                id="experience-title"
-                className="text-5xl leading-none font-semibold sm:text-6xl"
-              >
-                Experience
-              </h2>
+              <p className="mb-4 text-xs uppercase tracking-[0.14em] text-white/38">Selected work</p>
+              <h2 id="work-title" className="portfolio-serif text-4xl text-white/78 sm:text-5xl">Things I&apos;ve built</h2>
             </div>
-            <p className="hidden max-w-xs text-right text-sm leading-6 text-white/45 sm:block">
-              A compact record of the work, products, and teams behind the
-              current direction.
+            <p className="max-w-xl text-sm leading-7 text-white/48 sm:pt-1">
+              Full-stack products, internal systems, and businesses built from
+              an early idea into something people could use.
             </p>
           </div>
 
-          <div className="border-t border-white/18">
+          <div className="border-t border-white/15">
             {homepageExperiences.map((item, index) => (
               <Link
-                className="glass-row reveal grid gap-2 border-b border-white/15 px-4 py-5 transition-colors sm:grid-cols-[1fr_0.75fr_0.55fr] sm:gap-6 sm:px-5 lg:px-6"
+                className="portfolio-work-row reveal grid gap-4 border-b border-white/12 py-6 transition-colors sm:grid-cols-[2.5rem_1fr_1.2fr_auto] sm:items-start sm:gap-6 sm:py-8"
                 href={`/experience/${item.slug}`}
                 style={{ animationDelay: `${120 + index * 65}ms` }}
                 key={`${item.role}-${item.company}`}
               >
+                <span className="pt-1 text-xs text-white/30">{String(index + 1).padStart(2, "0")}</span>
                 <div>
-                  <h3 className="text-xl font-medium text-white">{item.role}</h3>
-                  <p className="mt-1 text-white/55">{item.company}</p>
+                  <h3 className="text-xl font-medium tracking-[-0.02em] text-white sm:text-2xl">{item.company}</h3>
+                  <p className="mt-1 text-sm text-white/42">{item.role}</p>
                 </div>
-                <p className="text-white/58 sm:pt-1">{item.location}</p>
-                <p className="text-white/42 sm:pt-1 sm:text-right">
-                  {item.date}
-                </p>
+                <p className="max-w-md text-sm leading-6 text-white/52">{item.summary}</p>
+                <span className="text-xs text-white/35 sm:pt-1">View project ↗</span>
               </Link>
             ))}
           </div>
         </section>
 
-        <footer className="glass-section reveal mt-auto grid gap-5 border-t border-white/15 p-4 text-sm text-white/55 sm:grid-cols-2 sm:p-6 lg:p-8">
-          <div>
-            <p className="text-white/80">Mehdi K / Mehdi Khoudali</p>
-            <a
-              className="mt-2 block transition-colors hover:text-white/85"
-              href="mailto:mehdikhoudalpro@gmail.com"
-            >
-              mehdikhoudalpro@gmail.com
-            </a>
+        <section id="contact" className="border-t border-white/12 py-16 sm:py-24">
+          <div className="grid gap-8 sm:grid-cols-[0.75fr_1fr] sm:gap-12">
+            <div>
+              <p className="mb-4 text-xs uppercase tracking-[0.14em] text-white/38">Contact</p>
+              <h2 className="portfolio-serif text-4xl text-white/78 sm:text-5xl">Have a product in mind?</h2>
+            </div>
+            <div className="flex flex-col items-start gap-6 sm:pt-1">
+              <p className="max-w-md text-base leading-7 text-white/52">
+                Tell me what you&apos;re building, what is stuck, or what needs
+                to ship next.
+              </p>
+              <a className="border-b border-white/55 pb-2 text-lg text-white transition-colors hover:border-white hover:text-white/75" href="mailto:mehdikhoudalpro@gmail.com">
+                mehdikhoudalpro@gmail.com ↗
+              </a>
+            </div>
           </div>
-          <div className="flex gap-5 sm:justify-end">
-            <a
-              className="transition-colors hover:text-white/85"
-              href="https://x.com/mehdi_khoudali"
-              target="_blank"
-              rel="noreferrer"
-            >
-              X
-            </a>
-            <a
-              className="transition-colors hover:text-white/85"
-              href="https://www.instagram.com/mehdi_khoudali/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Instagram
-            </a>
+        </section>
+
+        <footer className="flex flex-col gap-3 border-t border-white/12 py-6 text-xs text-white/38 sm:flex-row sm:items-center sm:justify-between sm:py-8">
+          <p>Mehdi Khoudali / TypeScript full-stack developer</p>
+          <div className="flex gap-5">
+            <a className="transition-colors hover:text-white" href="https://x.com/mehdi_khoudali" target="_blank" rel="noreferrer">X</a>
+            <a className="transition-colors hover:text-white" href="https://www.instagram.com/mehdi_khoudali/" target="_blank" rel="noreferrer">Instagram</a>
           </div>
         </footer>
       </div>
