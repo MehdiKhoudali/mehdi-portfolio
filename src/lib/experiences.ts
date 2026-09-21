@@ -25,6 +25,57 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
+    slug: "ryvalise",
+    role: "Founder",
+    company: "Ryvalise",
+    location: "Casablanca",
+    date: "August 1, 2026",
+    category: "Competitive Intelligence SaaS",
+    summary:
+      "Founded and built Ryvalise, a competitive intelligence platform that monitors competitor websites and turns meaningful changes into concise, source-backed briefs.",
+    description: [
+      "Ryvalise watches pricing, product, messaging, launch, changelog, and other important competitor pages while filtering out noisy edits.",
+      "I built the product end to end, including the monitoring workflow, competitor workspaces, change history, daily and weekly briefs, and AI-powered answers grounded in tracked activity.",
+      "The platform delivers updates through Slack and Discord and connects with AI clients such as ChatGPT, Claude, Cursor, and Codex through a read-only MCP integration.",
+    ],
+    highlights: [
+      "End-to-end product strategy, design, and full-stack development",
+      "Scheduled competitor website monitoring across high-value pages",
+      "Noise-aware change detection and source-backed summaries",
+      "Competitor workspaces, scan coverage, and page-level controls",
+      "Daily activity views and weekly market briefs",
+      "Grounded AI answers through a read-only MCP integration",
+      "Slack and Discord delivery workflows",
+      "Production infrastructure and deployment",
+    ],
+    techStack: [
+      "Next.js",
+      "Convex",
+      "Tailwind CSS",
+      "Hetzner",
+      "Netlify",
+      "Playwright",
+      "OpenAI API",
+    ],
+    galleryLayout: "grid",
+    gallery: [
+      {
+        src: "/experience/ryvalise/marketing-site.png",
+        label: "Ryvalise competitor monitoring marketing website",
+        width: 1651,
+        height: 939,
+        browserLabel: "Ryvalise / Marketing site",
+      },
+      {
+        src: "/experience/ryvalise/competitors-dashboard.png",
+        label: "Ryvalise competitors monitoring dashboard",
+        width: 1896,
+        height: 873,
+        browserLabel: "Ryvalise / Competitors workspace",
+      },
+    ],
+  },
+  {
     slug: "kitt-medical",
     role: "Full Stack Software Engineer",
     company: "Kitt Medical",
