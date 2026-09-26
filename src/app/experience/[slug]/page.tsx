@@ -104,7 +104,7 @@ export default async function ExperiencePage({ params }: ExperiencePageProps) {
           <section aria-label="Project images" className="border-t border-white/12 py-16 sm:py-24">
             <div className="mb-8 flex items-center justify-between text-xs uppercase tracking-[0.14em] text-white/38">
               <div className="flex items-center gap-4">
-                <span>Project / {String(projectIndex + 1).padStart(2, "0")}</span>
+                <span>Project</span>
                 <h1 className="text-xs font-medium tracking-normal text-white/78 normal-case">{experience.company}</h1>
               </div>
               <span>{experience.category}</span>
@@ -143,9 +143,8 @@ export default async function ExperiencePage({ params }: ExperiencePageProps) {
               <h2 className="portfolio-serif text-4xl text-white/78 sm:text-5xl">Contribution.</h2>
             </div>
             <div className="border-t border-white/15">
-              {experience.highlights.map((highlight, index) => (
-                <div className="grid grid-cols-[2.5rem_1fr] gap-4 border-b border-white/12 py-5 text-sm text-white/64 sm:py-6 sm:text-base" key={highlight}>
-                  <span className="text-white/30">{String(index + 1).padStart(2, "0")}</span>
+              {experience.highlights.map((highlight) => (
+                <div className="border-b border-white/12 py-5 text-sm text-white/64 sm:py-6 sm:text-base" key={highlight}>
                   <span><HighlightedText text={highlight} /></span>
                 </div>
               ))}
@@ -174,7 +173,7 @@ export default async function ExperiencePage({ params }: ExperiencePageProps) {
               <span className="mb-3 block text-xs uppercase tracking-[0.14em] text-white/38">Next project</span>
               <span className="portfolio-serif text-3xl text-white/78 transition-colors group-hover:text-white sm:text-4xl">{nextProject.company}</span>
             </span>
-            <span className="pb-1 text-sm text-white/45 transition-colors group-hover:text-white">View project ↗</span>
+            <span className="pb-1 text-sm text-white/45 transition-colors group-hover:text-white">View project</span>
           </Link>
           <div className="mt-12 flex flex-col gap-3 text-xs text-white/38 sm:flex-row sm:items-center sm:justify-between">
             <Link className="transition-colors hover:text-white" href="/#work">Back to all work</Link>

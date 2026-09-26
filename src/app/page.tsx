@@ -49,6 +49,17 @@ export default function Home() {
                 <span className="portfolio-serif portfolio-hero-serif block text-white/62">full-stack</span>
                 <span className="block font-medium">developer.</span>
               </h1>
+              <div className="reveal reveal-delay-3 mt-10 flex flex-wrap items-center gap-x-5 gap-y-3 sm:mt-12">
+                <a
+                  className="portfolio-cta-button"
+                  href="https://mehdikhoudali.substack.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Join my newsletter
+                </a>
+                <p className="text-xs text-white/42">Read by +1000 founders.</p>
+              </div>
             </div>
 
             <div className="reveal reveal-delay-2 relative hidden min-h-[540px] overflow-hidden border border-white/12 bg-[#111] lg:block">
@@ -61,9 +72,8 @@ export default function Home() {
                 className="object-cover object-[center_34%] contrast-105 grayscale-[0.2]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-white/[0.06]" />
-              <div className="absolute inset-x-0 bottom-0 flex items-center justify-between border-t border-white/15 px-4 py-3 text-[10px] uppercase tracking-[0.12em] text-white/42">
+              <div className="absolute inset-x-0 bottom-0 border-t border-white/15 px-4 py-3 text-[10px] uppercase tracking-[0.12em] text-white/42">
                 <span>Mehdi Khoudali</span>
-                <span>01 / 01</span>
               </div>
             </div>
           </div>
@@ -93,37 +103,44 @@ export default function Home() {
           <div className="border-t border-white/15">
             {homepageExperiences.map((item, index) => (
               <Link
-                className="portfolio-work-row reveal grid gap-4 border-b border-white/12 py-6 transition-colors sm:grid-cols-[2.5rem_1fr_1.2fr_auto] sm:items-start sm:gap-6 sm:py-8"
+                className="portfolio-work-row reveal grid gap-4 border-b border-white/12 py-6 transition-colors sm:grid-cols-[1fr_1.2fr_auto] sm:items-start sm:gap-6 sm:py-8"
                 href={`/experience/${item.slug}`}
                 style={{ animationDelay: `${120 + index * 65}ms` }}
                 key={`${item.role}-${item.company}`}
               >
-                <span className="pt-1 text-xs text-white/30">{String(index + 1).padStart(2, "0")}</span>
                 <div>
                   <h3 className="text-xl font-medium tracking-[-0.02em] text-white sm:text-2xl">{item.company}</h3>
                   <p className="mt-1 text-sm text-white/42">{item.role}</p>
                 </div>
                 <p className="max-w-md text-sm leading-6 text-white/52">{item.summary}</p>
-                <span className="text-xs text-white/35 sm:pt-1">View project ↗</span>
+                <span className="text-xs text-white/35 sm:pt-1">View project</span>
               </Link>
             ))}
           </div>
         </section>
 
-        <section id="contact" className="border-t border-white/12 py-16 sm:py-24">
+        <section id="contact" className="border-t border-white/12 py-16 sm:py-20">
           <div className="grid gap-8 sm:grid-cols-[0.75fr_1fr] sm:gap-12">
             <div>
               <p className="mb-4 text-xs uppercase tracking-[0.14em] text-white/38">Contact</p>
               <h2 className="portfolio-serif text-4xl text-white/78 sm:text-5xl">Have a product in mind?</h2>
             </div>
-            <div className="flex flex-col items-start gap-6 sm:pt-1">
-              <p className="max-w-md text-base leading-7 text-white/52">
-                Tell me what you&apos;re building, what is stuck, or what needs
+            <div className="flex max-w-xl flex-col items-start gap-7 sm:pt-1">
+              <p className="text-lg leading-8 text-white/66 sm:text-xl">
+                Tell me what you&apos;re building, where you&apos;re stuck, or what needs
                 to ship next.
               </p>
-              <a className="border-b border-white/55 pb-2 text-lg text-white transition-colors hover:border-white hover:text-white/75" href="mailto:mehdikhoudalpro@gmail.com">
-                mehdikhoudalpro@gmail.com ↗
-              </a>
+              <div className="flex w-full flex-wrap items-center gap-x-6 gap-y-4 border-t border-white/12 pt-6">
+                <a
+                  className="portfolio-cta-button"
+                  href="mailto:mehdikhoudalpro@gmail.com?subject=Let%27s%20talk%20about%20a%20project"
+                >
+                  Get in touch
+                </a>
+                <a className="portfolio-contact-email" href="mailto:mehdikhoudalpro@gmail.com">
+                  mehdikhoudalpro@gmail.com
+                </a>
+              </div>
             </div>
           </div>
         </section>

@@ -75,6 +75,41 @@ html {
   letter-spacing: -0.065em;
 }
 
+.portfolio-cta-button:focus-visible,
+.portfolio-contact-email:focus-visible {
+  outline: 2px solid #f0eee8;
+  outline-offset: 4px;
+}
+
+.portfolio-cta-button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 0.95rem;
+  background: #f0eee8;
+  color: #0a0a0a;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 180ms ease;
+}
+
+.portfolio-cta-button:hover {
+  background: #d7d4cb;
+}
+
+.portfolio-contact-email {
+  border-bottom: 1px solid rgba(240, 238, 232, 0.25);
+  color: rgba(240, 238, 232, 0.62);
+  font-size: 0.875rem;
+  transition: border-color 180ms ease, color 180ms ease;
+}
+
+.portfolio-contact-email:hover {
+  border-color: #f0eee8;
+  color: #f0eee8;
+}
+
 .portfolio-work-row {
   position: relative;
 }
@@ -120,5 +155,10 @@ html {
 
   .reveal {
     animation: none;
+  }
+
+  .portfolio-cta-button,
+  .portfolio-contact-email {
+    transition: none;
   }
 }
