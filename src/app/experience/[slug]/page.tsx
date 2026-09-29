@@ -102,20 +102,39 @@ export default async function ExperiencePage({ params }: ExperiencePageProps) {
 
         {experience.gallery.length > 0 && (
           <section aria-label="Project images" className="border-t border-white/12 py-16 sm:py-24">
-            <div className="mb-8 flex items-center justify-between text-xs uppercase tracking-[0.14em] text-white/38">
+            <div className="mb-8 flex flex-wrap items-center justify-between gap-4 text-xs uppercase tracking-[0.14em] text-white/38">
               <div className="flex items-center gap-4">
                 <span>Project</span>
                 <h1 className="text-xs font-medium tracking-normal text-white/78 normal-case">{experience.company}</h1>
               </div>
-              <span>{experience.category}</span>
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
+                <span>{experience.category}</span>
+                {experience.liveUrl && (
+                  <a
+                    className="portfolio-cta-button shrink-0 normal-case tracking-normal"
+                    href={experience.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit app
+                  </a>
+                )}
+              </div>
             </div>
-            <div className={`grid gap-6 ${experience.galleryLayout === "grid" ? "lg:grid-cols-2" : ""}`}>
+            <div
+              className={`grid gap-6 ${
+                experience.galleryLayout === "grid"
+                  ? `lg:grid-cols-2 ${experience.galleryUniformSize === false ? "items-start" : ""}`
+                  : ""
+              }`}
+            >
               {experience.gallery.map((image, index) => (
                 <BrowserScreenshot
                   image={image}
                   projectName={experience.company}
                   index={index}
-                  uniformSize={experience.galleryLayout === "grid"}
+                  uniformSize={experience.galleryUniformSize ?? experience.galleryLayout === "grid"}
+                  presentation={experience.galleryPresentation}
                   key={image.src}
                 />
               ))}

@@ -9,6 +9,7 @@ export type GalleryImage = {
 
 export type Experience = {
   slug: string;
+  liveUrl?: string;
   role: string;
   company: string;
   location: string;
@@ -21,16 +22,22 @@ export type Experience = {
   techStack: string[];
   gallery: GalleryImage[];
   galleryLayout?: "stacked" | "grid";
+  galleryUniformSize?: boolean;
+  galleryPresentation?: "browser" | "image";
 };
 
 export const experiences: Experience[] = [
   {
     slug: "ryvalise",
+    liveUrl: "https://ryvalise.com",
     role: "Founder",
     company: "Ryvalise",
     location: "Casablanca",
     date: "August 1, 2026",
     category: "Competitive Intelligence SaaS",
+    galleryLayout: "grid",
+    galleryUniformSize: false,
+    galleryPresentation: "browser",
     summary:
       "Founded and built Ryvalise, a competitive intelligence platform that monitors competitor websites and turns meaningful changes into concise, source-backed briefs.",
     description: [
@@ -57,21 +64,20 @@ export const experiences: Experience[] = [
       "Playwright",
       "OpenAI API",
     ],
-    galleryLayout: "grid",
     gallery: [
       {
-        src: "/experience/ryvalise/marketing-site.png",
-        label: "Ryvalise competitor monitoring marketing website",
-        width: 1651,
-        height: 939,
-        browserLabel: "Ryvalise / Marketing site",
+        src: "/experience/ryvalise/landing-hero.png",
+        label: "Ryvalise landing page hero and navigation",
+        width: 1904,
+        height: 941,
+        browserLabel: "ryvalise.com / Home",
       },
       {
-        src: "/experience/ryvalise/competitors-dashboard.png",
-        label: "Ryvalise competitors monitoring dashboard",
-        width: 1896,
-        height: 873,
-        browserLabel: "Ryvalise / Competitors workspace",
+        src: "/experience/ryvalise/notifications.png",
+        label: "Ryvalise notifications page",
+        width: 1902,
+        height: 940,
+        browserLabel: "ryvalise.com / Notifications",
       },
     ],
   },
