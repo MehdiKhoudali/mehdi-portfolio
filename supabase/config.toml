@@ -1,0 +1,5 @@
+project_id = "nepvmnffuczxtktvtjyj"
+
+[functions.capture-ugc-lead]
+# Public visitors use an apikey checked inside the function, not a user JWT.
+verify_jwt = false
