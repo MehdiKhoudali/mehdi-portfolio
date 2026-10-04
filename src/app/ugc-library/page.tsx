@@ -32,7 +32,7 @@ export default function UgcLibraryPage() {
         </header>
         <Onboarding />
         <footer className={styles.footer}>
-          <p>Mehdi Khoudali / TypeScript full-stack developer</p>
+          <p>Mehdi Khoudali / Software engineer</p>
           <div>
             <a href="https://x.com/mehdi_khoudali" target="_blank" rel="noreferrer">X</a>
             <a href="https://www.instagram.com/mehdi_khoudali/" target="_blank" rel="noreferrer">Instagram</a>

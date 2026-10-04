@@ -81,7 +81,7 @@ export default function Home() {
             <p className="text-sm uppercase tracking-[0.12em] text-white/38">About me</p>
             <div className="max-w-xl">
               <p className="text-base leading-7 text-white/68 sm:text-lg sm:leading-8">
-                I&apos;m <strong className="font-medium text-white">Mehdi Khoudali</strong>, a <strong className="font-medium text-white">TypeScript full-stack developer</strong>{" "}based in Casablanca. I build and ship web products across the frontend, backend, and infrastructure, staying close to both the product and the people using it. I&apos;ve founded products, scaled FeedbackLoop to 700 users, and worked on software used across thousands of venues. That experience keeps me focused on building software that is clear, useful, and reliable.
+                I&apos;m <strong className="font-medium text-white">Mehdi Khoudali</strong>, a <strong className="font-medium text-white">software engineer</strong>{" "}based in Casablanca. I build and ship web products across the frontend, backend, and infrastructure, staying close to both the product and the people using it. I&apos;ve founded products, scaled FeedbackLoop to 700 users, and worked on software used across thousands of venues. That experience keeps me focused on building software that is clear, useful, and reliable.
               </p>
             </div>
           </div>
@@ -145,7 +145,7 @@ export default function Home() {
         </section>
 
         <footer className="flex flex-col gap-3 border-t border-white/12 py-6 text-xs text-white/38 sm:flex-row sm:items-center sm:justify-between sm:py-8">
-          <p>Mehdi Khoudali / TypeScript full-stack developer</p>
+          <p>Mehdi Khoudali / Software engineer</p>
           <div className="flex gap-5">
             <a className="transition-colors hover:text-white" href="https://x.com/mehdi_khoudali" target="_blank" rel="noreferrer">X</a>
             <a className="transition-colors hover:text-white" href="https://www.instagram.com/mehdi_khoudali/" target="_blank" rel="noreferrer">Instagram</a>
