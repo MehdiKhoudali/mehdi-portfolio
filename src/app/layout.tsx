@@ -9,9 +9,9 @@ const bricolage = Bricolage_Grotesque({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.mehdikhoudali.com"),
-  title: "Mehdi Khoudali - TypeScript Full-Stack Developer",
+  title: "Mehdi Khoudali - Software Engineer",
   description:
-    "Mehdi Khoudali is a TypeScript full-stack developer building reliable web products from Casablanca, Morocco.",
+    "Mehdi Khoudali is a software engineer building apps for influencers from Casablanca, Morocco.",
   applicationName: "Mehdi Khoudali",
   keywords: [
     "Mehdi Khoudali",
@@ -23,26 +23,26 @@ export const metadata: Metadata = {
   authors: [{ name: "Mehdi Khoudali" }],
   creator: "Mehdi Khoudali",
   openGraph: {
-    title: "Mehdi Khoudali - TypeScript Full-Stack Developer",
+    title: "Mehdi Khoudali - Software Engineer",
     description:
-      "Mehdi Khoudali is a TypeScript full-stack developer building reliable web products from Casablanca, Morocco.",
+      "Mehdi Khoudali is a software engineer building apps for influencers from Casablanca, Morocco.",
     siteName: "Mehdi Khoudali",
     type: "website",
     images: [
       {
-        url: "/mehdi-hero.jpeg",
-        width: 960,
-        height: 1280,
+        url: "/mehdi-portrait.jpg",
+        width: 1200,
+        height: 1600,
         alt: "Portrait of Mehdi Khoudali",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mehdi Khoudali - TypeScript Full-Stack Developer",
+    title: "Mehdi Khoudali - Software Engineer",
     description:
-      "Mehdi Khoudali is a TypeScript full-stack developer building reliable web products from Casablanca, Morocco.",
-    images: ["/mehdi-hero.jpeg"],
+      "Mehdi Khoudali is a software engineer building apps for influencers from Casablanca, Morocco.",
+    images: ["/mehdi-portrait.jpg"],
   },
 };
 

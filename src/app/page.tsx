@@ -32,7 +32,7 @@ export default function Home() {
             <div>
               <div className="reveal mb-10 flex h-14 w-14 items-center justify-center overflow-hidden rounded-full bg-white/10 sm:mb-12 lg:hidden">
                 <Image
-                  src="/mehdi-hero.jpeg"
+                  src="/mehdi-portrait.jpg"
                   alt="Portrait of Mehdi Khoudali"
                   width={96}
                   height={96}
@@ -42,12 +42,11 @@ export default function Home() {
               </div>
 
               <p className="reveal reveal-delay-1 mb-5 text-xs uppercase tracking-[0.14em] text-white/42">
-                Casablanca, Morocco / Available for selected work
+                Casablanca, Morocco / Building apps for influencers.
               </p>
               <h1 className="reveal reveal-delay-2 max-w-5xl text-[clamp(3.5rem,7.2vw,7.1rem)] leading-[0.86] tracking-[-0.065em] text-white">
-                <span className="block font-medium">TypeScript</span>
-                <span className="portfolio-serif portfolio-hero-serif block text-white/62">full-stack</span>
-                <span className="block font-medium">developer.</span>
+                <span className="block font-medium">Software</span>
+                <span className="portfolio-serif portfolio-hero-serif block text-white/62">engineer.</span>
               </h1>
               <div className="reveal reveal-delay-3 mt-10 flex flex-wrap items-center gap-x-5 gap-y-3 sm:mt-12">
                 <a
@@ -64,7 +63,7 @@ export default function Home() {
 
             <div className="reveal reveal-delay-2 relative hidden min-h-[540px] overflow-hidden border border-white/12 bg-[#111] lg:block">
               <Image
-                src="/mehdi-hero.jpeg"
+                src="/mehdi-portrait.jpg"
                 alt="Portrait of Mehdi Khoudali"
                 fill
                 priority
