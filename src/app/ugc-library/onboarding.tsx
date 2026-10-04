@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type FormEvent } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./ugc.module.css";
 
@@ -117,10 +118,52 @@ export default function Onboarding() {
   }
 
   if (!started) return (
-    <section className={styles.hero}>
-      <h1>1,700 UGC videos.<span className="portfolio-serif">All in one list.</span></h1>
-      <button className={styles.button} onClick={() => setStarted(true)}>Grab your list now</button>
-    </section>
+    <>
+      <section className={styles.hero}>
+        <h1>1,700 UGC videos.<span className="portfolio-serif portfolio-hero-serif">All in one list.</span></h1>
+        <button className={styles.button} onClick={() => setStarted(true)}>Grab your list now</button>
+      </section>
+      <section className={styles.benefits} aria-labelledby="benefits-title">
+        <div className={styles.sectionIntro}>
+          <p className={styles.sectionLabel}>Why this list</p>
+          <h2 id="benefits-title" className="portfolio-serif">A head start for<br />your next video.</h2>
+        </div>
+        <div className={styles.benefitGrid}>
+          <article>
+            <h3>Find fresh ideas</h3>
+            <p>Explore different angles, stories, and formats to inspire your next piece of content.</p>
+          </article>
+          <article>
+            <h3>Study the hooks</h3>
+            <p>See how creators open their videos and give people a reason to keep watching.</p>
+          </article>
+          <article>
+            <h3>Save time searching</h3>
+            <p>Start with 1,700 references in one place instead of scrolling for inspiration.</p>
+          </article>
+        </div>
+      </section>
+      <section className={styles.about} aria-labelledby="about-title">
+        <div className={styles.portrait}>
+          <Image
+            src="/mehdi-hero.jpeg"
+            alt="Mehdi Khoudali"
+            fill
+            sizes="(max-width: 639px) 80px, 300px"
+            className={styles.portraitImage}
+          />
+        </div>
+        <div className={styles.aboutCopy}>
+          <div className={styles.aboutHeading}>
+            <p className={styles.sectionLabel}>About me</p>
+            <h2 id="about-title" className="portfolio-serif">Hi, I&apos;m Mehdi.</h2>
+          </div>
+          <p>I&apos;m a <strong>TypeScript full-stack developer</strong> based in Casablanca. I build and ship web products, staying close to both the product and the people using it.</p>
+          <p>I&apos;ve founded products and scaled FeedbackLoop to 700 users. That experience keeps me focused on building software that is clear, useful, and reliable.</p>
+          <Link href="/#work" className={`${styles.button} ${styles.aboutLink}`}>See what I&apos;ve built</Link>
+        </div>
+      </section>
+    </>
   );
 
   return (

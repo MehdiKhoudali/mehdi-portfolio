@@ -4,7 +4,7 @@
 .brand { font-weight: 500; color: #ffffffd9; }
 .header nav { display: flex; gap: 32px; }
 .header a:hover, .footer a:hover { color: white; }
-.hero { min-height: calc(100svh - 169px); padding: 60px 20px 90px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.hero { padding: 104px 20px 112px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
 .hero h1 { font-size: clamp(44px, 6.5vw, 84px); line-height: 1.06; font-weight: 500; letter-spacing: -.055em; }
 .hero h1 span { display: block; color: #ffffff80; }
 .hero .button { margin-top: 36px; }
@@ -38,10 +38,43 @@
 .footer { display: flex; align-items: center; justify-content: space-between; gap: 15px; border-top: 1px solid #ffffff1f; padding-block: 28px; font-size: 12px; color: #ffffff61; }
 .footer > div { display: flex; gap: 20px; }
 @media (max-width: 1023px) { .shell { padding-inline: 32px; } }
-@media (max-width: 639px) { .shell { padding-inline: 20px; } .header { padding-block: 24px; } .header nav { gap: 20px; } .footer { align-items: start; flex-direction: column; padding-block: 24px; } .hero, .formSection { min-height: calc(100svh - 188px); } }
+@media (max-width: 639px) { .shell { padding-inline: 20px; } .header { padding-block: 24px; } .header nav { gap: 20px; } .footer { align-items: start; flex-direction: column; padding-block: 24px; } .formSection { min-height: calc(100svh - 188px); } }
 @media (max-width: 520px) {
-  .hero { padding: 60px 0 80px; }
+  .hero { padding: 80px 0 88px; }
   .formSection { padding: 35px 0 50px; }
   .field input, .field textarea, .field select { font-size: 16px; }
 }
 @media (prefers-reduced-motion: reduce) { .button, .progress span { transition: none; } }
+
+.sectionLabel { font-size: 11px; line-height: 1.5; letter-spacing: .14em; text-transform: uppercase; color: #ffffff61; }
+.benefits { display: grid; grid-template-columns: .75fr 1fr; gap: 48px; padding: 64px 0; border-top: 1px solid #ffffff1f; }
+.sectionIntro h2, .aboutCopy h2 { font-size: 44px; line-height: 1.1; color: #ffffffc7; margin-top: 18px; }
+.benefitGrid { min-width: 0; }
+.benefitGrid article { display: grid; grid-template-columns: 150px 1fr; gap: 24px; padding: 24px 0; border-bottom: 1px solid #ffffff1f; }
+.benefitGrid article:first-child { padding-top: 0; }
+.benefitGrid article:last-child { border-bottom: 0; padding-bottom: 0; }
+.benefitGrid h3 { font-size: 16px; line-height: 1.6; font-weight: 500; letter-spacing: -.02em; color: #ffffffd9; }
+.benefitGrid p { font-size: 14px; line-height: 1.8; color: #ffffff85; }
+.about { display: grid; grid-template-columns: .75fr 1fr; gap: 48px; align-items: center; padding: 64px 0 72px; border-top: 1px solid #ffffff1f; }
+.portrait { position: relative; width: min(100%, 300px); aspect-ratio: 4 / 5; overflow: hidden; border: 1px solid #ffffff1f; background: #111; }
+.portraitImage { object-fit: cover; object-position: center 38%; filter: grayscale(.2) contrast(1.05); }
+.aboutCopy { max-width: 510px; }
+.aboutCopy > p:not(.sectionLabel) { font-size: 15px; line-height: 1.9; color: #ffffff99; margin-top: 22px; }
+.aboutCopy strong { color: #ffffffd9; font-weight: 500; }
+.aboutLink { margin-top: 24px; }
+@media (max-width: 1023px) {
+  .benefits, .about { grid-template-columns: .7fr 1fr; gap: 36px; }
+  .sectionIntro h2, .aboutCopy h2 { font-size: 38px; }
+  .benefitGrid article { grid-template-columns: 1fr; gap: 8px; }
+}
+@media (max-width: 639px) {
+  .benefits, .about { grid-template-columns: 1fr; padding: 40px 0 48px; gap: 30px; }
+  .sectionIntro h2, .aboutCopy h2 { font-size: 36px; margin-top: 14px; }
+  .benefitGrid article { padding-block: 22px; }
+  .about { grid-template-columns: 80px 1fr; align-items: center; gap: 24px; }
+  .portrait { width: 80px; aspect-ratio: 1; border-radius: 50%; }
+  .aboutCopy { display: contents; }
+  .aboutHeading h2 { font-size: clamp(28px, 8vw, 36px); margin-top: 9px; }
+  .aboutCopy > p:not(.sectionLabel) { grid-column: 1 / -1; font-size: 14px; margin-top: 0; }
+  .aboutLink { grid-column: 1 / -1; justify-self: start; margin-top: 0; }
+}
