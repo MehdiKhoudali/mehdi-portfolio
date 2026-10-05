@@ -1,0 +1,5 @@
+# Preserve research snapshots and exports exactly for provenance validation.
+research/** -text
+# Original source responses and review text can contain intentional whitespace.
+research/**/raw/** -whitespace
+research/**/*.csv -whitespace

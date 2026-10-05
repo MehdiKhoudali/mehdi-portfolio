@@ -1,0 +1,119 @@
+[
+  {
+    "app_id": "6745120053",
+    "app_name": "Imposter Game - Party Edition",
+    "maker": "Sven Vucak / Vucak IT Solutions (Sven and David Vucak)",
+    "category": "Party / social deduction game",
+    "indie_tier": "small_independent_team",
+    "eligibility": "qualified",
+    "release_date": "2025-05-18T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6745120053 (releaseDate)",
+    "original_launch_caveat": "Original Apple listing date, not currentVersionReleaseDate; no older app lineage established.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=6745120053", "quote": "\"sellerName\":\"Sven Vucak\"; \"releaseDate\":\"2025-05-18T07:00:00Z\"", "checked_at": "2026-10-04"},
+      {"url": "https://vucak.at", "quote": "Eight apps designed, built and shipped by us. Not client work, our own products. ... Sven Vucak and David Vucak ... Founders, Vucak IT Solutions", "checked_at": "2026-10-04"},
+      {"url": "https://vucak.at/impressum", "quote": "Sven Vucak ... David Vucak ... Entwicklung von Websites und mobilen Applikationen.", "checked_at": "2026-10-04"}
+    ],
+    "caveats": ["Current official maker evidence supports a two-founder team, not a solo classification; funding and acquisition history not independently audited."]
+  },
+  {
+    "app_id": "6736921913",
+    "app_name": "nomadtable: travel friends",
+    "maker": "Nomadtable Inc.; Jay Raavi",
+    "category": "Travel / social networking",
+    "indie_tier": "individual_led",
+    "eligibility": "borderline",
+    "release_date": "2025-03-19T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6736921913 (releaseDate; numeric listing verified)",
+    "original_launch_caveat": "Apple listing meets cutoff; bundle ID jayraavi.SoloMatch suggests a prior working name, not proof of a pre-2022 app.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/search?term=Nomadtable&entity=software&limit=3", "quote": "\"trackId\":6736921913; \"releaseDate\":\"2025-03-19T07:00:00Z\"; \"sellerName\":\"Nomadtable Inc.\"", "checked_at": "2026-10-04"},
+      {"url": "https://nomadtable.app", "quote": "in the summer of 2024, i was solo traveling ... i got back from that trip and immediately quit my job to build this app ... jay, founder", "checked_at": "2026-10-04"},
+      {"url": "https://www.linkedin.com/posts/vijayraavi_excited-to-share-that-nomadtable-just-crossed-activity-7375975431159738368-kGQQ", "quote": "Jay Raavi ... It's been a crazy 6 months! Seeing an app I built solo out of my SF apartment grow into a global community of travelers", "checked_at": "2026-10-04"}
+    ],
+    "caveats": ["Founder-led and solo-built origin verified; current legal policy names Nomadtable Inc. and contractor moderators. No reliable current primary funding or ownership confirmation obtained; secondary bootstrap claims not treated as proof. Not counted as qualified."]
+  },
+  {
+    "app_id": "1663430725",
+    "app_name": "RIZZ",
+    "maker": "TREND IT LLC; Joshua Miller and Roman Khaves",
+    "category": "Lifestyle / AI dating assistant",
+    "indie_tier": "individual_led",
+    "eligibility": "qualified",
+    "release_date": "2023-01-12T08:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=1663430725 (releaseDate; numeric listing verified)",
+    "original_launch_caveat": "Founder says a web app preceded mobile and App Store registration was December 8, 2022; registration is not release. Apple original listing release is January 12, 2023. Both accounts are post-cutoff, not an older similarly named dating app.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/search?term=Rizz&entity=software&limit=5", "quote": "\"trackId\":1663430725; \"releaseDate\":\"2023-01-12T08:00:00Z\"; Made with Love by: Joshua Miller & Roman Khaves", "checked_at": "2026-10-04"},
+      {"url": "https://www.rizz.app", "quote": "\"author\":[{\"@type\":\"Person\",\"name\":\"Joshua Miller\",\"sameAs\":[\"https://www.linkedin.com/in/joshzmiller/\"]},{\"@type\":\"Person\",\"name\":\"Roman Khaves\",\"sameAs\":[\"https://www.linkedin.com/in/romankhaves/\"]}]", "checked_at": "2026-10-04"},
+      {"url": "https://www.linkedin.com/in/romankhaves/", "quote": "i bootstrapped RIZZ app to $15M+ revenue ... my cofounder ... we launched the web app first ... i registered rizz on the app store on december 8, 2022.", "checked_at": "2026-10-04"}
+    ],
+    "caveats": ["Bootstrapping is a founder self-report on an official-site-linked personal profile; exact current employee count unavailable. Individual-led classification does not imply solo development. Official /terms returned only an app shell in text fetch."]
+  },
+  {
+    "app_id": "1624758651",
+    "app_name": "Couple Joy - Relationship App",
+    "maker": "HEARTBIT S.R.L.",
+    "category": "Lifestyle / couples and social networking",
+    "indie_tier": "small_independent_team",
+    "eligibility": "qualified",
+    "release_date": "2022-05-28T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=1624758651 (releaseDate; numeric listing verified)",
+    "original_launch_caveat": "Original Apple listing meets cutoff. Forbes mentions a relationship beginning over ten years earlier, not a dated app launch; no pre-2022 published app established.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/search?term=CoupleJoy&entity=software&limit=3", "quote": "\"trackId\":1624758651; \"releaseDate\":\"2022-05-28T07:00:00Z\"; \"sellerName\":\"HEARTBIT S.R.L.\"", "checked_at": "2026-10-04"},
+      {"url": "https://couplejoyapp.com/careers", "quote": "We are a small team of two people who are passionate about building a better way to communicate with your partner.", "checked_at": "2026-10-04"},
+      {"url": "https://www.forbes.ro/forbes-romania-30-sub-30-editia-2025-ioana-moraru-si-cosmin-andrei-anghel-couple-joy-love-at-scale-469987", "quote": "start-up construit exclusiv prin resurse proprii \u0219i f\u0103r\u0103 investi\u021bii externe", "checked_at": "2026-10-04"}
+    ],
+    "caveats": ["Forbes quote says built entirely with own resources and without external investment, as of October 2025; it also reports over 20 freelancers and planned hiring, so two-person core does not mean total workforce of two. Official terms identify HEARTBIT S.R.L. as IP owner; no acquisition established. Funding history not independently audited."]
+  },
+  {
+    "app_id": "1528595748",
+    "app_name": "Finch: Self-Care Pet",
+    "maker": "Finch Care Public Benefit Corporation",
+    "category": "Health & Fitness / self-care pet",
+    "indie_tier": "unknown",
+    "eligibility": "excluded",
+    "release_date": "2021-05-12T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=1528595748 (releaseDate; numeric listing verified)",
+    "original_launch_caveat": "Original Apple release is in 2021; recent updates do not satisfy the strict original-launch cutoff.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/search?term=Finch%20self%20care&entity=software&limit=2", "quote": "\"trackId\":1528595748; \"releaseDate\":\"2021-05-12T07:00:00Z\"", "checked_at": "2026-10-04"}
+    ],
+    "caveats": ["Excluded on launch date alone; no further independence investigation necessary."]
+  },
+  {
+    "app_id": "6745120443",
+    "app_name": "Charades - Who Am I?!?",
+    "maker": "Sven Vucak / Vucak IT Solutions (Sven and David Vucak)",
+    "category": "Party / charades game",
+    "indie_tier": "small_independent_team",
+    "eligibility": "qualified",
+    "release_date": "2025-05-20T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6745120443 (releaseDate)",
+    "original_launch_caveat": "Original Apple listing date, not currentVersionReleaseDate. Traditional charades is old; this particular app listing is new.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=6745120443", "quote": "\"trackId\":6745120443; \"trackName\":\"Charades - Who Am I?!?\"; \"sellerName\":\"Sven Vucak\"; \"releaseDate\":\"2025-05-20T07:00:00Z\"", "checked_at": "2026-10-04"},
+      {"url": "https://vucak.at", "quote": "Eight apps designed, built and shipped by us. Not client work, our own products. ... 2 ... Founders you deal with directly", "checked_at": "2026-10-04"},
+      {"url": "https://vucak.at/impressum", "quote": "Sven Vucak ... David Vucak ... Entwicklung von Websites und mobilen Applikationen.", "checked_at": "2026-10-04"}
+    ],
+    "caveats": ["Official maker site directly links this numeric Apple ID. Same maker as Imposter, not an additional independent maker. Funding and acquisition history not independently audited."]
+  },
+  {
+    "app_id": "6746101066",
+    "app_name": "Party Bomb - Pass it or lose",
+    "maker": "Sven Vucak / Vucak IT Solutions (Sven and David Vucak)",
+    "category": "Party / pass-the-phone game",
+    "indie_tier": "small_independent_team",
+    "eligibility": "qualified",
+    "release_date": "2025-05-22T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6746101066 (releaseDate)",
+    "original_launch_caveat": "Original Apple listing date, not currentVersionReleaseDate; no older listing lineage established.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=6746101066", "quote": "\"trackId\":6746101066; \"trackName\":\"Party Bomb - Pass it or lose\"; \"sellerName\":\"Sven Vucak\"; \"releaseDate\":\"2025-05-22T07:00:00Z\"", "checked_at": "2026-10-04"},
+      {"url": "https://vucak.at", "quote": "Eight apps designed, built and shipped by us. Not client work, our own products. ... Sven Vucak and David Vucak ... Founders, Vucak IT Solutions", "checked_at": "2026-10-04"},
+      {"url": "https://vucak.at/impressum", "quote": "Sven Vucak ... David Vucak ... Entwicklung von Websites und mobilen Applikationen.", "checked_at": "2026-10-04"}
+    ],
+    "caveats": ["Official maker site directly links this numeric Apple ID. Same maker as Imposter, not an additional independent maker. Funding and acquisition history not independently audited."]
+  }
+]

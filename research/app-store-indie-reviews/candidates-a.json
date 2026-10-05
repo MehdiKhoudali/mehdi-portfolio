@@ -1,0 +1,418 @@
+[
+  {
+    "candidate": "Streaks",
+    "eligibility": "qualified",
+    "alternate": false,
+    "apple_id": 963034692,
+    "app_name": "Streaks",
+    "storefront": "us",
+    "apple_url": "https://apps.apple.com/us/app/streaks/id963034692",
+    "metadata_source_url": "https://itunes.apple.com/lookup?id=963034692&country=us",
+    "maker": "Crunchy Bagel; collaboration with Triplezero",
+    "publisher": "Crunchy Bagel",
+    "seller": "Crunchy Bagel Pty Ltd",
+    "category": "Health & Fitness",
+    "indie_tier": "small independent team",
+    "eligibility_basis": "Official maker identifies Streaks as a collaboration between Crunchy Bagel and Triplezero. Triplezero's current site identifies its owner and a second developer. This supports a small maker collaboration, not a solo classification.",
+    "ownership_status": "Current Apple seller and app copyright identify Crunchy Bagel Pty Ltd. No acquisition disclosure appeared in the inspected maker pages; ultimate current ownership and shareholder control are not conclusively proven.",
+    "funding_status": "Not established; no explicit funding or cap-table disclosure in the inspected official sources. Do not interpret this as proof of no VC funding.",
+    "review_volume_status": "Not assessed. No written reviews collected; availability of enough 1-2 star written reviews remains unverified.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=963034692&country=us", "quote": "Streaks", "checked_at": "2026-10-04"},
+      {"url": "https://crunchybagel.com/about", "quote": "Streaks, Streaks Workout and Hexiled are a collaboration with another development agency called TripleZero.", "checked_at": "2026-10-04"},
+      {"url": "https://triplezero.com.au/", "quote": "We designed the productivity app Streaks (winning an Apple Design Award)", "checked_at": "2026-10-04"},
+      {"url": "https://triplezero.com.au/", "quote": "Isaac Forman", "checked_at": "2026-10-04"},
+      {"url": "https://triplezero.com.au/", "quote": "Owner, web developer and designer", "checked_at": "2026-10-04"},
+      {"url": "https://streaksapp.com/", "quote": "STREAKS. Copyright 2024 Crunchy Bagel Pty Ltd. All rights reserved.", "checked_at": "2026-10-04"}
+    ],
+    "caveats": [
+      "Crunchy Bagel's about article is dated November 6, 2015; current official sites still link Streaks and the same publisher, but no current total headcount is disclosed.",
+      "Small-team independence is a maker-profile assessment, not a corporate ownership audit."
+    ]
+  },
+  {
+    "candidate": "Structured",
+    "eligibility": "qualified",
+    "alternate": false,
+    "apple_id": 1499198946,
+    "app_name": "Structured: Daily Planner Todo",
+    "storefront": "us",
+    "apple_url": "https://apps.apple.com/us/app/structured-daily-planner-todo/id1499198946",
+    "metadata_source_url": "https://itunes.apple.com/lookup?id=1499198946&country=us",
+    "maker": "Leo Mehlig and the Structured team / unorderly GmbH",
+    "publisher": "unorderly GmbH",
+    "seller": "unorderly GmbH",
+    "category": "Productivity",
+    "indie_tier": "small independent team",
+    "eligibility_basis": "Maker-linked official press kit names founder Leo Mehlig and a 10-person core team plus freelancers. Official anniversary article describes a 15-person remote team. Founder-led small app company; no giant-platform affiliation disclosed in inspected sources.",
+    "ownership_status": "Official imprint and current Apple seller identify unorderly GmbH. No acquisition disclosure appeared in the inspected official press kit, blog and imprint. Ultimate current ownership is not conclusively proven.",
+    "funding_status": "Not established; inspected official sources do not establish bootstrapping or provide a cap table. No significant VC funding was verified, which is not proof that none exists.",
+    "review_volume_status": "Not assessed. No written reviews collected; availability of enough 1-2 star written reviews remains unverified.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=1499198946&country=us", "quote": "Structured: Daily Planner Todo", "checked_at": "2026-10-04"},
+      {"url": "https://impresskit.net/structured", "quote": "Founded by Leo Mehlig, now a 10-person core team and skilled freelancers, continuously innovating and expanding the app.", "checked_at": "2026-10-04"},
+      {"url": "https://structured.app/blog/structuredfive", "quote": "Our team has grown into a passionate group of 15 people working remotely across five continents.", "checked_at": "2026-10-04"},
+      {"url": "https://structured.app/imprint", "quote": "unorderly GmbH", "checked_at": "2026-10-04"}
+    ],
+    "caveats": [
+      "Team figures come from different official pages and may distinguish core staff from freelancers; not asserted as an exact October 2026 headcount.",
+      "Small founder-led maker evidence is strong; financial independence and beneficial ownership are less directly documented than for one sec or Overcast.",
+      "Imprint says last updated January 24, 2023."
+    ]
+  },
+  {
+    "candidate": "Tiimo",
+    "eligibility": "excluded",
+    "alternate": false,
+    "apple_id": 1480220328,
+    "app_name": "Tiimo: To-Do List Planner",
+    "storefront": "us",
+    "apple_url": "https://apps.apple.com/us/app/tiimo-to-do-list-planner/id1480220328",
+    "metadata_source_url": "https://itunes.apple.com/lookup?id=1480220328&country=us",
+    "maker": "Helene Lassen Norlem and Melissa Wurtz Azari / Tiimo",
+    "publisher": "tiimo",
+    "seller": "tiimo ApS",
+    "category": "Productivity",
+    "indie_tier": null,
+    "eligibility_basis": "Small-team origins are documented, but significant VC backing is explicitly documented. Excluded from the strict independent-app cohort, rather than labeled indie.",
+    "ownership_status": "Apple seller says tiimo ApS, while official site footer says Tiimo A/S. Official funding announcement identifies outside investors but not their current stakes. Current beneficial ownership and acquisition status are not conclusively proven.",
+    "funding_status": "Official August 27, 2024 announcement: $1.6M latest round plus $3.2M seed, $4.8M total pre-series A; names Crowberry Capital, People Ventures, Goodwater Capital and Divergent Investments.",
+    "review_volume_status": "Not assessed. No written reviews collected; excluded on funding grounds.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=1480220328&country=us", "quote": "Tiimo: To-Do List Planner", "checked_at": "2026-10-04"},
+      {"url": "https://www.tiimoapp.com/about", "quote": "Tiimo was co-founded by Helene and Melissa in 2015", "checked_at": "2026-10-04"},
+      {"url": "https://www.tiimoapp.com/resource-hub/tiimo-raises-4-8m-neurodivergent-planner", "quote": "Building on their 2022 seed round of $3.2 million, this brings their total raised to $4.8 million pre-series A.", "checked_at": "2026-10-04"},
+      {"url": "https://www.tiimoapp.com/resource-hub/tiimo-raises-4-8m-neurodivergent-planner", "quote": "The latest round was co-led by Crowberry Capital and People Ventures", "checked_at": "2026-10-04"}
+    ],
+    "caveats": [
+      "The funding article headline can be mistaken for a $4.8M single round; the body establishes that $4.8M is total raised at that date.",
+      "Founder names are ASCII transliterations; evidence quotes preserve the exact fetched wording where quoted.",
+      "A small team is not sufficient to treat a significantly VC-backed startup as strict indie."
+    ]
+  },
+  {
+    "candidate": "Waterllama",
+    "eligibility": "qualified",
+    "alternate": false,
+    "apple_id": 1454778585,
+    "app_name": "Water tracker Waterllama",
+    "storefront": "us",
+    "apple_url": "https://apps.apple.com/us/app/water-tracker-waterllama/id1454778585",
+    "metadata_source_url": "https://itunes.apple.com/lookup?id=1454778585&country=us",
+    "maker": "Llama Luna Apps",
+    "publisher": "Llama Luna Apps",
+    "seller": "Llama Luna Apps Inc",
+    "category": "Health & Fitness",
+    "indie_tier": "small independent team",
+    "eligibility_basis": "Official hiring page expressly calls the maker a small team. App website links the Llama Luna maker site and identifies Llama Luna Apps Inc, matching the current Apple seller.",
+    "ownership_status": "App site and Apple seller identify Llama Luna Apps Inc. No acquisition disclosure appeared in inspected app, maker and hiring pages; ultimate current ownership is not conclusively proven.",
+    "funding_status": "Not established. Official sources inspected disclose no cap table or explicit funding history; no claim of proven bootstrapping is made.",
+    "review_volume_status": "Not assessed. No written reviews collected; availability of enough 1-2 star written reviews remains unverified.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=1454778585&country=us", "quote": "Water tracker Waterllama", "checked_at": "2026-10-04"},
+      {"url": "https://waterllama.com/jobs.html", "quote": "Join our small but passionate team!", "checked_at": "2026-10-04"},
+      {"url": "https://waterllama.com/", "quote": "2019-2025 Llama Luna Apps Inc.", "checked_at": "2026-10-04"},
+      {"url": "https://llamaluna.com/", "quote": "Waterllama water tracker", "checked_at": "2026-10-04"}
+    ],
+    "caveats": [
+      "No precise headcount or founder identity established from the fetched maker pages; do not call it solo.",
+      "The app site's copyright range ends in 2025; the live Apple listing corroborates the current publishing entity.",
+      "Small-team classification is directly documented, but financial independence is not separately proven."
+    ]
+  },
+  {
+    "candidate": "HabitKit",
+    "eligibility": "qualified",
+    "alternate": false,
+    "apple_id": 6443918070,
+    "app_name": "Habit Tracker - HabitKit",
+    "storefront": "us",
+    "apple_url": "https://apps.apple.com/us/app/habit-tracker-habitkit/id6443918070",
+    "metadata_source_url": "https://itunes.apple.com/lookup?id=6443918070&country=us",
+    "maker": "Sebastian Roehl",
+    "publisher": "Sebastian Roehl",
+    "seller": "Sebastian Roehl",
+    "category": "Productivity",
+    "indie_tier": "solo",
+    "eligibility_basis": "Official about page explicitly says HabitKit is made by one person and identifies its author as an independent app developer; current Apple publisher is the same individual.",
+    "ownership_status": "Current official solo-maker statement and Apple personal seller match. No acquisition disclosure appeared in the inspected official pages. Ultimate current ownership or undisclosed contractual interests are not conclusively proven.",
+    "funding_status": "No significant VC backing established; official page documents an independent solo developer, not a funding history or cap table.",
+    "review_volume_status": "Not assessed. No written reviews collected; availability of enough 1-2 star written reviews remains unverified.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=6443918070&country=us", "quote": "Habit Tracker - HabitKit", "checked_at": "2026-10-04"},
+      {"url": "https://habitkit.app/about", "quote": "HabitKit is a habit tracker app for iPhone and Android, and it is made by one person. I am that person.", "checked_at": "2026-10-04"},
+      {"url": "https://habitkit.app/about", "quote": "I am an independent app developer in Germany", "checked_at": "2026-10-04"},
+      {"url": "https://habitkit.app/about", "quote": "There is no team behind that address.", "checked_at": "2026-10-04"}
+    ],
+    "caveats": [
+      "Roehl is the Apple seller spelling; the maker's own prose uses an umlaut in his surname.",
+      "Small apps may contribute relatively few low-star written reviews; no yield estimate is inferred from total ratings."
+    ]
+  },
+  {
+    "candidate": "Gentler Streak",
+    "eligibility": "qualified",
+    "alternate": false,
+    "apple_id": 1576857102,
+    "app_name": "Gentler Streak Workout Tracker",
+    "storefront": "us",
+    "apple_url": "https://apps.apple.com/us/app/gentler-streak-workout-tracker/id1576857102",
+    "metadata_source_url": "https://itunes.apple.com/lookup?id=1576857102&country=us",
+    "maker": "Gentler Stories; Katarina Lotric, co-founder and CEO",
+    "publisher": "Gentler Stories LLC",
+    "seller": "Gentler Stories d.o.o.",
+    "category": "Health & Fitness",
+    "indie_tier": "small independent team",
+    "eligibility_basis": "Fresh official September 2026 maker announcement explicitly states the team is small and independent and builds without outside growth pressure.",
+    "ownership_status": "Current Apple seller is Gentler Stories d.o.o.; official newsroom still names a co-founder as CEO. No acquisition disclosure appeared in inspected official newsroom material. Ultimate current ownership is not conclusively proven.",
+    "funding_status": "Official small-independent statement supports independence; no exact financing history or cap table established.",
+    "review_volume_status": "Not assessed. No written reviews collected; availability of enough 1-2 star written reviews remains unverified.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=1576857102&country=us", "quote": "Gentler Streak Workout Tracker", "checked_at": "2026-10-04"},
+      {"url": "https://gentlerstories.com/newsroom/20260914ios27", "quote": "We\u2019re small, independent, and building Gentler Streak and The Outsiders the way we think fitness apps should be built", "checked_at": "2026-10-04"},
+      {"url": "https://gentlerstories.com/newsroom/20260914ios27", "quote": "without outside pressure to prioritize growth over experience.", "checked_at": "2026-10-04"},
+      {"url": "https://gentlerstories.com/newsroom", "quote": "co-founder & CEO", "checked_at": "2026-10-04"}
+    ],
+    "caveats": [
+      "Publisher display name uses LLC, while legal seller uses Slovenian d.o.o.; both recorded exactly as returned by Apple.",
+      "Maker name is ASCII-transliterated; the official page uses diacritics.",
+      "No precise October 2026 headcount asserted."
+    ]
+  },
+  {
+    "candidate": "AutoSleep",
+    "eligibility": "borderline",
+    "alternate": false,
+    "apple_id": 1164801111,
+    "app_name": "AutoSleep: Watch Sleep Tracker",
+    "storefront": "us",
+    "apple_url": "https://apps.apple.com/us/app/autosleep-watch-sleep-tracker/id1164801111",
+    "metadata_source_url": "https://itunes.apple.com/lookup?id=1164801111&country=us",
+    "maker": "Tantsissa",
+    "publisher": "Tantsissa",
+    "seller": "TANTSISSA HOLDINGS PTY LTD",
+    "category": "Health & Fitness",
+    "indie_tier": null,
+    "eligibility_basis": "Consumer app and current Australian maker are verified, but inspected official app and Apple editorial pages did not establish current solo/small-team size or independent control. Not included in qualified pool.",
+    "ownership_status": "App footer and current Apple seller identify Tantsissa Holdings Pty Ltd. No acquisition disclosure appeared in inspected sources, but corporate ownership and independence are not conclusively proven.",
+    "funding_status": "Unknown; no funding history established.",
+    "review_volume_status": "Not assessed. No written reviews collected.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=1164801111&country=us", "quote": "AutoSleep: Watch Sleep Tracker", "checked_at": "2026-10-04"},
+      {"url": "https://autosleepapp.tantsissa.com/", "quote": "Tantsissa Holdings Pty Ltd", "checked_at": "2026-10-04"},
+      {"url": "https://apps.apple.com/story/id1529937534", "quote": "Australia\u2019s Tantsissa also developed the heart rate tracker", "checked_at": "2026-10-04"}
+    ],
+    "caveats": [
+      "No solo-founder identity inferred from historical recollection.",
+      "The main tantsissa.com domain and /about could not be fetched; the official AutoSleep subdomain was accessible.",
+      "Privacy and one-time pricing do not prove indie eligibility."
+    ]
+  },
+  {
+    "candidate": "Hevy",
+    "eligibility": "borderline",
+    "alternate": false,
+    "apple_id": 1458862350,
+    "app_name": "Hevy - Workout Tracker Gym Log",
+    "storefront": "us",
+    "apple_url": "https://apps.apple.com/us/app/hevy-workout-tracker-gym-log/id1458862350",
+    "metadata_source_url": "https://itunes.apple.com/lookup?id=1458862350&country=us",
+    "maker": "Guillem Ros and Desmond McNamee / Hevy Studios",
+    "publisher": "Hevy Studios S.L.",
+    "seller": "Hevy Studios S.L.",
+    "category": "Health & Fitness",
+    "indie_tier": null,
+    "eligibility_basis": "Official site verifies the two founders and a current multi-department named roster, but does not explicitly establish bootstrapping or independent control. Its roster contains 28 named people, substantially larger than the tiny maker teams. Hold outside the strict qualified pool pending ownership/funding confirmation.",
+    "ownership_status": "Official copyright and Apple seller identify Hevy Studios S.L.; official site identifies Guillem Ros as co-founder and CEO and Desmond McNamee as co-founder and CTO. This does not prove founder ownership. Acquisition status and ultimate current ownership are not conclusively proven.",
+    "funding_status": "Not established. Do not label bootstrapped, VC-backed or acquired without further evidence.",
+    "review_volume_status": "Not assessed. No written reviews collected.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=1458862350&country=us", "quote": "Hevy - Workout Tracker Gym Log", "checked_at": "2026-10-04"},
+      {"url": "https://www.hevyapp.com/press/", "quote": "Hevy was created by Guillem Ros and Desmond McNamee to make working out easier and help people reach their goals.", "checked_at": "2026-10-04"},
+      {"url": "https://www.hevyapp.com/about-us/", "quote": "Co-Founder & CEO", "checked_at": "2026-10-04"},
+      {"url": "https://www.hevyapp.com/about-us/", "quote": "Co-Founder & CTO", "checked_at": "2026-10-04"},
+      {"url": "https://www.hevyapp.com/about-us/", "quote": "Hevy Studios, S.L. All rights reserved.", "checked_at": "2026-10-04"}
+    ],
+    "caveats": [
+      "The 28-person figure is a count of the fetched named roster, not independently verified employee headcount.",
+      "17+ million users and a social feature do not alone make an app a giant platform; the hold is about ownership and strict team-size eligibility, not popularity.",
+      "Hevy Coach is a separate B2B offering; the Apple candidate here is the B2C workout app."
+    ]
+  },
+  {
+    "candidate": "Strong",
+    "eligibility": "borderline",
+    "alternate": false,
+    "apple_id": 464254577,
+    "app_name": "Strong Workout Tracker Gym Log",
+    "storefront": "us",
+    "apple_url": "https://apps.apple.com/us/app/strong-workout-tracker-gym-log/id464254577",
+    "metadata_source_url": "https://itunes.apple.com/lookup?id=464254577&country=us",
+    "maker": "Strong Fitness PTE. Ltd.",
+    "publisher": "Strong Fitness PTE Limited",
+    "seller": "Strong Fitness PTE Limited",
+    "category": "Health & Fitness",
+    "indie_tier": null,
+    "eligibility_basis": "Current consumer app, publisher and legal operator verified. Fetched official homepage, help-center introduction and legal terms do not establish current small-team size or independent ownership. Not included in qualified pool.",
+    "ownership_status": "Official terms identify Strong Fitness PTE. Ltd. as operator and owner of original service content; Apple identifies the same entity under its Limited spelling. Parent ownership and acquisition status are not conclusively proven.",
+    "funding_status": "Unknown; no funding history or current cap table established.",
+    "review_volume_status": "Not assessed. No written reviews collected.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=464254577&country=us", "quote": "Strong Workout Tracker Gym Log", "checked_at": "2026-10-04"},
+      {"url": "https://strong.app/terms", "quote": "operated by Strong Fitness PTE. Ltd.", "checked_at": "2026-10-04"},
+      {"url": "https://help.strongapp.io/article/228-what-is-strong", "quote": "Strong is built for everyone, including you.", "checked_at": "2026-10-04"}
+    ],
+    "caveats": [
+      "The fetched official terms and introductory article are dated February 2021; current Apple seller corroborates operator identity, not independence.",
+      "Official /about and /careers paths returned 404.",
+      "No acquisition or founder-control claim made from unverified historical accounts."
+    ]
+  },
+  {
+    "candidate": "Anybox",
+    "eligibility": "qualified",
+    "alternate": false,
+    "apple_id": 1593408455,
+    "app_name": "Anybox - Bookmark & Read Later",
+    "storefront": "us",
+    "apple_url": "https://apps.apple.com/us/app/anybox-bookmark-read-later/id1593408455",
+    "metadata_source_url": "https://itunes.apple.com/lookup?id=1593408455&country=us",
+    "maker": "Anybox Ltd; unnamed single-person operator",
+    "publisher": "Anybox LTD",
+    "seller": "Anybox LTD",
+    "category": "Productivity",
+    "indie_tier": "solo",
+    "eligibility_basis": "Official terms explicitly state Anybox is developed and operated by a single-person team. Current app and maker sites and Apple seller consistently identify Anybox Ltd.",
+    "ownership_status": "Current Apple seller, maker site and app privacy policy identify Anybox LTD. No acquisition disclosure appeared in inspected official sources. Ultimate current ownership is not conclusively proven, especially because the solo statement is on an older terms page.",
+    "funding_status": "Not established; no significant VC funding verified and no cap-table disclosure found in inspected pages.",
+    "review_volume_status": "Not assessed. No written reviews collected; availability of enough 1-2 star written reviews remains unverified.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=1593408455&country=us", "quote": "Anybox - Bookmark & Read Later", "checked_at": "2026-10-04"},
+      {"url": "https://anybox.app/terms-of-service", "quote": "Anybox is developed and operated by a single-person team.", "checked_at": "2026-10-04"},
+      {"url": "https://anybox.app/privacy-policy", "quote": "Anybox LTD values our users\u2019 privacy.", "checked_at": "2026-10-04"},
+      {"url": "https://anybox.ltd/", "quote": "Apps by Anybox Ltd", "checked_at": "2026-10-04"}
+    ],
+    "caveats": [
+      "Solo statement remains live but terms last-updated date is January 8, 2022, misspelled Januay on the page.",
+      "Founder personal name not established from fetched official sources; not guessed.",
+      "Qualifies as a personal bookmark/read-later utility, not an enterprise SaaS product."
+    ]
+  },
+  {
+    "candidate": "one sec",
+    "eligibility": "qualified",
+    "alternate": false,
+    "apple_id": 1532875441,
+    "app_name": "one sec | screen time + focus",
+    "storefront": "us",
+    "apple_url": "https://apps.apple.com/us/app/one-sec-screen-time-focus/id1532875441",
+    "metadata_source_url": "https://itunes.apple.com/lookup?id=1532875441&country=us",
+    "maker": "Frederik Riedel and team / riedel.wtf apps S.L.",
+    "publisher": "riedel.wtf apps S.L.",
+    "seller": "riedel.wtf apps S.L.",
+    "category": "Productivity",
+    "indie_tier": "small independent team",
+    "eligibility_basis": "Official about page expressly calls one sec an indie app and its maker a small independent team led by Frederik, not affiliated with big corporations. Current team page means it should not be labeled solo today.",
+    "ownership_status": "Official site and Apple seller identify riedel.wtf apps S.L.; official about page explicitly denies big-corporation affiliation. No acquisition disclosure appeared in inspected official pages. Ultimate beneficial ownership is not conclusively proven.",
+    "funding_status": "Official homepage says there is no investor pressure to push ads or analytics; no exact cap table or complete financing history established.",
+    "review_volume_status": "Not assessed. No written reviews collected; availability of enough 1-2 star written reviews remains unverified.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=1532875441&country=us", "quote": "one sec | screen time + focus", "checked_at": "2026-10-04"},
+      {"url": "https://one-sec.app/about/", "quote": "one sec is an indie app", "checked_at": "2026-10-04"},
+      {"url": "https://one-sec.app/about/", "quote": "We are a small, independent team led by Frederik.", "checked_at": "2026-10-04"},
+      {"url": "https://one-sec.app/about/", "quote": "We\u2019re not affiliated with big corporations or Silicon Valley giants.", "checked_at": "2026-10-04"}
+    ],
+    "caveats": [
+      "The current about page lists 15 named team members; solo origin should not be confused with current team size.",
+      "Corporate and school licensing exists, but this Apple candidate is the B2C screen-time app."
+    ]
+  },
+  {
+    "candidate": "ScreenZen",
+    "eligibility": "borderline",
+    "alternate": false,
+    "apple_id": 1541027222,
+    "app_name": "ScreenZen- Screen Time Control",
+    "storefront": "us",
+    "apple_url": "https://apps.apple.com/us/app/screenzen-screen-time-control/id1541027222",
+    "metadata_source_url": "https://itunes.apple.com/lookup?id=1541027222&country=us",
+    "maker": "ScreenZen LLC",
+    "publisher": "ScreenZen LLC",
+    "seller": "ScreenZen LLC",
+    "category": "Productivity",
+    "indie_tier": null,
+    "eligibility_basis": "Consumer app and operator verified, with donation-supported model on the official site. Fetched homepage, terms and Halo page do not identify founder, current team size or independent control. Not included in qualified pool.",
+    "ownership_status": "Official terms and current Apple seller identify ScreenZen LLC. No acquisition disclosure appeared in inspected sources; ultimate current ownership, founder control and acquisition status are not conclusively proven.",
+    "funding_status": "Unknown. Donation-supported app model does not prove absence of investors.",
+    "review_volume_status": "Not assessed. No written reviews collected.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=1541027222&country=us", "quote": "ScreenZen- Screen Time Control", "checked_at": "2026-10-04"},
+      {"url": "https://www.screenzen.co/", "quote": "ScreenZen is the only donation-supported screen time app that blocks distracting apps and websites.", "checked_at": "2026-10-04"},
+      {"url": "https://screenzen.co/policies/terms-of-service", "quote": "provided by ScreenZen LLC", "checked_at": "2026-10-04"}
+    ],
+    "caveats": [
+      "Official /pages/about and /about-us returned 404; no founder or small-team claim inferred from donation pricing.",
+      "The maker also sells Halo hardware, but the Apple candidate here is the software app.",
+      "App title spacing is recorded exactly as Apple's current US metadata returns it."
+    ]
+  },
+  {
+    "candidate": "Overcast",
+    "eligibility": "qualified",
+    "alternate": true,
+    "apple_id": 888422857,
+    "app_name": "Overcast Podcast App",
+    "storefront": "us",
+    "apple_url": "https://apps.apple.com/us/app/overcast-podcast-app/id888422857",
+    "metadata_source_url": "https://itunes.apple.com/lookup?id=888422857&country=us",
+    "maker": "Marco Arment / Overcast Radio, LLC",
+    "publisher": "Overcast Radio, LLC",
+    "seller": "Overcast Radio, LLC",
+    "category": "News",
+    "indie_tier": "solo",
+    "eligibility_basis": "Official current homepage explicitly states it is just Marco, with no big company or investors, and describes Overcast as self-funded for 12 years.",
+    "ownership_status": "Official live maker statement denies big-company ownership and investors; Apple seller is Overcast Radio, LLC. No acquisition disclosure appeared in inspected official source. This is strong direct independence evidence, but beneficial ownership was not conclusively audited through corporate filings.",
+    "funding_status": "Explicitly self-funded; official homepage says no investors.",
+    "review_volume_status": "Not assessed. No written reviews collected; availability of enough 1-2 star written reviews remains unverified.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=888422857&country=us", "quote": "Overcast Podcast App", "checked_at": "2026-10-04"},
+      {"url": "https://overcast.fm/", "quote": "no big company or investors.", "checked_at": "2026-10-04"},
+      {"url": "https://overcast.fm/", "quote": "Overcast is a self-funded app that has sustainably succeeded on its merits", "checked_at": "2026-10-04"}
+    ],
+    "caveats": [
+      "Apple classifies it as News, despite being a podcast player.",
+      "Personal podcast client using open RSS, not a giant content platform."
+    ]
+  },
+  {
+    "candidate": "Pedometer++",
+    "eligibility": "qualified",
+    "alternate": true,
+    "apple_id": 712286167,
+    "app_name": "Pedometer++",
+    "storefront": "us",
+    "apple_url": "https://apps.apple.com/us/app/pedometer/id712286167",
+    "metadata_source_url": "https://itunes.apple.com/lookup?id=712286167&country=us",
+    "maker": "David Smith / Cross Forward",
+    "publisher": "Cross Forward Consulting, LLC",
+    "seller": "Cross Forward Consulting, LLC",
+    "category": "Health & Fitness",
+    "indie_tier": "solo",
+    "eligibility_basis": "Maker's official about page calls David Smith an independent iOS developer and directly links Pedometer++. A March 2026 maker post says he works by himself in the code; later Pedometer++ launch material discloses outside design collaboration.",
+    "ownership_status": "Current Apple publisher is Cross Forward Consulting, LLC; product site footer says Cross Forward, Inc. Maker's current about page still identifies Pedometer++ as his app. No acquisition disclosure appeared in inspected official sources; legal relationship between these entities and ultimate current ownership are not conclusively proven.",
+    "funding_status": "No significant VC backing established; independent-developer self-description is not a full financing history.",
+    "review_volume_status": "Not assessed. No written reviews collected; availability of enough 1-2 star written reviews remains unverified.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=712286167&country=us", "quote": "Pedometer++", "checked_at": "2026-10-04"},
+      {"url": "https://david-smith.org/about/", "quote": "My name is David Smith.", "checked_at": "2026-10-04"},
+      {"url": "https://david-smith.org/about/", "quote": "an independent iOS developer.", "checked_at": "2026-10-04"},
+      {"url": "https://david-smith.org/blog/2026/03/20/generally-useful-prompts/", "quote": "I work by myself in the code", "checked_at": "2026-10-04"},
+      {"url": "https://pedometer.app/", "quote": "copyright 2026, Cross Forward, Inc.", "checked_at": "2026-10-04"}
+    ],
+    "caveats": [
+      "Solo means founder/developer-led, not that no contractors or support staff ever contribute; official launch material credits designer Rafa Conde.",
+      "Product website and Apple seller use different Cross Forward legal names; do not silently equate them as proven identical entities.",
+      "Large download counts alone do not disqualify a solo maker."
+    ]
+  }
+]

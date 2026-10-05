@@ -1,0 +1,10 @@
+{
+  "url": "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=888422857/sortby=mostrecent/json",
+  "resolved_url": "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=888422857/sortby=mostrecent/json",
+  "fetched_at": "2026-10-03T23:33:19.499Z",
+  "status": 200,
+  "attempt": 1,
+  "sha256": "02452ce9d3b2a694543d3d530e85f4320fb5d7e598e774afd7d12f691e86ff1e",
+  "raw_path": "raw/reviews/888422857/nz-1.json",
+  "content_type": "text/javascript; charset=UTF-8"
+}

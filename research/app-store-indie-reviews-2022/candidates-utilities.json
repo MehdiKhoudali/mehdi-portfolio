@@ -1,0 +1,137 @@
+[
+  {
+    "app_id": "6443918070",
+    "app_name": "Habit Tracker - HabitKit",
+    "maker": "Sebastian Roehl",
+    "category": "Productivity",
+    "indie_tier": "solo",
+    "eligibility": "qualified",
+    "release_date": "2022-11-26T08:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6443918070&country=us",
+    "original_launch_caveat": "Apple releaseDate, not currentVersionReleaseDate; official about page independently confirms first App Store version in November 2022.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=6443918070&country=us", "quote": "\"releaseDate\":\"2022-11-26T08:00:00Z\"", "checked_at": "2026-10-04"},
+      {"url": "https://habitkit.app/about", "quote": "HabitKit is a habit tracker app for iPhone and Android, and it is made by one person. I am that person.", "checked_at": "2026-10-04"},
+      {"url": "https://habitkit.app/about", "quote": "The first version of HabitKit reached the App Store in November 2022.", "checked_at": "2026-10-04"}
+    ],
+    "caveats": ["Prior maker evidence reused and official page rechecked live. Personal Apple seller matches maker; no corporate acquisition or significant VC established in inspected sources, not a cap-table audit."]
+  },
+  {
+    "app_id": "6752217216",
+    "app_name": "Pomodoro Timer - FocusKit",
+    "maker": "Sebastian Roehl",
+    "category": "Productivity",
+    "indie_tier": "solo",
+    "eligibility": "qualified",
+    "release_date": "2025-11-28T08:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6752217216&country=us",
+    "original_launch_caveat": "Apple releaseDate for the Sebastian Roehl app, not similarly named apps by other sellers; separate historical launch announcement not yet verified.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=6752217216&country=us", "quote": "2025-11-28T08:00:00Z", "checked_at": "2026-10-04"},
+      {"url": "https://habitkit.app/about", "quote": "I build HabitKit and FocusKit, and I answer the support email for both. There is no team behind that address.", "checked_at": "2026-10-04"}
+    ],
+    "caveats": ["Apple seller Sebastian Roehl matches the official maker. No complete financing or beneficial-ownership audit."]
+  },
+  {
+    "app_id": "6739589530",
+    "app_name": "touch grass: screen time limit",
+    "maker": "Rhys Kentish",
+    "category": "Productivity",
+    "indie_tier": "solo",
+    "eligibility": "qualified",
+    "release_date": "2025-03-14T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6739589530&country=us",
+    "original_launch_caveat": "Apple releaseDate corroborated by March 17, 2025 reporting of launch the preceding Friday. Earlier private savings-transfer prototype is not evidence of an older public Touch Grass launch.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=6739589530&country=us", "quote": "2025-03-14T07:00:00Z", "checked_at": "2026-10-04"},
+      {"url": "https://techcrunch.com/2025/03/17/this-app-limits-your-screen-time-by-making-you-literally-touch-grass/", "quote": "Rhys Kentish launched an iOS app last week called Touch Grass", "checked_at": "2026-10-04"},
+      {"url": "https://techcrunch.com/2025/03/17/this-app-limits-your-screen-time-by-making-you-literally-touch-grass/", "quote": "As an independent developer, Kentish is running the app on his own", "checked_at": "2026-10-04"}
+    ],
+    "caveats": ["Correct maker surname is Kentish, not Kent. Solo statement is from launch reporting; current Apple personal seller still matches. Article says he was open to investors, not that funding occurred; later funding and ownership not conclusively audited."]
+  },
+  {
+    "app_id": "6480082872",
+    "app_name": "Dumbify",
+    "maker": "AB Apps Inc.",
+    "category": "Productivity",
+    "indie_tier": "unknown",
+    "eligibility": "borderline",
+    "release_date": "2024-04-02T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6480082872&country=us",
+    "original_launch_caveat": "Apple releaseDate verified; official product site links the same ID and uses a 2024 footer, but no independent first-release announcement verified.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=6480082872&country=us", "quote": "2024-04-02T07:00:00Z", "checked_at": "2026-10-04"},
+      {"url": "https://itunes.apple.com/lookup?id=6480082872&country=us", "quote": "AB Apps Inc.", "checked_at": "2026-10-04"},
+      {"url": "https://dumbifyapp.com", "quote": "A Minimalist Launcher for iPhone.", "checked_at": "2026-10-04"}
+    ],
+    "caveats": ["Anthony Burkholder attribution supplied in brief was not corroborated by inspected live maker pages; do not infer identity from AB initials. Current team size, financing and ownership unresolved."]
+  },
+  {
+    "app_id": "6741765734",
+    "app_name": "Pushscroll: Exercise To Scroll",
+    "maker": "Pushscroll GmbH",
+    "category": "Health & Fitness",
+    "indie_tier": "unknown",
+    "eligibility": "borderline",
+    "release_date": "2025-06-24T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6741765734&country=us",
+    "original_launch_caveat": "Apple original releaseDate verified; no separate historical launch or rebrand evidence established.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=6741765734&country=us", "quote": "2025-06-24T07:00:00Z", "checked_at": "2026-10-04"},
+      {"url": "https://itunes.apple.com/lookup?id=6741765734&country=us", "quote": "Pushscroll GmbH", "checked_at": "2026-10-04"},
+      {"url": "https://itunes.apple.com/lookup?id=6741765734&country=us", "quote": "Want to scroll? Do pushups first.", "checked_at": "2026-10-04"}
+    ],
+    "caveats": ["Focused consumer exercise-for-screen-time utility. Official website returned only a page title; founder identity, small-team status, funding and ownership not established."]
+  },
+  {
+    "app_id": "6532588521",
+    "app_name": "QUITTR - Break Free Now",
+    "maker": "Quittr, LLC",
+    "category": "Health & Fitness",
+    "indie_tier": "unknown",
+    "eligibility": "borderline",
+    "release_date": "2024-07-23T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6532588521&country=us",
+    "original_launch_caveat": "Apple original releaseDate verified; separate original-product launch announcement not verified.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=6532588521&country=us", "quote": "2024-07-23T07:00:00Z", "checked_at": "2026-10-04"},
+      {"url": "https://itunes.apple.com/lookup?id=6532588521&country=us", "quote": "Quittr, LLC", "checked_at": "2026-10-04"},
+      {"url": "https://itunes.apple.com/lookup?id=6532588521&country=us", "quote": "Break free from adult content and regain control of your life.", "checked_at": "2026-10-04"}
+    ],
+    "caveats": ["Consumer recovery niche, not a party/social-game app. Website and jobs page could not be fetched; founder, current headcount, financing and independence unverified. Marketing health claims not evaluated."]
+  },
+  {
+    "app_id": "1547585270",
+    "app_name": "Superlist: To Do List & Team",
+    "maker": "Christian Reber and Niklas Jansen / Superlist Software GmbH",
+    "category": "Productivity",
+    "indie_tier": "unknown",
+    "eligibility": "excluded",
+    "release_date": "2023-11-23T08:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=1547585270&country=us",
+    "original_launch_caveat": "Apple listing releaseDate precedes February 2024 public launch after beta; company was announced in 2020. Not a Wunderlist rebrand according to launch reporting.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=1547585270&country=us", "quote": "2023-11-23T08:00:00Z", "checked_at": "2026-10-04"},
+      {"url": "https://techcrunch.com/2024/02/16/superlist/", "quote": "This week he finally brought Superlist out of beta.", "checked_at": "2026-10-04"},
+      {"url": "https://techcrunch.com/2024/02/16/superlist/", "quote": "the company has raised \u20ac13.5 million in funding from Cherry Ventures and EQT.", "checked_at": "2026-10-04"}
+    ],
+    "caveats": ["Excluded for significant institutional venture funding. Personal-use functionality does not make this team-oriented funded startup a strict indie candidate."]
+  },
+  {
+    "app_id": "6480417616",
+    "app_name": "Cal AI - Calorie Tracker",
+    "maker": "Zach Yadegari and Henry Langmack; now MyFitnessPal (Apple seller: Viral Development LLC)",
+    "category": "Health & Fitness",
+    "indie_tier": "unknown",
+    "eligibility": "excluded",
+    "release_date": "2024-04-08T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6480417616&country=us",
+    "original_launch_caveat": "Apple original releaseDate verified. Acquisition reporting corroborates a product built within the preceding two years; exact earliest prototype/public launch not separately established.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=6480417616&country=us", "quote": "2024-04-08T07:00:00Z", "checked_at": "2026-10-04"},
+      {"url": "https://techcrunch.com/2026/03/02/myfitnesspal-has-acquired-cal-ai-the-viral-calorie-app-built-by-teens/", "quote": "MyFitnessPal has successfully acquired its up-and-coming rival Cal AI.", "checked_at": "2026-10-04"},
+      {"url": "https://techcrunch.com/2026/03/02/myfitnesspal-has-acquired-cal-ai-the-viral-calorie-app-built-by-teens/", "quote": "Yadegari is still running the app, now as a unit of MFP", "checked_at": "2026-10-04"}
+    ],
+    "caveats": ["Excluded for current corporate ownership despite young indie origins and unchanged Apple seller. Report says acquisition closed in December before its March 2026 publication; remaining a standalone app is not independent ownership."]
+  }
+]

@@ -1,0 +1,427 @@
+[
+  {
+    "app_id": "6742410648",
+    "app_name": "WhoLiked? - Guess Who Reposted",
+    "maker": "IRL Apps",
+    "category": "Games",
+    "indie_tier": "small_independent_team",
+    "eligibility": "qualified",
+    "user_reference": true,
+    "release_date": "2025-04-15T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/search?term=wholiked&entity=software&country=us&limit=10",
+    "original_launch_caveat": "Apple releaseDate establishes the original listing date, and the official about timeline independently says the product released in 2025. Not based on the latest update.",
+    "evidence": [
+      {
+        "url": "https://www.wholiked.com/about",
+        "quote": "The app is published by IRL Apps, a studio building social games for real-life moments.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://www.wholiked.com/about",
+        "quote": "2025IRL Apps releases WhoLiked? on the App Store as a party game built on TikTok likes.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://www.linkedin.com/company/irl-apps/",
+        "quote": "2-10 employees",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Small-team evidence is a public company LinkedIn profile, not an audited headcount or an explicit independence statement on its website. The profile also displays five associated employees.",
+      "Current Apple seller is IRL APPS and the product site names the same maker. No corporate acquisition or significant VC funding was established in inspected sources; beneficial ownership and financing are not conclusively verified. Do not call it proven bootstrapped.",
+      "The publisher is IRL Apps, not the unrelated historical venture-backed IRL social-network company. Do not transfer ownership or funding facts based on the shared IRL name.",
+      "The product uses TikTok videos, but is a separate party game, not TikTok itself. Website download counts and subscription claims have not been independently validated."
+    ],
+    "candidate_file": "candidates-examples.json"
+  },
+  {
+    "app_id": "6746781192",
+    "app_name": "Imposter Who? - Word Game",
+    "maker": "Sokak Technologies Inc.",
+    "category": "Entertainment",
+    "indie_tier": "unknown",
+    "eligibility": "user_nominated",
+    "user_reference": true,
+    "release_date": "2025-06-05T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/search?term=imposterwho&entity=software&country=us&limit=10",
+    "original_launch_caveat": "Apple original listing date is June 5, 2025; official terms and privacy are effective June 4, 2025. No older product incarnation was established in inspected sources.",
+    "evidence": [
+      {
+        "url": "https://imposterwho.com/",
+        "quote": "Copyright © 2025 Sokak Technologies Inc.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://imposterwho.com/terms",
+        "quote": "Effective Date: June 4, 2025",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://sokak.io/",
+        "quote": "MOBILE APP / VR GAME STUDIO",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Explicit user-nominated reference. Product identity and launch age are verified, but inspected maker pages do not establish team size, independent ownership, or financing. Reviews are retained in a separately labeled user-nominated group and not silently counted as verified indie evidence.",
+      "The correct product is the Sokak app on imposterwho.com, not Fakeout on imposterwho.app, nor other similarly named imposter games.",
+      "A LinkedIn company at /company/sokak/ identifies a Turkish agency on sokak.com.tr; no relationship to Sokak Technologies Inc. on sokak.io was verified, so its headcount is not used."
+    ],
+    "candidate_file": "candidates-examples.json"
+  },
+  {
+    "app_id": "6745120053",
+    "app_name": "Imposter Game - Party Edition",
+    "maker": "Sven Vucak / Vucak IT Solutions (Sven and David Vucak)",
+    "category": "Party / social deduction game",
+    "indie_tier": "small_independent_team",
+    "eligibility": "qualified",
+    "release_date": "2025-05-18T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6745120053",
+    "original_launch_caveat": "Original Apple listing date, not currentVersionReleaseDate; no older app lineage established.",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=6745120053",
+        "quote": "\"sellerName\":\"Sven Vucak\"; \"releaseDate\":\"2025-05-18T07:00:00Z\"",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://vucak.at",
+        "quote": "Eight apps designed, built and shipped by us. Not client work, our own products. ... Sven Vucak and David Vucak ... Founders, Vucak IT Solutions",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://vucak.at/impressum",
+        "quote": "Sven Vucak ... David Vucak ... Entwicklung von Websites und mobilen Applikationen.",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Current official maker evidence supports a two-founder team, not a solo classification; funding and acquisition history not independently audited."
+    ],
+    "candidate_file": "candidates-social.json"
+  },
+  {
+    "app_id": "1663430725",
+    "app_name": "RIZZ",
+    "maker": "TREND IT LLC; Joshua Miller and Roman Khaves",
+    "category": "Lifestyle / AI dating assistant",
+    "indie_tier": "individual_led",
+    "eligibility": "qualified",
+    "release_date": "2023-01-12T08:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=1663430725",
+    "original_launch_caveat": "Founder says a web app preceded mobile and App Store registration was December 8, 2022; registration is not release. Apple original listing release is January 12, 2023. Both accounts are post-cutoff, not an older similarly named dating app.",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/search?term=Rizz&entity=software&limit=5",
+        "quote": "\"trackId\":1663430725; \"releaseDate\":\"2023-01-12T08:00:00Z\"; Made with Love by: Joshua Miller & Roman Khaves",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://www.rizz.app",
+        "quote": "\"author\":[{\"@type\":\"Person\",\"name\":\"Joshua Miller\",\"sameAs\":[\"https://www.linkedin.com/in/joshzmiller/\"]},{\"@type\":\"Person\",\"name\":\"Roman Khaves\",\"sameAs\":[\"https://www.linkedin.com/in/romankhaves/\"]}]",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://www.linkedin.com/in/romankhaves/",
+        "quote": "i bootstrapped RIZZ app to $15M+ revenue ... my cofounder ... we launched the web app first ... i registered rizz on the app store on december 8, 2022.",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Bootstrapping is a founder self-report on an official-site-linked personal profile; exact current employee count unavailable. Individual-led classification does not imply solo development. Official /terms returned only an app shell in text fetch."
+    ],
+    "candidate_file": "candidates-social.json"
+  },
+  {
+    "app_id": "1624758651",
+    "app_name": "Couple Joy - Relationship App",
+    "maker": "HEARTBIT S.R.L.",
+    "category": "Lifestyle / couples and social networking",
+    "indie_tier": "small_independent_team",
+    "eligibility": "qualified",
+    "release_date": "2022-05-28T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=1624758651",
+    "original_launch_caveat": "Original Apple listing meets cutoff. Forbes mentions a relationship beginning over ten years earlier, not a dated app launch; no pre-2022 published app established.",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/search?term=CoupleJoy&entity=software&limit=3",
+        "quote": "\"trackId\":1624758651; \"releaseDate\":\"2022-05-28T07:00:00Z\"; \"sellerName\":\"HEARTBIT S.R.L.\"",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://couplejoyapp.com/careers",
+        "quote": "We are a small team of two people who are passionate about building a better way to communicate with your partner.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://www.forbes.ro/forbes-romania-30-sub-30-editia-2025-ioana-moraru-si-cosmin-andrei-anghel-couple-joy-love-at-scale-469987",
+        "quote": "start-up construit exclusiv prin resurse proprii și fără investiții externe",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Forbes quote says built entirely with own resources and without external investment, as of October 2025; it also reports over 20 freelancers and planned hiring, so two-person core does not mean total workforce of two. Official terms identify HEARTBIT S.R.L. as IP owner; no acquisition established. Funding history not independently audited."
+    ],
+    "candidate_file": "candidates-social.json"
+  },
+  {
+    "app_id": "6745120443",
+    "app_name": "Charades - Who Am I?!?",
+    "maker": "Sven Vucak / Vucak IT Solutions (Sven and David Vucak)",
+    "category": "Party / charades game",
+    "indie_tier": "small_independent_team",
+    "eligibility": "qualified",
+    "release_date": "2025-05-20T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6745120443",
+    "original_launch_caveat": "Original Apple listing date, not currentVersionReleaseDate. Traditional charades is old; this particular app listing is new.",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=6745120443",
+        "quote": "\"trackId\":6745120443; \"trackName\":\"Charades - Who Am I?!?\"; \"sellerName\":\"Sven Vucak\"; \"releaseDate\":\"2025-05-20T07:00:00Z\"",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://vucak.at",
+        "quote": "Eight apps designed, built and shipped by us. Not client work, our own products. ... 2 ... Founders you deal with directly",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://vucak.at/impressum",
+        "quote": "Sven Vucak ... David Vucak ... Entwicklung von Websites und mobilen Applikationen.",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Official maker site directly links this numeric Apple ID. Same maker as Imposter, not an additional independent maker. Funding and acquisition history not independently audited."
+    ],
+    "candidate_file": "candidates-social.json"
+  },
+  {
+    "app_id": "6746101066",
+    "app_name": "Party Bomb - Pass it or lose",
+    "maker": "Sven Vucak / Vucak IT Solutions (Sven and David Vucak)",
+    "category": "Party / pass-the-phone game",
+    "indie_tier": "small_independent_team",
+    "eligibility": "qualified",
+    "release_date": "2025-05-22T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6746101066",
+    "original_launch_caveat": "Original Apple listing date, not currentVersionReleaseDate; no older listing lineage established.",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=6746101066",
+        "quote": "\"trackId\":6746101066; \"trackName\":\"Party Bomb - Pass it or lose\"; \"sellerName\":\"Sven Vucak\"; \"releaseDate\":\"2025-05-22T07:00:00Z\"",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://vucak.at",
+        "quote": "Eight apps designed, built and shipped by us. Not client work, our own products. ... Sven Vucak and David Vucak ... Founders, Vucak IT Solutions",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://vucak.at/impressum",
+        "quote": "Sven Vucak ... David Vucak ... Entwicklung von Websites und mobilen Applikationen.",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Official maker site directly links this numeric Apple ID. Same maker as Imposter, not an additional independent maker. Funding and acquisition history not independently audited."
+    ],
+    "candidate_file": "candidates-social.json"
+  },
+  {
+    "app_id": "6443918070",
+    "app_name": "Habit Tracker - HabitKit",
+    "maker": "Sebastian Roehl",
+    "category": "Productivity",
+    "indie_tier": "solo",
+    "eligibility": "qualified",
+    "release_date": "2022-11-26T08:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6443918070&country=us",
+    "original_launch_caveat": "Apple releaseDate, not currentVersionReleaseDate; official about page independently confirms first App Store version in November 2022.",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=6443918070&country=us",
+        "quote": "\"releaseDate\":\"2022-11-26T08:00:00Z\"",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://habitkit.app/about",
+        "quote": "HabitKit is a habit tracker app for iPhone and Android, and it is made by one person. I am that person.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://habitkit.app/about",
+        "quote": "The first version of HabitKit reached the App Store in November 2022.",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Prior maker evidence reused and official page rechecked live. Personal Apple seller matches maker; no corporate acquisition or significant VC established in inspected sources, not a cap-table audit."
+    ],
+    "candidate_file": "candidates-utilities.json"
+  },
+  {
+    "app_id": "6752217216",
+    "app_name": "Pomodoro Timer - FocusKit",
+    "maker": "Sebastian Roehl",
+    "category": "Productivity",
+    "indie_tier": "solo",
+    "eligibility": "qualified",
+    "release_date": "2025-11-28T08:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6752217216&country=us",
+    "original_launch_caveat": "Apple releaseDate for the Sebastian Roehl app, not similarly named apps by other sellers; separate historical launch announcement not yet verified.",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=6752217216&country=us",
+        "quote": "2025-11-28T08:00:00Z",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://habitkit.app/about",
+        "quote": "I build HabitKit and FocusKit, and I answer the support email for both. There is no team behind that address.",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Apple seller Sebastian Roehl matches the official maker. No complete financing or beneficial-ownership audit."
+    ],
+    "candidate_file": "candidates-utilities.json"
+  },
+  {
+    "app_id": "6739589530",
+    "app_name": "touch grass: screen time limit",
+    "maker": "Rhys Kentish",
+    "category": "Productivity",
+    "indie_tier": "solo",
+    "eligibility": "qualified",
+    "release_date": "2025-03-14T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6739589530&country=us",
+    "original_launch_caveat": "Apple releaseDate corroborated by March 17, 2025 reporting of launch the preceding Friday. Earlier private savings-transfer prototype is not evidence of an older public Touch Grass launch.",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=6739589530&country=us",
+        "quote": "2025-03-14T07:00:00Z",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://techcrunch.com/2025/03/17/this-app-limits-your-screen-time-by-making-you-literally-touch-grass/",
+        "quote": "Rhys Kentish launched an iOS app last week called Touch Grass",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://techcrunch.com/2025/03/17/this-app-limits-your-screen-time-by-making-you-literally-touch-grass/",
+        "quote": "As an independent developer, Kentish is running the app on his own",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Correct maker surname is Kentish, not Kent. Solo statement is from launch reporting; current Apple personal seller still matches. Article says he was open to investors, not that funding occurred; later funding and ownership not conclusively audited."
+    ],
+    "candidate_file": "candidates-utilities.json"
+  },
+  {
+    "app_id": "6532588521",
+    "app_name": "QUITTR - Break Free Now",
+    "maker": "Alex Slater and Connor McLaren / Quittr, LLC",
+    "category": "Health & Fitness",
+    "indie_tier": "small_independent_team",
+    "eligibility": "qualified",
+    "release_date": "2024-07-23T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6532588521&country=us",
+    "original_launch_caveat": "Apple original releaseDate; March 2026 New York reporting describes an August 2024 launch and a July 2024 founder meeting after a ten-day build. Store availability and broader launch differ; neither indicates a legacy pre-2022 app.",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=6532588521&country=us",
+        "quote": "\"releaseDate\":\"2024-07-23T07:00:00Z\"",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://www.techtimes.com/articles/310068/20250420/bootstrapped-revolution-why-quittrs-anti-vc-approach-disrupting-mental-health-tech.htm",
+        "quote": "all this, without a single cent of venture capital",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://nymag.com/intelligencer/article/porn-addiction-app-quittr-alex-slater-connor-mclaren.html",
+        "quote": "They joined forces, with McLaren acting as the marketing lead and providing the initial $3,000 used to pay influencers who could spread the word.",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Qualified on bootstrapped founder-built origins plus March 2026 reporting of both active founders; exact current headcount and beneficial ownership are not audited. Tech Times has a promotional tone, so its no-VC claim is not treated as an audited financing disclosure.",
+      "New York describes an acquisition as a future aspiration, not completed ownership. Meeting via YC co-founder matching is not evidence of YC funding; investments mentioned in McLaren's earlier failed fitness app are not QUITTR financing. No significant VC or completed corporate acquisition established in inspected sources.",
+      "Official site/jobs requests failed. Health claims and product efficacy were not evaluated."
+    ],
+    "candidate_file": "candidates-followup.json"
+  },
+  {
+    "app_id": "6480082872",
+    "app_name": "Dumbify",
+    "maker": "Anthony Burkholder / AB Apps Inc.",
+    "category": "Productivity",
+    "indie_tier": "solo",
+    "eligibility": "qualified",
+    "release_date": "2024-04-02T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6480082872&country=us",
+    "original_launch_caveat": "Apple original releaseDate; Product Hunt independently labels the exact-ID product as launched in 2024, without establishing the precise first public launch day.",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=6480082872&country=us",
+        "quote": "\"releaseDate\":\"2024-04-02T07:00:00Z\"",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://www.producthunt.com/products/dumbify",
+        "quote": "I built Dumbify for those looking for a minimalist, notification free experience for their iPhone.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://itunes.apple.com/lookup?id=6480082872&country=us",
+        "quote": "\"bundleId\":\"com.anthonyburkholder.dumbify\"",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Anthony attribution corroborated, not inferred from AB initials: Product Hunt links app ID 6480082872, identifies Anthony Burkholder as Maker, and carries his first-person build statement; Apple's bundle identifier independently matches his name.",
+      "Solo tier describes the publicly identified individual maker, not a verified current one-employee count. Seller remains AB Apps Inc.; financing and beneficial ownership are not audited. No significant VC or corporate acquisition established in inspected sources.",
+      "Search results for other Dumbify businesses/podcasts were not attributed to this app. The similarly named personal website was not used because its connection to this maker was unverified."
+    ],
+    "candidate_file": "candidates-followup.json"
+  },
+  {
+    "app_id": "6451491556",
+    "app_name": "Wave AI Note Taker & Recorder",
+    "maker": "Josh Mohrer / Mohrer Associates LLC",
+    "category": "Productivity",
+    "indie_tier": "small_independent_team",
+    "eligibility": "qualified",
+    "release_date": "2023-07-26T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6451491556&country=us",
+    "original_launch_caveat": "Apple releaseDate is the original mobile listing date, not a recent version. The maker's linked company profile independently says Founded 2023. Not the unrelated WaveAI music company or similarly named Notewave apps.",
+    "evidence": [
+      {
+        "url": "https://wave.co/about",
+        "quote": "We’re built by a small team in New York",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://wave.co/about",
+        "quote": "Wave is the product of Mohrer Associates LLC, based in New York, NY. Founded by Josh Mohrer.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://www.linkedin.com/company/waveapp-ai",
+        "quote": "Self-Owned",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Official current about page says small team; its linked company profile reports one employee and Founded 2023. Those can distinguish principal staff from contractors; do not assert an audited current one-person workforce.",
+      "No significant VC funding or corporate acquisition was established in inspected sources. Self-Owned is a company-profile statement, not an independently audited cap table.",
+      "The app supports consumer lectures, personal conversations and doctor's appointments, but also professional meetings and team billing. Include as mixed consumer/prosumer, not an exclusively entertainment app.",
+      "Josh Mohrer's former Uber employment is not evidence that Uber owns this app."
+    ],
+    "candidate_file": "candidates-extra.json"
+  }
+]

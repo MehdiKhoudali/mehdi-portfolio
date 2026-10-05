@@ -1,0 +1,533 @@
+[
+  {
+    "app_id": 904237743,
+    "app_name": "Things 3",
+    "maker": "Cultured Code GmbH & Co. KG",
+    "category": "Productivity",
+    "indie_tier": "small_team_12",
+    "eligibility": "eligible",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=904237743&country=us",
+        "quote": "Things 3",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://culturedcode.com/things/iphone/",
+        "quote": "https://apps.apple.com/app/things-3/id904237743?pt=13942&ct=Website&mt=8",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://culturedcode.com/about/",
+        "quote": "Our company is based out of Stuttgart, in southern Germany, and currently consists of 12 people.",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "This is the iPhone listing; Mac and iPad editions have different IDs. Do not combine their reviews under this ID.",
+      "Small-team size is explicit, but current beneficial ownership is unknown beyond the named legal maker. No acquisition is disclosed on the consulted official about page.",
+      "Eligibility only; availability of sufficient 1-2 star written reviews was not assessed."
+    ]
+  },
+  {
+    "app_id": 1016366447,
+    "app_name": "Bear - Markdown Notes",
+    "maker": "Shiny Frog Ltd.",
+    "category": "Productivity",
+    "indie_tier": "small_team",
+    "eligibility": "eligible",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=1016366447&country=us",
+        "quote": "Shiny Frog Ltd.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://bear.app/",
+        "quote": "https://apps.apple.com/it/app/bear-markdown-notes/id1016366447?l=en",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://www.shinyfrog.net/",
+        "quote": "We are an artisanal app crafting team that spans Italy, Ireland, Sweden, Germany, the UK and Japan.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://www.shinyfrog.net/",
+        "quote": "Our current projects are Bear and Lettera.",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Official maker page lists 12 named team members; that roster is not an audited employee headcount.",
+      "Use the iOS ID, not Mac ID 1091189122.",
+      "Current beneficial ownership is unknown beyond Shiny Frog Ltd.; no acquisition is disclosed in the consulted official pages.",
+      "Eligibility only; low-star written-review volume was not assessed."
+    ]
+  },
+  {
+    "app_id": 888422857,
+    "app_name": "Overcast Podcast App",
+    "maker": "Marco Arment / Overcast Radio, LLC",
+    "category": "News",
+    "indie_tier": "solo_explicit",
+    "eligibility": "eligible",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=888422857&country=us",
+        "quote": "Overcast Radio, LLC",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://overcast.fm/",
+        "quote": "Hi, I\u2019m Marco (\ud83d\udc4b). It\u2019s just me here \u2014 no big company or investors.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://overcast.fm/",
+        "quote": "Overcast is a self-funded app that has sustainably succeeded on its merits and respected your privacy for the last 12 years.",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Strong current first-party solo and self-funded statement; no corporate acquisition is indicated by the consulted official page.",
+      "Apple categorizes the app as News, although its function is podcast listening.",
+      "Eligibility only; low-star written-review volume was not assessed."
+    ]
+  },
+  {
+    "app_id": 961390574,
+    "app_name": "CARROT Weather: Alerts & Radar",
+    "maker": "Brian Mueller / Grailr LLC",
+    "category": "Weather",
+    "indie_tier": "solo_explicit",
+    "eligibility": "eligible",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=961390574&country=us",
+        "quote": "Grailr LLC",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://www.meetcarrot.com/weather/presskit.html",
+        "quote": "Brian Mueller is the developer, designer, and writer of the CARROT suite of apps. His one-man independent development studio is located in the suburbs of Philadelphia.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://www.meetcarrot.com/weather/presskit.html",
+        "quote": "https://itunes.apple.com/app/id961390574",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "The live press kit describes version 6.0; the solo statement is undated and may lag operational changes.",
+      "Current beneficial ownership is unknown beyond Grailr LLC and the named founder; no acquisition is disclosed in the consulted official sources.",
+      "Use of corporate weather-data suppliers does not itself constitute corporate ownership.",
+      "Eligibility only; low-star written-review volume was not assessed."
+    ]
+  },
+  {
+    "app_id": 390017969,
+    "app_name": "Due - Reminders & Timers",
+    "maker": "Lin Junjie / Due Apps LLP",
+    "category": "Productivity",
+    "indie_tier": "solo_led_with_collaborator",
+    "eligibility": "eligible",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/search?term=Due%20Reminders&entity=software&country=us&limit=5",
+        "quote": "Due Apps LLP",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://www.dueapp.com/blog/future-of-paid-upgrades.html",
+        "quote": "Many customers have gone on to purchase these upgrades, and that has been one of the main reasons behind the longevity of Due, and why I have been able to work on Due full-time for the past 9 years.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://www.dueapp.com/blog/due-mac-2020.html",
+        "quote": "Once it became clear that the amount of work that Due Mac needed was beyond what I could handle alongside iOS development, I turned to Hon Cheng for help.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://www.cleanshavenapps.com/",
+        "quote": "Apps made in Singapore by @honcheng and @jjlin",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Official founder posts from 2020 support an individual-led app, not a guaranteed one-person organization in 2026; the Mac app involved Hon Cheng.",
+      "Current Apple seller is Due Apps LLP, whereas the official 2021 terms name Due Pte. Ltd. Current beneficial ownership and the reason for the legal-entity mismatch are unknown; no acquisition was verified.",
+      "Lin Junjie is the candidate's supplied attribution; consulted official pages connect the maker to @jjlin but do not spell out that legal personal name.",
+      "Eligibility only; low-star written-review volume was not assessed."
+    ]
+  },
+  {
+    "app_id": 1236254471,
+    "app_name": "Drafts",
+    "maker": "Greg Pierce / Agile Tortoise, Inc.",
+    "category": "Productivity",
+    "indie_tier": "solo_led_indie",
+    "eligibility": "eligible",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=1236254471&country=us",
+        "quote": "Agile Tortoise",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://agiletortoise.com/",
+        "quote": "https://indieapps.space/@gregpierce",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://indieapps.space/api/v1/accounts/lookup?acct=gregpierce",
+        "quote": "I run Agile Tortoise, and indie app developer making apps like Drafts, Tally, and Terminology.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://getdrafts.com/",
+        "quote": "https://apps.apple.com/app/apple-store/id1236254471?pt=273342&ct=Landing&mt=8",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Indie identity is first-party and the profile is linked by the official maker site; exact current headcount is unknown. Do not interpret solo-led as a verified absence of contractors.",
+      "Current beneficial ownership is unknown beyond Agile Tortoise and its named operator; no acquisition is disclosed in the consulted official sources.",
+      "This is the current iOS app, not legacy Drafts 4 or the Mac listing.",
+      "Eligibility only; low-star written-review volume was not assessed."
+    ]
+  },
+  {
+    "app_id": 532430574,
+    "app_name": "Happy Scale",
+    "maker": "Russ Shanahan / Front Pocket Software LLC",
+    "category": "Health & Fitness",
+    "indie_tier": "small_team_solo_founder",
+    "eligibility": "eligible",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=532430574&country=us",
+        "quote": "Front Pocket Software LLC",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://russ.app/",
+        "quote": "Hi! I'm an indie app developer in Pennsylvania.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://russ.app/",
+        "quote": "I make a weight-loss tracker app called Happy Scale.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://happyscale.com/blog/tasteful-renovations",
+        "quote": "Hi! I\u2019m Daniel. I joined the Happy Scale team a few months ago to lead the design of the app, and we\u2019re about to launch our first real set of design updates.",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Do not label this strictly solo today: the August 22, 2026 official post documents a designer joining the team. Exact total headcount is unknown.",
+      "Current beneficial ownership is unknown beyond Front Pocket Software LLC and the founder's continuing indie identification; no acquisition is disclosed in the consulted official sources.",
+      "Eligibility only; low-star written-review volume was not assessed."
+    ]
+  },
+  {
+    "app_id": 712286167,
+    "app_name": "Pedometer++",
+    "maker": "David Smith / Cross Forward Consulting, LLC",
+    "category": "Health & Fitness",
+    "indie_tier": "solo_led_with_contractors",
+    "eligibility": "eligible",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=712286167&country=us",
+        "quote": "Cross Forward Consulting, LLC",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://david-smith.org/about/",
+        "quote": "My name is David Smith. I\u2019m an independent iOS developer.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://david-smith.org/about/",
+        "quote": "https://itunes.apple.com/us/app/pedometer++/id712286167?mt=8&at=10l3KS&ct=blog",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://david-smith.org/blog/2026/04/29/maps-on-watchos/",
+        "quote": "Working with the incredible cartographer Andy Allan, we created a completely new basemap that would look fantastic with Liquid Glass.",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Independent principal developer, with documented external cartography and design collaboration; not proof that every contributor is one person.",
+      "Current beneficial ownership is unknown beyond the listed LLC and named developer; no acquisition is disclosed in the consulted official sources.",
+      "Eligibility only; low-star written-review volume was not assessed."
+    ]
+  },
+  {
+    "app_id": 1581140954,
+    "app_name": "Noir - Dark Mode for Safari",
+    "maker": "Jeffrey Kuiken",
+    "category": "Utilities",
+    "indie_tier": "solo_supported_by_first_person_maker",
+    "eligibility": "eligible",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=1581140954&country=us",
+        "quote": "Jeffrey Kuiken",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://getnoir.app/",
+        "quote": "https://itunes.apple.com/app/id1581140954",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://getnoir.app/privacypolicy",
+        "quote": "If you report an issue with a website through the app, that report is sent to a server, and stored in a database that only I, the developer of the app, can access.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://getnoir.app/faq",
+        "quote": "Noir is a paid app, so its development is directly funded and supported by its customers. The app is the product, not you or your data.",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "First-person official developer statement and individual Apple seller support solo-indie eligibility, but no formal headcount statement was located.",
+      "Current beneficial ownership beyond the named individual is unknown; no acquisition is disclosed in the consulted official sources.",
+      "Mac ID 1592917505 and visionOS ID 6477319451 are separate listings.",
+      "Eligibility only; low-star written-review volume was not assessed."
+    ]
+  },
+  {
+    "app_id": 373493387,
+    "app_name": "AnkiMobile Flashcards",
+    "maker": "Anki Software LLC; AnkiHub transition from Damien Elmes / Ankitects",
+    "category": "Education",
+    "indie_tier": "self_funded_small_team_transition",
+    "eligibility": "eligible",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=373493387&country=us",
+        "quote": "Anki Software LLC",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://apps.ankiweb.net/",
+        "quote": "AnkiMobile is the official iOS app and all purchases help fund Anki's development.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://forums.ankiweb.net/t/ankis-growing-up/68610/1",
+        "quote": "I ended up suggesting to them that we look into gradually transitioning business operations and open source stewardship over, with provisions in place to ensure that Anki remains open source and true to the principles I\u2019ve run it by all these years.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://forums.ankiweb.net/t/ankis-growing-up/68610/2",
+        "quote": "AnkiHub is a small education technology company founded by two long-time Anki nerds",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://forums.ankiweb.net/t/ankis-growing-up/68610/2",
+        "quote": "None. Both Anki and AnkiHub are entirely self-funded. There are no outside investors dictating product decisions, growth targets, or monetization strategy.",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Not a current solo-Ankitects app: the founder publicly announced a gradual AnkiHub business/stewardship transition on February 2, 2026, and the live Apple seller is Anki Software LLC.",
+      "Eligible under the indie B2C/no-giant rule because the incoming operator explicitly identifies as a small, self-funded company without outside investors; lower priority than the solo makers.",
+      "Exact current headcount, beneficial ownership of Anki Software LLC, and legal completion mechanics of the transition are unknown. Do not portray the announcement as a verified giant-corporate or VC acquisition.",
+      "Do not confuse official AnkiMobile with unrelated similarly named flashcard apps.",
+      "Eligibility only; low-star written-review volume was not assessed."
+    ]
+  },
+  {
+    "app_id": 1474335294,
+    "app_name": "GoodLinks",
+    "maker": "Ngoc Luu",
+    "category": "News",
+    "indie_tier": "likely_solo_not_first_party_verified",
+    "eligibility": "needs_verification",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=1474335294&country=us",
+        "quote": "Ngoc Luu",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://goodlinks.app/press/",
+        "quote": "https://apps.apple.com/app/id1474335294",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://startupspotlight.co/startup/goodlinks",
+        "quote": "GoodLinks is a clean, fast read-later app for Apple devices with tags, syncing, and a one-time-payment model. Built by a solo developer.",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Apple ID and individual seller are verified. The only explicit solo statement located is a third-party commercial startup directory, not a maker/about statement; do not count as fully verified eligible under the requested first-party evidence standard.",
+      "Official press kit verifies product and ID but does not state team size or independent ownership. Current ownership beyond the individual seller is unknown; no acquisition was verified.",
+      "Eligibility research only; no reviews collected or volume estimated."
+    ]
+  },
+  {
+    "app_id": 1241909999,
+    "app_name": "WorkOutDoors",
+    "maker": "Ian Muriss; official website footer CCS Ltd",
+    "category": "Health & Fitness",
+    "indie_tier": "likely_solo_not_first_party_verified",
+    "eligibility": "needs_verification",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=1241909999&country=us",
+        "quote": "Ian Muriss",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "http://www.workoutdoors.net/",
+        "quote": "WorkOutDoors is the most powerful and configurable workout app for the Apple Watch.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "http://www.workoutdoors.net/",
+        "quote": "https://itunes.apple.com/app/workoutdoors/id1241909999?ls=1&mt=8",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Verified individual seller and official product website, but no accessible first-party explicit solo/small-team statement was located. A developer AMA was found in search but its page did not expose usable content; search snippets are not treated as verified maker evidence.",
+      "Official website was reachable over HTTP but HTTPS requests failed; evidence URLs reflect the actual accessible source.",
+      "Current ownership and the relationship between CCS Ltd and Ian Muriss are unknown; no acquisition was verified.",
+      "Apple Watch required; still a consumer fitness app.",
+      "Eligibility research only; no reviews collected or volume estimated."
+    ]
+  },
+  {
+    "app_id": 1303222868,
+    "app_name": "Paprika Recipe Manager 3",
+    "maker": "Hindsight Labs LLC",
+    "category": "Food & Drink",
+    "indie_tier": "unknown_team_size",
+    "eligibility": "needs_verification",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=1303222868&country=us",
+        "quote": "Hindsight Labs LLC",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://www.paprikaapp.com/",
+        "quote": "Designed and developed by Hindsight Labs LLC",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "http://hindsightlabs.com/",
+        "quote": "We write software. We believe that software should be intuitive, affordable, beautiful, and should just work.",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Consumer product, ID and legal maker verified, but consulted official maker pages did not disclose team size, self-funding, or independent ownership. Do not infer small indie status merely from an LLC name.",
+      "Current beneficial ownership is unknown; no acquisition was verified.",
+      "Paprika 4 is in open beta on the official site; the verified store ID belongs to Paprika 3. Older major versions and desktop versions are separate listings.",
+      "Eligibility research only; no reviews collected or volume estimated."
+    ]
+  },
+  {
+    "app_id": 1208145167,
+    "app_name": "Picsew - Screenshot Stitching",
+    "maker": "Yojio, Ltd.",
+    "category": "Photo & Video",
+    "indie_tier": "unknown_team_size",
+    "eligibility": "needs_verification",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=1208145167&country=us",
+        "quote": "Yojio, Ltd.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://picsew.app/",
+        "quote": "https://apps.apple.com/us/app/id1208145167",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://picsew.app/",
+        "quote": "\u00a9 2026 Yojio, Ltd.",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Verified consumer utility, numeric ID and legal maker, but no official team-size or independent-ownership statement was located.",
+      "Current beneficial ownership is unknown; no acquisition was verified. Do not classify as solo from the linked personal social handle alone.",
+      "Eligibility research only; no reviews collected or volume estimated."
+    ]
+  },
+  {
+    "app_id": 414834813,
+    "app_name": "Pocket Casts: Podcast Player",
+    "maker": "Automattic, Inc.",
+    "category": "News",
+    "indie_tier": "corporate_owned",
+    "eligibility": "excluded",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=414834813&country=us",
+        "quote": "Automattic, Inc.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://pocketcasts.com/",
+        "quote": "An Automattic venture",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Exclude as requested: both current Apple seller and official site identify Automattic ownership. Its historical independent origin does not establish current indie eligibility.",
+      "Exact acquisition transaction date was not verified in this pass; current corporate ownership is directly evidenced.",
+      "Eligibility research only; no reviews collected."
+    ]
+  },
+  {
+    "app_id": 916366645,
+    "app_name": "Procreate Pocket",
+    "maker": "Savage Interactive Pty Ltd",
+    "category": "Graphics & Design",
+    "indie_tier": "larger_independent_studio_80_plus",
+    "eligibility": "borderline",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=916366645&country=us",
+        "quote": "Savage Interactive Pty Ltd",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://procreate.com/careers",
+        "quote": "We thrive on the freedom to explore, which is why our company remains fiercely independent and free of investors.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://procreate.com/careers",
+        "quote": "2 offices, 80+ creators",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://procreate.com/careers",
+        "quote": "Independent and self-funded since\u00a02011.",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Independence and lack of investors are explicitly verified, but 80+ creators make this materially larger than the favored solo/small-team cohort. Reserve only if that broader independent-studio tier is acceptable; not counted among the 10 primary eligible apps.",
+      "No corporate acquisition is indicated by the current official independence statement; beneficial ownership was not independently audited.",
+      "This is Pocket for iPhone, not Procreate for iPad or Procreate Dreams.",
+      "Eligibility only; low-star written-review volume was not assessed."
+    ]
+  }
+]

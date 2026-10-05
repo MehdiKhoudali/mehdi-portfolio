@@ -1,0 +1,62 @@
+[
+  {
+    "app_id": "6451491556",
+    "app_name": "Wave AI Note Taker & Recorder",
+    "maker": "Josh Mohrer / Mohrer Associates LLC",
+    "category": "Productivity",
+    "indie_tier": "small_independent_team",
+    "eligibility": "qualified",
+    "release_date": "2023-07-26T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6451491556&country=us",
+    "original_launch_caveat": "Apple releaseDate is the original mobile listing date, not a recent version. The maker's linked company profile independently says Founded 2023. Not the unrelated WaveAI music company or similarly named Notewave apps.",
+    "evidence": [
+      {"url": "https://wave.co/about", "quote": "We\u2019re built by a small team in New York", "checked_at": "2026-10-04"},
+      {"url": "https://wave.co/about", "quote": "Wave is the product of Mohrer Associates LLC, based in New York, NY. Founded by Josh Mohrer.", "checked_at": "2026-10-04"},
+      {"url": "https://www.linkedin.com/company/waveapp-ai", "quote": "Self-Owned", "checked_at": "2026-10-04"}
+    ],
+    "caveats": [
+      "Official current about page says small team; its linked company profile reports one employee and Founded 2023. Those can distinguish principal staff from contractors; do not assert an audited current one-person workforce.",
+      "No significant VC funding or corporate acquisition was established in inspected sources. Self-Owned is a company-profile statement, not an independently audited cap table.",
+      "The app supports consumer lectures, personal conversations and doctor's appointments, but also professional meetings and team billing. Include as mixed consumer/prosumer, not an exclusively entertainment app.",
+      "Josh Mohrer's former Uber employment is not evidence that Uber owns this app."
+    ]
+  },
+  {
+    "app_id": "6744703926",
+    "app_name": "Prayer Lock (website-linked listing)",
+    "maker": "Not conclusively established from an available current Apple listing",
+    "category": "Screen time / devotional utility",
+    "indie_tier": "unknown",
+    "eligibility": "excluded",
+    "release_date": null,
+    "release_date_source": null,
+    "original_launch_caveat": "Official terms effective April 17, 2025 suggest a young product, but do not substitute for an available original App Store releaseDate.",
+    "evidence": [
+      {"url": "https://prayerlock.com/", "quote": "https://apps.apple.com/us/app/prayer-lock-screen-time/id6744703926", "checked_at": "2026-10-04"},
+      {"url": "https://prayerlock.com/terms", "quote": "Effective Date: 17th April 2025", "checked_at": "2026-10-04"}
+    ],
+    "caveats": [
+      "Current US and GB lookup responses returned zero results and the official website-linked US Apple page returned HTTP 404. Do not infer whether it was acquired, removed or renamed.",
+      "Search surfaces other similarly named Prayer Lock apps by different makers; those are not silently substituted. No reviews collected for this candidate."
+    ]
+  },
+  {
+    "app_id": "6708241793",
+    "app_name": "Notewave AI (formerly Feynman AI, website-linked listing)",
+    "maker": "Notewave AI team; current Apple seller unresolved",
+    "category": "Education / AI note taking",
+    "indie_tier": "unknown",
+    "eligibility": "borderline",
+    "release_date": null,
+    "release_date_source": null,
+    "original_launch_caveat": "Official privacy effective July 29, 2024 is not proof of original public listing launch. Website points to a Feynman AI listing and the product may have been renamed.",
+    "evidence": [
+      {"url": "https://notewave.app/", "quote": "https://apps.apple.com/us/app/feynman-ai-note-mindmap-memo/id6708241793", "checked_at": "2026-10-04"},
+      {"url": "https://notewave.app/privacy", "quote": "Notewave AI is a self-funded company focused on providing you with a smooth, reliable note-taking experience.", "checked_at": "2026-10-04"}
+    ],
+    "caveats": [
+      "US lookup returned zero results for the official website-linked ID, preventing current identity and original release-date verification. No reviews collected.",
+      "The unrelated Notewave AI Note Taker by DOTFORGE LIMITED on notewave.ai has a different numeric ID; do not conflate products based on names or the earlier Appkittie testimonial."
+    ]
+  }
+]

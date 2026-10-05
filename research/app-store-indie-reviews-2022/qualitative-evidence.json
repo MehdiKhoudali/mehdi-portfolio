@@ -1,0 +1,1143 @@
+{
+  "created_at": "2026-10-04T17:54:38.879Z",
+  "status": "Exploratory qualitative findings; not exhaustive semantic coding",
+  "method": "Systematic keyword screening across all 2,139 qualified records, followed by close reading of deterministic per-app samples and targeted examples. The archive includes the inspection script and selected supporting and counterexample records. Keyword matches are candidate retrieval, not theme counts. No complaint frequency, causal effect, or representative prevalence is estimated.",
+  "findings": [
+    {
+      "title": "Payment timing and the chance to evaluate value",
+      "interpretation": "A price complaint can concern the timing of disclosure or an inability to evaluate the core benefit, as well as affordability. Disclose required payment and platform limits before lengthy setup or sensitive questions; test whether the evaluation experience demonstrates the benefit.",
+      "ids": [
+        "12444329523",
+        "12965282716",
+        "11137256999",
+        "13134086879",
+        "10100430683"
+      ],
+      "examples": [
+        {
+          "app_id": "6532588521",
+          "app_name": "QUITTR - Break Free Now",
+          "maker": "Alex Slater and Connor McLaren / Quittr, LLC",
+          "category": "Health & Fitness",
+          "indie_tier": "small_independent_team",
+          "release_date": "2024-07-23T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "12444329523",
+          "rating": 1,
+          "title": "Pointless app based questionnaire",
+          "text": "I’m sure the app does great for people who have the excess money and time to pay for this kind of thing, however I was only interested at first as it seemed like a decent way to take your mind off of the urges of need to engage in pornographic material, breathing exercises etc. but it gives you a questionnaire to “build a report” that you then have to pay to view it before you can use the app? Not worth it in my opinion. Apps like these should have a statement before you download saying that they make you pay to use the app rather than offer in app purchases as it’s borderline scamming, false advertising and a waste of time",
+          "updated_at": "2025-03-20T15:58:11-07:00",
+          "app_version": "99.0",
+          "author_name": "Diehrbcoaphbs",
+          "author_url": "https://itunes.apple.com/gb/reviews/id1357762029",
+          "helpful_vote_sum": 9,
+          "helpful_vote_count": 9,
+          "apple_supplied_link": "https://itunes.apple.com/gb/review?id=6532588521&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "gb",
+              "page": 2,
+              "review_id": "12444329523",
+              "feed_url": "https://itunes.apple.com/gb/rss/customerreviews/page=2/id=6532588521/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/gb/app/id6532588521",
+              "fetched_at": "2026-10-04T10:50:17.107Z",
+              "raw_path": "raw/reviews/6532588521/gb-2.json",
+              "raw_sha256": "8a55baf1e8754c5ace6560cd30f8976d9279af1fe02cae6d77e7c806a830de42"
+            }
+          ],
+          "related_review_ids": []
+        },
+        {
+          "app_id": "6532588521",
+          "app_name": "QUITTR - Break Free Now",
+          "maker": "Alex Slater and Connor McLaren / Quittr, LLC",
+          "category": "Health & Fitness",
+          "indie_tier": "small_independent_team",
+          "release_date": "2024-07-23T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "12965282716",
+          "rating": 1,
+          "title": "Pay to use app, not free",
+          "text": "Thought this was a free app, it ask me for survey and profile to data collect, at the end of survey it ask my to buy its plan, what a waste of time, not recommended",
+          "updated_at": "2025-08-01T19:10:47-07:00",
+          "app_version": "139",
+          "author_name": "-lastvampire-",
+          "author_url": "https://itunes.apple.com/au/reviews/id1055576910",
+          "helpful_vote_sum": 0,
+          "helpful_vote_count": 0,
+          "apple_supplied_link": "https://itunes.apple.com/au/review?id=6532588521&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "au",
+              "page": 1,
+              "review_id": "12965282716",
+              "feed_url": "https://itunes.apple.com/au/rss/customerreviews/page=1/id=6532588521/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/au/app/id6532588521",
+              "fetched_at": "2026-10-04T10:50:21.151Z",
+              "raw_path": "raw/reviews/6532588521/au-1.json",
+              "raw_sha256": "c9d84b67df30bae003a085188fc3297c8db01d6562e6dbb58eac7c8ba93188e5"
+            }
+          ],
+          "related_review_ids": []
+        },
+        {
+          "app_id": "1663430725",
+          "app_name": "RIZZ",
+          "maker": "TREND IT LLC; Joshua Miller and Roman Khaves",
+          "category": "Lifestyle / AI dating assistant",
+          "indie_tier": "individual_led",
+          "release_date": "2023-01-12T08:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "11137256999",
+          "rating": 2,
+          "title": "Yo to the developers",
+          "text": "So I get the app go through the questions and I get to the “rizz god” stuff and it asks me to pay, is this a “I have to pay to use the app” or is there a way I can skip that and start using the app. Help plzzz",
+          "updated_at": "2024-04-08T18:50:01-07:00",
+          "app_version": "3.8",
+          "author_name": "Sappersleadtheway",
+          "author_url": "https://itunes.apple.com/us/reviews/id1590000954",
+          "helpful_vote_sum": 0,
+          "helpful_vote_count": 0,
+          "apple_supplied_link": "https://itunes.apple.com/us/review?id=1663430725&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "us",
+              "page": 6,
+              "review_id": "11137256999",
+              "feed_url": "https://itunes.apple.com/us/rss/customerreviews/page=6/id=1663430725/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/us/app/id1663430725",
+              "fetched_at": "2026-10-04T10:47:20.069Z",
+              "raw_path": "raw/reviews/1663430725/us-6-empty-recheck.json",
+              "raw_sha256": "034999b4c24a154198c58d44d67afa2f08c1d99333ea973a70b773a08bd6b076"
+            }
+          ],
+          "related_review_ids": []
+        },
+        {
+          "app_id": "6451491556",
+          "app_name": "Wave AI Note Taker & Recorder",
+          "maker": "Josh Mohrer / Mohrer Associates LLC",
+          "category": "Productivity",
+          "indie_tier": "small_independent_team",
+          "release_date": "2023-07-26T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "13134086879",
+          "rating": 1,
+          "title": "NOT FREE",
+          "text": "This app takes your login and email information before telling you that you must pay to use it. Deleted.",
+          "updated_at": "2025-09-13T14:47:43-07:00",
+          "app_version": "3.2.6",
+          "author_name": "Reviewer_Just_My_Experience",
+          "author_url": "https://itunes.apple.com/us/reviews/id1445988646",
+          "helpful_vote_sum": 0,
+          "helpful_vote_count": 0,
+          "apple_supplied_link": "https://itunes.apple.com/us/review?id=6451491556&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "us",
+              "page": 1,
+              "review_id": "13134086879",
+              "feed_url": "https://itunes.apple.com/us/rss/customerreviews/page=1/id=6451491556/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/us/app/id6451491556",
+              "fetched_at": "2026-10-04T10:51:13.142Z",
+              "raw_path": "raw/reviews/6451491556/us-1-empty-recheck.json",
+              "raw_sha256": "d2564b2fc4503d3b2749f647ea79dadf56c3744b51ed1c23b09cd30a831954f0"
+            }
+          ],
+          "related_review_ids": []
+        },
+        {
+          "app_id": "6443918070",
+          "app_name": "Habit Tracker - HabitKit",
+          "maker": "Sebastian Roehl",
+          "category": "Productivity",
+          "indie_tier": "solo",
+          "release_date": "2022-11-26T08:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "10100430683",
+          "rating": 1,
+          "title": "Il faut payer, comme d’habitude",
+          "text": "Si vous voulez faire plus de 4 habitudes il faudra payer.\nDéplus il serait bien que les applications arrêtent de vous agresser dès la première utilisation pour payer les fonctions pro !",
+          "updated_at": "2023-07-03T12:03:59-07:00",
+          "app_version": "1.5.5",
+          "author_name": "ellaoder",
+          "author_url": "https://itunes.apple.com/fr/reviews/id685589747",
+          "helpful_vote_sum": 1,
+          "helpful_vote_count": 1,
+          "apple_supplied_link": "https://itunes.apple.com/fr/review?id=6443918070&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "fr",
+              "page": 1,
+              "review_id": "10100430683",
+              "feed_url": "https://itunes.apple.com/fr/rss/customerreviews/page=1/id=6443918070/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/fr/app/id6443918070",
+              "fetched_at": "2026-10-04T10:33:41.748Z",
+              "raw_path": "raw/reviews/6443918070/fr-1.json",
+              "raw_sha256": "5fa61d04dd686904d165068d5cc7b86809e4562d2d4d05b4b71b7136c89f6bf3"
+            }
+          ],
+          "related_review_ids": []
+        }
+      ]
+    },
+    {
+      "title": "Purchased access must survive the next session",
+      "interpretation": "Complaints about access after payment appear across different products, not only QUITTR. Treat reopening, signing in, restoring a purchase, opening a paid widget, and changing phones as part of the purchase journey. These examples do not establish a common technical cause.",
+      "ids": [
+        "13487509073",
+        "13800131483",
+        "13932722535",
+        "13430341774",
+        "14519062888",
+        "12184821572"
+      ],
+      "examples": [
+        {
+          "app_id": "6532588521",
+          "app_name": "QUITTR - Break Free Now",
+          "maker": "Alex Slater and Connor McLaren / Quittr, LLC",
+          "category": "Health & Fitness",
+          "indie_tier": "small_independent_team",
+          "release_date": "2024-07-23T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "13487509073",
+          "rating": 1,
+          "title": "Don’t use",
+          "text": "Downloaded the app, took the quiz, signed up and paid for a lifetime subscription (money came out of my bank account). Got my account completely set up. Closed the app and when I opened it again, it want me to completely restart the process and to pay for a subscription again with no way of logging in to my account. I tried emailing the company only for it to say “email address not found”. I was really hoping to use this app, and I never leave negative reviews, but I’ve lost money and there’s apparently no way of contacting the company. Save your money and use a different app.",
+          "updated_at": "2025-12-07T13:23:07-07:00",
+          "app_version": "158",
+          "author_name": "Paulw2000",
+          "author_url": "https://itunes.apple.com/us/reviews/id1864610984",
+          "helpful_vote_sum": 1,
+          "helpful_vote_count": 1,
+          "apple_supplied_link": "https://itunes.apple.com/us/review?id=6532588521&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "us",
+              "page": 10,
+              "review_id": "13487509073",
+              "feed_url": "https://itunes.apple.com/us/rss/customerreviews/page=10/id=6532588521/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/us/app/id6532588521",
+              "fetched_at": "2026-10-04T10:50:14.254Z",
+              "raw_path": "raw/reviews/6532588521/us-10.json",
+              "raw_sha256": "7b071f17499061d8aa453c713ba3d15ad8ea9a138b7a416b13ab8eb47c2c2a37"
+            }
+          ],
+          "related_review_ids": []
+        },
+        {
+          "app_id": "6532588521",
+          "app_name": "QUITTR - Break Free Now",
+          "maker": "Alex Slater and Connor McLaren / Quittr, LLC",
+          "category": "Health & Fitness",
+          "indie_tier": "small_independent_team",
+          "release_date": "2024-07-23T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "13800131483",
+          "rating": 2,
+          "title": "Ok app, but horrible reliability",
+          "text": "I purchased the lifetime membership and it worked fine for a couple of weeks. Then it started to tell me that I didn’t have the subscription every time I would log into the app. I reached out to their support and they provided me with a code that I had to then enter every single time I open the app because it never would show my subscription once I would close out of the app. Became very frustrating to the point I just requested a refund.",
+          "updated_at": "2026-02-28T14:34:31-07:00",
+          "app_version": "182",
+          "author_name": "Infir32887447874994278",
+          "author_url": "https://itunes.apple.com/us/reviews/id342233520",
+          "helpful_vote_sum": 0,
+          "helpful_vote_count": 0,
+          "apple_supplied_link": "https://itunes.apple.com/us/review?id=6532588521&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "us",
+              "page": 5,
+              "review_id": "13800131483",
+              "feed_url": "https://itunes.apple.com/us/rss/customerreviews/page=5/id=6532588521/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/us/app/id6532588521",
+              "fetched_at": "2026-10-04T10:50:06.820Z",
+              "raw_path": "raw/reviews/6532588521/us-5.json",
+              "raw_sha256": "394aee59774bf604e23c91ed229db4e0332edae465bdc02be34857bf62303964"
+            }
+          ],
+          "related_review_ids": []
+        },
+        {
+          "app_id": "6745120053",
+          "app_name": "Imposter Game - Party Edition",
+          "maker": "Sven Vucak / Vucak IT Solutions (Sven and David Vucak)",
+          "category": "Party / social deduction game",
+          "indie_tier": "small_independent_team",
+          "release_date": "2025-05-18T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "13932722535",
+          "rating": 2,
+          "title": "Very fun but…",
+          "text": "I really enjoy playing this game. I bought the lifetime premium access for $9.99, and had it for 2 months and it was great. When I upgraded my phone it just didn’t transfer over. So now I lost the “lifetime” access after 2 months. Waste of $10.",
+          "updated_at": "2026-04-07T09:19:25-07:00",
+          "app_version": "4.2.1",
+          "author_name": "Harry Aaronson",
+          "author_url": "https://itunes.apple.com/us/reviews/id806961448",
+          "helpful_vote_sum": 1,
+          "helpful_vote_count": 1,
+          "apple_supplied_link": "https://itunes.apple.com/us/review?id=6745120053&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "us",
+              "page": 6,
+              "review_id": "13932722535",
+              "feed_url": "https://itunes.apple.com/us/rss/customerreviews/page=6/id=6745120053/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/us/app/id6745120053",
+              "fetched_at": "2026-10-04T10:47:03.804Z",
+              "raw_path": "raw/reviews/6745120053/us-6.json",
+              "raw_sha256": "f7420d5705bc7b1460ad24e3fd68174dcbb2713100d943b517548e5b00abf78f"
+            }
+          ],
+          "related_review_ids": []
+        },
+        {
+          "app_id": "6443918070",
+          "app_name": "Habit Tracker - HabitKit",
+          "maker": "Sebastian Roehl",
+          "category": "Productivity",
+          "indie_tier": "solo",
+          "release_date": "2022-11-26T08:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "13430341774",
+          "rating": 1,
+          "title": "Widgets need to be optimized",
+          "text": "I already bought the pro plan and my widgets keep getting blurry saying that I need to pay the pro plan to use this function 😭\n\nEdit: not fixed yet",
+          "updated_at": "2025-11-22T20:34:34-07:00",
+          "app_version": "1.14.2",
+          "author_name": "ViniJusty",
+          "author_url": "https://itunes.apple.com/br/reviews/id1287225831",
+          "helpful_vote_sum": 0,
+          "helpful_vote_count": 0,
+          "apple_supplied_link": "https://itunes.apple.com/br/review?id=6443918070&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "br",
+              "page": 1,
+              "review_id": "13430341774",
+              "feed_url": "https://itunes.apple.com/br/rss/customerreviews/page=1/id=6443918070/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/br/app/id6443918070",
+              "fetched_at": "2026-10-04T10:33:55.109Z",
+              "raw_path": "raw/reviews/6443918070/br-1.json",
+              "raw_sha256": "df81636f7267ee5ddfbd9fe17f689af4a42cd31f472785321a8d1707e3dd1ed9"
+            }
+          ],
+          "related_review_ids": []
+        },
+        {
+          "app_id": "6443918070",
+          "app_name": "Habit Tracker - HabitKit",
+          "maker": "Sebastian Roehl",
+          "category": "Productivity",
+          "indie_tier": "solo",
+          "release_date": "2022-11-26T08:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "14519062888",
+          "rating": 1,
+          "title": "Widget is broken",
+          "text": "Even though I am subscribed to Pro, the widgets will be blocker and show a text saying “ subscribe to pro”. It takes several minutes for it to go away. This happens every day and it makes the app no longer convenient and the widget no longer usable.",
+          "updated_at": "2026-09-06T14:14:38-07:00",
+          "app_version": "1.17.1",
+          "author_name": "Felixcoconut",
+          "author_url": "https://itunes.apple.com/us/reviews/id1512760178",
+          "helpful_vote_sum": 0,
+          "helpful_vote_count": 0,
+          "apple_supplied_link": "https://itunes.apple.com/us/review?id=6443918070&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "us",
+              "page": 1,
+              "review_id": "14519062888",
+              "feed_url": "https://itunes.apple.com/us/rss/customerreviews/page=1/id=6443918070/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/us/app/id6443918070",
+              "fetched_at": "2026-10-04T10:26:23.520Z",
+              "raw_path": "raw/reviews/6443918070/us-1.json",
+              "raw_sha256": "808f4e21ea1e18e73f46630f15292a14a298ba75915392a27b4bf41eaacfe0d2"
+            }
+          ],
+          "related_review_ids": []
+        },
+        {
+          "app_id": "6451491556",
+          "app_name": "Wave AI Note Taker & Recorder",
+          "maker": "Josh Mohrer / Mohrer Associates LLC",
+          "category": "Productivity",
+          "indie_tier": "small_independent_team",
+          "release_date": "2023-07-26T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "12184821572",
+          "rating": 1,
+          "title": "Not usable",
+          "text": "Basically, when this thing works , it works great, but it constantly is asking you to upgrade your paid subscription and won’t let you access the app until you’ve upgraded your subscription even if you’ve already chosen a subscription level so basically it is unusable.",
+          "updated_at": "2025-01-14T13:38:52-07:00",
+          "app_version": "2.7.7",
+          "author_name": "deseeteqgle50",
+          "author_url": "https://itunes.apple.com/us/reviews/id224056665",
+          "helpful_vote_sum": 0,
+          "helpful_vote_count": 0,
+          "apple_supplied_link": "https://itunes.apple.com/us/review?id=6451491556&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "us",
+              "page": 2,
+              "review_id": "12184821572",
+              "feed_url": "https://itunes.apple.com/us/rss/customerreviews/page=2/id=6451491556/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/us/app/id6451491556",
+              "fetched_at": "2026-10-04T10:51:14.626Z",
+              "raw_path": "raw/reviews/6451491556/us-2.json",
+              "raw_sha256": "55e110344dcc318b891059c77d3551a4e7c16428f776319bd0b4c0cb2b9d50b3"
+            }
+          ],
+          "related_review_ids": []
+        }
+      ]
+    },
+    {
+      "title": "The shared experience depends on every participant",
+      "interpretation": "For a multiplayer or couples app, successful use on one device is insufficient. A party can stall when one friend cannot connect; a couples quiz fails if only one partner can read it. Evaluate successful first shared activity, mixed platforms, and integration failures. This is an analyst inference from the reported experiences, not measured group churn.",
+      "ids": [
+        "14597531741",
+        "13329597146",
+        "12604753043",
+        "14133949505",
+        "14578414321"
+      ],
+      "examples": [
+        {
+          "app_id": "1624758651",
+          "app_name": "Couple Joy - Relationship App",
+          "maker": "HEARTBIT S.R.L.",
+          "category": "Lifestyle / couples and social networking",
+          "indie_tier": "small_independent_team",
+          "release_date": "2022-05-28T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "14597531741",
+          "rating": 2,
+          "title": "DOESNT WORK ON SOME PHONES",
+          "text": "I got this app because it’s super super fun and I really like the activities and quizzes. Only issue is once I bought a years worth of the subscription, half of the text wouldn’t show up on my partners side AT ALL (he has a Motorola). It made the app and subscription useless since the whole point was to do it long distance and in our own time but he couldn’t read the last half of all the questions or even the quiz name. I tried getting a refund for the months I haven’t used and it was denied even though I had evidence of the apps issues. Disappointing and a complete waste of money 💔 I would’ve loved to continue using this app and rebought the subscription if they fixed the issues otherwise and cancelled the months where it didn’t work.",
+          "updated_at": "2026-09-26T17:13:53-07:00",
+          "app_version": "4.28.0",
+          "author_name": "Spooky.exe",
+          "author_url": "https://itunes.apple.com/au/reviews/id1119081429",
+          "helpful_vote_sum": 0,
+          "helpful_vote_count": 0,
+          "apple_supplied_link": "https://itunes.apple.com/au/review?id=1624758651&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "au",
+              "page": 1,
+              "review_id": "14597531741",
+              "feed_url": "https://itunes.apple.com/au/rss/customerreviews/page=1/id=1624758651/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/au/app/id1624758651",
+              "fetched_at": "2026-10-04T10:32:16.668Z",
+              "raw_path": "raw/reviews/1624758651/au-1.json",
+              "raw_sha256": "36478acafd218720560f4d26cc338e3d29db00daeaff9b6bf502ba3a55978fc9"
+            }
+          ],
+          "related_review_ids": []
+        },
+        {
+          "app_id": "6742410648",
+          "app_name": "WhoLiked? - Guess Who Reposted",
+          "maker": "IRL Apps",
+          "category": "Games",
+          "indie_tier": "small_independent_team",
+          "release_date": "2025-04-15T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "13329597146",
+          "rating": 1,
+          "title": "upset",
+          "text": "Every time i try connecting my tiktok, it says something went wrong. it’s super annoying because all my friends can play but me. Sad.",
+          "updated_at": "2025-10-29T07:19:16-07:00",
+          "app_version": "1.0.20",
+          "author_name": "Dewydadude123",
+          "author_url": "https://itunes.apple.com/us/reviews/id1115824606",
+          "helpful_vote_sum": 0,
+          "helpful_vote_count": 0,
+          "apple_supplied_link": "https://itunes.apple.com/us/review?id=6742410648&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "us",
+              "page": 3,
+              "review_id": "13329597146",
+              "feed_url": "https://itunes.apple.com/us/rss/customerreviews/page=3/id=6742410648/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/us/app/id6742410648",
+              "fetched_at": "2026-10-04T10:25:49.216Z",
+              "raw_path": "raw/reviews/6742410648/us-3.json",
+              "raw_sha256": "9409c7662e9f63796a1ade66fc216cdb01066615d5342b7b3c7577990936d814"
+            }
+          ],
+          "related_review_ids": []
+        },
+        {
+          "app_id": "6742410648",
+          "app_name": "WhoLiked? - Guess Who Reposted",
+          "maker": "IRL Apps",
+          "category": "Games",
+          "indie_tier": "small_independent_team",
+          "release_date": "2025-04-15T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "12604753043",
+          "rating": 1,
+          "title": "Ça marche pas",
+          "text": "J’ai essayé en soirée avec des amis les vidéo ne chargeaient pas ce qui a bieser l’expérience",
+          "updated_at": "2025-04-30T17:13:21-07:00",
+          "app_version": "1.0.2",
+          "author_name": "margauxpilard 52",
+          "author_url": "https://itunes.apple.com/fr/reviews/id1104279694",
+          "helpful_vote_sum": 0,
+          "helpful_vote_count": 0,
+          "apple_supplied_link": "https://itunes.apple.com/fr/review?id=6742410648&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "fr",
+              "page": 6,
+              "review_id": "12604753043",
+              "feed_url": "https://itunes.apple.com/fr/rss/customerreviews/page=6/id=6742410648/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/fr/app/id6742410648",
+              "fetched_at": "2026-10-04T10:45:34.406Z",
+              "raw_path": "raw/reviews/6742410648/fr-6.json",
+              "raw_sha256": "7124402c54a8ded9a991cff9a556b5688d58a4d253fa13ff8534a6b4f97ae233"
+            }
+          ],
+          "related_review_ids": []
+        },
+        {
+          "app_id": "6742410648",
+          "app_name": "WhoLiked? - Guess Who Reposted",
+          "maker": "IRL Apps",
+          "category": "Games",
+          "indie_tier": "small_independent_team",
+          "release_date": "2025-04-15T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "14133949505",
+          "rating": 2,
+          "title": "Lag and game closing.",
+          "text": "Sometimes when you’re in the middle of a round the game will lag and stop everyone that’s playing from being able to move on. Also this could just be a problem on my end and not the games fault but whenever theres 3+ people joining the game wont start or will start but then lag cause the app to close.",
+          "updated_at": "2026-06-01T22:07:10-07:00",
+          "app_version": "1.4.0",
+          "author_name": "Imtoogoated",
+          "author_url": "https://itunes.apple.com/nz/reviews/id1928292581",
+          "helpful_vote_sum": 0,
+          "helpful_vote_count": 0,
+          "apple_supplied_link": "https://itunes.apple.com/nz/review?id=6742410648&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "nz",
+              "page": 1,
+              "review_id": "14133949505",
+              "feed_url": "https://itunes.apple.com/nz/rss/customerreviews/page=1/id=6742410648/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/nz/app/id6742410648",
+              "fetched_at": "2026-10-04T10:45:29.511Z",
+              "raw_path": "raw/reviews/6742410648/nz-1-empty-recheck.json",
+              "raw_sha256": "93246a63cfab00f8c248a0c5794a2c32ff1f1386ce1c5a7c5739697b29c05d95"
+            }
+          ],
+          "related_review_ids": []
+        },
+        {
+          "app_id": "6742410648",
+          "app_name": "WhoLiked? - Guess Who Reposted",
+          "maker": "IRL Apps",
+          "category": "Games",
+          "indie_tier": "small_independent_team",
+          "release_date": "2025-04-15T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "14578414321",
+          "rating": 1,
+          "title": "app refuses to work",
+          "text": "i was playing perfectly fine for the longest time and i was literally going to buy a membership and then the game just stopped working. i tried to relogin one time and now for ever and ever it refuses to save my reposts and saves. it only downloads my likes?? i have relinked another acc, i have signed out, i have deleted my account, i have cleared cache, deleted history, made new accounts, deleted the app, redownloaded the app, deleted and waited a day, still doesnt work. this is very unfortunate because this is ONLY happening to me and none of my friends have seemed to have an issue.",
+          "updated_at": "2026-09-21T19:03:14-07:00",
+          "app_version": "1.7.2",
+          "author_name": "zoestr8",
+          "author_url": "https://itunes.apple.com/us/reviews/id1865411927",
+          "helpful_vote_sum": 0,
+          "helpful_vote_count": 0,
+          "apple_supplied_link": "https://itunes.apple.com/us/review?id=6742410648&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "us",
+              "page": 1,
+              "review_id": "14578414321",
+              "feed_url": "https://itunes.apple.com/us/rss/customerreviews/page=1/id=6742410648/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/us/app/id6742410648",
+              "fetched_at": "2026-10-04T10:25:46.077Z",
+              "raw_path": "raw/reviews/6742410648/us-1.json",
+              "raw_sha256": "be9e24314ceca6d47448627e65926f3a60f563102b26bf53f8bd74995f6cbc64"
+            }
+          ],
+          "related_review_ids": []
+        }
+      ]
+    },
+    {
+      "title": "Content freshness is part of ongoing value",
+      "interpretation": "Reviewed examples describe repeated questions, words, roles, old videos, or generic output. Content renewal and replay variety can matter as much as new interface features. These examples do not establish retention or the financial viability of subscriptions.",
+      "ids": [
+        "13738603306",
+        "13960949133",
+        "12767131654",
+        "13745972194",
+        "10819600414"
+      ],
+      "examples": [
+        {
+          "app_id": "1624758651",
+          "app_name": "Couple Joy - Relationship App",
+          "maker": "HEARTBIT S.R.L.",
+          "category": "Lifestyle / couples and social networking",
+          "indie_tier": "small_independent_team",
+          "release_date": "2022-05-28T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "13738603306",
+          "rating": 2,
+          "title": "Good design poor question choice",
+          "text": "The question banks run out pretty quickly especially of good questions. Wish they would add more or work on that aspect. Right now it feels like those deck of cards you’d buy and when you’re through it it’s over.",
+          "updated_at": "2026-02-11T11:13:08-07:00",
+          "app_version": "4.25.0",
+          "author_name": "Frontlinebreakthrough",
+          "author_url": "https://itunes.apple.com/za/reviews/id449178288",
+          "helpful_vote_sum": 0,
+          "helpful_vote_count": 0,
+          "apple_supplied_link": "https://itunes.apple.com/za/review?id=1624758651&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "za",
+              "page": 1,
+              "review_id": "13738603306",
+              "feed_url": "https://itunes.apple.com/za/rss/customerreviews/page=1/id=1624758651/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/za/app/id1624758651",
+              "fetched_at": "2026-10-04T10:32:45.413Z",
+              "raw_path": "raw/reviews/1624758651/za-1.json",
+              "raw_sha256": "3ed1bddbcb4d3afbdf5be8595f55c5786df06e64ed375ad9ae75150d8c03b65d"
+            }
+          ],
+          "related_review_ids": []
+        },
+        {
+          "app_id": "1624758651",
+          "app_name": "Couple Joy - Relationship App",
+          "maker": "HEARTBIT S.R.L.",
+          "category": "Lifestyle / couples and social networking",
+          "indie_tier": "small_independent_team",
+          "release_date": "2022-05-28T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "13960949133",
+          "rating": 1,
+          "title": "Distance is completely inaccurate",
+          "text": "We are not keeping after this month the distance is hardly accurate for us. And he paid for lifetime membership apon my asking and then he said they changed their fees and when he contacted them about it would not reimburse or meet even in the middle ground. Also the questions are very similar for us. We both feel we repeat ourselves.",
+          "updated_at": "2026-04-15T09:11:36-07:00",
+          "app_version": "4.25.0",
+          "author_name": "CheleKelly",
+          "author_url": "https://itunes.apple.com/us/reviews/id545404699",
+          "helpful_vote_sum": 0,
+          "helpful_vote_count": 0,
+          "apple_supplied_link": "https://itunes.apple.com/us/review?id=1624758651&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "us",
+              "page": 5,
+              "review_id": "13960949133",
+              "feed_url": "https://itunes.apple.com/us/rss/customerreviews/page=5/id=1624758651/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/us/app/id1624758651",
+              "fetched_at": "2026-10-04T10:47:40.414Z",
+              "raw_path": "raw/reviews/1624758651/us-5.json",
+              "raw_sha256": "89fd70ee8872d89cf7787b14f7a7fb7363ecbeda5c82abe2ca1850ba7d53a6ef"
+            }
+          ],
+          "related_review_ids": []
+        },
+        {
+          "app_id": "6745120053",
+          "app_name": "Imposter Game - Party Edition",
+          "maker": "Sven Vucak / Vucak IT Solutions (Sven and David Vucak)",
+          "category": "Party / social deduction game",
+          "indie_tier": "small_independent_team",
+          "release_date": "2025-05-18T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "12767131654",
+          "rating": 2,
+          "title": "Ausbaufähig",
+          "text": "Idee ist sehr cool aber in einigen Runden hat man gemerkt dass oft die gleichen Leute Impostor sind und die Begriffe sehr oft wieder holen. Hier fehlt leider die Varianz um es weiter zu spielen. Sehr schade.",
+          "updated_at": "2025-06-12T14:03:22-07:00",
+          "app_version": "2.0.0",
+          "author_name": "Hansiiiii hans",
+          "author_url": "https://itunes.apple.com/de/reviews/id172857377",
+          "helpful_vote_sum": 1,
+          "helpful_vote_count": 1,
+          "apple_supplied_link": "https://itunes.apple.com/de/review?id=6745120053&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "de",
+              "page": 1,
+              "review_id": "12767131654",
+              "feed_url": "https://itunes.apple.com/de/rss/customerreviews/page=1/id=6745120053/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/de/app/id6745120053",
+              "fetched_at": "2026-10-04T10:31:14.519Z",
+              "raw_path": "raw/reviews/6745120053/de-1.json",
+              "raw_sha256": "301a52d7c873a859f3d99a05c01bfa27fe26fb8d55b36e50e55039b167ade2ef"
+            }
+          ],
+          "related_review_ids": []
+        },
+        {
+          "app_id": "6742410648",
+          "app_name": "WhoLiked? - Guess Who Reposted",
+          "maker": "IRL Apps",
+          "category": "Games",
+          "indie_tier": "small_independent_team",
+          "release_date": "2025-04-15T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "13745972194",
+          "rating": 2,
+          "title": "old videos and glitches",
+          "text": "my friends and i are obsessed with this game but the longer we play the more we realize it’s only showing videos we liked from late december to early january (it’s currently mid february) and it would be much more fun if it would show recent videos. also it glitches a LOT… a lot. otherwise i’d rate 5 stars so pls fix thank youuuuuuuu🩷",
+          "updated_at": "2026-02-13T13:24:02-07:00",
+          "app_version": "1.1.12",
+          "author_name": "chudbucket212",
+          "author_url": "https://itunes.apple.com/us/reviews/id336044389",
+          "helpful_vote_sum": 2,
+          "helpful_vote_count": 2,
+          "apple_supplied_link": "https://itunes.apple.com/us/review?id=6742410648&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "us",
+              "page": 2,
+              "review_id": "13745972194",
+              "feed_url": "https://itunes.apple.com/us/rss/customerreviews/page=2/id=6742410648/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/us/app/id6742410648",
+              "fetched_at": "2026-10-04T10:25:47.723Z",
+              "raw_path": "raw/reviews/6742410648/us-2.json",
+              "raw_sha256": "11c88c6c2de30990eb08e7a487e82664c2ee7d2d3da10bcebdf5dc0fd66631f4"
+            }
+          ],
+          "related_review_ids": []
+        },
+        {
+          "app_id": "1663430725",
+          "app_name": "RIZZ",
+          "maker": "TREND IT LLC; Joshua Miller and Roman Khaves",
+          "category": "Lifestyle / AI dating assistant",
+          "indie_tier": "individual_led",
+          "release_date": "2023-01-12T08:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "10819600414",
+          "rating": 1,
+          "title": "Start at the top now we’re here",
+          "text": "Seemed like a great app at first. The AI generated lines weren’t bad however at times they were a little to generic and every new line generated was to similar to previous pick up lines. With this new update it went from having 5 free lines a week to one being forced to update and two not being eligible for the free trial with the update and automatically being charged for a subpar product. The AI generated lines are not good enough even for just entertainment purposes for that price.",
+          "updated_at": "2024-01-13T19:52:09-07:00",
+          "app_version": "3.6",
+          "author_name": "MAG1989mag",
+          "author_url": "https://itunes.apple.com/us/reviews/id239112218",
+          "helpful_vote_sum": 0,
+          "helpful_vote_count": 0,
+          "apple_supplied_link": "https://itunes.apple.com/us/review?id=1663430725&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "us",
+              "page": 9,
+              "review_id": "10819600414",
+              "feed_url": "https://itunes.apple.com/us/rss/customerreviews/page=9/id=1663430725/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/us/app/id1663430725",
+              "fetched_at": "2026-10-04T10:47:24.422Z",
+              "raw_path": "raw/reviews/1663430725/us-9.json",
+              "raw_sha256": "221c45e34c45a15886d1fd516f3a9c6dd11076d147bea6ff1a10c0a0dca4a043"
+            }
+          ],
+          "related_review_ids": []
+        }
+      ]
+    },
+    {
+      "title": "Reliability has a different cost at the moment of use",
+      "interpretation": "A lost recording, an app restriction that fails to release, or an OS change that breaks the intended minimalist appearance undermines the specific benefit people sought. Prioritize tests around that benefit and recovery: save recordings, recover accounts and purchases, and keep support reachable before login.",
+      "ids": [
+        "11640472685",
+        "11557365239",
+        "13611668790",
+        "14183745341",
+        "12431443122",
+        "11637444597",
+        "13039110692"
+      ],
+      "examples": [
+        {
+          "app_id": "6451491556",
+          "app_name": "Wave AI Note Taker & Recorder",
+          "maker": "Josh Mohrer / Mohrer Associates LLC",
+          "category": "Productivity",
+          "indie_tier": "small_independent_team",
+          "release_date": "2023-07-26T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "11640472685",
+          "rating": 1,
+          "title": "Terrible do not trust",
+          "text": "I had about two hours recorded of notes. I exited the app and lost it immediately. Terrible. You would think they’d be able to develop something that could save your recordings. Absolutely terrible.",
+          "updated_at": "2024-08-22T10:11:59-07:00",
+          "app_version": "2.2.16",
+          "author_name": "Ac90999",
+          "author_url": "https://itunes.apple.com/us/reviews/id1509974424",
+          "helpful_vote_sum": 0,
+          "helpful_vote_count": 0,
+          "apple_supplied_link": "https://itunes.apple.com/us/review?id=6451491556&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "us",
+              "page": 3,
+              "review_id": "11640472685",
+              "feed_url": "https://itunes.apple.com/us/rss/customerreviews/page=3/id=6451491556/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/us/app/id6451491556",
+              "fetched_at": "2026-10-04T10:51:16.109Z",
+              "raw_path": "raw/reviews/6451491556/us-3.json",
+              "raw_sha256": "5fa1e5b5d3c3b00eca31d5b26eb57923f00b9f0c1b11d0a6149c50f54a993cee"
+            }
+          ],
+          "related_review_ids": []
+        },
+        {
+          "app_id": "6451491556",
+          "app_name": "Wave AI Note Taker & Recorder",
+          "maker": "Josh Mohrer / Mohrer Associates LLC",
+          "category": "Productivity",
+          "indie_tier": "small_independent_team",
+          "release_date": "2023-07-26T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "11557365239",
+          "rating": 2,
+          "title": "Great concept but needs improvement",
+          "text": "It is amazing the potential and summaries. The problem that I’m having is connecting in an easy way with costumer support. Every time that a call comes in, the recording stops and it does not save what was recording before. I have not found a way to troubleshoot. If is reliable and automatically saves the audio, I will feel safe to use it",
+          "updated_at": "2024-07-31T15:31:35-07:00",
+          "app_version": "2.2.11",
+          "author_name": "ischila",
+          "author_url": "https://itunes.apple.com/us/reviews/id818526834",
+          "helpful_vote_sum": 0,
+          "helpful_vote_count": 0,
+          "apple_supplied_link": "https://itunes.apple.com/us/review?id=6451491556&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "us",
+              "page": 3,
+              "review_id": "11557365239",
+              "feed_url": "https://itunes.apple.com/us/rss/customerreviews/page=3/id=6451491556/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/us/app/id6451491556",
+              "fetched_at": "2026-10-04T10:51:16.109Z",
+              "raw_path": "raw/reviews/6451491556/us-3.json",
+              "raw_sha256": "5fa1e5b5d3c3b00eca31d5b26eb57923f00b9f0c1b11d0a6149c50f54a993cee"
+            }
+          ],
+          "related_review_ids": []
+        },
+        {
+          "app_id": "6480082872",
+          "app_name": "Dumbify",
+          "maker": "Anthony Burkholder / AB Apps Inc.",
+          "category": "Productivity",
+          "indie_tier": "solo",
+          "release_date": "2024-04-02T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "13611668790",
+          "rating": 1,
+          "title": "Worked well until iOS 26",
+          "text": "With the advent of iOS 26 and Liquid Glass, this app has become completely unusable from a UI/UX perspective. It is now distracting to look at anything on the home screen, which defeats the point of using it. Until this app is fixed, I cannot give it anything more than 1 star.",
+          "updated_at": "2026-01-08T19:50:09-07:00",
+          "app_version": "1.7.0",
+          "author_name": "Elweedman",
+          "author_url": "https://itunes.apple.com/us/reviews/id535642831",
+          "helpful_vote_sum": 1,
+          "helpful_vote_count": 1,
+          "apple_supplied_link": "https://itunes.apple.com/us/review?id=6480082872&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "us",
+              "page": 1,
+              "review_id": "13611668790",
+              "feed_url": "https://itunes.apple.com/us/rss/customerreviews/page=1/id=6480082872/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/us/app/id6480082872",
+              "fetched_at": "2026-10-04T10:50:43.874Z",
+              "raw_path": "raw/reviews/6480082872/us-1.json",
+              "raw_sha256": "db539f5f0d63ed719b0ba79f1cd3a6e2ef7725f4b260274954ef2b1f04c08320"
+            }
+          ],
+          "related_review_ids": []
+        },
+        {
+          "app_id": "6739589530",
+          "app_name": "touch grass: screen time limit",
+          "maker": "Rhys Kentish",
+          "category": "Productivity",
+          "indie_tier": "solo",
+          "release_date": "2025-03-14T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "14183745341",
+          "rating": 1,
+          "title": "it wouldn’t actually open my apps",
+          "text": "Like my apps were locked the whole time, even if I showed it grass and it would say it was opening them, but it never did",
+          "updated_at": "2026-06-14T17:32:38-07:00",
+          "app_version": "1.4.2",
+          "author_name": "🥥claire🥥",
+          "author_url": "https://itunes.apple.com/us/reviews/id1369603973",
+          "helpful_vote_sum": 0,
+          "helpful_vote_count": 0,
+          "apple_supplied_link": "https://itunes.apple.com/us/review?id=6739589530&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "us",
+              "page": 1,
+              "review_id": "14183745341",
+              "feed_url": "https://itunes.apple.com/us/rss/customerreviews/page=1/id=6739589530/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/us/app/id6739589530",
+              "fetched_at": "2026-10-04T10:49:36.767Z",
+              "raw_path": "raw/reviews/6739589530/us-1-empty-recheck.json",
+              "raw_sha256": "2bb55e5bddba773ca3f028dd120abbf743dafde47e80f1867fa798e03e591715"
+            }
+          ],
+          "related_review_ids": []
+        },
+        {
+          "app_id": "6739589530",
+          "app_name": "touch grass: screen time limit",
+          "maker": "Rhys Kentish",
+          "category": "Productivity",
+          "indie_tier": "solo",
+          "release_date": "2025-03-14T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "12431443122",
+          "rating": 1,
+          "title": "Letdown",
+          "text": "I saw ads for this thinking that this would help me reduce my distractions but nope it has so many bugs especially when it comes to blocking apps.  It lets me block them at least once and when I touch grass it would give me the break like it should.  Once I get the notification saying my apps are reblocked this is when the lie comes in.  I can still access my apps even though they are restricted",
+          "updated_at": "2025-03-17T07:25:47-07:00",
+          "app_version": "1.0.1",
+          "author_name": "cactus0962",
+          "author_url": "https://itunes.apple.com/us/reviews/id897687387",
+          "helpful_vote_sum": 0,
+          "helpful_vote_count": 0,
+          "apple_supplied_link": "https://itunes.apple.com/us/review?id=6739589530&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "us",
+              "page": 4,
+              "review_id": "12431443122",
+              "feed_url": "https://itunes.apple.com/us/rss/customerreviews/page=4/id=6739589530/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/us/app/id6739589530",
+              "fetched_at": "2026-10-04T10:49:41.227Z",
+              "raw_path": "raw/reviews/6739589530/us-4.json",
+              "raw_sha256": "23a8c37daaf9f0fabf62e44c0e10f4186da21671c26082caafec5e8fc2da395c"
+            }
+          ],
+          "related_review_ids": []
+        },
+        {
+          "app_id": "6451491556",
+          "app_name": "Wave AI Note Taker & Recorder",
+          "maker": "Josh Mohrer / Mohrer Associates LLC",
+          "category": "Productivity",
+          "indie_tier": "small_independent_team",
+          "release_date": "2023-07-26T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "11637444597",
+          "rating": 1,
+          "title": "Major Fail",
+          "text": "Sad!! Sounds like a great app but only providing three ways to set up an account and not accommodating emails for new accounts is so prohibitive. I then tried to create an account with a Google account and it pushed me to use a passkey which I didn’t have set up so I ended up in this never ending loop. Finally crashed out and attempted to email app support but the link to app support requires an account to access. MAJOR FAIL!!!",
+          "updated_at": "2024-08-21T16:17:33-07:00",
+          "app_version": "2.2.15",
+          "author_name": "JHDallasnickname",
+          "author_url": "https://itunes.apple.com/us/reviews/id413279479",
+          "helpful_vote_sum": 1,
+          "helpful_vote_count": 1,
+          "apple_supplied_link": "https://itunes.apple.com/us/review?id=6451491556&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "us",
+              "page": 3,
+              "review_id": "11637444597",
+              "feed_url": "https://itunes.apple.com/us/rss/customerreviews/page=3/id=6451491556/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/us/app/id6451491556",
+              "fetched_at": "2026-10-04T10:51:16.109Z",
+              "raw_path": "raw/reviews/6451491556/us-3.json",
+              "raw_sha256": "5fa1e5b5d3c3b00eca31d5b26eb57923f00b9f0c1b11d0a6149c50f54a993cee"
+            }
+          ],
+          "related_review_ids": []
+        },
+        {
+          "app_id": "6532588521",
+          "app_name": "QUITTR - Break Free Now",
+          "maker": "Alex Slater and Connor McLaren / Quittr, LLC",
+          "category": "Health & Fitness",
+          "indie_tier": "small_independent_team",
+          "release_date": "2024-07-23T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "13039110692",
+          "rating": 1,
+          "title": "Where is my lifetime membership",
+          "text": "Lifetime membership doesn’t seem to work. I subscribed to lifetime membership, but it is missing from my subscriptions. \n\nFirst of all I subscribed to the 3 day trial. \nThen I was offered the chance of upgrading to a lifetime subscription, which I took. \nThen I was billed for both the yearly subscription at end of trial, and the lifetime subscription. \n\nHow can you get billed twice for the same app. \n\nI wanted to keep the lifetime subscription and asked for a refund for the yearly subscription as I should not have been charged as I had upgraded to lifetime membership.  I did get this and apple refunded me on one of the two.\n\nHowever the lifetime subscription does not work, no sign of it in my subscriptions . I have tried to restore purchase, but this hasn’t worked. \n\nSo I asked apple for a refund, but they said no because it did work for a couple of days.\n\n£29.99 for 3 or 4 days is a bit much. \n\nI have the receipt from apple billing my apple account for the lifetime subscription.\nI contacted QUITTR support and they referred me back to a QUITTR support website, which then referred my back to apple to ask for a refund. \nThis is the same apple who said they won’t give a refund. \n\nINFURIATING….",
+          "updated_at": "2025-08-20T05:25:24-07:00",
+          "app_version": "140",
+          "author_name": "N_Dixon_1975",
+          "author_url": "https://itunes.apple.com/gb/reviews/id538059739",
+          "helpful_vote_sum": 0,
+          "helpful_vote_count": 0,
+          "apple_supplied_link": "https://itunes.apple.com/gb/review?id=6532588521&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "gb",
+              "page": 1,
+              "review_id": "13039110692",
+              "feed_url": "https://itunes.apple.com/gb/rss/customerreviews/page=1/id=6532588521/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/gb/app/id6532588521",
+              "fetched_at": "2026-10-04T10:50:15.567Z",
+              "raw_path": "raw/reviews/6532588521/gb-1.json",
+              "raw_sha256": "a5577f4bdc2108b12f2fbcf271e862a8e74d397b73bec9c0e700e69c84802608"
+            }
+          ],
+          "related_review_ids": []
+        }
+      ]
+    },
+    {
+      "title": "Low stars are not automatically complaint evidence",
+      "interpretation": "Some low-star records praise the product without a substantive complaint; others joke or complain about matters unrelated to product operation. Rating is the collection filter, not a reliable semantic label. Allegations of fraud, hacking, manipulation, or data breaches require independent verification and are not treated as established facts.",
+      "ids": [
+        "13325380641",
+        "13928114415",
+        "14320469279",
+        "13813322430"
+      ],
+      "examples": [
+        {
+          "app_id": "1624758651",
+          "app_name": "Couple Joy - Relationship App",
+          "maker": "HEARTBIT S.R.L.",
+          "category": "Lifestyle / couples and social networking",
+          "indie_tier": "small_independent_team",
+          "release_date": "2022-05-28T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "13325380641",
+          "rating": 1,
+          "title": "OBSESSED",
+          "text": "I absolutely LOVE this app so much! My fiancé and I use it often. We love the widgets you can put on your Lock Screen. Makes us feel closer whenever we are apart during long distance. It’s definitely worth it ❤️",
+          "updated_at": "2025-10-28T07:26:18-07:00",
+          "app_version": "4.21.0",
+          "author_name": "Kels WRIGHT",
+          "author_url": "https://itunes.apple.com/us/reviews/id887868855",
+          "helpful_vote_sum": 0,
+          "helpful_vote_count": 0,
+          "apple_supplied_link": "https://itunes.apple.com/us/review?id=1624758651&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "us",
+              "page": 8,
+              "review_id": "13325380641",
+              "feed_url": "https://itunes.apple.com/us/rss/customerreviews/page=8/id=1624758651/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/us/app/id1624758651",
+              "fetched_at": "2026-10-04T10:47:44.844Z",
+              "raw_path": "raw/reviews/1624758651/us-8.json",
+              "raw_sha256": "bcdad4d829b4a361222314752349f8120af33c9782e16855fc84dfe5c342612b"
+            }
+          ],
+          "related_review_ids": []
+        },
+        {
+          "app_id": "1624758651",
+          "app_name": "Couple Joy - Relationship App",
+          "maker": "HEARTBIT S.R.L.",
+          "category": "Lifestyle / couples and social networking",
+          "indie_tier": "small_independent_team",
+          "release_date": "2022-05-28T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "13928114415",
+          "rating": 1,
+          "title": "Love ittt",
+          "text": "Cool app made my relationship stronger",
+          "updated_at": "2026-04-06T02:46:22-07:00",
+          "app_version": "4.25.0",
+          "author_name": "Zonely Trinidad",
+          "author_url": "https://itunes.apple.com/us/reviews/id1817098606",
+          "helpful_vote_sum": 0,
+          "helpful_vote_count": 0,
+          "apple_supplied_link": "https://itunes.apple.com/us/review?id=1624758651&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "us",
+              "page": 5,
+              "review_id": "13928114415",
+              "feed_url": "https://itunes.apple.com/us/rss/customerreviews/page=5/id=1624758651/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/us/app/id1624758651",
+              "fetched_at": "2026-10-04T10:47:40.414Z",
+              "raw_path": "raw/reviews/1624758651/us-5.json",
+              "raw_sha256": "89fd70ee8872d89cf7787b14f7a7fb7363ecbeda5c82abe2ca1850ba7d53a6ef"
+            }
+          ],
+          "related_review_ids": []
+        },
+        {
+          "app_id": "1624758651",
+          "app_name": "Couple Joy - Relationship App",
+          "maker": "HEARTBIT S.R.L.",
+          "category": "Lifestyle / couples and social networking",
+          "indie_tier": "small_independent_team",
+          "release_date": "2022-05-28T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "14320469279",
+          "rating": 1,
+          "title": "Buena app",
+          "text": "Buena app, esta cool pero terminamos así que 1 estrella",
+          "updated_at": "2026-07-18T18:30:53-07:00",
+          "app_version": "4.27.0",
+          "author_name": "GAEL VUELVE PORFAVOR",
+          "author_url": "https://itunes.apple.com/mx/reviews/id1664848665",
+          "helpful_vote_sum": 1,
+          "helpful_vote_count": 1,
+          "apple_supplied_link": "https://itunes.apple.com/mx/review?id=1624758651&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "mx",
+              "page": 1,
+              "review_id": "14320469279",
+              "feed_url": "https://itunes.apple.com/mx/rss/customerreviews/page=1/id=1624758651/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/mx/app/id1624758651",
+              "fetched_at": "2026-10-04T10:32:37.434Z",
+              "raw_path": "raw/reviews/1624758651/mx-1.json",
+              "raw_sha256": "6fde0dce0bcbb0d06d4b23c9fd0c72deb563a0fa4c327f46bab599a60e97a36a"
+            }
+          ],
+          "related_review_ids": []
+        },
+        {
+          "app_id": "6745120053",
+          "app_name": "Imposter Game - Party Edition",
+          "maker": "Sven Vucak / Vucak IT Solutions (Sven and David Vucak)",
+          "category": "Party / social deduction game",
+          "indie_tier": "small_independent_team",
+          "release_date": "2025-05-18T07:00:00Z",
+          "eligibility": "qualified",
+          "review_id": "13813322430",
+          "rating": 1,
+          "title": "Worst game ever",
+          "text": "This is the most horrible  game I’ve ever played my friends are idiots and they say the most obvious things TEHEHEHEHHEH this game should be banned from the App Store. This is the best game ever I play it every day it’s so fun",
+          "updated_at": "2026-03-04T08:26:41-07:00",
+          "app_version": "4.2.0",
+          "author_name": "hi im pee",
+          "author_url": "https://itunes.apple.com/us/reviews/id695999543",
+          "helpful_vote_sum": 0,
+          "helpful_vote_count": 2,
+          "apple_supplied_link": "https://itunes.apple.com/us/review?id=6745120053&type=Purple%20Software",
+          "observations": [
+            {
+              "storefront": "us",
+              "page": 7,
+              "review_id": "13813322430",
+              "feed_url": "https://itunes.apple.com/us/rss/customerreviews/page=7/id=6745120053/sortby=mostrecent/json",
+              "app_store_url": "https://apps.apple.com/us/app/id6745120053",
+              "fetched_at": "2026-10-04T10:47:05.243Z",
+              "raw_path": "raw/reviews/6745120053/us-7.json",
+              "raw_sha256": "1e4bff693cc365d9d8cf9342b942b1c8868a55f6140e827fcf3edae1b11d0bae"
+            }
+          ],
+          "related_review_ids": []
+        }
+      ]
+    }
+  ]
+}

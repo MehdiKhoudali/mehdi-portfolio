@@ -1,0 +1,241 @@
+[
+  {
+    "app_id": "6736921913",
+    "app_name": "nomadtable: travel friends",
+    "maker": "Nomadtable Inc.; Jay Raavi",
+    "category": "Travel / social networking",
+    "indie_tier": "individual_led",
+    "eligibility": "borderline",
+    "release_date": "2025-03-19T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6736921913",
+    "original_launch_caveat": "Apple listing meets cutoff; bundle ID jayraavi.SoloMatch suggests a prior working name, not proof of a pre-2022 app.",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/search?term=Nomadtable&entity=software&limit=3",
+        "quote": "\"trackId\":6736921913; \"releaseDate\":\"2025-03-19T07:00:00Z\"; \"sellerName\":\"Nomadtable Inc.\"",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://nomadtable.app",
+        "quote": "in the summer of 2024, i was solo traveling ... i got back from that trip and immediately quit my job to build this app ... jay, founder",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://www.linkedin.com/posts/vijayraavi_excited-to-share-that-nomadtable-just-crossed-activity-7375975431159738368-kGQQ",
+        "quote": "Jay Raavi ... It's been a crazy 6 months! Seeing an app I built solo out of my SF apartment grow into a global community of travelers",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Founder-led and solo-built origin verified; current legal policy names Nomadtable Inc. and contractor moderators. No reliable current primary funding or ownership confirmation obtained; secondary bootstrap claims not treated as proof. Not counted as qualified."
+    ],
+    "candidate_file": "candidates-social.json"
+  },
+  {
+    "app_id": "1528595748",
+    "app_name": "Finch: Self-Care Pet",
+    "maker": "Finch Care Public Benefit Corporation",
+    "category": "Health & Fitness / self-care pet",
+    "indie_tier": "unknown",
+    "eligibility": "excluded",
+    "release_date": "2021-05-12T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=1528595748",
+    "original_launch_caveat": "Original Apple release is in 2021; recent updates do not satisfy the strict original-launch cutoff.",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/search?term=Finch%20self%20care&entity=software&limit=2",
+        "quote": "\"trackId\":1528595748; \"releaseDate\":\"2021-05-12T07:00:00Z\"",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Excluded on launch date alone; no further independence investigation necessary."
+    ],
+    "candidate_file": "candidates-social.json"
+  },
+  {
+    "app_id": "6741765734",
+    "app_name": "Pushscroll: Exercise To Scroll",
+    "maker": "Pushscroll GmbH",
+    "category": "Health & Fitness",
+    "indie_tier": "unknown",
+    "eligibility": "borderline",
+    "release_date": "2025-06-24T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6741765734&country=us",
+    "original_launch_caveat": "Apple original releaseDate verified; no separate historical launch or rebrand evidence established.",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=6741765734&country=us",
+        "quote": "2025-06-24T07:00:00Z",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://itunes.apple.com/lookup?id=6741765734&country=us",
+        "quote": "Pushscroll GmbH",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://itunes.apple.com/lookup?id=6741765734&country=us",
+        "quote": "Want to scroll? Do pushups first.",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Focused consumer exercise-for-screen-time utility. Official website returned only a page title; founder identity, small-team status, funding and ownership not established."
+    ],
+    "candidate_file": "candidates-utilities.json"
+  },
+  {
+    "app_id": "1547585270",
+    "app_name": "Superlist: To Do List & Team",
+    "maker": "Christian Reber and Niklas Jansen / Superlist Software GmbH",
+    "category": "Productivity",
+    "indie_tier": "unknown",
+    "eligibility": "excluded",
+    "release_date": "2023-11-23T08:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=1547585270&country=us",
+    "original_launch_caveat": "Apple listing releaseDate precedes February 2024 public launch after beta; company was announced in 2020. Not a Wunderlist rebrand according to launch reporting.",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=1547585270&country=us",
+        "quote": "2023-11-23T08:00:00Z",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://techcrunch.com/2024/02/16/superlist/",
+        "quote": "This week he finally brought Superlist out of beta.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://techcrunch.com/2024/02/16/superlist/",
+        "quote": "the company has raised €13.5 million in funding from Cherry Ventures and EQT.",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Excluded for significant institutional venture funding. Personal-use functionality does not make this team-oriented funded startup a strict indie candidate."
+    ],
+    "candidate_file": "candidates-utilities.json"
+  },
+  {
+    "app_id": "6480417616",
+    "app_name": "Cal AI - Calorie Tracker",
+    "maker": "Zach Yadegari and Henry Langmack; now MyFitnessPal (Apple seller: Viral Development LLC)",
+    "category": "Health & Fitness",
+    "indie_tier": "unknown",
+    "eligibility": "excluded",
+    "release_date": "2024-04-08T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6480417616&country=us",
+    "original_launch_caveat": "Apple original releaseDate verified. Acquisition reporting corroborates a product built within the preceding two years; exact earliest prototype/public launch not separately established.",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=6480417616&country=us",
+        "quote": "2024-04-08T07:00:00Z",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://techcrunch.com/2026/03/02/myfitnesspal-has-acquired-cal-ai-the-viral-calorie-app-built-by-teens/",
+        "quote": "MyFitnessPal has successfully acquired its up-and-coming rival Cal AI.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://techcrunch.com/2026/03/02/myfitnesspal-has-acquired-cal-ai-the-viral-calorie-app-built-by-teens/",
+        "quote": "Yadegari is still running the app, now as a unit of MFP",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Excluded for current corporate ownership despite young indie origins and unchanged Apple seller. Report says acquisition closed in December before its March 2026 publication; remaining a standalone app is not independent ownership."
+    ],
+    "candidate_file": "candidates-utilities.json"
+  },
+  {
+    "app_id": "6741765734",
+    "app_name": "Pushscroll: Exercise To Scroll",
+    "maker": "Pushscroll GmbH; Alejandro Sanchez named in registered contact address, founder status unverified",
+    "category": "Health & Fitness",
+    "indie_tier": "unknown",
+    "eligibility": "borderline",
+    "release_date": "2025-06-24T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6741765734&country=us",
+    "original_launch_caveat": "Apple original releaseDate. Bundle identifier com.capyapps.speedbump suggests a possible earlier working name but does not establish an earlier public launch or rebrand.",
+    "evidence": [
+      {
+        "url": "https://itunes.apple.com/lookup?id=6741765734&country=us",
+        "quote": "\"releaseDate\":\"2025-06-24T07:00:00Z\"",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://pushscroll.com/assets/Privacy-CA4ruwC_.js",
+        "quote": "The Service is operated by Pushscroll GmbH, a limited liability company registered in Switzerland.",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://pushscroll.com/assets/Terms-lMd6w3D7.js",
+        "quote": "Pushscroll GmbH, Ginsterweg 6, c/o Alejandro Sanchez, 4303 Kaiseraugst, Aargau, Switzerland",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Official privacy/terms text inspected in the lazy-loaded assets linked by the website; both policies dated September 30, 2026. This corroborates the Swiss operator and named contact, not solo/small-team status.",
+      "No verified maker profile, founder interview, small-team or bootstrap statement established within this bounded follow-up. GmbH and a personal c/o address alone are insufficient to qualify. Significant VC/current corporate ownership likewise not established; retain borderline rather than invent an exclusion."
+    ],
+    "candidate_file": "candidates-followup.json"
+  },
+  {
+    "app_id": "6744703926",
+    "app_name": "Prayer Lock (website-linked listing)",
+    "maker": "Not conclusively established from an available current Apple listing",
+    "category": "Screen time / devotional utility",
+    "indie_tier": "unknown",
+    "eligibility": "excluded",
+    "release_date": null,
+    "release_date_source": null,
+    "original_launch_caveat": "Official terms effective April 17, 2025 suggest a young product, but do not substitute for an available original App Store releaseDate.",
+    "evidence": [
+      {
+        "url": "https://prayerlock.com/",
+        "quote": "https://apps.apple.com/us/app/prayer-lock-screen-time/id6744703926",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://prayerlock.com/terms",
+        "quote": "Effective Date: 17th April 2025",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "Current US and GB lookup responses returned zero results and the official website-linked US Apple page returned HTTP 404. Do not infer whether it was acquired, removed or renamed.",
+      "Search surfaces other similarly named Prayer Lock apps by different makers; those are not silently substituted. No reviews collected for this candidate."
+    ],
+    "candidate_file": "candidates-extra.json"
+  },
+  {
+    "app_id": "6708241793",
+    "app_name": "Notewave AI (formerly Feynman AI, website-linked listing)",
+    "maker": "Notewave AI team; current Apple seller unresolved",
+    "category": "Education / AI note taking",
+    "indie_tier": "unknown",
+    "eligibility": "borderline",
+    "release_date": null,
+    "release_date_source": null,
+    "original_launch_caveat": "Official privacy effective July 29, 2024 is not proof of original public listing launch. Website points to a Feynman AI listing and the product may have been renamed.",
+    "evidence": [
+      {
+        "url": "https://notewave.app/",
+        "quote": "https://apps.apple.com/us/app/feynman-ai-note-mindmap-memo/id6708241793",
+        "checked_at": "2026-10-04"
+      },
+      {
+        "url": "https://notewave.app/privacy",
+        "quote": "Notewave AI is a self-funded company focused on providing you with a smooth, reliable note-taking experience.",
+        "checked_at": "2026-10-04"
+      }
+    ],
+    "caveats": [
+      "US lookup returned zero results for the official website-linked ID, preventing current identity and original release-date verification. No reviews collected.",
+      "The unrelated Notewave AI Note Taker by DOTFORGE LIMITED on notewave.ai has a different numeric ID; do not conflate products based on names or the earlier Appkittie testimonial."
+    ],
+    "candidate_file": "candidates-extra.json"
+  }
+]

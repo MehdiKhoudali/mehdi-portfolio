@@ -1,0 +1,15 @@
+{
+  "verified_at": "2026-10-03T23:36:29.378Z",
+  "passed": true,
+  "unique_reviews_verified": 3003,
+  "source_observations_verified": 3003,
+  "raw_responses_hash_verified": 377,
+  "original_review_text_preserved": true,
+  "only_one_and_two_star_written_reviews": true,
+  "repeated_review_snapshot_variants": 0,
+  "earliest_review_updated_at": "2012-05-30T01:07:33-07:00",
+  "latest_review_updated_at": "2026-10-02T06:05:25-07:00",
+  "future_dated_review_count": 0,
+  "over_1000_target_met": true,
+  "failed_request_count": 36
+}

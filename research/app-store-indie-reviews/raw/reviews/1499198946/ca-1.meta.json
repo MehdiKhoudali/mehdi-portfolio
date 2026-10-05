@@ -1,0 +1,10 @@
+{
+  "url": "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=1499198946/sortby=mostrecent/json",
+  "resolved_url": "https://itunes.apple.com/ca/rss/customerreviews/page=1/id=1499198946/sortby=mostrecent/json",
+  "fetched_at": "2026-10-03T23:32:44.071Z",
+  "status": 200,
+  "attempt": 1,
+  "sha256": "84d1a4068308c4fa2f84324375e21c8c3845166e6e408dc51840714963813f98",
+  "raw_path": "raw/reviews/1499198946/ca-1.json",
+  "content_type": "text/javascript; charset=UTF-8"
+}

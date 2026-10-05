@@ -1,0 +1,10 @@
+{
+  "url": "https://itunes.apple.com/lookup?id=1016366447&country=us",
+  "resolved_url": "https://itunes.apple.com/lookup?id=1016366447&country=us",
+  "fetched_at": "2026-10-03T23:33:21.151Z",
+  "status": 200,
+  "attempt": 1,
+  "sha256": "9dcfa54f23bf8c9ed682271da343ee7cabe4a99e67db5d5a2daa56f52a690b1b",
+  "raw_path": "raw/lookup/1016366447-us.json",
+  "content_type": "text/javascript; charset=utf-8"
+}

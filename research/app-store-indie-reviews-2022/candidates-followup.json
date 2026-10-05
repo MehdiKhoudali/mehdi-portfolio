@@ -1,0 +1,53 @@
+[
+  {
+    "app_id": "6532588521",
+    "app_name": "QUITTR - Break Free Now",
+    "maker": "Alex Slater and Connor McLaren / Quittr, LLC",
+    "category": "Health & Fitness",
+    "indie_tier": "small_team",
+    "eligibility": "qualified",
+    "release_date": "2024-07-23T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6532588521&country=us",
+    "original_launch_caveat": "Apple original releaseDate; March 2026 New York reporting describes an August 2024 launch and a July 2024 founder meeting after a ten-day build. Store availability and broader launch differ; neither indicates a legacy pre-2022 app.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=6532588521&country=us", "quote": "\"releaseDate\":\"2024-07-23T07:00:00Z\"", "checked_at": "2026-10-04"},
+      {"url": "https://www.techtimes.com/articles/310068/20250420/bootstrapped-revolution-why-quittrs-anti-vc-approach-disrupting-mental-health-tech.htm", "quote": "all this, without a single cent of venture capital", "checked_at": "2026-10-04"},
+      {"url": "https://nymag.com/intelligencer/article/porn-addiction-app-quittr-alex-slater-connor-mclaren.html", "quote": "They joined forces, with McLaren acting as the marketing lead and providing the initial $3,000 used to pay influencers who could spread the word.", "checked_at": "2026-10-04"}
+    ],
+    "caveats": ["Qualified on bootstrapped founder-built origins plus March 2026 reporting of both active founders; exact current headcount and beneficial ownership are not audited. Tech Times has a promotional tone, so its no-VC claim is not treated as an audited financing disclosure.", "New York describes an acquisition as a future aspiration, not completed ownership. Meeting via YC co-founder matching is not evidence of YC funding; investments mentioned in McLaren's earlier failed fitness app are not QUITTR financing. No significant VC or completed corporate acquisition established in inspected sources.", "Official site/jobs requests failed. Health claims and product efficacy were not evaluated."]
+  },
+  {
+    "app_id": "6480082872",
+    "app_name": "Dumbify",
+    "maker": "Anthony Burkholder / AB Apps Inc.",
+    "category": "Productivity",
+    "indie_tier": "solo",
+    "eligibility": "qualified",
+    "release_date": "2024-04-02T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6480082872&country=us",
+    "original_launch_caveat": "Apple original releaseDate; Product Hunt independently labels the exact-ID product as launched in 2024, without establishing the precise first public launch day.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=6480082872&country=us", "quote": "\"releaseDate\":\"2024-04-02T07:00:00Z\"", "checked_at": "2026-10-04"},
+      {"url": "https://www.producthunt.com/products/dumbify", "quote": "I built Dumbify for those looking for a minimalist, notification free experience for their iPhone.", "checked_at": "2026-10-04"},
+      {"url": "https://itunes.apple.com/lookup?id=6480082872&country=us", "quote": "\"bundleId\":\"com.anthonyburkholder.dumbify\"", "checked_at": "2026-10-04"}
+    ],
+    "caveats": ["Anthony attribution corroborated, not inferred from AB initials: Product Hunt links app ID 6480082872, identifies Anthony Burkholder as Maker, and carries his first-person build statement; Apple's bundle identifier independently matches his name.", "Solo tier describes the publicly identified individual maker, not a verified current one-employee count. Seller remains AB Apps Inc.; financing and beneficial ownership are not audited. No significant VC or corporate acquisition established in inspected sources.", "Search results for other Dumbify businesses/podcasts were not attributed to this app. The similarly named personal website was not used because its connection to this maker was unverified."]
+  },
+  {
+    "app_id": "6741765734",
+    "app_name": "Pushscroll: Exercise To Scroll",
+    "maker": "Pushscroll GmbH; Alejandro Sanchez named in registered contact address, founder status unverified",
+    "category": "Health & Fitness",
+    "indie_tier": "unknown",
+    "eligibility": "borderline",
+    "release_date": "2025-06-24T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/lookup?id=6741765734&country=us",
+    "original_launch_caveat": "Apple original releaseDate. Bundle identifier com.capyapps.speedbump suggests a possible earlier working name but does not establish an earlier public launch or rebrand.",
+    "evidence": [
+      {"url": "https://itunes.apple.com/lookup?id=6741765734&country=us", "quote": "\"releaseDate\":\"2025-06-24T07:00:00Z\"", "checked_at": "2026-10-04"},
+      {"url": "https://pushscroll.com/assets/Privacy-CA4ruwC_.js", "quote": "The Service is operated by Pushscroll GmbH, a limited liability company registered in Switzerland.", "checked_at": "2026-10-04"},
+      {"url": "https://pushscroll.com/assets/Terms-lMd6w3D7.js", "quote": "Pushscroll GmbH, Ginsterweg 6, c/o Alejandro Sanchez, 4303 Kaiseraugst, Aargau, Switzerland", "checked_at": "2026-10-04"}
+    ],
+    "caveats": ["Official privacy/terms text inspected in the lazy-loaded assets linked by the website; both policies dated September 30, 2026. This corroborates the Swiss operator and named contact, not solo/small-team status.", "No verified maker profile, founder interview, small-team or bootstrap statement established within this bounded follow-up. GmbH and a personal c/o address alone are insufficient to qualify. Significant VC/current corporate ownership likewise not established; retain borderline rather than invent an exclusion."]
+  }
+]

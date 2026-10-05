@@ -1,0 +1,10 @@
+{
+  "min_release_date": "2022-01-01T00:00:00Z",
+  "storefronts": ["us", "gb", "ca", "au", "nz", "ie", "fr", "de", "es", "it", "nl", "at", "ch", "be", "br", "mx", "tr", "in", "id", "za"],
+  "max_pages_per_app_storefront": 10,
+  "ratings": [1, 2],
+  "selection": "Newer consumer apps made by individual developers or small studios, including focused utilities, lifestyle tools and social/party games. User references: HabitKit, WhoLiked and Imposter Who.",
+  "market_rationale": "Uniformly expand from six English-language markets to twenty accessible storefronts covering European maker/home markets and additional consumer markets. Preserve all original languages; do not use market as a language or residence label.",
+  "uncertain_makers": "Imposter Who is an explicit user-nominated reference with verified identity/age but unverified small-team independence; label separately and do not silently count as qualified indie evidence.",
+  "legacy_sample": "../app-store-indie-reviews; retained unchanged as an earlier, out-of-scope cohort. Its review counts do not contribute to this cohort's headline target."
+}

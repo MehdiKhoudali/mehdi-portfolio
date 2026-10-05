@@ -1,0 +1,47 @@
+[
+  {
+    "app_id": "6742410648",
+    "app_name": "WhoLiked? - Guess Who Reposted",
+    "maker": "IRL Apps",
+    "category": "Games",
+    "indie_tier": "small_independent_team",
+    "eligibility": "qualified",
+    "user_reference": true,
+    "release_date": "2025-04-15T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/search?term=wholiked&entity=software&country=us&limit=10",
+    "original_launch_caveat": "Apple releaseDate establishes the original listing date, and the official about timeline independently says the product released in 2025. Not based on the latest update.",
+    "evidence": [
+      {"url": "https://www.wholiked.com/about", "quote": "The app is published by IRL Apps, a studio building social games for real-life moments.", "checked_at": "2026-10-04"},
+      {"url": "https://www.wholiked.com/about", "quote": "2025IRL Apps releases WhoLiked? on the App Store as a party game built on TikTok likes.", "checked_at": "2026-10-04"},
+      {"url": "https://www.linkedin.com/company/irl-apps/", "quote": "2-10 employees", "checked_at": "2026-10-04"}
+    ],
+    "caveats": [
+      "Small-team evidence is a public company LinkedIn profile, not an audited headcount or an explicit independence statement on its website. The profile also displays five associated employees.",
+      "Current Apple seller is IRL APPS and the product site names the same maker. No corporate acquisition or significant VC funding was established in inspected sources; beneficial ownership and financing are not conclusively verified. Do not call it proven bootstrapped.",
+      "The publisher is IRL Apps, not the unrelated historical venture-backed IRL social-network company. Do not transfer ownership or funding facts based on the shared IRL name.",
+      "The product uses TikTok videos, but is a separate party game, not TikTok itself. Website download counts and subscription claims have not been independently validated."
+    ]
+  },
+  {
+    "app_id": "6746781192",
+    "app_name": "Imposter Who? - Word Game",
+    "maker": "Sokak Technologies Inc.",
+    "category": "Entertainment",
+    "indie_tier": "unknown",
+    "eligibility": "user_nominated",
+    "user_reference": true,
+    "release_date": "2025-06-05T07:00:00Z",
+    "release_date_source": "https://itunes.apple.com/search?term=imposterwho&entity=software&country=us&limit=10",
+    "original_launch_caveat": "Apple original listing date is June 5, 2025; official terms and privacy are effective June 4, 2025. No older product incarnation was established in inspected sources.",
+    "evidence": [
+      {"url": "https://imposterwho.com/", "quote": "Copyright \u00a9 2025 Sokak Technologies Inc.", "checked_at": "2026-10-04"},
+      {"url": "https://imposterwho.com/terms", "quote": "Effective Date: June 4, 2025", "checked_at": "2026-10-04"},
+      {"url": "https://sokak.io/", "quote": "MOBILE APP / VR GAME STUDIO", "checked_at": "2026-10-04"}
+    ],
+    "caveats": [
+      "Explicit user-nominated reference. Product identity and launch age are verified, but inspected maker pages do not establish team size, independent ownership, or financing. Reviews are retained in a separately labeled user-nominated group and not silently counted as verified indie evidence.",
+      "The correct product is the Sokak app on imposterwho.com, not Fakeout on imposterwho.app, nor other similarly named imposter games.",
+      "A LinkedIn company at /company/sokak/ identifies a Turkish agency on sokak.com.tr; no relationship to Sokak Technologies Inc. on sokak.io was verified, so its headcount is not used."
+    ]
+  }
+]

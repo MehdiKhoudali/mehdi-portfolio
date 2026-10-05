@@ -1,0 +1,19 @@
+{
+  "verified_at": "2026-10-04T10:56:47.696Z",
+  "passed": true,
+  "unique_reviews_verified": 2286,
+  "source_observations_verified": 2286,
+  "raw_responses_hash_verified": 532,
+  "original_review_text_preserved": true,
+  "only_one_and_two_star_written_reviews": true,
+  "repeated_review_snapshot_variants": 0,
+  "earliest_review_updated_at": "2023-02-20T22:54:19-07:00",
+  "latest_review_updated_at": "2026-10-02T22:09:40-07:00",
+  "future_dated_review_count": 0,
+  "over_1000_target_met": true,
+  "failed_request_count": 0,
+  "all_apps_launched_in_2022_or_later": true,
+  "qualified_indie_reviews": 2139,
+  "user_nominated_independence_unverified_reviews": 147,
+  "qualified_indie_over_1000_target_met": true
+}
