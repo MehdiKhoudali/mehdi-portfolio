@@ -18,6 +18,15 @@ work details, optional social links, and goals to the dedicated `ugc-leads` Supa
 project. Each successful step is saved independently, including incomplete leads.
 The form keeps its draft in memory, not persistent browser storage.
 
+The final author introduction is shared across pages through `AuthorIntro`. It
+includes the portrait, biography, newsletter link, and its responsive styles:
+
+```tsx
+import { AuthorIntro } from "@/components/author-intro";
+
+<AuthorIntro />
+```
+
 Netlify's build configuration includes `NEXT_PUBLIC_SUPABASE_URL` and
 `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`. Set these in the build environment when
 using another host. Local development uses `.env.local`. These are public

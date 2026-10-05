@@ -48,33 +48,20 @@
 
 .sectionLabel { font-size: 11px; line-height: 1.5; letter-spacing: .14em; text-transform: uppercase; color: #ffffff61; }
 .benefits { display: grid; grid-template-columns: .75fr 1fr; gap: 48px; padding: 64px 0; border-top: 1px solid #ffffff1f; }
-.sectionIntro h2, .aboutCopy h2 { font-size: 44px; line-height: 1.1; color: #ffffffc7; margin-top: 18px; }
+.sectionIntro h2 { font-size: 44px; line-height: 1.1; color: #ffffffc7; margin-top: 18px; }
 .benefitGrid { min-width: 0; }
 .benefitGrid article { display: grid; grid-template-columns: 150px 1fr; gap: 24px; padding: 24px 0; border-bottom: 1px solid #ffffff1f; }
 .benefitGrid article:first-child { padding-top: 0; }
 .benefitGrid article:last-child { border-bottom: 0; padding-bottom: 0; }
 .benefitGrid h3 { font-size: 16px; line-height: 1.6; font-weight: 500; letter-spacing: -.02em; color: #ffffffd9; }
 .benefitGrid p { font-size: 14px; line-height: 1.8; color: #ffffff85; }
-.about { display: grid; grid-template-columns: .75fr 1fr; gap: 48px; align-items: center; padding: 64px 0 72px; border-top: 1px solid #ffffff1f; }
-.portrait { position: relative; width: min(100%, 300px); aspect-ratio: 4 / 5; overflow: hidden; border: 1px solid #ffffff1f; background: #111; }
-.portraitImage { object-fit: cover; object-position: center 38%; filter: grayscale(.2) contrast(1.05); }
-.aboutCopy { max-width: 510px; }
-.aboutCopy > p:not(.sectionLabel) { font-size: 15px; line-height: 1.9; color: #ffffff99; margin-top: 22px; }
-.aboutCopy strong { color: #ffffffd9; font-weight: 500; }
-.aboutLink { margin-top: 24px; }
 @media (max-width: 1023px) {
-  .benefits, .about { grid-template-columns: .7fr 1fr; gap: 36px; }
-  .sectionIntro h2, .aboutCopy h2 { font-size: 38px; }
+  .benefits { grid-template-columns: .7fr 1fr; gap: 36px; }
+  .sectionIntro h2 { font-size: 38px; }
   .benefitGrid article { grid-template-columns: 1fr; gap: 8px; }
 }
 @media (max-width: 639px) {
-  .benefits, .about { grid-template-columns: 1fr; padding: 40px 0 48px; gap: 30px; }
-  .sectionIntro h2, .aboutCopy h2 { font-size: 36px; margin-top: 14px; }
+  .benefits { grid-template-columns: 1fr; padding: 40px 0 48px; gap: 30px; }
+  .sectionIntro h2 { font-size: 36px; margin-top: 14px; }
   .benefitGrid article { padding-block: 22px; }
-  .about { grid-template-columns: 80px 1fr; align-items: center; gap: 24px; }
-  .portrait { width: 80px; aspect-ratio: 1; border-radius: 50%; }
-  .aboutCopy { display: contents; }
-  .aboutHeading h2 { font-size: clamp(28px, 8vw, 36px); margin-top: 9px; }
-  .aboutCopy > p:not(.sectionLabel) { grid-column: 1 / -1; font-size: 14px; margin-top: 0; }
-  .aboutLink { grid-column: 1 / -1; justify-self: start; margin-top: 0; }
 }

@@ -1,0 +1,92 @@
+.about {
+  display: grid;
+  grid-template-columns: .75fr 1fr;
+  gap: 48px;
+  align-items: center;
+  padding: 64px 0 72px;
+  border-top: 1px solid #ffffff1f;
+}
+
+.portrait {
+  position: relative;
+  width: min(100%, 300px);
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid #ffffff1f;
+  background: #111;
+}
+
+.portraitImage {
+  object-fit: cover;
+  object-position: center 38%;
+  filter: grayscale(.2) contrast(1.05);
+}
+
+.aboutCopy { max-width: 510px; }
+
+.sectionLabel {
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #ffffff61;
+}
+
+.aboutCopy h2 {
+  font-size: 44px;
+  line-height: 1.1;
+  color: #ffffffc7;
+  margin-top: 18px;
+}
+
+.aboutCopy > p:not(.sectionLabel) {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #ffffff99;
+  margin-top: 22px;
+}
+
+.aboutCopy strong { color: #ffffffd9; font-weight: 500; }
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 48px;
+  padding: 13px 24px;
+  border: 0;
+  background: #f0eee8;
+  color: #0a0a0a;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color .18s;
+}
+
+.button:hover { background: #d7d4cb; }
+.button:focus-visible { outline: 2px solid #f0eee8; outline-offset: 4px; }
+.aboutLink { margin-top: 24px; }
+
+@media (max-width: 1023px) {
+  .about { grid-template-columns: .7fr 1fr; gap: 36px; }
+  .aboutCopy h2 { font-size: 38px; }
+}
+
+@media (max-width: 639px) {
+  .about {
+    grid-template-columns: 80px 1fr;
+    padding: 40px 0 48px;
+    align-items: center;
+    gap: 24px;
+  }
+  .portrait { width: 80px; aspect-ratio: 1; border-radius: 50%; }
+  .aboutCopy { display: contents; }
+  .aboutHeading h2 { font-size: clamp(28px, 8vw, 36px); margin-top: 9px; }
+  .aboutCopy > p:not(.sectionLabel) { grid-column: 1 / -1; font-size: 14px; margin-top: 0; }
+  .aboutLink { grid-column: 1 / -1; justify-self: start; margin-top: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button { transition: none; }
+}
