@@ -81,25 +81,8 @@ export default async function ExperiencePage({ params }: ExperiencePageProps) {
   const nextProject = experiences[(projectIndex + 1) % experiences.length];
 
   return (
-    <main className="portfolio-page min-h-screen bg-[#0a0a0a] text-[#f0eee8]">
+    <main className="bg-[#0a0a0a] text-[#f0eee8]">
       <div className="mx-auto w-full max-w-[1180px] px-5 sm:px-8 lg:px-12">
-        <header className="portfolio-header reveal flex items-center justify-between py-6 text-xs text-white/55 sm:py-8">
-          <Link className="font-medium text-white/85" href="/">
-            Mehdi Khoudali
-          </Link>
-          <nav aria-label="Project navigation" className="flex items-center gap-5 sm:gap-8">
-            <Link className="transition-colors hover:text-white" href="/#work">
-              Work
-            </Link>
-            <Link className="transition-colors hover:text-white" href="/#about">
-              About me
-            </Link>
-            <Link className="transition-colors hover:text-white" href="/#contact">
-              Let&apos;s talk
-            </Link>
-          </nav>
-        </header>
-
         {experience.gallery.length > 0 && (
           <section aria-label="Project images" className="border-t border-white/12 py-16 sm:py-24">
             <div className="mb-8 flex flex-wrap items-center justify-between gap-4 text-xs uppercase tracking-[0.14em] text-white/38">
@@ -186,7 +169,7 @@ export default async function ExperiencePage({ params }: ExperiencePageProps) {
           </section>
         )}
 
-        <footer className="border-t border-white/12 py-10 sm:py-14">
+        <section aria-label="More projects" className="border-t border-white/12 py-10 sm:py-14">
           <Link className="group flex items-end justify-between gap-6" href={`/experience/${nextProject.slug}`}>
             <span>
               <span className="mb-3 block text-xs uppercase tracking-[0.14em] text-white/38">Next project</span>
@@ -196,9 +179,8 @@ export default async function ExperiencePage({ params }: ExperiencePageProps) {
           </Link>
           <div className="mt-12 flex flex-col gap-3 text-xs text-white/38 sm:flex-row sm:items-center sm:justify-between">
             <Link className="transition-colors hover:text-white" href="/#work">Back to all work</Link>
-            <a className="transition-colors hover:text-white" href="mailto:mehdikhoudalpro@gmail.com">mehdikhoudalpro@gmail.com</a>
           </div>
-        </footer>
+        </section>
       </div>
     </main>
   );

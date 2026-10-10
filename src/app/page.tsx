@@ -8,24 +8,9 @@ const homepageExperiences = experiences.filter(
 
 export default function Home() {
   return (
-    <main className="portfolio-page min-h-screen bg-[#0a0a0a] text-[#f0eee8]">
+    <main className="bg-[#0a0a0a] text-[#f0eee8]">
       <div className="mx-auto w-full max-w-[1180px] px-5 sm:px-8 lg:px-12">
-        <header className="portfolio-header reveal flex items-center justify-between py-6 text-xs text-white/55 sm:py-8">
-          <a className="font-medium text-white/85" href="#top">
-            Mehdi Khoudali
-          </a>
-          <nav aria-label="Primary navigation" className="flex items-center gap-5 sm:gap-8">
-            <a className="transition-colors hover:text-white" href="#work">
-              Work
-            </a>
-            <a className="transition-colors hover:text-white" href="#about">
-              About me
-            </a>
-            <a className="transition-colors hover:text-white" href="#contact">
-              Let&apos;s talk
-            </a>
-          </nav>
-        </header>
+
 
         <section id="top" className="portfolio-hero border-t border-white/12 py-16 sm:py-24 lg:py-24">
           <div className="grid gap-12 lg:grid-cols-[1fr_0.72fr] lg:items-center lg:gap-16">
@@ -42,7 +27,7 @@ export default function Home() {
               </div>
 
               <p className="reveal reveal-delay-1 mb-5 text-xs uppercase tracking-[0.14em] text-white/42">
-                Casablanca, Morocco / Building apps for influencers.
+                Building apps for influencers.
               </p>
               <h1 className="reveal reveal-delay-2 max-w-5xl text-[clamp(3.5rem,7.2vw,7.1rem)] leading-[0.86] tracking-[-0.065em] text-white">
                 <span className="block font-medium">Software</span>
@@ -81,7 +66,7 @@ export default function Home() {
             <p className="text-sm uppercase tracking-[0.12em] text-white/38">About me</p>
             <div className="max-w-xl">
               <p className="text-base leading-7 text-white/68 sm:text-lg sm:leading-8">
-                I&apos;m <strong className="font-medium text-white">Mehdi Khoudali</strong>, a <strong className="font-medium text-white">software engineer</strong>{" "}based in Casablanca. I build and ship web products across the frontend, backend, and infrastructure, staying close to both the product and the people using it. I&apos;ve founded products, scaled FeedbackLoop to 700 users, and worked on software used across thousands of venues. That experience keeps me focused on building software that is clear, useful, and reliable.
+                I&apos;m <strong className="font-medium text-white">Mehdi</strong>, based in Casablanca. I started building software at 15, and I&apos;ve been following ideas ever since. Some became businesses, others became projects with friends and teams, from FeedbackLoop, which reached 700 users before being acquired, to AI tools for creators and healthcare software. I also enjoy creating content around what I do: sharing what I&apos;m building, what I&apos;m trying, and what I learn along the way.
               </p>
             </div>
           </div>
@@ -118,39 +103,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="border-t border-white/12 py-16 sm:py-20">
-          <div className="grid gap-8 sm:grid-cols-[0.75fr_1fr] sm:gap-12">
-            <div>
-              <p className="mb-4 text-xs uppercase tracking-[0.14em] text-white/38">Contact</p>
-              <h2 className="portfolio-serif text-4xl text-white/78 sm:text-5xl">Have a product in mind?</h2>
-            </div>
-            <div className="flex max-w-xl flex-col items-start gap-7 sm:pt-1">
-              <p className="text-lg leading-8 text-white/66 sm:text-xl">
-                Tell me what you&apos;re building, where you&apos;re stuck, or what needs
-                to ship next.
-              </p>
-              <div className="flex w-full flex-wrap items-center gap-x-6 gap-y-4 border-t border-white/12 pt-6">
-                <a
-                  className="portfolio-cta-button"
-                  href="mailto:mehdikhoudalpro@gmail.com?subject=Let%27s%20talk%20about%20a%20project"
-                >
-                  Get in touch
-                </a>
-                <a className="portfolio-contact-email" href="mailto:mehdikhoudalpro@gmail.com">
-                  mehdikhoudalpro@gmail.com
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        <footer className="flex flex-col gap-3 border-t border-white/12 py-6 text-xs text-white/38 sm:flex-row sm:items-center sm:justify-between sm:py-8">
-          <p>Mehdi Khoudali / Software engineer</p>
-          <div className="flex gap-5">
-            <a className="transition-colors hover:text-white" href="https://x.com/mehdi_khoudali" target="_blank" rel="noreferrer">X</a>
-            <a className="transition-colors hover:text-white" href="https://www.instagram.com/mehdi_khoudali/" target="_blank" rel="noreferrer">Instagram</a>
-          </div>
-        </footer>
+
       </div>
     </main>
   );

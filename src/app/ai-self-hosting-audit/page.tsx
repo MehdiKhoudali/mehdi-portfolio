@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Free AI & Self-Hosting Audit | Mehdi Khoudali",
@@ -54,18 +53,8 @@ function ArrowUpRight() {
 
 export default function AiSelfHostingAuditPage() {
   return (
-    <main className="grain min-h-screen bg-[#080808] text-[#efefea]">
+    <main className="min-h-screen bg-[#080808] text-[#efefea]">
       <div className="mx-auto w-full max-w-[1440px] border-x border-white/12">
-        <header className="reveal flex h-20 items-center justify-between border-b border-white/12 px-5 sm:px-8 lg:px-12">
-          <Link
-            className="text-sm font-medium transition-colors hover:text-white/65"
-            href="/"
-          >
-            Mehdi Khoudali
-          </Link>
-          <p className="text-xs uppercase text-white/38">Free business audit</p>
-        </header>
-
         <section className="relative flex min-h-[calc(100svh-5rem)] flex-col items-center justify-center overflow-hidden px-5 py-16 text-center sm:px-8 sm:py-20 lg:px-12">
           <div
             aria-hidden="true"
@@ -364,15 +353,6 @@ export default function AiSelfHostingAuditPage() {
           </div>
         </section>
 
-        <footer className="flex flex-col gap-3 border-t border-white/12 px-5 py-7 text-xs text-white/38 sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12">
-          <p>Mehdi Khoudali / Software engineer</p>
-          <a
-            className="transition-colors hover:text-white/75"
-            href="mailto:mehdikhoudalpro@gmail.com"
-          >
-            mehdikhoudalpro@gmail.com
-          </a>
-        </footer>
       </div>
     </main>
   );
