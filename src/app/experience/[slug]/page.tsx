@@ -1,187 +1,69 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import Link from "next/link";
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { BrowserScreenshot } from "@/components/browser-screenshot";
 import { experiences, getExperience } from "@/lib/experiences";
 
-type ExperiencePageProps = {
-  params: Promise<{
-    slug: string;
-  }>;
-};
-
-const highlightedTerms = [
-  "TypeScript",
-  "700 users",
-  "50K+",
-  "thousands of venues",
-  "acquired",
-  "core systems",
-  "product judgment",
-  "AI SaaS",
-  "short-form content",
-  "full-stack",
-  "automation",
-  "payment logic",
-];
-
-function HighlightedText({ text }: { text: string }) {
-  const terms = [...highlightedTerms].sort((a, b) => b.length - a.length);
-  const escapedTerms = terms.map((term) =>
-    term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
-  );
-  const pattern = new RegExp(`(${escapedTerms.join("|")})`, "gi");
-
-  return text.split(pattern).map((part, index) => {
-    const isHighlighted = terms.some(
-      (term) => term.toLowerCase() === part.toLowerCase(),
-    );
-
-    return isHighlighted ? (
-      <strong className="font-medium text-white" key={`${part}-${index}`}>
-        {part}
-      </strong>
-    ) : (
-      part
-    );
-  });
-}
+type ExperiencePageProps = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
-  return experiences.map((experience) => ({
-    slug: experience.slug,
-  }));
+  return experiences.map(({ slug }) => ({ slug }));
 }
 
-export async function generateMetadata({
-  params,
-}: ExperiencePageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const experience = getExperience(slug);
-
-  if (!experience) {
-    return {};
-  }
-
-  return {
-    title: `${experience.company} - Mehdi Khoudali`,
-    description: experience.summary,
-  };
+export async function generateMetadata({ params }: ExperiencePageProps): Promise<Metadata> {
+  const experience = getExperience((await params).slug);
+  return experience ? { title: `${experience.company} - Mehdi Khoudali`, description: experience.summary } : {};
 }
 
 export default async function ExperiencePage({ params }: ExperiencePageProps) {
   const { slug } = await params;
   const experience = getExperience(slug);
-
-  if (!experience) {
-    notFound();
-  }
-
+  if (!experience) notFound();
   const projectIndex = experiences.findIndex((item) => item.slug === slug);
   const nextProject = experiences[(projectIndex + 1) % experiences.length];
 
   return (
-    <main className="bg-[#0a0a0a] text-[#f0eee8]">
-      <div className="mx-auto w-full max-w-[1180px] px-5 sm:px-8 lg:px-12">
-        {experience.gallery.length > 0 && (
-          <section aria-label="Project images" className="border-t border-white/12 py-16 sm:py-24">
-            <div className="mb-8 flex flex-wrap items-center justify-between gap-4 text-xs uppercase tracking-[0.14em] text-white/38">
-              <div className="flex items-center gap-4">
-                <span>Project</span>
-                <h1 className="text-xs font-medium tracking-normal text-white/78 normal-case">{experience.company}</h1>
-              </div>
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
-                <span>{experience.category}</span>
-                {experience.liveUrl && (
-                  <a
-                    className="portfolio-cta-button shrink-0 normal-case tracking-normal"
-                    href={experience.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Visit app
-                  </a>
-                )}
-              </div>
-            </div>
-            <div
-              className={`grid gap-6 ${
-                experience.galleryLayout === "grid"
-                  ? `lg:grid-cols-2 ${experience.galleryUniformSize === false ? "items-start" : ""}`
-                  : ""
-              }`}
-            >
-              {experience.gallery.map((image, index) => (
-                <BrowserScreenshot
-                  image={image}
-                  projectName={experience.company}
-                  index={index}
-                  uniformSize={experience.galleryUniformSize ?? experience.galleryLayout === "grid"}
-                  presentation={experience.galleryPresentation}
-                  key={image.src}
-                />
-              ))}
-            </div>
-          </section>
-        )}
-
-        <section className="border-t border-white/12 py-16 sm:py-24">
-          <div className="grid gap-10 sm:grid-cols-[0.75fr_1fr] sm:gap-12">
-            <div>
-              <h2 className="portfolio-serif text-4xl text-white/78 sm:text-5xl">What it took.</h2>
-            </div>
-            <div className="max-w-xl space-y-6 text-base leading-8 text-white/62 sm:text-lg">
-              <p className="text-white/78"><HighlightedText text={experience.summary} /></p>
-              {experience.description.map((paragraph) => (
-                <p key={paragraph}><HighlightedText text={paragraph} /></p>
-              ))}
-            </div>
-          </div>
+    <main className="detail-page">
+      <Link prefetch={false} className="quiet-link back-link" href="/#work">Back to all work</Link>
+      <header className="detail-intro">
+        <p className="eyebrow">{experience.category}</p>
+        <h1>{experience.company}</h1>
+        <p className="detail-summary">{experience.summary}</p>
+        <dl className="project-meta">
+          <div><dt>Role</dt><dd>{experience.role}</dd></div>
+          <div><dt>Based in</dt><dd>{experience.location}</dd></div>
+          <div><dt>Started</dt><dd>{experience.date}</dd></div>
+        </dl>
+        {experience.liveUrl && <a className="quiet-link visit-link" href={experience.liveUrl} target="_blank" rel="noopener noreferrer">Visit app <ArrowRightIcon aria-hidden="true" /></a>}
+      </header>
+      {experience.gallery.length > 0 && (
+        <section className="project-gallery" aria-label="Project images">
+          {experience.gallery.map((image, index) => (
+            <BrowserScreenshot image={image} projectName={experience.company} index={index} key={image.src} />
+          ))}
         </section>
-
-        <section className="border-t border-white/12 py-16 sm:py-24">
-          <div className="grid gap-10 sm:grid-cols-[0.75fr_1fr] sm:gap-12">
-            <div>
-              <h2 className="portfolio-serif text-4xl text-white/78 sm:text-5xl">Contribution.</h2>
-            </div>
-            <div className="border-t border-white/15">
-              {experience.highlights.map((highlight) => (
-                <div className="border-b border-white/12 py-5 text-sm text-white/64 sm:py-6 sm:text-base" key={highlight}>
-                  <span><HighlightedText text={highlight} /></span>
-                </div>
-              ))}
-            </div>
-          </div>
+      )}
+      <section className="detail-section" aria-labelledby="story-title">
+        <h2 id="story-title">What it took</h2>
+        <div className="prose">{experience.description.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+      </section>
+      <section className="detail-section" aria-labelledby="contribution-title">
+        <h2 id="contribution-title">Contribution</h2>
+        <ul className="plain-list">{experience.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}</ul>
+      </section>
+      {experience.techStack.length > 0 && (
+        <section className="detail-section" aria-labelledby="stack-title">
+          <h2 id="stack-title">Stack</h2>
+          <ul className="stack-list">{experience.techStack.map((tool) => <li key={tool}>{tool}</li>)}</ul>
         </section>
-
-        {experience.techStack.length > 0 && (
-          <section className="border-t border-white/12 py-16 sm:py-24">
-            <div className="grid gap-10 sm:grid-cols-[0.75fr_1fr] sm:gap-12">
-              <div>
-                <h2 className="portfolio-serif text-4xl text-white/78 sm:text-5xl">Stack.</h2>
-              </div>
-              <div className="flex max-w-xl flex-wrap content-start gap-x-5 gap-y-3 text-sm text-white/62 sm:text-base">
-                {experience.techStack.map((tool) => (
-                  <span className="border-b border-white/20 pb-1" key={tool}>{tool}</span>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
-
-        <section aria-label="More projects" className="border-t border-white/12 py-10 sm:py-14">
-          <Link className="group flex items-end justify-between gap-6" href={`/experience/${nextProject.slug}`}>
-            <span>
-              <span className="mb-3 block text-xs uppercase tracking-[0.14em] text-white/38">Next project</span>
-              <span className="portfolio-serif text-3xl text-white/78 transition-colors group-hover:text-white sm:text-4xl">{nextProject.company}</span>
-            </span>
-            <span className="pb-1 text-sm text-white/45 transition-colors group-hover:text-white">View project</span>
-          </Link>
-          <div className="mt-12 flex flex-col gap-3 text-xs text-white/38 sm:flex-row sm:items-center sm:justify-between">
-            <Link className="transition-colors hover:text-white" href="/#work">Back to all work</Link>
-          </div>
-        </section>
-      </div>
+      )}
+      <nav className="next-project" aria-label="More projects">
+        <a href={`/experience/${nextProject.slug}`}>
+          <span><span className="eyebrow">Next project</span><span className="next-project-name">{nextProject.company}</span></span>
+          <ArrowRightIcon aria-hidden="true" />
+        </a>
+      </nav>
     </main>
   );
 }

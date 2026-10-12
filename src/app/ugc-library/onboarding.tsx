@@ -120,13 +120,13 @@ export default function Onboarding() {
   if (!started) return (
     <>
       <section className={styles.hero}>
-        <h1>1,700 UGC videos.<span className="portfolio-serif portfolio-hero-serif">All in one list.</span></h1>
+        <h1>1,700 UGC videos.<span>All in one list.</span></h1>
         <button className={styles.button} onClick={() => setStarted(true)}>Grab your list now</button>
       </section>
       <section className={styles.benefits} aria-labelledby="benefits-title">
         <div className={styles.sectionIntro}>
           <p className={styles.sectionLabel}>Why this list</p>
-          <h2 id="benefits-title" className="portfolio-serif">A head start for<br />your next video.</h2>
+          <h2 id="benefits-title">A head start for your next video.</h2>
         </div>
         <div className={styles.benefitGrid}>
           <article>

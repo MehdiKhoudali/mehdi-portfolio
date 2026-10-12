@@ -1,111 +1,62 @@
 import Image from "next/image";
-import Link from "next/link";
-import { experiences } from "@/lib/experiences";
+import { ArrowRightIcon } from "@radix-ui/react-icons";
+import { NewsletterButton } from "@/components/newsletter-button";
+import styles from "./home.module.css";
 
-const homepageExperiences = experiences.filter(
-  (experience) => experience.showOnHomepage !== false,
-);
+const selectedWork = [
+  { name: "Ryvalise", slug: "ryvalise", description: "Competitive intelligence that turns competitor changes into useful briefs." },
+  { name: "Kitt Medical", slug: "kitt-medical", description: "Software supporting emergency allergy response in schools and businesses." },
+  { name: "FeedbackLoop", slug: "feedbackloop", description: "Feedback and roadmaps. Built at 15, grew to 700 users, then acquired." },
+];
 
 export default function Home() {
   return (
-    <main className="bg-[#0a0a0a] text-[#f0eee8]">
-      <div className="mx-auto w-full max-w-[1180px] px-5 sm:px-8 lg:px-12">
-
-
-        <section id="top" className="portfolio-hero border-t border-white/12 py-16 sm:py-24 lg:py-24">
-          <div className="grid gap-12 lg:grid-cols-[1fr_0.72fr] lg:items-center lg:gap-16">
+    <div className={styles.page}>
+      <div className={styles.column}>
+        <header className={styles.header}>
+          <div className={styles.identity}>
+            <div className={styles.portraitFrame}>
+              <Image className={styles.portrait} src="/mehdi-portrait.jpg" alt="Mehdi Khoudali" width={400} height={400} sizes="(max-width: 600px) 140px, 190px" priority />
+            </div>
             <div>
-              <div className="reveal mb-10 flex h-14 w-14 items-center justify-center overflow-hidden rounded-full bg-white/10 sm:mb-12 lg:hidden">
-                <Image
-                  src="/mehdi-portrait.jpg"
-                  alt="Portrait of Mehdi Khoudali"
-                  width={96}
-                  height={96}
-                  priority
-                  className="h-full w-full object-cover object-[center_35%] grayscale"
-                />
-              </div>
-
-              <p className="reveal reveal-delay-1 mb-5 text-xs uppercase tracking-[0.14em] text-white/42">
-                Building apps for influencers.
-              </p>
-              <h1 className="reveal reveal-delay-2 max-w-5xl text-[clamp(3.5rem,7.2vw,7.1rem)] leading-[0.86] tracking-[-0.065em] text-white">
-                <span className="block font-medium">Software</span>
-                <span className="portfolio-serif portfolio-hero-serif block text-white/62">engineer.</span>
-              </h1>
-              <div className="reveal reveal-delay-3 mt-10 flex flex-wrap items-center gap-x-5 gap-y-3 sm:mt-12">
-                <a
-                  className="portfolio-cta-button"
-                  href="https://mehdikhoudali.substack.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Join my newsletter
-                </a>
-                <p className="text-xs text-white/42">Read by +1000 founders.</p>
-              </div>
-            </div>
-
-            <div className="reveal reveal-delay-2 relative hidden min-h-[540px] overflow-hidden border border-white/12 bg-[#111] lg:block">
-              <Image
-                src="/mehdi-portrait.jpg"
-                alt="Portrait of Mehdi Khoudali"
-                fill
-                priority
-                sizes="(min-width: 1024px) 42vw, 100vw"
-                className="object-cover object-[center_34%] contrast-105 grayscale-[0.2]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-white/[0.06]" />
-              <div className="absolute inset-x-0 bottom-0 border-t border-white/15 px-4 py-3 text-[10px] uppercase tracking-[0.12em] text-white/42">
-                <span>Mehdi Khoudali</span>
-              </div>
+              <p className={styles.name}>Mehdi Khoudali</p>
+              <p className={styles.role}>Software engineer &amp; founder</p>
             </div>
           </div>
-
-          <div id="about" className="reveal reveal-delay-3 mt-14 grid gap-7 border-t border-white/12 pt-6 sm:mt-20 sm:grid-cols-[0.75fr_1fr] sm:gap-12">
-            <p className="text-sm uppercase tracking-[0.12em] text-white/38">About me</p>
-            <div className="max-w-xl">
-              <p className="text-base leading-7 text-white/68 sm:text-lg sm:leading-8">
-                I&apos;m <strong className="font-medium text-white">Mehdi</strong>, based in Casablanca. I started building software at 15, and I&apos;ve been following ideas ever since. Some became businesses, others became projects with friends and teams, from FeedbackLoop, which reached 700 users before being acquired, to AI tools for creators and healthcare software. I also enjoy creating content around what I do: sharing what I&apos;m building, what I&apos;m trying, and what I learn along the way.
-              </p>
+          <p className={styles.location}>Casablanca</p>
+        </header>
+        <main>
+          <section className={styles.intro} aria-labelledby="intro-title">
+            <h1 id="intro-title" className={styles.headline}>
+              I build software for creators, founders, and teams.
+              <br />
+              And share what I learn along the way.
+            </h1>
+            <div className={styles.subscribe}>
+              <NewsletterButton className={styles.newsletter} />
+              <p className={styles.proof}>Read by 1,000+ founders.</p>
             </div>
-          </div>
-        </section>
-
-        <section id="work" aria-labelledby="work-title" className="border-t border-white/12 py-16 sm:py-24">
-          <div className="mb-10 grid gap-6 sm:grid-cols-[0.75fr_1fr] sm:gap-12">
-            <div>
-              <p className="mb-4 text-xs uppercase tracking-[0.14em] text-white/38">Selected work</p>
-              <h2 id="work-title" className="portfolio-serif text-4xl text-white/78 sm:text-5xl">Things I&apos;ve built</h2>
-            </div>
-            <p className="max-w-xl text-sm leading-7 text-white/48 sm:pt-1">
-              Full-stack products, internal systems, and businesses built from
-              an early idea into something people could use.
-            </p>
-          </div>
-
-          <div className="border-t border-white/15">
-            {homepageExperiences.map((item, index) => (
-              <Link
-                className="portfolio-work-row reveal grid gap-4 border-b border-white/12 py-6 transition-colors sm:grid-cols-[1fr_1.2fr_auto] sm:items-start sm:gap-6 sm:py-8"
-                href={`/experience/${item.slug}`}
-                style={{ animationDelay: `${120 + index * 65}ms` }}
-                key={`${item.role}-${item.company}`}
-              >
-                <div>
-                  <h3 className="text-xl font-medium tracking-[-0.02em] text-white sm:text-2xl">{item.company}</h3>
-                  <p className="mt-1 text-sm text-white/42">{item.role}</p>
-                </div>
-                <p className="max-w-md text-sm leading-6 text-white/52">{item.summary}</p>
-                <span className="text-xs text-white/35 sm:pt-1">View project</span>
-              </Link>
-            ))}
-          </div>
-        </section>
-
-
-
+          </section>
+          <section id="work" className={styles.work} aria-labelledby="work-title">
+            <h2 id="work-title" className={styles.sectionTitle}>A few things I&apos;ve built</h2>
+            <ul className={styles.projects}>
+              {selectedWork.map((project) => (
+                <li key={project.slug}>
+                  <a className={styles.project} href={`/experience/${project.slug}`}>
+                    <p><span className={styles.projectName}>{project.name}.</span>{" "}{project.description}</p>
+                    <ArrowRightIcon className={styles.arrow} aria-hidden="true" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+          <section id="about" className={styles.about} aria-label="About Mehdi">
+            <p>Based in Casablanca. Building since 15.</p>
+            <p>I write about the products I build, the experiments I try, and what I learn.</p>
+          </section>
+        </main>
+        <footer className={styles.footer}>Mehdi Khoudali</footer>
       </div>
-    </main>
+    </div>
   );
 }

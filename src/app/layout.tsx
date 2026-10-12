@@ -1,20 +1,17 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque } from "next/font/google";
-import { SiteContact, SiteFooter, SiteHeader } from "@/components/site-chrome";
+import { Inter } from "next/font/google";
+import { SiteFrame } from "@/components/site-frame";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import "lenis/dist/lenis.css";
 import "./globals.css";
 
-const bricolage = Bricolage_Grotesque({
-  variable: "--font-bricolage",
-  subsets: ["latin"],
-});
+const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.mehdikhoudali.com"),
   title: "Mehdi Khoudali - Software Engineer",
   description:
-    "Mehdi Khoudali is a software engineer building apps for influencers from Casablanca, Morocco.",
+    "Mehdi Khoudali is a software engineer and founder in Casablanca, building products for creators, founders, and teams, and sharing what he learns.",
   applicationName: "Mehdi Khoudali",
   keywords: [
     "Mehdi Khoudali",
@@ -28,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mehdi Khoudali - Software Engineer",
     description:
-      "Mehdi Khoudali is a software engineer building apps for influencers from Casablanca, Morocco.",
+      "Mehdi Khoudali is a software engineer and founder in Casablanca, building products for creators, founders, and teams, and sharing what he learns.",
     siteName: "Mehdi Khoudali",
     type: "website",
     images: [
@@ -44,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mehdi Khoudali - Software Engineer",
     description:
-      "Mehdi Khoudali is a software engineer building apps for influencers from Casablanca, Morocco.",
+      "Mehdi Khoudali is a software engineer and founder in Casablanca, building products for creators, founders, and teams, and sharing what he learns.",
     images: ["/mehdi-portrait.jpg"],
   },
 };
@@ -55,19 +52,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${bricolage.variable} h-full antialiased`}>
+    <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full">
         <SmoothScroll />
-        <div className="portfolio-page min-h-screen bg-[#0a0a0a] text-[#f0eee8]">
-          <div className="mx-auto w-full max-w-[1180px] px-5 sm:px-8 lg:px-12">
-            <SiteHeader />
-          </div>
-          {children}
-          <div className="mx-auto w-full max-w-[1180px] px-5 sm:px-8 lg:px-12">
-            <SiteContact />
-            <SiteFooter />
-          </div>
-        </div>
+        <SiteFrame>{children}</SiteFrame>
       </body>
     </html>
   );
