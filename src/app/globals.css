@@ -72,6 +72,14 @@
 .app-heading { display: flex; align-items: center; gap: 18px; margin-bottom: 20px; }
 .app-heading h2 { margin-bottom: 2px !important; }
 .app-icon { width: 64px; height: 64px; border-radius: 15px; }
+.browser-frame { margin-top: 28px; overflow: hidden; border: 1px solid #2c2c2c; border-radius: 12px; background: #171717; box-shadow: 0 24px 60px #00000080; }
+.browser-bar { display: flex; position: relative; align-items: center; gap: 8px; height: 38px; padding-inline: 14px; border-bottom: 1px solid #262626; background: #1c1c1c; }
+.browser-bar span { width: 11px; height: 11px; border-radius: 50%; background: #3a3a3a; }
+.browser-bar span:nth-child(1) { background: #ff5f57; }
+.browser-bar span:nth-child(2) { background: #febc2e; }
+.browser-bar span:nth-child(3) { background: #28c840; }
+.browser-bar p { position: absolute; left: 50%; transform: translateX(-50%); padding: 3px 28px; border-radius: 6px; background: #262626; color: #999; font-size: 12px; }
+.browser-frame video { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
 .app-screens { display: flex; gap: 14px; margin-block: 28px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
 .app-screens::-webkit-scrollbar { display: none; }
 .app-screens img { flex: 0 0 220px; width: 220px; height: auto; border-radius: 14px; scroll-snap-align: start; }

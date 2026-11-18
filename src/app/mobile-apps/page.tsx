@@ -58,6 +58,13 @@ export default function MobileAppsPage() {
             </div>
           </div>
           <p className="prose">{app.summary}</p>
+          <div className="browser-frame">
+            <div className="browser-bar" aria-hidden="true">
+              <span /><span /><span />
+              <p>{app.name}</p>
+            </div>
+            <video src={`/apps/${app.name.toLowerCase()}/promo.mp4`} poster={`/apps/${app.name.toLowerCase()}/promo-poster.jpg`} autoPlay muted loop playsInline preload="metadata" aria-label={`${app.name} promo video`} />
+          </div>
           <div className="app-screens">
             {app.screenshots.map((shot) => (
               <Image src={`/apps/${app.name.toLowerCase()}/${shot}.jpg`} alt={`${app.name} screenshot`} width={660} height={1434} sizes="220px" key={shot} />
