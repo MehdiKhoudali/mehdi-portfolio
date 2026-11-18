@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { NewsletterButton } from "@/components/newsletter-button";
+import { SiteFooter } from "@/components/site-chrome";
 import styles from "./home.module.css";
 
 const selectedWork = [
@@ -55,7 +56,7 @@ export default function Home() {
             <p>I write about the products I build, the experiments I try, and what I learn.</p>
           </section>
         </main>
-        <footer className={styles.footer}>Mehdi Khoudali</footer>
+        <SiteFooter />
       </div>
     </div>
   );
